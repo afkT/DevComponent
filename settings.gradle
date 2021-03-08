@@ -4,5 +4,10 @@ include ':app'
 // = Lib =
 // =======
 
-include ':DevApp'
-project(':DevApp').projectDir = new File('lib/DevApp')
+
+// ====================
+// = core - 核心开发库 =
+// ====================
+
+include ':core_base_lib'
+project(':core_base_lib').projectDir = new File('lib/core_base_lib')
