@@ -9,5 +9,8 @@ include ':app'
 // = core - 核心开发库 =
 // ====================
 
-include ':core_base_lib'
-project(':core_base_lib').projectDir = new File('lib/core_base_lib')
+include ':core'
+project(':core').projectDir = new File('core/core')
+
+include ':core_base'
+project(':core_base').projectDir = new File('core/core_base')
