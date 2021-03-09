@@ -35,9 +35,6 @@ project(':core_lib_media_selector').projectDir = new File('core/libs/lib_media_s
 include ':core_lib_network'
 project(':core_lib_network').projectDir = new File('core/libs/lib_network')
 
-include ':core_lib_permission'
-project(':core_lib_permission').projectDir = new File('core/libs/lib_permission')
-
 include ':core_lib_storage'
 project(':core_lib_storage').projectDir = new File('core/libs/lib_storage')
 
