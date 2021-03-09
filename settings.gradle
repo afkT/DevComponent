@@ -14,3 +14,36 @@ project(':core').projectDir = new File('core/core')
 
 include ':core_base_lib'
 project(':core_base_lib').projectDir = new File('core/core_base_lib')
+
+// = core - libs =
+
+include ':core_lib_base'
+project(':core_lib_base').projectDir = new File('core/libs/lib_base')
+
+include ':core_lib_bean'
+project(':core_lib_bean').projectDir = new File('core/libs/lib_bean')
+
+include ':core_lib_config'
+project(':core_lib_config').projectDir = new File('core/libs/lib_config')
+
+include ':core_lib_image'
+project(':core_lib_image').projectDir = new File('core/libs/lib_image')
+
+include ':core_lib_media_selector'
+project(':core_lib_media_selector').projectDir = new File('core/libs/lib_media_selector')
+
+include ':core_lib_network'
+project(':core_lib_network').projectDir = new File('core/libs/lib_network')
+
+include ':core_lib_permission'
+project(':core_lib_permission').projectDir = new File('core/libs/lib_permission')
+
+include ':core_lib_storage'
+project(':core_lib_storage').projectDir = new File('core/libs/lib_storage')
+
+include ':core_lib_ui'
+project(':core_lib_ui').projectDir = new File('core/libs/lib_ui')
+
+include ':core_lib_upgrade'
+project(':core_lib_upgrade').projectDir = new File('core/libs/lib_upgrade')
+
