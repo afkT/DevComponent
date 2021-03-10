@@ -29,9 +29,6 @@ project(':core_lib_config').projectDir = new File('core/libs/lib_config')
 include ':core_lib_engine'
 project(':core_lib_engine').projectDir = new File('core/libs/lib_engine')
 
-include ':core_lib_media_selector'
-project(':core_lib_media_selector').projectDir = new File('core/libs/lib_media_selector')
-
 include ':core_lib_network'
 project(':core_lib_network').projectDir = new File('core/libs/lib_network')
 
