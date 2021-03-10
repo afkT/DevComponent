@@ -27,6 +27,8 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.21"
         // Hilt 依赖注入
         classpath 'com.google.dagger:hilt-android-gradle-plugin:2.28-alpha'
+        // 美团多渠道打包
+        classpath 'com.meituan.android.walle:plugin:1.1.7'
     }
 }
 
