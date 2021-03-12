@@ -41,3 +41,9 @@ project(':core_lib_ui').projectDir = new File('core/libs/lib_ui')
 include ':core_lib_upgrade'
 project(':core_lib_upgrade').projectDir = new File('core/libs/lib_upgrade')
 
+// ===============
+// = Interesting =
+// ===============
+
+include ':DevStandard'
+project(':DevStandard').projectDir = new File('interesting/DevStandard')
