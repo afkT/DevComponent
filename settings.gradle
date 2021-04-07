@@ -1,14 +1,10 @@
 include ':app'
 
-// =======
-// = Lib =
-// =======
-
 // ====================
 // = core - 核心开发库 =
 // ====================
 
-def coreLibs = [
+def cores = [
         "core",
         "core_base_lib",
         "core_lib_base",
@@ -19,7 +15,7 @@ def coreLibs = [
         'core_lib_ui'
 ]
 
-coreLibs.forEach {
+cores.forEach {
     include(":$it")
     // 属于 core/libs 模块
     if (it.startsWith("core_lib")) {
@@ -33,9 +29,36 @@ coreLibs.forEach {
     }
 }
 
-// ===============
-// = Interesting =
-// ===============
+// =========================
+// = Interesting - 规范检测 =
+// =========================
 
 include ':DevStandard'
 project(':DevStandard').projectDir = new File('interesting/DevStandard')
+
+// ======================
+// = libs - 模块封装复用 =
+// ======================
+
+def libs = [
+        "lib_circle_igview",
+        "lib_commodity",
+]
+
+libs.forEach {
+    include(":$it")
+    project(":$it").projectDir = new File(rootProject.getProjectDir(), "/libs/$it")
+}
+
+// ========================
+// = module - 各个模块 APP =
+// ========================
+
+def modules = [
+        "module_qrcode",
+]
+
+modules.forEach {
+    include(":$it")
+    project(":$it").projectDir = new File(rootProject.getProjectDir(), "/module/$it")
+}
