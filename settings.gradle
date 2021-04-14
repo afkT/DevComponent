@@ -1,0 +1,67 @@
+include ':app'
+
+// ====================
+// = core - 核心开发库 =
+// ====================
+
+def cores = [
+        "core",
+        "core_base_lib",
+        "core_lib_base",
+        "core_lib_bean",
+        "core_lib_config",
+        "core_lib_engine",
+        "core_lib_network",
+        'core_lib_ui'
+]
+
+cores.forEach {
+    include(":$it")
+    // 属于 core/libs 模块
+    if (it.startsWith("core_lib")) {
+        // 例 core/libs/lib_engine
+        project(":$it").projectDir = new File(
+                rootProject.getProjectDir(),
+                "/component/core/libs/" + it.replace("core_", "")
+        )
+    } else {
+        project(":$it").projectDir = new File(rootProject.getProjectDir(), "/component/core/$it")
+    }
+}
+
+// ======================
+// = libs - 模块封装复用 =
+// ======================
+
+def libs = [
+        "lib_circle_igview",
+        "lib_commodity",
+]
+
+libs.forEach {
+    include(":$it")
+    project(":$it").projectDir = new File(rootProject.getProjectDir(), "/component/libs/$it")
+}
+
+// ========================
+// = module - 各个模块 APP =
+// ========================
+
+def modules = [
+        "module_aaa",
+        "module_commodity",
+        "module_main",
+        "module_splash",
+]
+
+modules.forEach {
+    include(":$it")
+    project(":$it").projectDir = new File(rootProject.getProjectDir(), "/component/module/$it")
+}
+
+// =========================
+// = Interesting - 规范检测 =
+// =========================
+
+include ':DevStandard'
+project(':DevStandard').projectDir = new File('interesting/DevStandard')
