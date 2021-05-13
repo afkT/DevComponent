@@ -12,8 +12,8 @@ def cores = [
         "core_lib_config",
         "core_lib_engine",
         "core_lib_network",
-        'core_lib_ui',
-        'core_lib_utils'
+        "core_lib_ui",
+        "core_lib_utils"
 ]
 
 cores.forEach {
@@ -64,5 +64,11 @@ modules.forEach {
 // = Interesting - 规范检测 =
 // =========================
 
-include ':DevStandard'
-project(':DevStandard').projectDir = new File(rootDir, 'interesting/DevStandard')
+def interestings = [
+        "DevStandard",
+]
+
+interestings.forEach {
+    include(":$it")
+    project(":$it").projectDir = new File(rootDir, "interesting/$it")
+}
