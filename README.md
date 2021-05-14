@@ -220,6 +220,10 @@ if (isModular) { // 每个模块都是独立应用
 
 * [阿里的ARouter，问几个你 “不会” 的问题！](https://mp.weixin.qq.com/s/vYsVJI1SoT4gaiMGoEkx-Q)
 
+* [关于 Android 架构，你是否还在生搬硬套？](https://juejin.cn/post/6942464122273398820)
+
+* [引入 Jetpack 架构后，你的 App 会发生哪些变化？](https://juejin.cn/post/6955491901265051661)
+
 ### 参考项目
 
 * [AndroidModulePattern](https://github.com/guiying712/AndroidModulePattern)
