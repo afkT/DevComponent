@@ -2,7 +2,7 @@
 
 > Android 组件化就是利用多个 Module 来表示应用的多个模块实现代码和资源的隔离，并且每个 Module 都有单独运行和组合的能力.
 
-该 Android 项目组件化示例代码使用 [ARouter](https://github.com/alibaba/ARouter) 方案实现组件化，
+该 Android 项目组件化示例代码 [100% kotlin](http://www.kotlincn.net/docs/reference) 实现，使用 [ARouter](https://github.com/alibaba/ARouter) 方案实现组件化，
 整个项目基于 [Google JetPack](https://developer.android.google.cn/jetpack) 组件库 + [Kotlin](http://www.kotlincn.net/docs/reference) 等最新技术栈进行开发，
 使用 MVVM 架构 ( [DataBinding](https://developer.android.google.cn/topic/libraries/data-binding) + [ViewModel](https://developer.android.google.cn/topic/libraries/architecture/viewmodel) + [Lifecycle](https://developer.android.google.cn/topic/libraries/architecture/lifecycle) )
 
