@@ -1,8 +1,8 @@
 include ':app'
 
-// ====================
+// ===================
 // = core - 核心开发库 =
-// ====================
+// ===================
 
 def cores = [
         "core",
@@ -29,9 +29,9 @@ cores.forEach {
     }
 }
 
-// ======================
+// ====================
 // = libs - 模块封装复用 =
-// ======================
+// ====================
 
 def libs = [
         "lib_circle_igview",
@@ -43,9 +43,9 @@ libs.forEach {
     project(":$it").projectDir = new File(rootDir, "/component/libs/$it")
 }
 
-// ========================
+// =======================
 // = module - 各个模块 APP =
-// ========================
+// =======================
 
 def modules = [
         "module_aaa",
@@ -60,9 +60,9 @@ modules.forEach {
     project(":$it").projectDir = new File(rootDir, "/component/module/$it")
 }
 
-// =========================
+// ========================
 // = Interesting - 规范检测 =
-// =========================
+// ========================
 
 def interestings = [
         "DevStandard",
