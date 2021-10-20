@@ -190,7 +190,6 @@ if (isModular) { // 每个模块都是独立应用
 调试工具：
 
 - [Bugly](https://bugly.qq.com/docs) 异常上报和运营统计。
-- [xCrash](https://github.com/iqiyi/xCrash/blob/master/README.zh-CN.md) Android 应用崩溃捕获工具。
 - [Glance](https://github.com/guolindev/Glance) 应用数据库展示。
 - [LeakCanary](https://github.com/square/leakcanary) 内存泄漏检测工具。
 - [BlockCanary](https://github.com/markzhai/AndroidPerformanceMonitor/blob/master/README_CN.md) 性能监控组件。

@@ -4,8 +4,9 @@ apply from: rootProject.file("file/gradle/config.gradle")
 buildscript {
 
     // Kotlin 版本
-    ext.kotlin_version = "1.4.31"
-    ext.kotlin_stdlib = "1.4.31"
+    ext.kotlin_version = "1.5.31"
+    ext.kotlin_stdlib = "1.5.31"
+    ext.matrix_version = "1.0.0"
 
     repositories { // 该 repositories 用于 buildscript dependencies 插件、脚本依赖加载
         // AliRepo 阿里仓库服务 https://maven.aliyun.com/mvn/view
@@ -14,6 +15,7 @@ buildscript {
         maven { url "https://maven.aliyun.com/repository/gradle-plugin" }
 
         google()
+        mavenCentral()
 
         // jitpack maven
         maven { url "https://jitpack.io" }
@@ -24,21 +26,22 @@ buildscript {
     }
 
     dependencies {
-        classpath "com.android.tools.build:gradle:4.2.1"
+        classpath 'com.android.tools.build:gradle:7.0.3'
         // kotlin https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-gradle-plugin
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        // Hilt 依赖注入
-        classpath "com.google.dagger:hilt-android-gradle-plugin:2.36"
-        // 美团多渠道打包
-        classpath "com.meituan.android.walle:plugin:1.1.7"
         // ARouter AutoRegister
         classpath "com.alibaba:arouter-register:1.0.2"
+        // Hilt 依赖注入
+        classpath "com.google.dagger:hilt-android-gradle-plugin:2.38"
+        // 美团多渠道打包
+        classpath "com.meituan.android.walle:plugin:1.1.7"
     }
 }
 
 allprojects {
     repositories { // 该 repositories 用于 app、module dependencies 第三方库 implementation 等依赖加载
         google()
+        mavenCentral()
 
         // jitpack maven
         maven { url "https://jitpack.io" }
