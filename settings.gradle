@@ -65,6 +65,7 @@ modules.forEach {
 // ========================
 
 def interestings = [
+        "DevReplace",
         "DevStandard",
 ]
 
