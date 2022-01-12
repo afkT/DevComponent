@@ -48,7 +48,13 @@ libs.forEach {
 // =======================
 
 def modules = [
-        "module_aaa",
+        // 功能模板
+        "module_template",
+
+        // ==============
+        // = 各个功能模块 =
+        // ==============
+
         "module_commodity",
         "module_main",
         "module_splash",

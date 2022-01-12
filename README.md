@@ -64,7 +64,7 @@
 
 ```
 - module                            | 根目录
-   - module_aaa                     | 演示 AAA Module
+   - module_template                     | 模板 Module ( 便于 copy )
    - module_commodity               | 商品相关 Module
    - module_main                    | 首页 Module
    - module_splash                  | 启动页 ( 广告页、首次启动引导页 ) Module
