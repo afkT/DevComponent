@@ -36,9 +36,9 @@
 
 ```
 - core                   | 根目录
-   - core                | 核心基础整合库 ( 内部集成 core libs，对外依赖该 module 即可 )
+   - core                | 核心基础整合库 ( 内部集成 core libs, 对外依赖该 module 即可 )
    - core_base_lib       | 基础核心开发库依赖 ( libs 便捷依赖统一维护 )
-   - libs                | 具体功能拆分，封装 lib
+   - libs                | 具体功能拆分, 封装 lib
       - lib_base         | 基类相关 ( Activity、Application 等 )
       - lib_bean         | 通用实体类 ( module 实体类下沉 )
       - lib_config       | 通用配置、常量信息
@@ -53,9 +53,9 @@
 该目录属于 项目模块快捷工具封装复用、第三方库 clone 对源码进行差异化修改使用等存储目录
 
 ```
-- libs                              | 根目录
-   - lib_circle_igview              | clone CircleImageView 修改源码使用 ( 例 )
-   - lib_commodity                  | 商品通用快捷工具库 ( 方便复用 - 例 )
+- libs                           | 根目录
+   - lib_circle_igview           | clone CircleImageView 修改源码使用 ( 例 )
+   - lib_commodity               | 商品通用快捷工具库 ( 方便复用 - 例 )
 ```
 
 ### [module](https://github.com/afkT/DevComponent/tree/main/component/module)
