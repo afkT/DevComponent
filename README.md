@@ -128,7 +128,7 @@ Android Studio 使用 gradle 进行项目构建，gradle 使得我们可以像�
 主要技术点为在 [modular.gradle](https://github.com/afkT/DevComponent/blob/main/file/gradle/modular.gradle) 中定义标识
 
 ```groovy
-// 模块化编译开关 ( true = 每个模块都是独立应用, false = 整合运行)
+// 模块化编译开关 ( true = 每个模块都是独立应用, false = 整合运行 )
 isModular = false
 ```
 
