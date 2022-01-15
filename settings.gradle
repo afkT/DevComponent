@@ -11,6 +11,7 @@ def cores = [
         "core_lib_bean",
         "core_lib_config",
         "core_lib_engine",
+        "core_lib_environment",
         "core_lib_network",
         "core_lib_ui",
         "core_lib_utils"
