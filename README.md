@@ -135,7 +135,7 @@ isModular = false
 根据标识，应用不同的[构建文件](https://github.com/afkT/DevComponent/blob/main/file/gradle/build/build_module.gradle)。
 
 ```groovy
-boolean isModular = isModular.toBoolean()
+def isModular = isModular.toBoolean()
 
 if (isModular) { // 每个模块都是独立应用
     apply from: rootProject.file(files.build_application_gradle)
