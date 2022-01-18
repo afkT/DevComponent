@@ -16,7 +16,8 @@ def cores = [
         "core_lib_receiver",
         "core_lib_router",
         "core_lib_ui",
-        "core_lib_utils"
+        "core_lib_utils",
+        "core_lib_web",
 ]
 
 cores.forEach {
