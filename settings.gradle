@@ -13,6 +13,7 @@ def cores = [
         "core_lib_engine",
         "core_lib_environment",
         "core_lib_network",
+        "core_lib_receiver",
         "core_lib_router",
         "core_lib_ui",
         "core_lib_utils"
