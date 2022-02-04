@@ -10,6 +10,7 @@ def cores = [
         "core_lib_base",
         "core_lib_bean",
         "core_lib_config",
+        "core_lib_debug_assist",
         "core_lib_engine",
         "core_lib_environment",
         "core_lib_network",
