@@ -50,23 +50,30 @@ libs.forEach {
     project(":$it").projectDir = new File(rootDir, "/component/libs/$it")
 }
 
-// =======================
-// = module - 各个模块 APP =
-// =======================
-
 def modules = [
+
         // 功能模板
         "module_template",
 
-        // ==============
+        // =============
         // = 各个功能模块 =
-        // ==============
+        // =============
 
         "module_commodity",
         "module_main",
         "module_splash",
         "module_user",
+
+        // =========================
+        // = DevHttpManager 演示模块 =
+        // =========================
+
+        "module_wanandroid",
 ]
+// =======================
+// = module - 各个模块 APP =
+// =======================
+
 
 modules.forEach {
     include(":$it")
