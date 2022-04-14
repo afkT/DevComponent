@@ -1,4 +1,9 @@
-include ':app'
+// ===============
+// = 主程序 ( 壳 ) =
+// ===============
+
+include(":app")
+project(":app").projectDir = new File(rootDir, "application/app")
 
 // =======================
 // = module - 各个模块 APP =
