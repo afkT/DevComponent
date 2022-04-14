@@ -31,8 +31,11 @@ def modules = [
 ]
 
 modules.forEach {
+    // module 文件夹路径 ( 美化 configurations name )
+    File applicationModuleDir = new File(rootDir, "application/module")
+
     include(":$it")
-    project(":$it").projectDir = new File(rootDir, "component/module/$it")
+    project(":$it").projectDir = new File(applicationModuleDir, "$it")
 }
 
 // ===================
