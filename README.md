@@ -2,11 +2,11 @@
 
 > Android 组件化就是利用多个 Module 来表示应用的多个模块实现代码和资源的隔离，并且每个 Module 都有单独运行和组合的能力.
 >
-> **[Android 规范](https://github.com/afkT/DevComponent/blob/master/README/android_standard.md)** 、 **[Java 规范](https://github.com/afkT/DevComponent/blob/master/README/java_standard.md)** 、 **[Git 规范](https://github.com/afkT/DevComponent/blob/master/README/git_standard.md)**
+> **[Android 规范][Android 规范]** 、 **[Java 规范][Java 规范]** 、 **[Git 规范][Git 规范]**
 
-该 Android 项目组件化示例代码 [100% Kotlin](http://www.kotlincn.net/docs/reference) 实现，使用 [ARouter](https://github.com/alibaba/ARouter) 方案实现组件化，
-整个项目基于 [Google JetPack](https://developer.android.google.cn/jetpack) 组件库 + [Kotlin](http://www.kotlincn.net/docs/reference) 等最新技术栈进行开发，
-使用 MVVM 架构 ( [DataBinding](https://developer.android.google.cn/topic/libraries/data-binding) + [ViewModel](https://developer.android.google.cn/topic/libraries/architecture/viewmodel) + [Lifecycle](https://developer.android.google.cn/topic/libraries/architecture/lifecycle) )
+该 Android 项目组件化示例代码 [100% Kotlin][100% Kotlin] 实现，使用 [ARouter][ARouter] 方案实现组件化，
+整个项目基于 [Google JetPack][Google JetPack] 组件库 + [Kotlin][Kotlin] 等最新技术栈进行开发，
+使用 MVVM 架构 ( [DataBinding][DataBinding] + [ViewModel][ViewModel] + [Lifecycle][Lifecycle] )
 
 ## 组件化架构
 
@@ -26,7 +26,6 @@
 - component           | 根目录
    - core             | 核心基础整合库
    - libs             | 通用 Library、第三方库 clone 差异化修改
-   - module           | 具体功能模块 ( 可单独运行 )，被主体应用 ( 壳 ) 所依赖使用
 ```
 
 ### [core](https://github.com/afkT/DevComponent/tree/main/component/core)
@@ -67,7 +66,17 @@
    - lib_commodity                 | 商品通用快捷工具库 ( 方便复用 - 例 )
 ```
 
-### [module](https://github.com/afkT/DevComponent/tree/main/component/module)
+## 应用程序目录展示
+
+### [目录](https://github.com/afkT/DevComponent/tree/main/application)
+
+```
+- application                        | 根目录
+   - app                             | 主体应用 ( APP 壳工程 )
+   - module                          | 具体功能模块 ( 可单独运行 )，被主体应用 ( 壳 ) 所依赖使用
+```
+
+### [module](https://github.com/afkT/DevComponent/tree/main/application/module)
 
 该目录下的 Module 在 `isModular=true` 的情况下，都属于独立的应用可单独运行，为 `false` 则都属于功能模块，被主体应用 ( 壳 ) 所依赖使用
 
@@ -156,7 +165,7 @@ if (isModular) { // 每个模块都是独立应用
 ##### 组件间通信
 
 经过组件化后，组件之间在物理上被隔离，组件间彼此不感知对方的存在，但是在业务上组件间又有通信的需求，
-业界主流采用的方案是采用路由通信。项目将会采用阿里巴巴开源的 [ARouter](https://github.com/alibaba/ARouter) 通信通信方案。
+业界主流采用的方案是采用路由通信。项目将会采用阿里巴巴开源的 [ARouter][ARouter] 通信通信方案。
 
 ##### 配置文件
 
@@ -237,3 +246,18 @@ if (isModular) { // 每个模块都是独立应用
 * [AndroidModulePattern](https://github.com/guiying712/AndroidModulePattern)
 
 * [Component](https://github.com/xiaojinzi123/Component)
+
+
+
+
+
+[Android 规范]: https://github.com/afkT/DevComponent/blob/master/README/android_standard.md
+[Java 规范]: https://github.com/afkT/DevComponent/blob/master/README/java_standard.md
+[Git 规范]: https://github.com/afkT/DevComponent/blob/master/README/git_standard.md
+[100% Kotlin]: http://www.kotlincn.net/docs/reference
+[ARouter]: https://github.com/alibaba/ARouter
+[Google JetPack]: https://developer.android.google.cn/jetpack
+[Kotlin]: http://www.kotlincn.net/docs/reference
+[DataBinding]: https://developer.android.google.cn/topic/libraries/data-binding
+[ViewModel]: https://developer.android.google.cn/topic/libraries/architecture/viewmodel
+[Lifecycle]: https://developer.android.google.cn/topic/libraries/architecture/lifecycle
