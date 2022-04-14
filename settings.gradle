@@ -1,5 +1,35 @@
 include ':app'
 
+// =======================
+// = module - 各个模块 APP =
+// =======================
+
+def modules = [
+
+        // 功能模板
+        "module_template",
+
+        // =============
+        // = 各个功能模块 =
+        // =============
+
+        "module_commodity",
+        "module_main",
+        "module_splash",
+        "module_user",
+
+        // =========================
+        // = DevHttpManager 演示模块 =
+        // =========================
+
+        "module_wanandroid",
+]
+
+modules.forEach {
+    include(":$it")
+    project(":$it").projectDir = new File(rootDir, "component/module/$it")
+}
+
 // ===================
 // = core - 核心开发库 =
 // ===================
@@ -26,13 +56,13 @@ def cores = [
 cores.forEach {
     include(":$it")
     // 属于 core/libs 模块
-    if (it.startsWith("core_lib")) {
+    if (it.startsWith("core_lib_")) {
         // 例 core/libs/lib_engine
         project(":$it").projectDir = new File(
-                rootDir, "/component/core/libs/" + it.replace("core_", "")
+                rootDir, "component/core/libs/" + it.replace("core_", "")
         )
     } else {
-        project(":$it").projectDir = new File(rootDir, "/component/core/$it")
+        project(":$it").projectDir = new File(rootDir, "component/core/$it")
     }
 }
 
@@ -47,37 +77,7 @@ def libs = [
 
 libs.forEach {
     include(":$it")
-    project(":$it").projectDir = new File(rootDir, "/component/libs/$it")
-}
-
-def modules = [
-
-        // 功能模板
-        "module_template",
-
-        // =============
-        // = 各个功能模块 =
-        // =============
-
-        "module_commodity",
-        "module_main",
-        "module_splash",
-        "module_user",
-
-        // =========================
-        // = DevHttpManager 演示模块 =
-        // =========================
-
-        "module_wanandroid",
-]
-// =======================
-// = module - 各个模块 APP =
-// =======================
-
-
-modules.forEach {
-    include(":$it")
-    project(":$it").projectDir = new File(rootDir, "/component/module/$it")
+    project(":$it").projectDir = new File(rootDir, "component/libs/$it")
 }
 
 // ========================
