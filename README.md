@@ -1,3 +1,5 @@
+### [如何使用该项目进行开发?](https://github.com/afkT/DevComponent/blob/main/USE_GUIDE.md)
+
 # About
 
 > Android 组件化就是利用多个 Module 来表示应用的多个模块实现代码和资源的隔离，并且每个 Module 都有单独运行和组合的能力.
@@ -20,7 +22,7 @@
 
 ## 组件目录展示
 
-### [目录](https://github.com/afkT/DevComponent/tree/main/component)
+### [目录](https://github.com/afkT/DevComponent/blob/main/component)
 
 ```
 - component           | 根目录
@@ -28,11 +30,11 @@
    - libs             | 通用 Library、第三方库 clone 差异化修改
 ```
 
-### [core](https://github.com/afkT/DevComponent/tree/main/component/core)
+### [core](https://github.com/afkT/DevComponent/blob/main/component/core)
 
 该目录属于核心基础库代码，整个组件化项目基于该基础上进行开发
 
-> 该 [Core Module](https://github.com/afkT/DevComponent/tree/main/component/core/core) 基于 [Dev 系列开发库](https://github.com/afkT/DevUtils) 搭建，
+> 该 [Core Module](https://github.com/afkT/DevComponent/blob/main/component/core/core) 基于 [Dev 系列开发库](https://github.com/afkT/DevUtils) 搭建，
 ( 全部开发基于该 module ) 用于统一维护基础核心开发库、第三方库依赖，对外只需要依赖该 module 便可使用整个核心模块 ( core 文件以及内部所有 libs )
 
 ```
@@ -56,7 +58,7 @@
       - lib_web               | WebView 相关
 ```
 
-### [libs](https://github.com/afkT/DevComponent/tree/main/component/libs)
+### [libs](https://github.com/afkT/DevComponent/blob/main/component/libs)
 
 该目录属于 项目模块快捷工具封装复用、第三方库 clone 对源码进行差异化修改使用等存储目录
 
@@ -68,7 +70,7 @@
 
 ## 应用程序目录展示
 
-### [目录](https://github.com/afkT/DevComponent/tree/main/application)
+### [目录](https://github.com/afkT/DevComponent/blob/main/application)
 
 ```
 - application                        | 根目录
@@ -76,7 +78,7 @@
    - module                          | 具体功能模块 ( 可单独运行 )，被主体应用 ( 壳 ) 所依赖使用
 ```
 
-### [module](https://github.com/afkT/DevComponent/tree/main/application/module)
+### [module](https://github.com/afkT/DevComponent/blob/main/application/module)
 
 该目录下的 Module 在 `isModular=true` 的情况下，都属于独立的应用可单独运行，为 `false` 则都属于功能模块，被主体应用 ( 壳 ) 所依赖使用
 
