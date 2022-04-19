@@ -26,7 +26,7 @@
 * 项目文件名 ( DevComponent ) 直接手动修改即可
 * 执行该操作结束后记得把 .git 文件夹删除，再 push 到 git 服务器上
 
-### 替换包名结果目录展示
+# 替换包名结果目录展示
 
 ### [core][DevComponent.Core]
 
@@ -65,15 +65,15 @@
       - module_wanandroid     | com.afkt.shop.module.wan_android
 ```
 
-如上结果展示可得出规律
+**如上结果展示可得出**
 
-* 主体应用包名为 com.afkt.shop.component
+* 主体应用 ( APP 壳工程 ) 包名为 com.afkt.shop.component
 * 各个 module 包名为 com.afkt.shop.module.xxxx
-* core/libs 为 com.afkt.shop.core.lib.xxx
+* core-libs 为 com.afkt.shop.core.lib.xxx
 
 如果对该包名结构不满意，可自行在`执行替换操作之后`进行修改，最大程度减少替换包名的复杂性。
 
-并同步更新 [modular.gradle][modular.gradle] 中 modularVersion 的各个 module applicationId 包名配置即可
+并同步修改 [file/gradle/modular.gradle][modular.gradle] 文件中 modularVersion 的各个 module applicationId 包名配置即可
 
 
 
