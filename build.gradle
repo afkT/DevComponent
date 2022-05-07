@@ -5,8 +5,8 @@ apply from: rootProject.file(files.task_generate_deps_file_gradle)
 buildscript {
 
     // Kotlin 版本
-    ext.kotlin_version = "1.6.10"
-    ext.kotlin_stdlib = "1.6.10"
+    ext.kotlin_version = "1.6.21"
+    ext.kotlin_stdlib = "1.6.21"
     ext.matrix_version = "2.0.5"
 
     repositories { // 该 repositories 用于 buildscript dependencies 插件、脚本依赖加载
@@ -28,7 +28,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.0.4'
+        classpath 'com.android.tools.build:gradle:7.1.3'
         // kotlin https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-gradle-plugin
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         // ARouter AutoRegister
