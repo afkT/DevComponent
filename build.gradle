@@ -7,7 +7,7 @@ buildscript {
     // Kotlin 版本
     ext.kotlin_version = "1.6.21"
     ext.kotlin_stdlib = "1.6.21"
-    ext.matrix_version = "2.0.5"
+    ext.matrix_version = "2.0.8"
 
     repositories { // 该 repositories 用于 buildscript dependencies 插件、脚本依赖加载
         // AliRepo 阿里仓库服务 https://maven.aliyun.com/mvn/view
@@ -28,14 +28,15 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.2.0'
+        // https://mvnrepository.com/artifact/com.android.tools.build/gradle
+        classpath 'com.android.tools.build:gradle:7.2.1'
         // kotlin https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-gradle-plugin
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        // ARouter AutoRegister
+        // ARouter AutoRegister https://mvnrepository.com/artifact/com.alibaba/arouter-register
         classpath "com.alibaba:arouter-register:1.0.2"
-        // Hilt 依赖注入
-        classpath "com.google.dagger:hilt-android-gradle-plugin:2.40.5"
-        // 美团多渠道打包
+        // Hilt 依赖注入 https://mvnrepository.com/artifact/com.google.dagger/hilt-android-gradle-plugin
+        classpath "com.google.dagger:hilt-android-gradle-plugin:2.42"
+        // 美团多渠道打包 https://mvnrepository.com/artifact/com.meituan.android.walle/plugin
         classpath "com.meituan.android.walle:plugin:1.1.7"
     }
 }
