@@ -93,6 +93,7 @@ libs.forEach {
 // ========================
 
 def interestings = [
+        "DevLogo",
         "DevReplace",
         "DevStandard",
 ]
