@@ -47,6 +47,7 @@ def cores = [
         "core_base_lib",
         "core_lib_base",
         "core_lib_bean",
+        "core_lib_channel_flavors",
         "core_lib_config",
         "core_lib_debug_assist",
         "core_lib_engine",
