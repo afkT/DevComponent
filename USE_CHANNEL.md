@@ -1,87 +1,37 @@
-# 如何使用该项目进行开发?
 
-## 直接使用该项目代码会遇到的问题
 
-* 最直接的就是 `包名` 每个应用包名都是唯一且有意义的
+## 摘要
 
-## 解决方案
+* [第三方多渠道](#第三方多渠道)
+* [Android 官方多渠道](#Android-官方多渠道)
+* [总结与扩展](#总结与扩展)
 
-针对 `包名` 替换问题，已编写 [DevReplace][DevReplace] 项目进行快捷替换
 
-便于直接使用该模板进行组件化开发，减少使用者包名替换、重新搭建组件化流程。
+## 第三方多渠道
 
-> 核心实现代码 [DevReplace.Code][DevReplace.Code]，代码执行入口 [ReplaceMain][ReplaceMain]
+目前市面上的多渠道打包工具，大多基于 V1、V2 签名的多渠道打包方案实现。
 
-### DevReplace 使用步骤
+比较火的有 [Walle 瓦力多渠道打包][Walle 瓦力多渠道打包]、[VasDolly 多渠道打包][VasDolly 多渠道打包] 都是基于该方案实现
 
-1. Clone `https://github.com/afkT/DevComponent.git` 项目到本地
-2. 打开项目根目录，进入 `/interesting/DevReplace` 文件目录，定位并打开 `Code.kt` 文件
-3. 搜索 `const val REPLACE_PACKNAME = ""` 并修改字符串值为待变更包名，例：com.afkt.shop
-4. 同目录打开 `ReplaceMain.kt` 文件，执行 `main` 方法，完成替换包名第一步
-5. 进行全局搜索 **afkt_replace** 并替换为刚才 `REPLACE_PACKNAME` 字符串设置的包名，并结束替换流程
+具体实现原理可以点击上方链接查看对应 **README**、**WIKI**。
 
-**至此整个流程结束，成功将该项目包名替换为指定包名**
+**优点：**不需要重新构建新渠道包，不需要重新签名，打包方式速度非常快，每个渠道包仅需几秒的耗时，非常适合渠道较多的 APK。
 
-* 最后只需 clean project 并进行 rebuild 即可使用该组件化模板进行个人、公司项目开发
-* 项目文件名 ( DevComponent ) 直接手动修改即可
-* 执行该操作结束后记得把 .git 文件夹删除，再 push 到 git 服务器上
+**缺点：**
 
-# 替换包名结果目录展示
+1. 不支持不同渠道编译不同代码、logo、布局、资源文件等各种差异化实现。
+2. 依赖作者同步更新实现方案，如 v3 签名、gradle 更新等。
 
-### [core][DevComponent.Core]
 
-```
-- core                        | 根目录
-   - core                     | com.afkt.shop.core
-   - core_base_lib            | com.afkt.shop.core.base.lib
-   - libs                     | 
-      - lib_base              | com.afkt.shop.core.lib.base
-      - lib_bean              | com.afkt.shop.core.lib.bean
-      - lib_config            | com.afkt.shop.core.lib.config
-      - lib_debug_assist      | com.afkt.shop.core.lib.debug
-      - lib_engine            | com.afkt.shop.core.lib.engine
-      - lib_environment       | com.afkt.shop.core.lib.environment
-      - lib_network           | com.afkt.shop.core.lib.network
-      - lib_property          | com.afkt.shop.core.lib.property
-      - lib_receiver          | com.afkt.shop.core.lib.receiver
-      - lib_router            | com.afkt.shop.core.lib.router
-      - lib_ui                | com.afkt.shop.core.lib.ui
-      - lib_upload            | com.afkt.shop.core.lib.upload
-      - lib_utils             | com.afkt.shop.core.lib.utils
-      - lib_web               | com.afkt.shop.core.lib.web
-```
+## Android 官方多渠道
 
-### [application、module][DevComponent.Application]
-
-```
-- application                 | 根目录
-   - app                      | com.afkt.shop.component
-   - module                   | 
-      - module_commodity      | com.afkt.shop.module.commodity
-      - module_main           | com.afkt.shop.module.main
-      - module_splash         | com.afkt.shop.module.splash
-      - module_template       | com.afkt.shop.module.template
-      - module_user           | com.afkt.shop.module.user
-      - module_wanandroid     | com.afkt.shop.module.wan_android
-```
-
-**如上结果展示可得出**
-
-* 主体应用 ( APP 壳工程 ) 包名为 com.afkt.shop.component
-* 各个 module 包名为 com.afkt.shop.module.xxxx
-* core-libs 为 com.afkt.shop.core.lib.xxx
-
-如果对该包名结构不满意，可自行在`执行替换操作之后`进行修改，最大程度减少替换包名的复杂性。
-
-并同步修改 [file/gradle/modular.gradle][modular.gradle] 文件中 modularVersion 的各个 module applicationId 包名配置即可
+另外一种就是 [Android 官方多渠道 productFlavors][Android 官方多渠道 productFlavors] 实现方案。
 
 
 
 
 
-[DevReplace]: https://github.com/afkT/DevComponent/tree/main/interesting
-[ReplaceMain]: https://github.com/afkT/DevComponent/blob/main/interesting/DevReplace/src/main/java/afkt_replace/replace/ReplaceMain.kt
-[DevReplace.Code]: https://github.com/afkT/DevComponent/blob/main/interesting/DevReplace/src/main/java/afkt_replace/replace/Code.kt
-[DevComponent.Core]: https://github.com/afkT/DevComponent/blob/main/component/core
-[DevComponent.Application]: https://github.com/afkT/DevComponent/blob/main/application
-[modular.gradle]: https://github.com/afkT/DevComponent/blob/main/file/gradle/modular.gradle
+
+[Walle 瓦力多渠道打包]: https://github.com/Meituan-Dianping/walle
+[VasDolly 多渠道打包]: https://github.com/Tencent/VasDolly
+[Android 官方多渠道 productFlavors]: https://developer.android.com/studio/build/build-variants
