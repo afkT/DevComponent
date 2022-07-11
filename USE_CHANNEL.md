@@ -37,7 +37,6 @@
    - libs                     | 
       - lib_base              | com.afkt.shop.core.lib.base
       - lib_bean              | com.afkt.shop.core.lib.bean
-      - lib_channel_flavors   | com.afkt.shop.core.lib.channel
       - lib_config            | com.afkt.shop.core.lib.config
       - lib_debug_assist      | com.afkt.shop.core.lib.debug
       - lib_engine            | com.afkt.shop.core.lib.engine

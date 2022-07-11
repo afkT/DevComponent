@@ -1,5 +1,7 @@
 ### [如何使用该项目进行开发?](https://github.com/afkT/DevComponent/blob/main/USE_GUIDE.md)
 
+### [多渠道打包](https://github.com/afkT/DevComponent/blob/main/USE_CHANNEL.md)
+
 # About
 
 > Android 组件化就是利用多个 Module 来表示应用的多个模块实现代码和资源的隔离，并且每个 Module 都有单独运行和组合的能力.
@@ -25,9 +27,9 @@
 ### [目录](https://github.com/afkT/DevComponent/blob/main/component)
 
 ```
-- component           | 根目录
-   - core             | 核心基础整合库
-   - libs             | 通用 Library、第三方库 clone 差异化修改
+- component          | 根目录
+   - core            | 核心基础整合库
+   - libs            | 通用 Library、第三方库 clone 差异化修改
 ```
 
 ### [core](https://github.com/afkT/DevComponent/blob/main/component/core)
@@ -38,24 +40,25 @@
 ( 全部开发基于该 module ) 用于统一维护基础核心开发库、第三方库依赖，对外只需要依赖该 module 便可使用整个核心模块 ( core 文件以及内部所有 libs )
 
 ```
-- core                        | 根目录
-   - core                     | 核心基础整合库 ( 内部集成 core libs, 对外依赖该 module 即可 )
-   - core_base_lib            | 基础核心开发库依赖 ( libs 便捷依赖统一维护 )
-   - libs                     | 具体功能拆分, 封装 lib
-      - lib_base              | 基类相关 ( Activity、Application 等 )
-      - lib_bean              | 通用实体类 ( module 实体类下沉 )
-      - lib_config            | 通用配置、常量信息
-      - lib_debug_assist      | Debug 编译辅助开发库 ( 提供切换环境、抓包数据可视化、调试按钮开关等辅助功能 )
-      - lib_engine            | 通用 Engine ( 图片加载、日志、JSON、权限、资源选择、缓存 ) lib
-      - lib_environment       | 通用环境配置切换库
-      - lib_network           | 网络相关 lib ( 网络请求、上传下载 )
-      - lib_property          | 性能优化、检测 lib
-      - lib_receiver          | 广播监听 ( 如网络状态、电量、屏幕解锁 ) 相关
-      - lib_router            | 路由相关
-      - lib_ui                | 统一 style、widget、ui 相关组件
-      - lib_upload            | 通用上传库
-      - lib_utils             | 通用工具库
-      - lib_web               | WebView 相关
+- core                                 | 根目录
+   - core                              | 核心基础整合库 ( 内部集成 core libs, 对外依赖该 module 即可 )
+   - core_base_lib                     | 基础核心开发库依赖 ( libs 便捷依赖统一维护 )
+   - libs                              | 具体功能拆分, 封装 lib
+      - lib_base                       | 基类相关 ( Activity、Application 等 )
+      - lib_bean                       | 通用实体类 ( module 实体类下沉 )
+      - lib_channel_flavors            | App 多渠道
+      - lib_config                     | 通用配置、常量信息
+      - lib_debug_assist               | Debug 编译辅助开发库 ( 提供切换环境、抓包数据可视化、调试按钮开关等辅助功能 )
+      - lib_engine                     | 通用 Engine ( 图片加载、日志、JSON、权限、资源选择、缓存 ) lib
+      - lib_environment                | 通用环境配置切换库
+      - lib_network                    | 网络相关 lib ( 网络请求、上传下载 )
+      - lib_property                   | 性能优化、检测 lib
+      - lib_receiver                   | 广播监听 ( 如网络状态、电量、屏幕解锁 ) 相关
+      - lib_router                     | 路由相关
+      - lib_ui                         | 统一 style、widget、ui 相关组件
+      - lib_upload                     | 通用上传库
+      - lib_utils                      | 通用工具库
+      - lib_web                        | WebView 相关
 ```
 
 ### [libs](https://github.com/afkT/DevComponent/blob/main/component/libs)
@@ -63,9 +66,9 @@
 该目录属于 项目模块快捷工具封装复用、第三方库 clone 对源码进行差异化修改使用等存储目录
 
 ```
-- libs                             | 根目录
-   - lib_circle_igview             | clone CircleImageView 修改源码使用 ( 例 )
-   - lib_commodity                 | 商品通用快捷工具库 ( 方便复用 - 例 )
+- libs                            | 根目录
+   - lib_circle_igview            | clone CircleImageView 修改源码使用 ( 例 )
+   - lib_commodity                | 商品通用快捷工具库 ( 方便复用 - 例 )
 ```
 
 ## 应用程序目录展示
@@ -73,9 +76,9 @@
 ### [目录](https://github.com/afkT/DevComponent/blob/main/application)
 
 ```
-- application                        | 根目录
-   - app                             | 主体应用 ( APP 壳工程 )
-   - module                          | 具体功能模块 ( 可单独运行 )，被主体应用 ( 壳 ) 所依赖使用
+- application       | 根目录
+   - app            | 主体应用 ( APP 壳工程 )
+   - module         | 具体功能模块 ( 可单独运行 )，被主体应用 ( 壳 ) 所依赖使用
 ```
 
 ### [module](https://github.com/afkT/DevComponent/blob/main/application/module)
@@ -83,12 +86,13 @@
 该目录下的 Module 在 `isModular=true` 的情况下，都属于独立的应用可单独运行，为 `false` 则都属于功能模块，被主体应用 ( 壳 ) 所依赖使用
 
 ```
-- module                           | 根目录
-   - module_commodity              | 商品相关 Module
-   - module_main                   | 首页 Module
-   - module_splash                 | 启动页 ( 广告页、首次启动引导页 ) Module
-   - module_template               | 模板 Module ( 便于 copy )
-   - module_user                   | 用户 Module
+- module                         | 根目录
+   - module_commodity            | 商品相关 Module
+   - module_main                 | 首页 Module
+   - module_splash               | 启动页 ( 广告页、首次启动引导页 ) Module
+   - module_template             | 模板 Module ( 便于 copy )
+   - module_user                 | 用户 Module
+   - module_wanandroid           | 玩 Android Module
 ```
 
 ### 基础架构组件
@@ -204,8 +208,8 @@ if (isModular) { // 每个模块都是独立应用
 - [SmartRefreshLayout](https://github.com/scwang90/SmartRefreshLayout) 下拉刷新框架。
 - [Banner](https://github.com/youth5201314/banner) Banner 轮播库。
 - [PhotoView](https://github.com/chrisbanes/PhotoView) 图片缩放库。
-- [Walle](https://github.com/Meituan-Dianping/walle) 瓦力多渠道打包。
 - [Dev 系列库](https://github.com/afkT/DevUtils) Android 工具类库、辅助类、基类、UI 库、环境配置切换库。
+- [多渠道打包](https://github.com/afkT/DevComponent/blob/main/USE_CHANNEL.md)
 
 调试工具：
 
