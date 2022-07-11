@@ -80,7 +80,7 @@
 
 
 
-[DevReplace]: https://github.com/afkT/DevComponent/tree/main/interesting
+[DevReplace]: https://github.com/afkT/DevComponent/blob/main/interesting
 [ReplaceMain]: https://github.com/afkT/DevComponent/blob/main/interesting/DevReplace/src/main/java/afkt_replace/replace/ReplaceMain.kt
 [DevReplace.Code]: https://github.com/afkT/DevComponent/blob/main/interesting/DevReplace/src/main/java/afkt_replace/replace/Code.kt
 [DevComponent.Core]: https://github.com/afkT/DevComponent/blob/main/component/core
