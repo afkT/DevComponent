@@ -262,8 +262,8 @@ if (isModular) { // 每个模块都是独立应用
 [Git 规范]: https://github.com/afkT/DevComponent/blob/master/README/git_standard.md
 [100% Kotlin]: http://www.kotlincn.net/docs/reference
 [ARouter]: https://github.com/alibaba/ARouter
-[Google JetPack]: https://developer.android.google.cn/jetpack
+[Google JetPack]: https://developer.android.com/jetpack
 [Kotlin]: http://www.kotlincn.net/docs/reference
-[DataBinding]: https://developer.android.google.cn/topic/libraries/data-binding
-[ViewModel]: https://developer.android.google.cn/topic/libraries/architecture/viewmodel
-[Lifecycle]: https://developer.android.google.cn/topic/libraries/architecture/lifecycle
+[DataBinding]: https://developer.android.com/topic/libraries/data-binding
+[ViewModel]: https://developer.android.com/topic/libraries/architecture/viewmodel
+[Lifecycle]: https://developer.android.com/topic/libraries/architecture/lifecycle
