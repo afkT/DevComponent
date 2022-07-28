@@ -184,6 +184,8 @@ if (isModular) { // 每个模块都是独立应用
 ### 项目依赖库
 
 - [AndroidX](https://developer.android.com/jetpack/androidx) Android 官方推出的一系列架构组件与向下兼容库。
+- [Jetpack](https://developer.android.com/jetpack) Android Jetpack 是一个由多个库组成的套件。
+- [Navigation](https://developer.android.com/guide/navigation) Android Fragment 路由导航。
 - [Kotlin](http://www.kotlincn.net/docs/reference) Kotlin 语言支持。
 - [Kotlin Coroutines](http://www.kotlincn.net/docs/reference/coroutines/coroutines-guide.html) Kotlin 语言协程支持。
 - [RxJava](https://github.com/ReactiveX/RxJava) 一个基于事件组合异步操作的响应式编程框架。
