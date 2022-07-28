@@ -68,7 +68,6 @@
 ```
 - libs                            | 根目录
    - lib_circle_igview            | clone CircleImageView 修改源码使用 ( 例 )
-   - lib_commodity                | 商品通用快捷工具库 ( 方便复用 - 例 )
 ```
 
 ## 应用程序目录展示
@@ -86,13 +85,12 @@
 该目录下的 Module 在 `isModular=true` 的情况下，都属于独立的应用可单独运行，为 `false` 则都属于功能模块，被主体应用 ( 壳 ) 所依赖使用
 
 ```
-- module                         | 根目录
-   - module_commodity            | 商品相关 Module
-   - module_main                 | 首页 Module
-   - module_splash               | 启动页 ( 广告页、首次启动引导页 ) Module
-   - module_template             | 模板 Module ( 便于 copy )
-   - module_user                 | 用户 Module
-   - module_wanandroid           | 玩 Android Module
+- module                          | 根目录
+   - module_main                  | 首页 Module
+   - module_splash                | 启动页 ( 广告页、首次启动引导页 ) Module
+   - module_template              | 模板 Module ( 便于 copy )
+   - module_user                  | 用户 Module
+   - module_wanandroid            | 玩 Android Module
 ```
 
 ### 基础架构组件
@@ -204,17 +202,14 @@ if (isModular) { // 每个模块都是独立应用
 - [ZXing](https://github.com/zxing/zxing) 二维码库。
 - [Luban](https://github.com/Curzibn/Luban) 鲁班图片压缩。
 - [PictureSelector](https://github.com/LuckSiege/PictureSelector) Android 平台下的图片选择器。
-- [Aria](https://github.com/AriaLyy/Aria) Android 下载库。
 - [SmartRefreshLayout](https://github.com/scwang90/SmartRefreshLayout) 下拉刷新框架。
 - [Banner](https://github.com/youth5201314/banner) Banner 轮播库。
-- [PhotoView](https://github.com/chrisbanes/PhotoView) 图片缩放库。
 - [Dev 系列库](https://github.com/afkT/DevUtils) Android 工具类库、辅助类、基类、UI 库、环境配置切换库。
 - [多渠道打包](https://github.com/afkT/DevComponent/blob/main/USE_CHANNEL.md)
 
 调试工具：
 
 - [Bugly](https://bugly.qq.com/docs) 异常上报和运营统计。
-- [Glance](https://github.com/guolindev/Glance) 应用数据库展示。
 - [LeakCanary](https://github.com/square/leakcanary) 内存泄漏检测工具。
 - [BlockCanary](https://github.com/markzhai/AndroidPerformanceMonitor/blob/master/README_CN.md) 性能监控组件。
 - [UeTool](https://github.com/eleme/UETool) 饿了么 UI 调试工具。

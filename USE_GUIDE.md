@@ -58,7 +58,6 @@
 - application                 | 根目录
    - app                      | com.afkt.shop.component
    - module                   | 
-      - module_commodity      | com.afkt.shop.module.commodity
       - module_main           | com.afkt.shop.module.main
       - module_splash         | com.afkt.shop.module.splash
       - module_template       | com.afkt.shop.module.template

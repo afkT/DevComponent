@@ -18,7 +18,6 @@ def modules = [
         // = 各个功能模块 =
         // =============
 
-        "module_commodity",
         "module_main",
         "module_splash",
         "module_user",
@@ -81,7 +80,6 @@ cores.forEach {
 
 def libs = [
         "lib_circle_igview",
-        "lib_commodity",
 ]
 
 libs.forEach {
