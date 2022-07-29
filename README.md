@@ -18,10 +18,11 @@
 <b><a href="https://github.com/afkT/DevUtils/blob/master/README/git_standard.md">Git 规范</a></b>
 </p>
 
+<p align="center">
+<b><a href="https://github.com/afkT/DevComponent/blob/main/USE_GUIDE.md">如何使用?</a></b>、
+<b><a href="https://github.com/afkT/DevComponent/blob/main/USE_CHANNEL.md">多渠道打包</a></b>
+</p>
 
-### [如何使用该项目进行开发?](https://github.com/afkT/DevComponent/blob/main/USE_GUIDE.md)
-
-### [多渠道打包](https://github.com/afkT/DevComponent/blob/main/USE_CHANNEL.md)
 
 # About
 
