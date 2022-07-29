@@ -19,7 +19,7 @@
 </p>
 
 <p align="center">
-<b><a href="https://github.com/afkT/DevComponent/blob/main/USE_GUIDE.md">如何使用?</a></b>、
+<b><a href="https://github.com/afkT/DevComponent/blob/main/USE_GUIDE.md">使用说明</a></b>、
 <b><a href="https://github.com/afkT/DevComponent/blob/main/USE_CHANNEL.md">多渠道打包</a></b>
 </p>
 
