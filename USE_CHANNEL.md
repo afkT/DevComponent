@@ -39,7 +39,7 @@
 1. 每生成一个渠道包，都要重新执行一遍构建流程，效率太低，只适用于渠道较少的场景。
 2. 部分热修复方案需要对每个渠道包单独生成差分补丁或进行适配处理。
 
-> 当前主线分支 [main][main] 使用的就是该方案，[feature_20220707_walle][feature_20220707_walle] 分支使用的是 [Walle 瓦力多渠道打包][Walle 瓦力多渠道打包] 方案
+> 当前主线分支 [main][main] 使用的就是该方案。
 
 **如何使用该方案：**
 
@@ -279,7 +279,6 @@ private val IMPL_CLASS_NAME = "afkt_replace.core.lib.channel.ChannelFlavorsIMPL"
 [VasDolly 多渠道打包]: https://github.com/Tencent/VasDolly
 [Android 官方多渠道 productFlavors]: https://developer.android.com/studio/build/build-variants
 [main]: https://github.com/afkT/DevComponent
-[feature_20220707_walle]: https://github.com/afkT/DevComponent/tree/feature_20220707_walle
 [apk_channel.gradle]: https://github.com/afkT/DevComponent/blob/main/file/gradle/channel/apk_channel.gradle
 [app/src]: https://github.com/afkT/DevComponent/blob/main/application/app/src
 [AbstractChannelFlavors]: https://github.com/afkT/DevComponent/blob/main/component/core/libs/lib_channel_flavors/src/main/java/afkt_replace/core/lib/channel/AbstractChannelFlavors.kt

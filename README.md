@@ -1,15 +1,34 @@
+
+<h1 align="center">DevComponent</h1>
+
+<p align="center">
+<a href="https://github.com/afkT"><img alt="Profile" src="https://img.shields.io/badge/GitHub-afkT-orange.svg"/></a>
+<a href="https://github.com/afkT/DevComponent/blob/master/LICENSE"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
+<a href="https://android-arsenal.com/api?level=14"><img alt="API" src="https://img.shields.io/badge/API-14%2B-brightgreen.svg?style=flat"/></a>
+<a href="https://search.maven.org/search?q=io.github.afkt"><img alt="Version" src="https://img.shields.io/badge/Maven-Dev-5776E0.svg"/></a>
+</p>
+
+<p align="center">
+🍋 这是一个 Android 组件化模板项目，通过在此基础上开发项目，使其拥有组件化能力。
+</p>
+
+<p align="center">
+<b><a href="https://github.com/afkT/DevUtils/blob/master/README/android_standard.md">Android 规范</a></b>、
+<b><a href="https://github.com/afkT/DevUtils/blob/master/README/java_standard.md">Java 规范</a></b>、
+<b><a href="https://github.com/afkT/DevUtils/blob/master/README/git_standard.md">Git 规范</a></b>
+</p>
+
+
 ### [如何使用该项目进行开发?](https://github.com/afkT/DevComponent/blob/main/USE_GUIDE.md)
 
 ### [多渠道打包](https://github.com/afkT/DevComponent/blob/main/USE_CHANNEL.md)
 
 # About
 
-> Android 组件化就是利用多个 Module 来表示应用的多个模块实现代码和资源的隔离，并且每个 Module 都有单独运行和组合的能力.
->
-> **[Android 规范][Android 规范]** 、 **[Java 规范][Java 规范]** 、 **[Git 规范][Git 规范]**
+> Android 组件化就是利用多个 Module 来表示应用的多个模块实现代码和资源的隔离，并且每个 Module 都有单独运行和组合的能力。
 
 该 Android 项目组件化示例代码 [100% Kotlin][100% Kotlin] 实现，使用 [ARouter][ARouter] 方案实现组件化，
-整个项目基于 [Google JetPack][Google JetPack] 组件库 + [Kotlin][Kotlin] 等最新技术栈进行开发，
+整个项目基于 [Android JetPack][Android JetPack] 组件库 + [Kotlin][Kotlin] 等最新技术栈进行开发，
 使用 MVVM 架构 ( [DataBinding][DataBinding] + [ViewModel][ViewModel] + [Lifecycle][Lifecycle] )
 
 ## 组件化架构
@@ -184,7 +203,7 @@ if (isModular) { // 每个模块都是独立应用
 ### 项目依赖库
 
 - [AndroidX](https://developer.android.com/jetpack/androidx) Android 官方推出的一系列架构组件与向下兼容库。
-- [Jetpack](https://developer.android.com/jetpack) Android Jetpack 是一个由多个库组成的套件。
+- [Android Jetpack](https://developer.android.com/jetpack) Android Jetpack 是一个由多个库组成的套件。
 - [Navigation](https://developer.android.com/guide/navigation) Android Fragment 路由导航。
 - [Kotlin](http://www.kotlincn.net/docs/reference) Kotlin 语言支持。
 - [Kotlin Coroutines](http://www.kotlincn.net/docs/reference/coroutines/coroutines-guide.html) Kotlin 语言协程支持。
@@ -192,20 +211,15 @@ if (isModular) { // 每个模块都是独立应用
 - [RxKotlin](https://github.com/ReactiveX/RxKotlin) RxJava 在 Kotlin 上的扩展。
 - [RxAndroid](https://github.com/ReactiveX/RxAndroid) RxJava 在 Android 平台上的扩展。
 - [AutoDispose](https://github.com/uber/AutoDispose) 用于将 RxJava 事件流绑定到 Android 组件生命周期，以避免内存泄漏。
-- [OkHttp](https://github.com/square/okhttp) Http 协议实现。
-- [Retrofit](https://github.com/square/retrofit) Type-safe HTTP client for Android and Java.
+- [OkHttp3](https://github.com/square/okhttp) Http 协议实现。
+- [Retrofit2](https://github.com/square/retrofit) Type-safe HTTP client for Android and Java.
 - [Gson](https://github.com/google/gson) Json 序列化工具。
 - [Glide](https://github.com/bumptech/glide) 图片加载框架。
 - [MMKV](https://github.com/Tencent/MMKV) 高性能 key-value 存储库。
 - [ARouter](https://github.com/alibaba/ARouter) 路由导航框架。
 - [LiveEventBus](https://github.com/JeremyLiao/LiveEventBus) 是一款 Android 消息总线，基于 LiveData，具有生命周期感知能力。
 - [AndroidAutoSize](https://github.com/JessYanCoding/AndroidAutoSize/blob/master/README-zh.md) 今日头条屏幕适配方案终极版。
-- [Lottie](https://github.com/airbnb/lottie-android) 动画库。
-- [ZXing](https://github.com/zxing/zxing) 二维码库。
-- [Luban](https://github.com/Curzibn/Luban) 鲁班图片压缩。
-- [PictureSelector](https://github.com/LuckSiege/PictureSelector) Android 平台下的图片选择器。
 - [SmartRefreshLayout](https://github.com/scwang90/SmartRefreshLayout) 下拉刷新框架。
-- [Banner](https://github.com/youth5201314/banner) Banner 轮播库。
 - [Dev 系列库](https://github.com/afkT/DevUtils) Android 工具类库、辅助类、基类、UI 库、环境配置切换库。
 - [多渠道打包](https://github.com/afkT/DevComponent/blob/main/USE_CHANNEL.md)
 
@@ -251,15 +265,29 @@ if (isModular) { // 每个模块都是独立应用
 * [Component](https://github.com/xiaojinzi123/Component)
 
 
+## License
+
+    Copyright 2022 afkT
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
 
 
 
-[Android 规范]: https://github.com/afkT/DevComponent/blob/master/README/android_standard.md
-[Java 规范]: https://github.com/afkT/DevComponent/blob/master/README/java_standard.md
-[Git 规范]: https://github.com/afkT/DevComponent/blob/master/README/git_standard.md
+
+
 [100% Kotlin]: http://www.kotlincn.net/docs/reference
 [ARouter]: https://github.com/alibaba/ARouter
-[Google JetPack]: https://developer.android.com/jetpack
+[Android JetPack]: https://developer.android.com/jetpack
 [Kotlin]: http://www.kotlincn.net/docs/reference
 [DataBinding]: https://developer.android.com/topic/libraries/data-binding
 [ViewModel]: https://developer.android.com/topic/libraries/architecture/viewmodel
