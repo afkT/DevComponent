@@ -1,0 +1,41 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-parcelize'
+apply plugin: 'kotlin-kapt'
+
+// ============================================================================
+// = Java Lib 构建通用配置 ( 方便使用 kotlin 运行 main, plugin 为 android kotlin ) =
+// ============================================================================
+
+// ===========================
+// = Interesting 文件夹项目使用 =
+// ===========================
+
+android {
+
+    compileSdkVersion versions.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion versions.lib_minSdkVersion
+    }
+
+    lintOptions {
+        // https://blog.csdn.net/berber78/article/details/60766091
+        abortOnError false
+        checkReleaseBuilds false
+    }
+
+    compileOptions {
+        sourceCompatibility versions.javaVersion
+        targetCompatibility versions.javaVersion
+    }
+
+    kotlinOptions {
+        jvmTarget = versions.javaVersion_str
+    }
+}
+
+// 编码设置
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}

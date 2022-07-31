@@ -1,0 +1,52 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-parcelize'
+apply plugin: 'kotlin-kapt'
+
+// ================================
+// = Module 构建配置 ( 非可运行应用 ) =
+// ================================
+
+android {
+
+    compileSdkVersion versions.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion versions.lib_minSdkVersion
+        // 混淆配置
+        consumerProguardFiles 'proguard-rules.pro'
+    }
+
+    buildFeatures {
+        // Data Binding
+        dataBinding = true
+        // View Binding
+        viewBinding = true
+    }
+
+    lintOptions {
+        // https://blog.csdn.net/berber78/article/details/60766091
+        abortOnError false
+        checkReleaseBuilds false
+    }
+
+    compileOptions {
+        sourceCompatibility versions.javaVersion
+        targetCompatibility versions.javaVersion
+    }
+
+    kotlinOptions {
+        jvmTarget = versions.javaVersion_str
+    }
+}
+
+dependencies {
+
+    // 核心基础依赖库
+    api project(':core')
+}
+
+// 编码设置
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}

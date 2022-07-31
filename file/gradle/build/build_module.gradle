@@ -1,0 +1,51 @@
+// =================
+// = Module 构建配置 =
+// =================
+
+// 模块化编译开关 ( true = 每个模块都是独立应用, false = 整合运行 )
+def isModular = isModular.toBoolean()
+
+if (isModular) { // 每个模块都是独立应用
+    apply from: rootProject.file(files.build_application_gradle)
+} else { // 整合运行, 每个 module 都是 library
+    apply from: rootProject.file(files.build_library_module_gradle)
+}
+
+// 版本构建截取、设置处理
+apply from: rootProject.file(files.config_build_version_gradle)
+
+kapt {
+    arguments {
+        arg("AROUTER_MODULE_NAME", project.getName())
+    }
+}
+
+dependencies {
+
+    // ARouter 路由 https://github.com/alibaba/ARouter
+    api deps.lib.arouter_api // https://github.com/alibaba/ARouter/blob/master/README_CN.md
+    kapt deps.lib.arouter_compiler
+}
+
+android {
+    sourceSets {
+        main {
+//            // 判断是否模块化, 加载不同的 AndroidManifest
+//            if (isModular) {
+//                manifest.srcFile "buildSrc/AndroidManifest.xml"
+//            } else {
+//                manifest.srcFile "src/main/AndroidManifest.xml"
+//            }
+
+            // 判断是否模块化, 加载不同的 AndroidManifest
+            if (isModular) {
+                manifest.srcFile "buildSrc/AndroidManifest.xml"
+                if (!manifest.srcFile.exists()) { // 解决没 buildSrc/xml 文件无法 sync、clean 操作
+                    manifest.srcFile "src/main/AndroidManifest.xml"
+                }
+            } else {
+                manifest.srcFile "src/main/AndroidManifest.xml"
+            }
+        }
+    }
+}

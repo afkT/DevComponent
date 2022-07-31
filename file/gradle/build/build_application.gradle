@@ -1,0 +1,96 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-parcelize'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'com.alibaba.arouter'
+
+def libName = project.getName()
+def modular = modularVersion[libName]
+
+// https://blog.csdn.net/weixin_37625173/article/details/100867037
+android {
+
+    compileSdkVersion versions.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion versions.app_minSdkVersion
+        targetSdkVersion versions.targetSdkVersion
+
+        applicationId modular.applicationId
+        versionCode modular.versionCode
+        versionName modular.versionName
+
+        // 开启 multiDex
+        multiDexEnabled true
+
+        ndk {
+            // 'armeabi'
+            abiFilters 'armeabi-v7a', 'arm64-v8a'
+        }
+    }
+
+    // 签名配置
+    signingConfigs {
+        release {
+            def releaseSign = modularSigning['release']
+            storeFile rootProject.file(releaseSign.storeFile)
+            storePassword releaseSign.storePassword
+            keyAlias releaseSign.keyAlias
+            keyPassword releaseSign.keyPassword
+        }
+
+        debug {
+            def debugSign = modularSigning['debug']
+            storeFile rootProject.file(debugSign.storeFile)
+            storePassword debugSign.storePassword
+            keyAlias debugSign.keyAlias
+            keyPassword debugSign.keyPassword
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            debuggable true
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    buildFeatures {
+        // Data Binding
+        dataBinding = true
+        // View Binding
+        viewBinding = true
+    }
+
+    lintOptions {
+        // https://blog.csdn.net/berber78/article/details/60766091
+        abortOnError false
+        checkReleaseBuilds false
+    }
+
+    compileOptions {
+        sourceCompatibility versions.javaVersion
+        targetCompatibility versions.javaVersion
+    }
+
+    kotlinOptions {
+        jvmTarget = versions.javaVersion_str
+    }
+}
+
+dependencies {
+
+    // 核心基础依赖库
+    api project(':core')
+}
+
+// 编码设置
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}

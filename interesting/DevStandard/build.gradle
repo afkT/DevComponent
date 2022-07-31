@@ -1,0 +1,9 @@
+apply from: rootProject.file(files.build_library_java_gradle)
+
+dependencies {
+    implementation deps.kotlin.stdlib
+    // DevApp - Android 工具类库
+    implementation deps.dev.dev_app
+    // Gson https://github.com/google/gson
+    implementation deps.lib.gson
+}

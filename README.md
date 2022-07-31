@@ -4,8 +4,8 @@
 <p align="center">
 <a href="https://github.com/afkT"><img alt="Profile" src="https://img.shields.io/badge/GitHub-afkT-orange.svg"/></a>
 <a href="https://github.com/afkT/DevComponent/blob/master/LICENSE"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
-<a href="https://android-arsenal.com/api?level=14"><img alt="API" src="https://img.shields.io/badge/API-14%2B-brightgreen.svg?style=flat"/></a>
 <a href="https://search.maven.org/search?q=io.github.afkt"><img alt="Version" src="https://img.shields.io/badge/Maven-Dev-5776E0.svg"/></a>
+<a href="https://android-arsenal.com/api?level=14"><img alt="API" src="https://img.shields.io/badge/API-14%2B-brightgreen.svg?style=flat"/></a>
 </p>
 
 <p align="center">
@@ -199,7 +199,7 @@ if (isModular) { // 每个模块都是独立应用
 
 * [modular.gradle](https://github.com/afkT/DevComponent/blob/main/file/gradle/modular.gradle) ：组件化配置以及各个 Module 版本信息
 
-> 关于 core 库依赖可以参考 [MavenCentral Links - 搭建自己的 Maven 库](https://github.com/afkT/DevComponent/blob/main/art/link/MavenCentral.md) 搭建自己的 Maven 库，通过 aar 直接进行依赖
+> 关于 core 库依赖可以参考 [MavenCentral Links - 搭建自己的 Maven 库](https://github.com/afkT/Resources/blob/main/link/MavenCentral.md) 搭建自己的 Maven 库，通过 aar 直接进行依赖
 
 ### 项目依赖库
 
@@ -245,11 +245,9 @@ if (isModular) { // 每个模块都是独立应用
 
 ### Link
 
-* [Links](https://github.com/afkT/DevComponent/blob/main/art/link)
+* [Component Links](https://github.com/afkT/Resources/blob/main/link/Component.md)
 
-* [Component Links](https://github.com/afkT/DevComponent/blob/main/art/link/Component.md)
-
-* [MavenCentral Links - 搭建自己的 Maven 库](https://github.com/afkT/DevComponent/blob/main/art/link/MavenCentral.md)
+* [MavenCentral Links - 搭建自己的 Maven 库](https://github.com/afkT/Resources/blob/main/link/MavenCentral.md)
 
 * [什么是 Android 组件化](https://blog.csdn.net/u011692041/article/details/92572758)
 

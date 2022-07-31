@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<afkt_replace.core.lib.ui.widget.BaseTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/vid_title_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:includeFontPadding="false"
+    android:textColor="@color/white"
+    android:textSize="@dimen/sp_30"
+    tools:background="@color/skyblue"
+    tools:ignore="MissingDefaultResource"
+    tools:layout_height="match_parent"
+    tools:layout_width="match_parent"
+    tools:text="TEMPLATE"
+    tools:theme="@style/AppTheme" />

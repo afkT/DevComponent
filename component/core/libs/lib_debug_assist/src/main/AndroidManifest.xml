@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="afkt_replace.core.lib.debug">
+
+    <application>
+        <activity
+            android:name=".DebugMainContainerActivity"
+            android:exported="false" />
+
+        <provider
+            android:name=".provider.InitProvider"
+            android:authorities="${applicationId}.provider.InitProvider"
+            android:exported="false" />
+    </application>
+</manifest>

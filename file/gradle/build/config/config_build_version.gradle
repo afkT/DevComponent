@@ -1,0 +1,198 @@
+import java.text.SimpleDateFormat
+
+// =================
+// = 版本信息统一处理 =
+// =================
+
+// 获取 lib 名 => settings.gradle 例 include ':core_lib_engine'
+def libName = project.getName() // core_lib_engine
+// 是否开启日志
+def openLog = isOpenLog.toBoolean()
+// 是否标记 Debug 模式 ( 与 APK build 模式无关, 用于控制第三方库 debug 标记 )
+def openDebug = isOpenDebug.toBoolean()
+// 是否开启优化检测、调试工具 ( 控制 UETool、LeakCanary、BlockCanary 等开关 )
+def showDebugTools = showDebugTools.toBoolean()
+// 模块化编译开关 ( true = 每个模块都是独立应用, false = 整合运行 )
+def isModular = isModular.toBoolean()
+// 是否 Release 版本标记 ( 用于标记 APK 是否 Release 发布版本 )
+def isRelease = isRelease.toBoolean()
+// 服务器环境配置 ( 例: 1 生产环境、2 测试环境、3 预发布环境、4 开发环境 )
+def environmentType = environmentType.intValue()
+// 构建时间 ( 时间戳 )
+def buildTime = System.currentTimeMillis()
+// 构建日期 ( yyyy-MM-dd HH:mm:ss )
+def buildDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(buildTime)
+// 构建日期 ( yyyyMMdd )
+def buildDate_yyyyMMdd = new SimpleDateFormat("yyyyMMdd").format(buildTime)
+
+// ========
+// = core =
+// ========
+
+// 从 file/gradle/modular.gradle 中获取对应的 core lib 版本信息
+if (libName.startsWith("core")) {
+    def coreLibrary = coreLibraryVersion[libName]
+    if (coreLibrary != null) {
+        def coreLibVersionCode = coreLibrary.versionCode
+        def coreLibVersionName = coreLibrary.versionName
+        def moduleName = coreLibrary.moduleName
+
+        if (coreLibVersionCode != null && coreLibVersionName != null) {
+            android.defaultConfig {
+                versionCode coreLibVersionCode
+                versionName coreLibVersionName
+                // Build Version
+                buildConfigField("int", libName + "_VersionCode", "${versionCode}")
+                buildConfigField("String", libName + "_Version", "\"${versionName}\"")
+                // 模块名
+                buildConfigField("String", "MODULE_NAME", "\"${moduleName}\"")
+                // Release 版本标记
+                buildConfigField("boolean", "isRelease", "${isRelease}")
+                // 构建时间 ( 时间戳 )
+                buildConfigField("long", "BUILD_TIME", "${buildTime}")
+                // 构建日期 ( yyyy-MM-dd HH:mm:ss )
+                buildConfigField("String", "BUILD_DATE", "\"${buildDate}\"")
+                // 构建日期 ( yyyyMMdd )
+                buildConfigField("String", "BUILD_DATE_YYYYMMDD", "\"${buildDate_yyyyMMdd}\"")
+            }
+        }
+    }
+}
+
+// ==========
+// = module =
+// ==========
+
+// 从 file/gradle/modular.gradle 中获取对应的 module 版本信息
+if (libName.startsWith("module_")) {
+    def modular = modularVersion[libName]
+    if (modular != null) {
+        def moduleVersionCode = modular.versionCode
+        def moduleVersionName = modular.versionName
+        def moduleName = modular.moduleName
+        def featureVersion = modular.featureVersion
+
+        if (moduleVersionCode != null && moduleVersionName != null) {
+            android.defaultConfig {
+                versionCode moduleVersionCode
+                versionName moduleVersionName
+                // 模块化编译开关值
+                buildConfigField("boolean", "isModular", "${isModular}")
+                // 模块功能版本标识 ( 需求、RP 版本 )
+                buildConfigField("String", "FEATURE_VERSION", "\"${featureVersion}\"")
+                // Build Version
+                buildConfigField("int", libName + "_VersionCode", "${versionCode}")
+                buildConfigField("String", libName + "_Version", "\"${versionName}\"")
+                // 模块名
+                buildConfigField("String", "MODULE_NAME", "\"${moduleName}\"")
+                // Release 版本标记
+                buildConfigField("boolean", "isRelease", "${isRelease}")
+                // 构建时间 ( 时间戳 )
+                buildConfigField("long", "BUILD_TIME", "${buildTime}")
+                // 构建日期 ( yyyy-MM-dd HH:mm:ss )
+                buildConfigField("String", "BUILD_DATE", "\"${buildDate}\"")
+                // 构建日期 ( yyyyMMdd )
+                buildConfigField("String", "BUILD_DATE_YYYYMMDD", "\"${buildDate_yyyyMMdd}\"")
+            }
+        }
+    }
+}
+
+// =======================
+// = Application ( app ) =
+// =======================
+
+// 从 file/gradle/modular.gradle 中获取 app 版本信息
+if (libName.startsWith("app")) {
+    def app = modularVersion[libName]
+    if (app != null) {
+        def appVersionCode = app.versionCode
+        def appVersionName = app.versionName
+        def moduleName = app.moduleName
+        def featureVersion = app.featureVersion
+
+        if (appVersionCode != null && appVersionName != null) {
+            android.defaultConfig {
+                versionCode appVersionCode
+                versionName appVersionName
+                // 模块化编译开关值
+                buildConfigField("boolean", "isModular", "${isModular}")
+                // 模块功能版本标识 ( 需求、RP 版本 )
+                buildConfigField("String", "FEATURE_VERSION", "\"${featureVersion}\"")
+                // Build Version
+                buildConfigField("int", libName + "_VersionCode", "${versionCode}")
+                buildConfigField("String", libName + "_Version", "\"${versionName}\"")
+                // 模块名
+                buildConfigField("String", "MODULE_NAME", "\"${moduleName}\"")
+                // Release 版本标记
+                buildConfigField("boolean", "isRelease", "${isRelease}")
+                // 构建时间 ( 时间戳 )
+                buildConfigField("long", "BUILD_TIME", "${buildTime}")
+                // 构建日期 ( yyyy-MM-dd HH:mm:ss )
+                buildConfigField("String", "BUILD_DATE", "\"${buildDate}\"")
+                // 构建日期 ( yyyyMMdd )
+                buildConfigField("String", "BUILD_DATE_YYYYMMDD", "\"${buildDate_yyyyMMdd}\"")
+            }
+        }
+    }
+}
+
+// =================
+// = 资源统一前缀处理 =
+// =================
+
+android {
+
+    if (libName.startsWith("core")) {
+        // 属于 core module
+        resourcePrefix libName.replaceAll("_lib", "") + "_"
+    } else if (libName.startsWith("module_")) {
+        // 属于各个组件 module
+        resourcePrefix libName.replaceAll("module_", "") + "_"
+    } else if (libName.startsWith("lib_")) {
+//        // 属于各个封装 libs
+//        resourcePrefix libName.replaceAll("lib_", "") + "_"
+//        resourcePrefix libName
+    }
+    printf("\n%s - %s", libName, android.resourcePrefix)
+}
+
+
+// =============
+// = 特殊字段创建 =
+// =============
+
+// core/libs/lib_base Module 构建字段创建
+if (libName == "core_lib_base") {
+    android.defaultConfig {
+        buildConfigField("boolean", "openLog", "$openLog")
+        buildConfigField("boolean", "openDebug", "$openDebug")
+        buildConfigField("boolean", "showDebugTools", "$showDebugTools")
+    }
+}
+
+// core/libs/lib_environment Module 构建字段创建
+if (libName == "core_lib_environment") {
+    android.defaultConfig {
+        buildConfigField("int", "environmentType", "$environmentType")
+
+        // 循环每个模块 MODULE_NAME 用于传入 MODULE_NAME 获取对应的环境配置
+        modularVersion.values().forEach {
+            def moduleName = it.moduleName
+            buildConfigField("String", "ENV_MODULE_${moduleName}", "\"${moduleName}\"")
+        }
+
+        // ===================================
+        // = 以下代码用于支持 lib 封装支持环境切换 =
+        // ===================================
+
+        // 正常应该通过外部传入 url
+        // lib 则实现具体功能 ( 如上传文件 lib, 只关注上传不考虑上传到哪 )
+
+        // 循环每个 lib MODULE_NAME 用于传入 MODULE_NAME 获取对应的环境配置
+        coreLibraryVersion.values().forEach {
+            def moduleName = it.moduleName
+            buildConfigField("String", "ENV_LIB_${moduleName}", "\"${moduleName}\"")
+        }
+    }
+}

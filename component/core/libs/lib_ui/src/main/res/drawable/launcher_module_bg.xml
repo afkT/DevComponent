@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="ResourceName">
+
+    <item android:id="@android:id/background">
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="135"
+                android:centerColor="@color/lightskyblue"
+                android:endColor="@color/cornflowerblue"
+                android:startColor="@color/skyblue" />
+        </shape>
+    </item>
+
+    <item
+        android:width="@dimen/dp_150"
+        android:height="@dimen/dp_150"
+        android:drawable="@mipmap/core_ui_module_logo"
+        android:gravity="center|top"
+        android:top="@dimen/dp_150" />
+</layer-list>

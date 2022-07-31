@@ -1,0 +1,33 @@
+apply from: rootProject.file(files.build_application_gradle)
+apply from: rootProject.file(files.apk_channel_gradle)
+// 版本构建截取、设置处理
+apply from: rootProject.file(files.config_build_version_gradle)
+
+// 模块化编译开关 ( true = 每个模块都是独立应用, false = 整合运行 )
+def isModular = isModular.toBoolean()
+
+android {
+    sourceSets {
+        main {
+            // https://www.jianshu.com/p/f5a49d54e16e
+            // 优化 res 资源管理, 使用 sourceSets 资源分包
+            res.srcDirs = [
+                    'src/main/res', // 模块通用资源文件
+            ]
+        }
+    }
+}
+
+dependencies {
+
+//    // clone CircleImageView 修改源码使用 ( 用于演示, 推荐使用 Material ShapeableImageView )
+//    implementation project(':lib_circle_igview') // 哪个 module 需要使用就单独依赖
+
+    if (!isModular) { // 非组件化则加载各个模块
+        implementation project(':module_template')
+        implementation project(':module_main')
+        implementation project(':module_splash')
+        implementation project(':module_user')
+        implementation project(':module_wanandroid')
+    }
+}

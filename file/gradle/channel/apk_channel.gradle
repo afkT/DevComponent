@@ -1,0 +1,84 @@
+android {
+    defaultConfig {
+    }
+
+    /**
+     * 多渠道通过官方 productFlavors 实现
+     * https://developer.android.com/studio/build/build-variants
+     * 支持不同渠道编译不同代码、logo、布局、资源文件等各种差异化实现
+     */
+
+    def flavorVersion = "default"
+
+    // ==========
+    // = Channel =
+    // ==========
+
+    flavorDimensions flavorVersion
+
+    // 多渠道信息定义
+    productFlavors {
+
+        // 默认 APP ( 官方 ) 渠道
+        app_default { // 反着过来命名是 a 开头排序在最前面
+
+//            // 替换清单文件中的标签
+//            manifestPlaceholders = [
+//
+//            ]
+//            // 甚至可以设置不同包名、包名自动加后缀等
+//            applicationId "afkt_replace.component"
+//            // 当前包名加后缀
+//            applicationIdSuffix ".debug"
+        }
+
+        // 华为渠道
+        hua_wei {
+        }
+
+        // 小米渠道
+        xiao_mi {
+        }
+    }
+
+    /**
+     * 通过循环简化每个渠道 productFlavors 相同配置
+     */
+    productFlavors.all { flavor ->
+        // 必须设置
+        dimension flavorVersion
+
+        // 统一创建 BuildConfig.CHANNEL_ID
+        buildConfigField "String", "CHANNEL_ID", "\"" + name + "\""
+    }
+
+    // ==========
+    // = Source =
+    // ==========
+
+    /**
+     * 需要与 productFlavors 渠道名一致方便统一处理
+     */
+    sourceSets {
+        app_default {
+            // 有特殊配置可单独设置, 如某个渠道合并 AndroidManifest.xml
+            //manifest.srcFile 'src/app_default/AndroidManifest.xml'
+        }
+        hua_wei {
+        }
+        xiao_mi {
+        }
+    }
+
+    /**
+     * 通过循环简化每个渠道 sourceSets 相同配置
+     */
+    sourceSets.all { flavor ->
+
+        // 合并 java 目录代码
+        java.srcDirs = ['src/' + name + '/java']
+
+        // 合并 res 资源目录
+        res.srcDirs = ['src/' + name + '/res']
+    }
+}
