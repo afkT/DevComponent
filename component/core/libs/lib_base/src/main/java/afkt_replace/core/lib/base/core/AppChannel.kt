@@ -15,6 +15,18 @@ object AppChannel : AbstractChannelFlavors {
         newChannelFlavorsIMPL()
     }
 
+    // ==============
+    // = 对外公开方法 =
+    // ==============
+
+    /**
+     * 是否未找到渠道实现
+     * @return `true` yes, `false` no
+     */
+    fun isNotFoundChannel(): Boolean {
+        return IMPL is NotFoundChannelFlavors
+    }
+
     // ==========================
     // = AbstractChannelFlavors =
     // ==========================

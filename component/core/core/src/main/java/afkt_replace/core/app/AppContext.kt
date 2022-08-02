@@ -1,12 +1,12 @@
 package afkt_replace.core.app
 
+import afkt_replace.core.lib.base.core.AppChannel
 import afkt_replace.core.lib.base.core.AppDebug
 import afkt_replace.core.lib.base.core.BaseAppContext
 import afkt_replace.core.lib.property.BlockCanaryKT
-import afkt_replace.core.property.Bugly
-import afkt_replace.core.property.BuglyConfig
+import afkt_replace.core.lib.property.Bugly
+import afkt_replace.core.lib.property.BuglyConfig
 import afkt_replace.core.property.FloatingDebug
-import afkt_replace.core.property.defaultBuglyConfig
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelStore
@@ -42,7 +42,9 @@ open class AppContext : BaseAppContext(),
         mAppViewModelStore = ViewModelStore()
 
         // Bugly
-        Bugly.initialize(this)
+        getBuglyConfig()?.let { config ->
+            Bugly.initialize(this, config)
+        }
         // BlockCanary
         BlockCanaryKT.initialize(this)
         // Debug 悬浮窗处理
@@ -55,6 +57,18 @@ open class AppContext : BaseAppContext(),
 
     // 获取 Bugly 配置
     open fun getBuglyConfig(): BuglyConfig? = defaultBuglyConfig()
+
+    /**
+     * 返回默认 Bugly 配置
+     */
+    private fun defaultBuglyConfig(): BuglyConfig? {
+        if (AppChannel.isNotFoundChannel()) return null
+        return BuglyConfig(
+            key = AppChannel.getChannelInfo(Bugly.KEY) ?: "",
+            debug = AppDebug.isOpenDebug(),
+            channel = AppChannel.getChannel()
+        )
+    }
 
     // ==========
     // = 静态方法 =
