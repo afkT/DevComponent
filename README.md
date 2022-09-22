@@ -1,26 +1,48 @@
 
 <h1 align="center">DevComponent</h1>
 
-<p align="center">
-<a href="https://github.com/afkT"><img alt="Profile" src="https://img.shields.io/badge/GitHub-afkT-orange.svg"/></a>
-<a href="https://github.com/afkT/DevComponent/blob/master/LICENSE"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
-<a href="https://search.maven.org/search?q=io.github.afkt"><img alt="Version" src="https://img.shields.io/badge/Maven-Dev-5776E0.svg"/></a>
-<a href="https://android-arsenal.com/api?level=14"><img alt="API" src="https://img.shields.io/badge/API-14%2B-brightgreen.svg?style=flat"/></a>
-</p>
 
 <p align="center">
-🍋 这是一个 Android 组件化模板项目，通过在此基础上开发项目，使其拥有组件化能力。
+	<a href="https://github.com/afkT">
+		<img alt="Profile" src="https://img.shields.io/badge/GitHub-afkT-orange.svg" />
+	</a>
+	<a href="https://github.com/afkT/DevComponent/blob/master/LICENSE">
+		<img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" />
+	</a>
+	<a href="https://search.maven.org/search?q=io.github.afkt">
+		<img alt="Version" src="https://img.shields.io/badge/Maven-Dev-5776E0.svg" />
+	</a>
+	<a href="https://android-arsenal.com/api?level=14">
+		<img alt="API" src="https://img.shields.io/badge/API-14%2B-brightgreen.svg?style=flat" />
+	</a>
 </p>
 
-<p align="center">
-<b><a href="https://github.com/afkT/DevUtils/blob/master/README/android_standard.md">Android 规范</a></b>、
-<b><a href="https://github.com/afkT/DevUtils/blob/master/README/java_standard.md">Java 规范</a></b>、
-<b><a href="https://github.com/afkT/DevUtils/blob/master/README/git_standard.md">Git 规范</a></b>
-</p>
 
 <p align="center">
-<b><a href="https://github.com/afkT/DevComponent/blob/main/USE_GUIDE.md">使用说明</a></b>、
-<b><a href="https://github.com/afkT/DevComponent/blob/main/USE_CHANNEL.md">多渠道打包</a></b>
+	🍋 这是一个 Android 组件化模板项目，通过在此基础上开发项目，使其拥有组件化能力。
+</p>
+
+
+<p align="center">
+	<b>
+		<a href="https://github.com/afkT/DevUtils/blob/master/README/android_standard.md">Android 规范</a>
+	</b>、
+	<b>
+		<a href="https://github.com/afkT/DevUtils/blob/master/README/java_standard.md">Java 规范</a>
+	</b>、
+	<b>
+		<a href="https://github.com/afkT/DevUtils/blob/master/README/git_standard.md">Git 规范</a>
+	</b>
+</p>
+
+
+<p align="center">
+	<b>
+		<a href="https://github.com/afkT/DevComponent/blob/main/USE_GUIDE.md">使用说明</a>
+	</b>、
+	<b>
+		<a href="https://github.com/afkT/DevComponent/blob/main/USE_CHANNEL.md">多渠道打包</a>
+	</b>
 </p>
 
 
