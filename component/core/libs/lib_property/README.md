@@ -22,14 +22,9 @@ dependencies {
         // 饿了么 UETool https://github.com/eleme/UETool/blob/master/README_zh.md
         api deps_split.property.uetool
         api deps_split.property.uetool_base
-        // BlockCanary 性能监控组件 https://github.com/markzhai/AndroidPerformanceMonitor/blob/master/README_CN.md
-//        api deps_split.property.blockcanary_android // 内部 DisplayActivity 未适配 android 12 暂时不依赖
-        api deps_split.property.blockcanary_no_op
     } else {
         // 饿了么 UETool https://github.com/eleme/UETool/blob/master/README_zh.md
         api deps_split.property.uetool_no_op
-        // BlockCanary 性能监控组件 https://github.com/markzhai/AndroidPerformanceMonitor/blob/master/README_CN.md
-        api deps_split.property.blockcanary_no_op
     }
 
     // ====================

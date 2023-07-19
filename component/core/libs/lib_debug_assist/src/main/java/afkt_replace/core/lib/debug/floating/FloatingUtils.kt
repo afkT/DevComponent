@@ -1,12 +1,14 @@
 package afkt_replace.core.lib.debug.floating
 
 import afkt_replace.core.lib.debug.DebugMainContainerActivity
+import afkt_replace.core.lib.debug.R
 import android.content.Intent
 import android.graphics.PointF
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
+import dev.mvvm.utils.toResString
 import dev.utils.app.AppUtils
 import dev.utils.app.ScreenUtils
 import dev.utils.app.ViewUtils
@@ -71,13 +73,13 @@ internal class FloatingUtils private constructor() : IFloatingOperate {
                     // 长按关闭 Debug 功能
                     FloatingDebug.instance.setDebugFunction(false)
                     // 进行提示
-                    ToastTintUtils.normal("已关闭 Debug 功能, 重启 APP 将会再次打开")
+                    ToastTintUtils.normal(R.string.str_close_debug_function.toResString())
                 }
                 return true
             }
         }
-        // 默认在左上角的位置
-        y = ScreenUtils.getScreenHeight() / 5
+        // 默认在左下角的位置
+        y = (ScreenUtils.getScreenHeight() * 0.7f).toInt()
     }
 
     /**

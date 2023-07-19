@@ -1,7 +1,7 @@
 package afkt_replace.core.router
 
+import afkt_replace.core.lib.router.module.AppRouter
 import com.alibaba.android.arouter.facade.Postcard
-import com.alibaba.android.arouter.launcher.ARouter
 
 /**
  * detail: Core Route Path
@@ -23,6 +23,6 @@ object CoreRouter {
      * 便于代码跳转直观、对外避免跳转错 [GROUP] ( Module )
      */
     fun build(path: String): Postcard {
-        return ARouter.getInstance().build(path, GROUP)
+        return AppRouter.buildByUri(path)
     }
 }

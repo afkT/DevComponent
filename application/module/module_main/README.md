@@ -54,11 +54,14 @@ dependencies {
 # main/res 目录结构
 
 ```
-- res                        
-   - layout                  
-   - mipmap-xhdpi            
-   - mipmap-xxhdpi           
-   - mipmap-xxxhdpi          
-   - values                  
-   - values-zh               
+- res                           
+   - drawable-anydpi            
+   - drawable-hdpi              
+   - drawable-mdpi              
+   - drawable-xhdpi             
+   - drawable-xxhdpi            
+   - layout                     
+   - menu                       
+   - values                     
+   - values-zh                  
 ```

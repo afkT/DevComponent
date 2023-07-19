@@ -20,14 +20,17 @@ android {
 
 dependencies {
 
-//    // clone CircleImageView 修改源码使用 ( 用于演示, 推荐使用 Material ShapeableImageView )
-//    implementation project(':lib_circle_igview') // 哪个 module 需要使用就单独依赖
-
     if (!isModular) { // 非组件化则加载各个模块
-        implementation project(':module_template')
-        implementation project(':module_main')
         implementation project(':module_splash')
-        implementation project(':module_user')
-        implementation project(':module_wanandroid')
+        implementation project(':module_main')
+        implementation project(':module_movie')
+        implementation project(':module_person')
+        implementation project(':module_tv')
+
+        // ==============
+        // = 模板 Module =
+        // ==============
+
+        implementation project(':module_template')
     }
 }

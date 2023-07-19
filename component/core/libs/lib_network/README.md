@@ -59,4 +59,5 @@ dependencies {
          - lib                     
             - network              
                - common            
+               - tmdb              
 ```

@@ -1,4 +1,7 @@
 apply from: rootProject.file(files.build_module_gradle)
 
 dependencies {
+
+    // 启动页广告 lib
+    implementation project(':lib_splash_ads')
 }

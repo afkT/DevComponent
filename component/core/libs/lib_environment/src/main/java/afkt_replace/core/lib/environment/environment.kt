@@ -46,7 +46,7 @@ enum class EnvironmentType(
 /**
  * detail: Build Config Field Environment Type 构建校验
  * @author Ttt
- * [HttpService] 新增模块则同步需要再以下方法进行添加处理
+ * [HttpService] 新增模块则同步需要在以下方法进行添加处理
  * [getModuleBean]、[getReleaseEnvironment]、[getEnvironment]、[setEnvironment]
  */
 internal object EnvironmentTypeChecker {
@@ -124,22 +124,23 @@ internal object EnvironmentTypeChecker {
      */
     fun getModuleBean(moduleName: String): ModuleBean {
         return when (moduleName) {
-            // 启动页 ( 广告页、首次启动引导页 ) 模块
+            // Splash Module
             BuildConfig.ENV_MODULE_SPLASH -> {
                 DevEnvironment.getSplashModule()
             }
-            // 用户模块
-            BuildConfig.ENV_MODULE_USER -> {
-                DevEnvironment.getUserModule()
+            // TMDB Movie Module
+            BuildConfig.ENV_MODULE_MOVIE -> {
+                DevEnvironment.getMovieModule()
             }
-            // 上传 lib
-            BuildConfig.ENV_LIB_CORE_LIB_UPLOAD -> {
-                DevEnvironment.getLibUploadModule()
+            // TMDB Person Module
+            BuildConfig.ENV_MODULE_PERSON -> {
+                DevEnvironment.getPersonModule()
             }
-            // 玩 Android 模块
-            BuildConfig.ENV_MODULE_WAN_ANDROID -> {
-                DevEnvironment.getWanAndroidModule()
+            // TMDB TV Module
+            BuildConfig.ENV_MODULE_TV -> {
+                DevEnvironment.getTvModule()
             }
+
             else -> {
                 EMPTY_MODULE
             }
@@ -153,22 +154,23 @@ internal object EnvironmentTypeChecker {
      */
     fun getReleaseEnvironment(moduleName: String): EnvironmentBean {
         return when (moduleName) {
-            // 启动页 ( 广告页、首次启动引导页 ) 模块
+            // Splash Module
             BuildConfig.ENV_MODULE_SPLASH -> {
                 DevEnvironment.getSplashReleaseEnvironment()
             }
-            // 用户模块
-            BuildConfig.ENV_MODULE_USER -> {
-                DevEnvironment.getUserReleaseEnvironment()
+            // TMDB Movie Module
+            BuildConfig.ENV_MODULE_MOVIE -> {
+                DevEnvironment.getMovieReleaseEnvironment()
             }
-            // 上传 lib
-            BuildConfig.ENV_LIB_CORE_LIB_UPLOAD -> {
-                DevEnvironment.getLibUploadReleaseEnvironment()
+            // TMDB Person Module
+            BuildConfig.ENV_MODULE_PERSON -> {
+                DevEnvironment.getPersonReleaseEnvironment()
             }
-            // 玩 Android 模块
-            BuildConfig.ENV_MODULE_WAN_ANDROID -> {
-                DevEnvironment.getWanAndroidReleaseEnvironment()
+            // TMDB TV Module
+            BuildConfig.ENV_MODULE_TV -> {
+                DevEnvironment.getTvReleaseEnvironment()
             }
+
             else -> {
                 EMPTY_ENVIRONMENT
             }
@@ -194,22 +196,23 @@ internal object EnvironmentTypeChecker {
     fun getEnvironment(moduleName: String): EnvironmentBean {
         val context = DevUtils.getContext()
         return when (moduleName) {
-            // 启动页 ( 广告页、首次启动引导页 ) 模块
+            // Splash Module
             BuildConfig.ENV_MODULE_SPLASH -> {
                 DevEnvironment.getSplashEnvironment(context)
             }
-            // 用户模块
-            BuildConfig.ENV_MODULE_USER -> {
-                DevEnvironment.getUserEnvironment(context)
+            // TMDB Movie Module
+            BuildConfig.ENV_MODULE_MOVIE -> {
+                DevEnvironment.getMovieEnvironment(context)
             }
-            // 上传 lib
-            BuildConfig.ENV_LIB_CORE_LIB_UPLOAD -> {
-                DevEnvironment.getLibUploadEnvironment(context)
+            // TMDB Person Module
+            BuildConfig.ENV_MODULE_PERSON -> {
+                DevEnvironment.getPersonEnvironment(context)
             }
-            // 玩 Android 模块
-            BuildConfig.ENV_MODULE_WAN_ANDROID -> {
-                DevEnvironment.getWanAndroidEnvironment(context)
+            // TMDB TV Module
+            BuildConfig.ENV_MODULE_TV -> {
+                DevEnvironment.getTvEnvironment(context)
             }
+
             else -> {
                 EMPTY_ENVIRONMENT
             }
@@ -242,22 +245,23 @@ internal object EnvironmentTypeChecker {
         }
         val context = DevUtils.getContext()
         return when (moduleName) {
-            // 启动页 ( 广告页、首次启动引导页 ) 模块
+            // Splash Module
             BuildConfig.ENV_MODULE_SPLASH -> {
                 DevEnvironment.setSplashEnvironment(context, newEnvironment)
             }
-            // 用户模块
-            BuildConfig.ENV_MODULE_USER -> {
-                DevEnvironment.setUserEnvironment(context, newEnvironment)
+            // TMDB Movie Module
+            BuildConfig.ENV_MODULE_MOVIE -> {
+                DevEnvironment.setMovieEnvironment(context, newEnvironment)
             }
-            // 上传 lib
-            BuildConfig.ENV_LIB_CORE_LIB_UPLOAD -> {
-                DevEnvironment.setLibUploadEnvironment(context, newEnvironment)
+            // TMDB Person Module
+            BuildConfig.ENV_MODULE_PERSON -> {
+                DevEnvironment.setPersonEnvironment(context, newEnvironment)
             }
-            // 玩 Android 模块
-            BuildConfig.ENV_MODULE_WAN_ANDROID -> {
-                DevEnvironment.setWanAndroidEnvironment(context, newEnvironment)
+            // TMDB TV Module
+            BuildConfig.ENV_MODULE_TV -> {
+                DevEnvironment.setTvEnvironment(context, newEnvironment)
             }
+
             else -> {
                 false
             }

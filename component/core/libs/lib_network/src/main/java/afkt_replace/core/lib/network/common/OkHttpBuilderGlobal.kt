@@ -3,10 +3,13 @@ package afkt_replace.core.lib.network.common
 import afkt_replace.core.lib.engine.debug.DevDebugEngine
 import afkt_replace.core.lib.network.BuildConfig
 import afkt_replace.core.lib.network.HttpCoreConst
+import afkt_replace.core.lib.network.tmdb.TMDBAPIInterceptor
 import dev.capture.CallbackInterceptor
+import dev.capture.CaptureInfo
+import dev.capture.IHttpCaptureEnd
+import dev.expand.engine.log.log_jsonTag
 import dev.http.manager.OkHttpBuilder
 import dev.http.manager.RetrofitBuilder
-import dev.kotlin.engine.log.log_jsonTag
 import okhttp3.OkHttpClient
 import java.util.concurrent.TimeUnit
 
@@ -54,6 +57,13 @@ class OkHttpBuilderGlobal : OkHttpBuilder {
             // 全局的连接超时时间
             connectTimeout(HttpCoreConst.CONNECT_TIMEOUT_MS, TimeUnit.MILLISECONDS)
 
+            // ========
+            // = TMDB =
+            // ========
+
+            // TMDB API 参数拦截器
+            addInterceptor(TMDBAPIInterceptor())
+
             // =============
             // = 不同版本构建 =
             // =============
@@ -99,14 +109,16 @@ class OkHttpBuilderGlobal : OkHttpBuilder {
     ) {
         builder.apply {
             // Http 抓包拦截器 ( 无存储逻辑, 进行回调通知 )
-            addInterceptor(CallbackInterceptor { info ->
-                // 打印 Http 请求信息 log
-                // tag 为 "key"_http_capture
-                val tag = "${key}_http_capture"
-                tag.log_jsonTag(
-                    json = info?.toJson()
-                )
-            })
+            addInterceptor(CallbackInterceptor(endCall = object : IHttpCaptureEnd {
+                override fun callEnd(info: CaptureInfo) {
+                    // 打印 Http 请求信息 log
+                    // tag 为 "key"_http_capture
+                    val tag = "${key}_http_capture"
+                    tag.log_jsonTag(
+                        json = info.toJson()
+                    )
+                }
+            }))
             // 添加 Http 抓包拦截处理
             DevDebugEngine.getEngine()?.addInterceptor(
                 builder, key

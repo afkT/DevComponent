@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="appUI"
+            type="afkt_replace.core.lib.ui.listener.AppUI" />
+
+        <variable
+            name="appListener"
+            type="afkt_replace.core.lib.ui.listener.AppListener" />
+
+        <variable
+            name="appThemeRes"
+            type="afkt_replace.core.lib.ui.skin.AppThemeRes" />
+
+        <variable
+            name="appThemeResBefore"
+            type="afkt_replace.core.lib.ui.skin.AppThemeRes" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/vid_status_bar"
+            layout="@layout/core_ui_base_status_bar"
+            binding:appThemeRes="@{appThemeRes}" />
+
+        <include
+            android:id="@+id/vid_title_bar"
+            layout="@layout/core_ui_base_title_bar"
+            binding:appListener="@{appListener}"
+            binding:appThemeRes="@{appThemeRes}"
+            binding:appUI="@{appUI}" />
+    </LinearLayout>
+</layout>

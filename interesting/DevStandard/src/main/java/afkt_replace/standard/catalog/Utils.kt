@@ -140,7 +140,9 @@ object Utils {
         // 插入文档尾部内容
         insertModuleTailREADME(builder, path)
 
-        val readme = builder.toString()
+        val readme = StringUtils.clearEndsWith(
+            builder.toString(), DevFinal.SYMBOL.NEW_LINE
+        )
         try {
             FileUtils.saveFile(
                 File(path, "README.md"),
@@ -364,7 +366,7 @@ object Utils {
             builder.append(DevFinal.SYMBOL.NEW_LINE).append(">").append(DevFinal.SYMBOL.NEW_LINE)
             builder.append("> 统一维护核心库依赖，对外只需要依赖该 Module 便可使用整个核心模块 ( core 文件以及内部所有 libs )")
             builder.append(DevFinal.SYMBOL.NEW_LINE_X2)
-            builder.append("## core/core_base_lib")
+            builder.append("# core/core_base_lib")
             builder.append(DevFinal.SYMBOL.NEW_LINE_X2)
             builder.append("> 该 Module 基于 Dev 系列开发库搭建，且不存在任何代码属于核心 lib 依赖 ( 全部开发基于该 module )")
             builder.append(DevFinal.SYMBOL.NEW_LINE).append(">").append(DevFinal.SYMBOL.NEW_LINE)
@@ -381,28 +383,10 @@ object Utils {
         builder: StringBuilder,
         path: String
     ) {
-        // 属于 lib_circle_igview lib
-        if (path.indexOf("lib_circle_igview") != -1) {
-            builder.append(DevFinal.SYMBOL.NEW_LINE)
-                .append("# Usage").append(DevFinal.SYMBOL.NEW_LINE_X2)
-                .append("```xml").append(DevFinal.SYMBOL.NEW_LINE)
-                .append("<de.hdodenhof.circleimageview.CircleImageView")
-                .append(DevFinal.SYMBOL.NEW_LINE)
-                .append("\txmlns:app=\"http://schemas.android.com/apk/res-auto\"")
-                .append(DevFinal.SYMBOL.NEW_LINE)
-                .append("\tandroid:id=\"@+id/vid_profile_civ\"")
-                .append(DevFinal.SYMBOL.NEW_LINE)
-                .append("\tandroid:layout_width=\"96dp\"")
-                .append(DevFinal.SYMBOL.NEW_LINE)
-                .append("\tandroid:layout_height=\"96dp\"")
-                .append(DevFinal.SYMBOL.NEW_LINE)
-                .append("\tandroid:src=\"@drawable/profile\"")
-                .append(DevFinal.SYMBOL.NEW_LINE)
-                .append("\tapp:civ_border_width=\"2dp\"")
-                .append(DevFinal.SYMBOL.NEW_LINE)
-                .append("\tapp:civ_border_color=\"#FF000000\"/>")
-                .append(DevFinal.SYMBOL.NEW_LINE)
-                .append("```")
+        // 属于 lib_splash_ads lib
+        if (path.indexOf("lib_splash_ads") != -1) {
+//            builder.append(DevFinal.SYMBOL.NEW_LINE)
+//                .append("# Usage").append(DevFinal.SYMBOL.NEW_LINE_X2)
         }
     }
 }

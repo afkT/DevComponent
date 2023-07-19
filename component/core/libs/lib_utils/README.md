@@ -15,8 +15,15 @@ dependencies {
     // = core - 核心开发库 =
     // ===================
 
-    // 通用 Engine ( 图片加载、日志、JSON、权限、资源选择 等 ) lib
-    compileOnly project(':core_lib_engine')
+    // 通用 UI 样式、资源、交互、控件 lib
+    compileOnly project(':core_lib_ui')
+
+    // ====================
+    // = libs - 第三方库依赖 =
+    // ====================
+
+    // Android 平台下的图片选择器 https://github.com/LuckSiege/PictureSelector
+    api deps_split.lib.pictureSelector
 }
 ```
 
@@ -37,24 +44,8 @@ dependencies {
             - utils            
    - dev                       
       - kotlin                 
-         - engine              
-            - analytics        
-            - barcode          
-            - cache            
-            - compress         
-            - image            
-            - json             
-            - keyvalue         
-            - log              
-            - media            
-            - permission       
-            - push             
-            - share            
-            - storage          
          - utils               
             - image            
-            - price            
-            - size             
 ```
 
 

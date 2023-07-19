@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_nav_movie"
+        android:checked="true"
+        android:icon="@drawable/icon_movie_white"
+        android:title="@string/str_movie" />
+
+    <item
+        android:id="@+id/action_nav_tv"
+        android:icon="@drawable/icon_tv_white"
+        android:title="@string/str_tv" />
+
+    <item
+        android:id="@+id/action_nav_person"
+        android:icon="@drawable/icon_person_white"
+        android:title="@string/str_person" />
+</menu>

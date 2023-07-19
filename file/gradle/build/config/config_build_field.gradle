@@ -1,0 +1,39 @@
+// =================
+// = 字段信息统一处理 =
+// =================
+
+// 获取 lib 名 => settings.gradle 例 include ':core_lib_engine'
+def libName = project.getName() // core_lib_engine
+
+/**
+ * 读取 properties 配置属性
+ */
+def getProperty(
+        def filename,
+        def propName
+) {
+    def propsFile = rootProject.file(filename)
+    if (propsFile.exists()) {
+        def props = new Properties()
+        props.load(new FileInputStream(propsFile))
+        if (props[propName] != null) {
+            return props[propName]
+        } else {
+            println("No such property " + propName + " in file " + filename)
+        }
+    } else {
+        println(filename + " does not exist!")
+    }
+}
+
+// =============
+// = 特殊字段创建 =
+// =============
+
+// core/libs/lib_network Module 构建字段创建
+if (libName == "core_lib_network") {
+    android.defaultConfig {
+        // https://www.themoviedb.org API Key
+        buildConfigField("String", "TMDB_API_KEY", "\"${getProperty("api_key.properties", "tmdb_api_key")}\"")
+    }
+}

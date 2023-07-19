@@ -40,5 +40,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- End Page -->
+
+        <activity
+            android:name=".feature.end.EndActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:screenOrientation="portrait" />
     </application>
 </manifest>

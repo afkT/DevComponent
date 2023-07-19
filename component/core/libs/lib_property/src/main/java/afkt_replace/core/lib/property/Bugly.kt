@@ -13,7 +13,7 @@ import dev.utils.app.ProcessUtils
  */
 object Bugly {
 
-    val KEY = "bugly_key"
+    const val KEY = "bugly_key"
 
     /**
      * 初始化 Bugly

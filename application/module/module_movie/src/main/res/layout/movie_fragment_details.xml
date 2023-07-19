@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:binding="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="afkt_replace.module.movie.feature.details.MovieDetailsViewModel" />
+
+        <variable
+            name="appUI"
+            type="afkt_replace.core.lib.ui.listener.AppUI" />
+
+        <variable
+            name="appListener"
+            type="afkt_replace.core.lib.ui.listener.AppListener" />
+
+        <variable
+            name="appThemeRes"
+            type="afkt_replace.core.lib.ui.skin.AppThemeRes" />
+
+        <!-- 对应变量 -->
+
+        <variable
+            name="details"
+            type="androidx.lifecycle.MutableLiveData&lt;MovieDetails&gt;" />
+
+        <variable
+            name="poster"
+            type="androidx.lifecycle.MutableLiveData&lt;MoviePosterImages&gt;" />
+
+        <import type="dev.utils.common.StringUtils" />
+
+        <import type="afkt_replace.core.lib.utils.TMDBImageUrlKt" />
+
+        <import type="afkt_replace.core.lib.bean.movie.MovieDetails" />
+
+        <import type="afkt_replace.core.lib.bean.movie.MoviePosterImages" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@{appThemeRes.themeBackground}">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <afkt_replace.core.lib.ui.widget.BaseImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_0"
+                        android:scaleType="centerCrop"
+                        app:binding_source_anim="@{TMDBImageUrlKt.toTMDBImageSourceEmpty(details.imagePath())}"
+                        app:layout_constraintDimensionRatio="H,7:10"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="1"
+                        tools:background="@drawable/tools_image" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <afkt_replace.core.lib.ui.widget.BaseTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_marginEnd="@dimen/dp_15"
+                    android:text="@{details.release_date}"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_20"
+                    android:textStyle="bold"
+                    tools:text="2023-05-03" />
+
+                <afkt_replace.core.lib.ui.widget.BaseTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_15"
+                    android:text="@{details.title()}"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_26"
+                    android:textStyle="bold"
+                    tools:text="Guardians of the Galaxy Vol. 3" />
+
+                <afkt_replace.core.lib.ui.widget.BaseTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_15"
+                    android:text="@{details.overview}"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_15"
+                    android:textStyle="bold"
+                    tools:text="Peter Quill, still reeling from the loss of Gamora" />
+
+                <afkt_replace.core.lib.ui.widget.BaseTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_15"
+                    android:text="@string/str_poster"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_22"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:cacheColorHint="@color/transparent"
+                    android:clipToPadding="false"
+                    android:divider="@null"
+                    android:fadingEdge="none"
+                    android:listSelector="@null"
+                    android:orientation="horizontal"
+                    android:overScrollMode="never"
+                    android:paddingStart="@dimen/dp_15"
+                    android:paddingEnd="@dimen/dp_15"
+                    android:paddingBottom="@dimen/dp_4"
+                    android:scrollbars="none"
+                    app:adapter="@{viewModel.moviePosterItem.adapter}"
+                    app:itemBinding="@{viewModel.moviePosterItem.itemBinding}"
+                    app:items="@{viewModel.moviePosterItem.items}"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:itemCount="5"
+                    tools:listitem="@layout/tmdb_movie_poster" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <include
+            android:id="@+id/vid_header"
+            layout="@layout/core_ui_base_header"
+            binding:appListener="@{appListener}"
+            binding:appThemeRes="@{appThemeRes}"
+            binding:appUI="@{appUI}" />
+    </FrameLayout>
+</layout>

@@ -75,6 +75,10 @@ object FloatingDebug {
                 if (name.contains(".splash.")) {
                     return
                 }
+                // 属于 Debug 辅助页面不添加
+                if (name.contains(".DebugMainContainerActivity")) {
+                    return
+                }
 
                 // 可自行添加过滤页面
                 // xxxx

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/PopularPersonFragment">
+
+    <fragment
+        android:id="@+id/PopularPersonFragment"
+        android:name="afkt_replace.module.person.feature.popular.PopularPersonFragment"
+        android:label="PopularPersonFragment" />
+
+    <fragment
+        android:id="@+id/PersonDetailsFragment"
+        android:name="afkt_replace.module.person.feature.details.PersonDetailsFragment"
+        android:label="PersonDetailsFragment" />
+</navigation>

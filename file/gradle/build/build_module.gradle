@@ -13,19 +13,8 @@ if (isModular) { // 每个模块都是独立应用
 
 // 版本构建截取、设置处理
 apply from: rootProject.file(files.config_build_version_gradle)
-
-kapt {
-    arguments {
-        arg("AROUTER_MODULE_NAME", project.getName())
-    }
-}
-
-dependencies {
-
-    // ARouter 路由 https://github.com/alibaba/ARouter
-    api deps.lib.arouter_api // https://github.com/alibaba/ARouter/blob/master/README_CN.md
-    kapt deps.lib.arouter_compiler
-}
+// Router Module 构建配置
+apply from: rootProject.file(files.build_router_module_gradle)
 
 android {
     sourceSets {

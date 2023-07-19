@@ -17,71 +17,63 @@ internal class HttpService private constructor() {
     // = Module =
     // ==========
 
-    @Module(alias = "启动页 ( 广告页、首次启动引导页 ) 模块")
+    @Module(alias = "Splash Module")
     private inner class Splash {
-        @Environment(value = "https://splash-release.com", isRelease = true, alias = "生产环境")
+        @Environment(value = "https://api.themoviedb.org", isRelease = true, alias = "release")
         private val release: String? = null
 
-        @Environment(value = "http://splash-debug.com", alias = "测试环境")
+        @Environment(value = "https://api.themoviedb.org", alias = "debug")
         private val debug: String? = null
 
-        @Environment(value = "http://splash-pre_release.com", alias = "预发布环境")
+        @Environment(value = "https://api.themoviedb.org", alias = "pre-release")
         private val pre_release: String? = null
 
-        @Environment(value = "http://splash-development.com", alias = "开发环境")
+        @Environment(value = "https://api.themoviedb.org", alias = "development")
         private val development: String? = null
     }
 
-    @Module(alias = "用户模块")
-    private inner class User {
-        @Environment(value = "https://user-release.com", isRelease = true, alias = "生产环境")
+    @Module(alias = "TMDB Movie Module")
+    private inner class Movie {
+        @Environment(value = "https://api.themoviedb.org", isRelease = true, alias = "release")
         private val release: String? = null
 
-        @Environment(value = "http://user-debug.com", alias = "测试环境")
+        @Environment(value = "https://api.themoviedb.org", alias = "debug")
         private val debug: String? = null
 
-        @Environment(value = "http://user-pre_release.com", alias = "预发布环境")
+        @Environment(value = "https://api.themoviedb.org", alias = "pre-release")
         private val pre_release: String? = null
 
-        @Environment(value = "http://user-development.com", alias = "开发环境")
+        @Environment(value = "https://api.themoviedb.org", alias = "development")
         private val development: String? = null
     }
 
-    // =======
-    // = Lib =
-    // =======
-
-    @Module(alias = "上传 Libs")
-    private inner class LibUpload {
-        @Environment(value = "https://upload-release.com", isRelease = true, alias = "生产环境")
+    @Module(alias = "TMDB Person Module")
+    private inner class Person {
+        @Environment(value = "https://api.themoviedb.org", isRelease = true, alias = "release")
         private val release: String? = null
 
-        @Environment(value = "http://upload-debug.com", alias = "测试环境")
+        @Environment(value = "https://api.themoviedb.org", alias = "debug")
         private val debug: String? = null
 
-        @Environment(value = "http://upload-pre_release.com", alias = "预发布环境")
+        @Environment(value = "https://api.themoviedb.org", alias = "pre-release")
         private val pre_release: String? = null
 
-        @Environment(value = "http://upload-development.com", alias = "开发环境")
+        @Environment(value = "https://api.themoviedb.org", alias = "development")
         private val development: String? = null
     }
 
-    // ==============================
-    // = Module - WanAndroid 演示模块 =
-    // ==============================
-
-    @Module(alias = "玩 Android 模块")
-    private inner class WanAndroid {
-        @Environment(value = "https://www.wanandroid.com", isRelease = true, alias = "生产环境")
+    @Module(alias = "TMDB TV Module")
+    private inner class Tv {
+        @Environment(value = "https://api.themoviedb.org", isRelease = true, alias = "release")
         private val release: String? = null
 
-        @Environment(value = "https://www.wanandroid.com", alias = "测试环境")
+        @Environment(value = "https://api.themoviedb.org", alias = "debug")
         private val debug: String? = null
 
-        @Environment(value = "https://www.wanandroid.com", alias = "预发布环境")
+        @Environment(value = "https://api.themoviedb.org", alias = "pre-release")
         private val pre_release: String? = null
 
-        @Environment(value = "https://www.wanandroid.com", alias = "开发环境")
+        @Environment(value = "https://api.themoviedb.org", alias = "development")
         private val development: String? = null
     }
 }

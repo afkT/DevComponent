@@ -1,0 +1,3 @@
+package afkt_replace.module.template
+
+class TemplateRepository

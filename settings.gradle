@@ -18,15 +18,11 @@ def modules = [
         // = 各个功能模块 =
         // =============
 
-        "module_main",
         "module_splash",
-        "module_user",
-
-        // =========================
-        // = DevHttpManager 演示模块 =
-        // =========================
-
-        "module_wanandroid",
+        "module_main",
+        "module_movie",
+        "module_person",
+        "module_tv",
 ]
 
 modules.forEach {
@@ -45,17 +41,21 @@ def cores = [
         "core",
         "core_base_lib",
         "core_lib_base",
+        "core_lib_base_split",
         "core_lib_bean",
         "core_lib_channel_flavors",
         "core_lib_config",
         "core_lib_debug_assist",
         "core_lib_engine",
         "core_lib_environment",
+        "core_lib_language",
+        "core_lib_mvvm",
         "core_lib_network",
         "core_lib_property",
         "core_lib_receiver",
         "core_lib_router",
         "core_lib_ui",
+        "core_lib_ui_skin",
         "core_lib_upload",
         "core_lib_utils",
         "core_lib_web",
@@ -79,7 +79,8 @@ cores.forEach {
 // ====================
 
 def libs = [
-        "lib_circle_igview",
+        "lib_splash_ads",
+        "lib_tmdb_ui",
 ]
 
 libs.forEach {
@@ -92,7 +93,6 @@ libs.forEach {
 // ========================
 
 def interestings = [
-        "DevLogo",
         "DevReplace",
         "DevStandard",
 ]

@@ -1,64 +1,58 @@
 package afkt_replace.module.splash
 
-import afkt_replace.core.lib.base.app.BaseActivityViewBinding
-import afkt_replace.core.lib.bean.ThemeStyle
-import afkt_replace.core.lib.router.module.splash.SplashNav
+import afkt_replace.core.lib.base.app.BaseAppActivity
+import afkt_replace.core.lib.base.controller.ui.theme.defaultAppLauncherUITheme
+import afkt_replace.core.lib.base.split.data.IntentData
 import afkt_replace.core.lib.router.module.splash.SplashRouter
-import android.content.Intent
-import android.os.Bundle
-import android.view.View
-import android.widget.ImageView
+import afkt_replace.lib.splash.ads.SplashAdsEvent
+import afkt_replace.module.splash.databinding.SplashActivityBinding
 import androidx.lifecycle.lifecycleScope
-import androidx.viewbinding.ViewBinding
-import com.alibaba.android.arouter.core.LogisticsCenter
+import androidx.navigation.findNavController
 import com.alibaba.android.arouter.facade.annotation.Route
-import dev.utils.DevFinal
-import dev.utils.app.toast.ToastTintUtils
-import kotlinx.coroutines.delay
+import com.jeremyliao.liveeventbus.LiveEventBus
+import dev.expand.engine.json.toJson
+import dev.utils.app.ActivityUtils
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import me.jessyan.autosize.internal.CancelAdapt
 
 @Route(path = SplashRouter.PATH_LAUNCHER, group = SplashRouter.GROUP)
-class AppLauncherActivity : BaseActivityViewBinding<ViewBinding>() {
+class AppLauncherActivity : BaseAppActivity<SplashActivityBinding, SplashViewModel>(
+    R.layout.splash_activity, BR.viewModel, simple_UITheme = {
+        it.defaultAppLauncherUITheme()
+    }
+),
+    CancelAdapt {
 
-    override fun baseLayoutId(): Int = 0
+    // ============
+    // = 初始化操作 =
+    // ============
 
-    override fun isViewBinding(): Boolean = false
-
-    override fun isContentAssistSafe(): Boolean = true
-
-    override fun isAddTitleBar(): Boolean = false
-
-    override fun isAddStatusBar(): Boolean = false
-
-    override fun isStatusBarFrame(): Boolean = false
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        val value = if (BuildConfig.isModular) "【模块化运行】" else "【整合运行】"
-
-        ToastTintUtils.normal("延迟进入【首页容器页】")
-
-        lifecycleScope.launch {
-            delay(2000L)
-            // 直接通过 postcard.navigation() 跳转会显示 AppTheme.Launcher style windowBackground
-            val postcard = SplashNav.buildAppMain()
-                .withObject(DevFinal.STR.STYLE, ThemeStyle(value))
-            try {
-                LogisticsCenter.completion(postcard)
-                val intent = Intent(mActivity, postcard.destination)
-                intent.putExtras(postcard.extras)
-                startActivity(intent)
-            } catch (e: Exception) {
-            }
-            finish()
-        }
+    override fun onBackPressed() {
+        ActivityUtils.getManager().finishAllActivity()
+        finish()
     }
 
-    override fun baseLayoutView(): View {
-        return ImageView(this).apply {
-            setBackgroundResource(R.drawable.launcher_gradient_bg)
-            scaleType = ImageView.ScaleType.FIT_XY
+    override fun initListener() {
+        super.initListener()
+
+        LiveEventBus.get(SplashAdsEvent::class.java)
+            .observe(this) {
+                viewModel.routerAppMain(mActivity, it.ads)
+            }
+
+        // 获取广告数据
+        viewModel.queryAds().observe(this) { ads ->
+            if (ads.previewTime <= 0) {
+                viewModel.routerAppMain(mActivity, ads)
+            } else {
+                lifecycleScope.launch(Dispatchers.Main) {
+                    val args = IntentData.with().setAds(ads.toJson())
+                    binding.navContainer.findNavController().navigate(
+                        R.id.SplashAdsFragment, args.insert()
+                    )
+                }
+            }
         }
     }
 }

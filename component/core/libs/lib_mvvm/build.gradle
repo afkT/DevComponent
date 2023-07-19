@@ -1,0 +1,18 @@
+apply from: rootProject.file(files.build_library_gradle)
+
+/**
+ * 推荐不依赖任何额外的库, 防止多层级重复依赖冲突
+ * 存粹的 MVVM 实现
+ */
+dependencies {
+
+    // 核心基础依赖库 ( 编译但不参与打包 )
+    compileOnly project(':core_base_lib')
+
+    // ===================
+    // = core - 核心开发库 =
+    // ===================
+
+    // 通用 UI 样式、资源、交互、控件 lib
+    compileOnly project(':core_lib_ui')
+}

@@ -3,7 +3,6 @@ package afkt_replace.core.app
 import afkt_replace.core.lib.base.core.AppChannel
 import afkt_replace.core.lib.base.core.AppDebug
 import afkt_replace.core.lib.base.core.BaseAppContext
-import afkt_replace.core.lib.property.BlockCanaryKT
 import afkt_replace.core.lib.property.Bugly
 import afkt_replace.core.lib.property.BuglyConfig
 import afkt_replace.core.property.FloatingDebug
@@ -45,8 +44,6 @@ open class AppContext : BaseAppContext(),
         getBuglyConfig()?.let { config ->
             Bugly.initialize(this, config)
         }
-        // BlockCanary
-        BlockCanaryKT.initialize(this)
         // Debug 悬浮窗处理
         FloatingDebug.initialize(this)
     }

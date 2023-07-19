@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="ResourceName">
 
-    <!-- 线条 -->
-    <dimen name="line_0_5">0.5dp</dimen>
-
-    <!-- 边框 ( 描边 ) 宽度 -->
-    <dimen name="border_width_1">1.0dp</dimen>
-
-    <!-- 圆角角度 -->
-    <dimen name="radius_3">3.0dp</dimen>
-
-    <!-- NavigationView 顶部背景高度 -->
-    <dimen name="nav_header_height">176.0dp</dimen>
-
     <!--
         直接通过 dp_xxx 去使用, 不区分 line、border、radius 等
         除非某些主题、模块相关则以指定标识新增, 如: nav_header_height

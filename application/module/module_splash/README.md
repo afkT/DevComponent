@@ -7,6 +7,9 @@
 
 ```groovy
 dependencies {
+
+    // 启动页广告 lib
+    implementation project(':lib_splash_ads')
 }
 ```
 
@@ -43,16 +46,16 @@ dependencies {
       - module                
          - splash             
             - base            
+            - feature         
 ```
 
 
 # main/res 目录结构
 
 ```
-- res                        
-   - mipmap-xhdpi            
-   - mipmap-xxhdpi           
-   - mipmap-xxxhdpi          
-   - values                  
-   - values-zh               
+- res                  
+   - layout            
+   - navigation        
+   - values            
+   - values-zh         
 ```

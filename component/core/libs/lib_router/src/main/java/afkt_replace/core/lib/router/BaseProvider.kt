@@ -17,7 +17,7 @@ const val PROVIDER_INIT_TAG = "Provider_Init"
  * detail: BaseProvider 扩展类
  * @author Ttt
  */
-open class BaseProviderExt(val TAG: String) {
+open class BaseProviderExt(TAG: String) {
 
     init {
         printProviderInitialize(TAG)

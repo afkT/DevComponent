@@ -55,7 +55,7 @@ ext {
     modularVersion = [
             // 主程序 ( 壳 ) 版本信息
             // TODO 非模块化情况下, 打包最终使用该信息 ( "app" 根据 project.getName() )
-            "app"              : [
+            "app"            : [
                     // 版本号
                     versionCode   : 100,
                     // 版本名
@@ -65,36 +65,10 @@ ext {
                     // 模块名
                     moduleName    : "APP",
                     // 模块功能版本标识 ( 需求、RP 版本 )
-                    featureVersion: "22.01.01",
-            ],
-            // 模板 Module ( 便于 copy )
-            "module_template"  : [
-                    // 版本号
-                    versionCode   : 100,
-                    // 版本名
-                    versionName   : "1.0.0",
-                    // 包名
-                    applicationId : "afkt_replace.module.template",
-                    // 模块名
-                    moduleName    : "TEMPLATE",
-                    // 模块功能版本标识 ( 需求、RP 版本 )
-                    featureVersion: "22.01.01",
-            ],
-            // 首页 Module
-            "module_main"      : [
-                    // 版本号
-                    versionCode   : 100,
-                    // 版本名
-                    versionName   : "1.0.0",
-                    // 包名
-                    applicationId : "afkt_replace.module.main",
-                    // 模块名
-                    moduleName    : "MAIN",
-                    // 模块功能版本标识 ( 需求、RP 版本 )
-                    featureVersion: "22.01.01",
+                    featureVersion: "23.01.01",
             ],
             // 启动页 ( 广告页、首次启动引导页 ) Module
-            "module_splash"    : [
+            "module_splash"  : [
                     // 版本号
                     versionCode   : 100,
                     // 版本名
@@ -104,38 +78,72 @@ ext {
                     // 模块名
                     moduleName    : "SPLASH",
                     // 模块功能版本标识 ( 需求、RP 版本 )
-                    featureVersion: "22.01.01",
+                    featureVersion: "23.01.01",
             ],
-            // 用户 Module
-            "module_user"      : [
+            // 首页 Module
+            "module_main"    : [
                     // 版本号
                     versionCode   : 100,
                     // 版本名
                     versionName   : "1.0.0",
                     // 包名
-                    applicationId : "afkt_replace.module.user",
+                    applicationId : "afkt_replace.module.main",
                     // 模块名
-                    moduleName    : "USER",
+                    moduleName    : "MAIN",
                     // 模块功能版本标识 ( 需求、RP 版本 )
-                    featureVersion: "22.01.01",
+                    featureVersion: "23.01.01",
             ],
-
-            // =========================
-            // = DevHttpManager 演示模块 =
-            // =========================
-
-            // WanAndroid Module
-            "module_wanandroid": [
+            // Movie Module
+            "module_movie"   : [
                     // 版本号
                     versionCode   : 100,
                     // 版本名
                     versionName   : "1.0.0",
                     // 包名
-                    applicationId : "afkt_replace.module.wan_android",
+                    applicationId : "afkt_replace.module.movie",
                     // 模块名
-                    moduleName    : "WAN_ANDROID",
+                    moduleName    : "MOVIE",
                     // 模块功能版本标识 ( 需求、RP 版本 )
-                    featureVersion: "22.01.01",
+                    featureVersion: "23.01.01",
+            ],
+            // Person Module
+            "module_person"  : [
+                    // 版本号
+                    versionCode   : 100,
+                    // 版本名
+                    versionName   : "1.0.0",
+                    // 包名
+                    applicationId : "afkt_replace.module.person",
+                    // 模块名
+                    moduleName    : "PERSON",
+                    // 模块功能版本标识 ( 需求、RP 版本 )
+                    featureVersion: "23.01.01",
+            ],
+            // TV Module
+            "module_tv"      : [
+                    // 版本号
+                    versionCode   : 100,
+                    // 版本名
+                    versionName   : "1.0.0",
+                    // 包名
+                    applicationId : "afkt_replace.module.tv",
+                    // 模块名
+                    moduleName    : "TV",
+                    // 模块功能版本标识 ( 需求、RP 版本 )
+                    featureVersion: "23.01.01",
+            ],
+            // 模板 Module ( 便于 copy )
+            "module_template": [
+                    // 版本号
+                    versionCode   : 100,
+                    // 版本名
+                    versionName   : "1.0.0",
+                    // 包名
+                    applicationId : "afkt_replace.module.template",
+                    // 模块名
+                    moduleName    : "TEMPLATE",
+                    // 模块功能版本标识 ( 需求、RP 版本 )
+                    featureVersion: "23.01.01",
             ],
     ]
 
@@ -181,6 +189,16 @@ ext {
                     versionName: "1.0.0",
                     // 模块名
                     moduleName : "CORE_LIB_BASE",
+            ],
+
+            // 基础 ( 基类等 ) lib 拆包
+            "core_lib_base_split"     : [
+                    // 版本号
+                    versionCode: 100,
+                    // 版本名
+                    versionName: "1.0.0",
+                    // 模块名
+                    moduleName : "CORE_LIB_BASE_SPLIT",
             ],
 
             // 通用实体类 lib
@@ -243,6 +261,26 @@ ext {
                     moduleName : "CORE_LIB_ENVIRONMENT",
             ],
 
+            // 通用多语言 lib
+            "core_lib_language"       : [
+                    // 版本号
+                    versionCode: 100,
+                    // 版本名
+                    versionName: "1.0.0",
+                    // 模块名
+                    moduleName : "CORE_LIB_LANGUAGE",
+            ],
+
+            // MVVM 通用代码封装
+            "core_lib_mvvm"           : [
+                    // 版本号
+                    versionCode: 100,
+                    // 版本名
+                    versionName: "1.0.0",
+                    // 模块名
+                    moduleName : "CORE_LIB_MVVM",
+            ],
+
             // 网络相关 lib ( 网络请求、上传下载 )
             "core_lib_network"        : [
                     // 版本号
@@ -291,6 +329,16 @@ ext {
                     versionName: "1.0.0",
                     // 模块名
                     moduleName : "CORE_LIB_UI",
+            ],
+
+            // APP 主题、换肤相关控制
+            "core_lib_ui_skin"        : [
+                    // 版本号
+                    versionCode: 100,
+                    // 版本名
+                    versionName: "1.0.0",
+                    // 模块名
+                    moduleName : "CORE_LIB_UI_SKIN",
             ],
 
             // 通用上传库

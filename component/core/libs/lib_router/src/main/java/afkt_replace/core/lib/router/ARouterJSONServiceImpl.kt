@@ -3,8 +3,8 @@ package afkt_replace.core.lib.router
 import android.content.Context
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.alibaba.android.arouter.facade.service.SerializationService
-import dev.kotlin.engine.json.fromJson
-import dev.kotlin.engine.json.toJson
+import dev.expand.engine.json.fromJson
+import dev.expand.engine.json.toJson
 import java.lang.reflect.Type
 
 /**

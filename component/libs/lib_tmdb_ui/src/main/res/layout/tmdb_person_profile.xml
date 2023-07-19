@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="afkt_replace.core.lib.utils.TMDBUtils" />
+
+        <import
+            alias="TMDBPerson"
+            type="afkt_replace.core.lib.bean.person.TMDBPerson" />
+
+        <variable
+            name="itemClick"
+            type="dev.mvvm.command.BindingClick&lt;TMDBPerson&gt;" />
+
+        <variable
+            name="itemValue"
+            type="TMDBPerson" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:onClick="@{() -> itemClick.onClick(itemValue)}">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vid_guide_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="@dimen/dp_10"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <FrameLayout
+            android:id="@+id/vid_profile_fl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vid_guide_top"
+            app:layout_constraintWidth_percent="1">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/profile_card_margin"
+                android:background="@color/white"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardCornerRadius="@dimen/profile_radius"
+                app:cardElevation="@dimen/profile_card_elevation"
+                tools:targetApi="lollipop">
+
+                <afkt_replace.core.lib.ui.widget.BaseImageView
+                    android:id="@+id/vid_profile_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    tools:background="@drawable/tools_image" />
+
+                <FrameLayout
+                    android:id="@+id/vid_placeholder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </androidx.cardview.widget.CardView>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_3"
+            android:layout_marginRight="@dimen/dp_3"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vid_profile_fl"
+            app:layout_constraintWidth_percent="0.8">
+
+            <afkt_replace.core.lib.ui.widget.BaseTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:text="@{itemValue.name}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_18"
+                android:textStyle="bold"
+                tools:text="Aya Asahina" />
+
+            <afkt_replace.core.lib.ui.widget.BaseTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@{itemValue.knownSplicing()}"
+                android:textColor="@color/color_66"
+                android:textSize="@dimen/sp_14"
+                tools:text="弥留之国的爱丽丝,碧蓝之海" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

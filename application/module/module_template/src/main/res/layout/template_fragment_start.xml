@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="afkt_replace.module.template.feature.start.StartViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <dev.widget.ui.round.RoundTextView
+            android:layout_width="@dimen/dp_230"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingStart="@dimen/dp_5"
+            android:paddingTop="@dimen/dp_15"
+            android:paddingEnd="@dimen/dp_5"
+            android:paddingBottom="@dimen/dp_15"
+            android:text="@string/str_start_end"
+            android:textColor="@color/white"
+            app:binding_click="@{viewModel.onClickEnd}"
+            app:dev_backgroundColor="@color/colorPrimary"
+            app:dev_isRadiusAdjustBounds="true" />
+    </FrameLayout>
+</layout>

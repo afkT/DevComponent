@@ -2,7 +2,7 @@ package afkt_replace.core.lib.web
 
 import afkt_replace.core.lib.web.assist.WebViewAssist
 import android.webkit.WebSettings
-import dev.kotlin.engine.log.log_d
+import dev.expand.engine.log.log_d
 import dev.utils.app.PathUtils
 
 /**

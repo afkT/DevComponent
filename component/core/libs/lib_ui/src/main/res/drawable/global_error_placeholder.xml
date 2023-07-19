@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="ResourceName">
+
+    <item android:id="@android:id/background">
+        <color android:color="@color/color_d7" />
+    </item>
+
+    <item
+        android:bottom="@dimen/dp_5"
+        android:gravity="center"
+        android:left="@dimen/dp_5"
+        android:right="@dimen/dp_5"
+        android:top="@dimen/dp_5">
+        <scale
+            android:drawable="@mipmap/icon_launcher"
+            android:scaleWidth="50%"
+            android:scaleHeight="50%" />
+    </item>
+</layer-list>

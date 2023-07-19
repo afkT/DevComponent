@@ -117,7 +117,6 @@ object Config {
         // ===============
 
         sInterestingCatalogMap["interesting"] = "根目录"
-        sInterestingCatalogMap[".DevLogo"] = "生成各个 Module 文字 Logo"
         sInterestingCatalogMap[".DevReplace"] = "快捷替换组件化模板包名"
         sInterestingCatalogMap[".DevStandard"] = "项目规范统一检测、生成替换等"
 
@@ -138,18 +137,25 @@ object Config {
         sCoreCatalogMap[".core_base_lib"] = "基础核心开发库依赖 ( libs 便捷依赖统一维护 )"
         sCoreCatalogMap[".libs"] = "具体功能拆分, 封装 lib"
         sCoreCatalogMap[".libs.lib_base"] = "基类相关 ( Activity、Application 等 )"
+        sCoreCatalogMap[".libs.lib_base_split"] = "基础 ( 基类等 ) lib 拆包"
         sCoreCatalogMap[".libs.lib_bean"] = "通用实体类 ( module 实体类下沉 )"
         sCoreCatalogMap[".libs.lib_channel_flavors"] = "App 多渠道"
         sCoreCatalogMap[".libs.lib_config"] = "通用配置、常量信息"
-        sCoreCatalogMap[".libs.lib_debug_assist"] = "Debug 编译辅助开发库 ( 提供切换环境、抓包数据可视化、调试按钮开关等辅助功能 )"
-        sCoreCatalogMap[".libs.lib_engine"] = "通用 Engine ( 图片加载、日志、JSON、权限、资源选择、缓存 ) lib"
+        sCoreCatalogMap[".libs.lib_debug_assist"] =
+            "Debug 编译辅助开发库 ( 提供切换环境、抓包数据可视化、调试按钮开关等辅助功能 )"
+        sCoreCatalogMap[".libs.lib_engine"] =
+            "通用 Engine ( 图片加载、日志、JSON、权限、资源选择、缓存 ) lib"
         sCoreCatalogMap[".libs.lib_environment"] = "通用环境配置切换库"
+        sCoreCatalogMap[".libs.lib_mvvm"] =
+            "MVVM 通用代码封装 ( 使用 MVVM module 必须 api 依赖如果使用 compileOnly 将会找不到 BindingAdapter 等 )"
+        sCoreCatalogMap[".libs.lib_language"] = "通用多语言 lib"
         sCoreCatalogMap[".libs.lib_network"] = "网络相关 lib ( 网络请求、上传下载 )"
         sCoreCatalogMap[".libs.lib_property"] = "性能优化、检测 lib"
         sCoreCatalogMap[".libs.lib_receiver"] = "广播监听 ( 如网络状态、电量、屏幕解锁 ) 相关"
         sCoreCatalogMap[".libs.lib_router"] = "路由相关"
         sCoreCatalogMap[".libs.lib_ui"] = "统一 style、widget、ui 相关组件"
         sCoreCatalogMap[".libs.lib_upload"] = "通用上传库"
+        sCoreCatalogMap[".libs.lib_ui_skin"] = "APP 主题、换肤相关控制"
         sCoreCatalogMap[".libs.lib_utils"] = "通用工具库"
         sCoreCatalogMap[".libs.lib_web"] = "WebView 相关"
 
@@ -163,11 +169,12 @@ object Config {
         // ===================
 
         sLibsCatalogMap["libs"] = "根目录"
-        sLibsCatalogMap[".lib_circle_igview"] = "clone CircleImageView 修改源码使用 ( 例 )"
+        sLibsCatalogMap[".lib_splash_ads"] = "启动页广告 lib"
+        sLibsCatalogMap[".lib_tmdb_ui"] = "TheMovieDB 通用 UI lib"
 
         sLibsAboutMap.putAll(sLibsCatalogMap)
-        sLibsAboutMap[".lib_circle_igview"] =
-            "clone CircleImageView 修改源码使用 ( 用于演示, 推荐使用 Material ShapeableImageView )"
+        sLibsAboutMap[".lib_splash_ads"] = "启动页 module 依赖 lib，用于校验是否存在广告需要展示"
+        sLibsAboutMap[".lib_tmdb_ui"] = "TheMovieDB 通用 UI、适配器依赖库"
 
         // ===============
         // = Application =
@@ -184,12 +191,16 @@ object Config {
         sModuleCatalogMap["module"] = "根目录"
         sModuleCatalogMap[".module_template"] = "模板 Module ( 便于 copy )"
         sModuleCatalogMap[".module_main"] = "首页 Module"
+        sModuleCatalogMap[".module_movie"] = "电影 Module"
+        sModuleCatalogMap[".module_person"] = "人物 Module"
         sModuleCatalogMap[".module_splash"] = "启动页 ( 广告页、首次启动引导页 ) Module"
-        sModuleCatalogMap[".module_user"] = "用户 Module"
-        sModuleCatalogMap[".module_wanandroid"] = "玩 Android Module"
+        sModuleCatalogMap[".module_tv"] = "剧集 Module"
 
         sModuleAboutMap.putAll(sModuleCatalogMap)
         sModuleAboutMap[".module_main"] = "首页 ( 底部 Button 导航 ) Module"
-        sModuleAboutMap[".module_wanandroid"] = "DevHttpManager 演示 - 玩 Android 文章 Module"
+        sModuleAboutMap[".module_movie"] = "电影 Module"
+        sModuleAboutMap[".module_person"] = "人物 Module"
+        sModuleAboutMap[".module_splash"] = "启动页 ( 广告页、首次启动引导页 ) Module"
+        sModuleAboutMap[".module_tv"] = "剧集 Module"
     }
 }

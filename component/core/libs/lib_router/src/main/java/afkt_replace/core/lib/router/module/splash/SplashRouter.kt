@@ -1,7 +1,7 @@
 package afkt_replace.core.lib.router.module.splash
 
+import afkt_replace.core.lib.router.module.AppRouter
 import com.alibaba.android.arouter.facade.Postcard
-import com.alibaba.android.arouter.launcher.ARouter
 
 /**
  * detail: Splash Module Router
@@ -16,7 +16,14 @@ object SplashRouter {
     // ========
 
     // 模块入口
-    const val PATH_LAUNCHER = "/splash/launcher"
+    const val PATH_LAUNCHER = "/$GROUP/launcher"
+
+    // ====================
+    // = PATH - IProvider =
+    // ====================
+
+    // 对外公开 IProvider 通讯组件
+    const val PATH_SPLASH_PROVIDER = "/$GROUP/provider"
 
     // ==========
     // = 快捷方法 =
@@ -27,6 +34,6 @@ object SplashRouter {
      * 便于代码跳转直观、对外避免跳转错 [GROUP] ( Module )
      */
     internal fun build(path: String): Postcard {
-        return ARouter.getInstance().build(path, GROUP)
+        return AppRouter.buildByUri(path)
     }
 }

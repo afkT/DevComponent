@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:binding="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="afkt_replace.module.person.feature.details.PersonDetailsViewModel" />
+
+        <variable
+            name="appUI"
+            type="afkt_replace.core.lib.ui.listener.AppUI" />
+
+        <variable
+            name="appListener"
+            type="afkt_replace.core.lib.ui.listener.AppListener" />
+
+        <variable
+            name="appThemeRes"
+            type="afkt_replace.core.lib.ui.skin.AppThemeRes" />
+
+        <!-- 对应变量 -->
+        <!-- 也可以 viewModel.dataConsumer.details.xxx -->
+
+        <variable
+            name="details"
+            type="androidx.lifecycle.MutableLiveData&lt;PersonDetails&gt;" />
+
+        <variable
+            name="acting"
+            type="androidx.lifecycle.MutableLiveData&lt;PersonActing&gt;" />
+
+        <import type="dev.utils.common.StringUtils" />
+
+        <import type="afkt_replace.core.lib.utils.TMDBImageUrlKt" />
+
+        <import type="afkt_replace.core.lib.bean.person.PersonDetails" />
+
+        <import type="afkt_replace.core.lib.bean.person.PersonActing" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@{appThemeRes.themeBackground}">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:id="@+id/vid_head_fl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0"
+                app:layout_constraintDimensionRatio="H,7:10"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="1">
+
+                <afkt_replace.core.lib.ui.widget.BaseImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    app:binding_source_anim="@{TMDBImageUrlKt.toTMDBImageSourceEmpty(details.profile_path)}"
+                    tools:background="@drawable/tools_image" />
+
+                <afkt_replace.core.lib.ui.widget.BaseTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@color/black_tran30"
+                    android:ellipsize="end"
+                    android:maxLines="3"
+                    android:padding="@dimen/dp_15"
+                    android:text="@{details.biography}"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_22"
+                    android:textStyle="bold"
+                    app:binding_visibleOrGone="@{StringUtils.isNotEmpty(details.biography)}"
+                    tools:text="Biography" />
+
+                <include
+                    android:id="@+id/vid_action_popup"
+                    layout="@layout/include_person_action_popup" />
+            </FrameLayout>
+
+            <afkt_replace.core.lib.ui.widget.BaseTextView
+                android:id="@+id/vid_acting_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_15"
+                android:text="@string/str_acting"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_22"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/vid_head_fl" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0"
+                android:layout_marginTop="@dimen/dp_4"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:cacheColorHint="@color/transparent"
+                android:clipToPadding="false"
+                android:divider="@null"
+                android:fadingEdge="none"
+                android:listSelector="@null"
+                android:orientation="horizontal"
+                android:overScrollMode="never"
+                android:paddingStart="@dimen/dp_15"
+                android:paddingEnd="@dimen/dp_15"
+                android:paddingBottom="@dimen/dp_4"
+                android:scrollbars="none"
+                app:adapter="@{viewModel.actingItem.adapter}"
+                app:itemBinding="@{viewModel.actingItem.itemBinding}"
+                app:items="@{viewModel.actingItem.items}"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vid_acting_tv"
+                tools:itemCount="5"
+                tools:listitem="@layout/tmdb_person_acting" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <include
+            android:id="@+id/vid_header"
+            layout="@layout/core_ui_base_header"
+            binding:appListener="@{appListener}"
+            binding:appThemeRes="@{appThemeRes}"
+            binding:appUI="@{appUI}" />
+    </FrameLayout>
+</layout>

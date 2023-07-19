@@ -1,40 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white"
-    android:orientation="vertical">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <FrameLayout
-        android:id="@+id/vid_status_frame"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_56"
-        android:background="@color/dev_http_capture_title_bg_color"
-        android:scrollbars="none">
+    <data>
 
-        <ImageView
-            android:id="@+id/vid_back_iv"
-            android:layout_width="@dimen/dp_56"
-            android:layout_height="@dimen/dp_56"
-            android:background="@drawable/dev_http_capture_back"
-            android:padding="@dimen/dp_15" />
-
-        <TextView
-            android:id="@+id/vid_title_tv"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="@dimen/dp_56"
-            android:ellipsize="end"
-            android:gravity="center_vertical"
-            android:includeFontPadding="false"
-            android:maxLines="1"
-            android:paddingRight="@dimen/dp_5"
-            android:singleLine="true"
-            android:text="项目 Debug 功能编译"
-            android:textColor="@color/white"
-            android:textSize="@dimen/sp_20"
-            android:textStyle="bold" />
-    </FrameLayout>
+        <variable
+            name="viewModel"
+            type="afkt_replace.core.lib.debug.DebugAssistViewModel" />
+    </data>
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -56,69 +29,69 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp_20"
-                android:text="调试功能"
+                android:text="@string/str_debugging_features"
                 android:textColor="@color/blue"
                 android:textSize="@dimen/sp_18"
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/vid_environment_tv"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_55"
                 android:layout_marginTop="@dimen/dp_20"
                 android:gravity="center"
                 android:includeFontPadding="false"
-                android:text="切换环境"
-                android:textSize="@dimen/sp_18" />
+                android:text="@string/str_switching_environment"
+                android:textSize="@dimen/sp_18"
+                app:binding_click="@{viewModel.onClickEnvironment}" />
 
             <Button
-                android:id="@+id/vid_http_capture_tv"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_55"
                 android:layout_marginTop="@dimen/dp_20"
                 android:gravity="center"
                 android:includeFontPadding="false"
-                android:text="抓包数据"
-                android:textSize="@dimen/sp_18" />
+                android:text="@string/str_http_capture_data"
+                android:textSize="@dimen/sp_18"
+                app:binding_click="@{viewModel.onClickHttpCapture}" />
 
             <Button
-                android:id="@+id/vid_open_ue_tool_tv"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_55"
                 android:layout_marginTop="@dimen/dp_20"
                 android:gravity="center"
                 android:includeFontPadding="false"
-                android:text="打开 UI 可视化调试"
-                android:textSize="@dimen/sp_18" />
+                android:text="@string/str_open_ui_visual_debugging"
+                android:textSize="@dimen/sp_18"
+                app:binding_click="@{viewModel.onClickOpenUeTool}" />
 
             <Button
-                android:id="@+id/vid_close_ue_tool_tv"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_55"
                 android:layout_marginTop="@dimen/dp_20"
                 android:gravity="center"
                 android:includeFontPadding="false"
-                android:text="关闭 UI 可视化调试"
-                android:textSize="@dimen/sp_18" />
+                android:text="@string/str_close_ui_visual_debugging"
+                android:textSize="@dimen/sp_18"
+                app:binding_click="@{viewModel.onClickCloseUeTool}" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp_20"
-                android:text="数据处理"
+                android:text="@string/str_data_processing"
                 android:textColor="@color/blue"
                 android:textSize="@dimen/sp_18"
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/vid_delete_http_capture_tv"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_55"
                 android:layout_marginTop="@dimen/dp_20"
                 android:gravity="center"
                 android:includeFontPadding="false"
-                android:text="删除抓包数据"
-                android:textSize="@dimen/sp_18" />
+                android:text="@string/str_delete_http_capture_data"
+                android:textSize="@dimen/sp_18"
+                app:binding_click="@{viewModel.onClickDeleteHttpCapture}" />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
-</LinearLayout>
+</layout>

@@ -1,32 +1,23 @@
 package afkt_replace.module.template
 
-import afkt_replace.core.lib.base.app.BaseActivityViewBinding
-import afkt_replace.core.lib.bean.ThemeStyle
+import afkt_replace.core.lib.base.app.BaseAppActivity
+import afkt_replace.core.lib.base.controller.ui.theme.defaultAppLauncherUITheme
+import afkt_replace.core.lib.config.AppLibConfig
 import afkt_replace.core.lib.router.module.template.TemplateNav
 import afkt_replace.core.lib.router.module.template.TemplateRouter
+import afkt_replace.module.template.databinding.TemplateAppLauncherBinding
 import android.os.Bundle
-import android.view.View
-import android.widget.ImageView
 import androidx.lifecycle.lifecycleScope
-import androidx.viewbinding.ViewBinding
-import dev.utils.DevFinal
-import dev.utils.app.toast.ToastTintUtils
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import me.jessyan.autosize.internal.CancelAdapt
 
-class AppLauncherActivity : BaseActivityViewBinding<ViewBinding>() {
-
-    override fun baseLayoutId(): Int = 0
-
-    override fun isViewBinding(): Boolean = false
-
-    override fun isContentAssistSafe(): Boolean = true
-
-    override fun isAddTitleBar(): Boolean = false
-
-    override fun isAddStatusBar(): Boolean = false
-
-    override fun isStatusBarFrame(): Boolean = false
+class AppLauncherActivity : BaseAppActivity<TemplateAppLauncherBinding, TemplateViewModel>(
+    R.layout.template_app_launcher, BR.viewModel, simple_UITheme = {
+        it.defaultAppLauncherUITheme()
+    }
+),
+    CancelAdapt {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,21 +28,10 @@ class AppLauncherActivity : BaseActivityViewBinding<ViewBinding>() {
             return
         }
 
-        ToastTintUtils.normal("延迟进入【首页容器页】")
-
         lifecycleScope.launch {
-            delay(2000L)
-            TemplateNav.build(TemplateRouter.PATH_MAIN)
-                .withObject(DevFinal.STR.STYLE, ThemeStyle("【模块化运行】"))
-                .navigation()
+            delay(AppLibConfig.ROUTER_DELAY_MILLIS)
+            TemplateNav.build(TemplateRouter.PATH_MAIN).navigation()
             finish()
-        }
-    }
-
-    override fun baseLayoutView(): View {
-        return ImageView(this).apply {
-            setBackgroundResource(R.drawable.launcher_gradient_bg)
-            scaleType = ImageView.ScaleType.FIT_XY
         }
     }
 }

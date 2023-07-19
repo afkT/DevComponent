@@ -33,7 +33,7 @@ interface IDebugEngine {
      * @param moduleName 模块名 ( 要求唯一性 )
      */
     fun addInterceptor(
-        builder: OkHttpClient.Builder?,
-        moduleName: String?
+        builder: OkHttpClient.Builder,
+        moduleName: String
     )
 }

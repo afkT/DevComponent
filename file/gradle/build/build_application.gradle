@@ -2,7 +2,9 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-parcelize'
 apply plugin: 'kotlin-kapt'
-apply plugin: 'com.alibaba.arouter'
+
+// Router App 构建配置
+apply from: rootProject.file(files.build_router_app_gradle)
 
 def libName = project.getName()
 def modular = modularVersion[libName]

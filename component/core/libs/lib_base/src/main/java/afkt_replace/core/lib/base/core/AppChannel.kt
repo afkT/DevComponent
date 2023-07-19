@@ -91,7 +91,7 @@ object AppChannel : AbstractChannelFlavors {
     // ==========
 
     // 多渠道实现类名 ( 类名必须一致且包名位置相同 )
-    private val IMPL_CLASS_NAME = "afkt_replace.core.lib.channel.ChannelFlavorsIMPL"
+    private const val IMPL_CLASS_NAME = "afkt_replace.core.lib.channel.ChannelFlavorsIMPL"
 
     /**
      * 通过 class 创建多渠道实例

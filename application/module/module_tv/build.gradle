@@ -1,0 +1,7 @@
+apply from: rootProject.file(files.build_module_gradle)
+
+dependencies {
+
+    // TMDB 通用 UI lib
+    implementation project(':lib_tmdb_ui')
+}

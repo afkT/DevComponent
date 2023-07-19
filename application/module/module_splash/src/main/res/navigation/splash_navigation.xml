@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/SplashFragment">
+
+    <fragment
+        android:id="@+id/SplashFragment"
+        android:name="afkt_replace.module.splash.feature.SplashFragment"
+        android:label="SplashFragment">
+
+        <action
+            android:id="@+id/action_SplashFragment_to_SplashAdsFragment"
+            app:destination="@id/SplashAdsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/SplashAdsFragment"
+        android:name="afkt_replace.lib.splash.ads.SplashAdsFragment"
+        android:label="SplashAdsFragment" />
+</navigation>

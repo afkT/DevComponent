@@ -1,56 +1,25 @@
 package afkt_replace.module.template
 
-import afkt_replace.core.lib.base.app.BaseActivityViewBinding
-import afkt_replace.core.lib.bean.ThemeStyle
-import afkt_replace.core.lib.router.module.template.TemplateNav
+import afkt_replace.core.lib.base.app.BaseAppActivity
+import afkt_replace.core.lib.base.controller.ui.ext.defaultMainContainerController
+import afkt_replace.core.lib.base.controller.ui.ext.setExitBackIntercept
+import afkt_replace.core.lib.base.controller.ui.theme.defaultMainContainerUITheme
 import afkt_replace.core.lib.router.module.template.TemplateRouter
-import android.graphics.Color
-import android.os.Bundle
-import android.view.View
-import androidx.fragment.app.Fragment
-import androidx.viewbinding.ViewBinding
-import com.alibaba.android.arouter.facade.annotation.Autowired
+import afkt_replace.module.template.databinding.TemplateAppContainerBinding
 import com.alibaba.android.arouter.facade.annotation.Route
-import dev.utils.DevFinal
-import dev.utils.app.ClickUtils
-import dev.utils.app.toast.ToastTintUtils
+import dev.mvvm.utils.toResString
 
 @Route(path = TemplateRouter.PATH_MAIN, group = TemplateRouter.GROUP)
-class MainContainerActivity : BaseActivityViewBinding<ViewBinding>() {
-
-    @JvmField
-    @Autowired(name = DevFinal.STR.STYLE)
-    var themeStyle: ThemeStyle? = null
-
-    override fun baseLayoutId(): Int = 0
-
-    override fun isViewBinding(): Boolean = false
-
-    override fun isContentAssistSafe(): Boolean = true
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        titleBar.setTitle("${BuildConfig.MODULE_NAME} 首页容器页")
-            .setTitleColor(Color.WHITE)
-            .goneBackView()
-
-        themeStyle?.let { uiController.setAllBackground(it.color) }
-
-        (TemplateNav.build(TemplateRouter.PATH_TEMPLATE_FRAGMENT)
-            .with(intent.extras).navigation() as? Fragment)?.let { fragment ->
-            supportFragmentManager.beginTransaction().apply {
-                add(contentAssist.contentLinear?.id ?: View.NO_ID, fragment)
-                commit()
-            }
+class MainContainerActivity : BaseAppActivity<TemplateAppContainerBinding, TemplateViewModel>(
+    R.layout.template_app_container, BR.viewModel, simple_UITheme = {
+        it.defaultMainContainerUITheme()
+    }, simple_PreLoad = {
+        it.apply {
+            uiController.defaultMainContainerController(
+                R.string.app_name.toResString()
+            )
+            // 设置返回键退出 App 拦截监听
+            keyEventController.setExitBackIntercept(BuildConfig.MODULE_NAME)
         }
     }
-
-    override fun onBackPressed() {
-        if (!ClickUtils.isFastDoubleClick(DevFinal.STR.TAG, 1500L)) {
-            ToastTintUtils.info("再按一次，退出应用")
-            return
-        }
-        super.onBackPressed()
-    }
-}
+)

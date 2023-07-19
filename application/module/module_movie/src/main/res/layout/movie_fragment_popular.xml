@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="afkt_replace.module.movie.feature.popular.PopularMovieViewModel" />
+    </data>
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/vid_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:srlEnableAutoLoadMore="false"
+        app:srlEnableLoadMore="false">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@color/transparent"
+            android:divider="@null"
+            android:fadingEdge="none"
+            android:listSelector="@null"
+            android:orientation="vertical"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            app:adapter="@{viewModel.popularItem.adapter}"
+            app:itemBinding="@{viewModel.popularItem.itemBinding}"
+            app:items="@{viewModel.popularItem.items}"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2"
+            tools:itemCount="4"
+            tools:listitem="@layout/tmdb_poster_cover" />
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+</layout>

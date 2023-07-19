@@ -1,0 +1,13 @@
+apply from: rootProject.file(files.build_router_module_gradle)
+
+// ===========
+// = ARouter =
+// ===========
+
+apply plugin: 'com.alibaba.arouter'
+
+// =============
+// = TheRouter =
+// =============
+
+//apply plugin: 'therouter'

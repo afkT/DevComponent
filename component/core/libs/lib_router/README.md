@@ -19,18 +19,6 @@ dependencies {
     compileOnly project(':core_lib_bean')
     // 通用配置、常量 lib
     compileOnly project(':core_lib_config')
-    // 通用 Engine ( 图片加载、日志、JSON、权限、资源选择 等 ) lib
-    compileOnly project(':core_lib_engine')
-    // 通用工具库
-    compileOnly project(':core_lib_utils')
-
-    // ====================
-    // = libs - 第三方库依赖 =
-    // ====================
-
-    // ARouter 路由 https://github.com/alibaba/ARouter
-    api deps.lib.arouter_api // https://github.com/alibaba/ARouter/blob/master/README_CN.md
-    kapt deps.lib.arouter_compiler
 }
 ```
 
@@ -46,15 +34,16 @@ dependencies {
 # main/java 目录结构
 
 ```
-- java                                     
-   - afkt_replace                          
-      - core                               
-         - lib                             
-            - router                       
-               - module                    
-                  - main                   
-                  - splash                 
-                  - template               
-                  - user                   
-                  - wan_android            
+- java                              
+   - afkt_replace                   
+      - core                        
+         - lib                      
+            - router                
+               - module             
+                  - main            
+                  - movie           
+                  - person          
+                  - splash          
+                  - template        
+                  - tv              
 ```

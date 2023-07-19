@@ -1,5 +1,6 @@
 package afkt_replace.core.lib.router.module.splash
 
+import afkt_replace.core.lib.router.module.AppRouter
 import afkt_replace.core.lib.router.module.main.MainNav
 import com.alibaba.android.arouter.facade.Postcard
 
@@ -36,5 +37,22 @@ object SplashNav {
 
     fun buildAppMain(): Postcard {
         return MainNav.buildMain()
+    }
+
+    // ====================
+    // = PATH - IProvider =
+    // ====================
+
+    private var splashProvider: ISplashProvider? = null
+
+    /**
+     * 获取 SplashProvider
+     * @return ISplashProvider?
+     */
+    fun splashProvider(): ISplashProvider? {
+        if (splashProvider == null) {
+            splashProvider = AppRouter.navigation(ISplashProvider::class.java)
+        }
+        return splashProvider
     }
 }

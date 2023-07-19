@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="ResourceName">
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="core_ui_AppTheme" tools:ignore="ResourceName" />
+    <style name="AppTheme" parent="core_ui_AppTheme" />
 
     <style name="core_ui_AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
@@ -14,10 +14,11 @@
         <item name="android:colorBackground">@color/white</item>
     </style>
 
-    <style name="AppTheme.Launcher" parent="AppTheme" tools:ignore="ResourceName">
+    <style name="AppTheme.Launcher" parent="AppTheme">
         <item name="windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
-        <item name="android:windowFullscreen">true</item>
+        <!-- 不设置为全屏防止状态栏隐藏紧接着又显示 -->
+        <item name="android:windowFullscreen">false</item>
         <item name="android:splitMotionEvents">false</item>
         <item name="android:windowEnableSplitTouch">false</item>
         <item name="android:windowBackground">@drawable/launcher_module_bg</item>
@@ -25,7 +26,7 @@
 
     <!-- TextView 默认样式 -->
 
-    <style name="AppTheme.Base_TextView" tools:ignore="ResourceName">
+    <style name="AppTheme.Base_TextView">
         <!-- 设置铺满 -->
         <item name="android:layout_width">match_parent</item>
         <!-- 设置高度 -->

@@ -26,6 +26,9 @@ dependencies {
     // DevBaseMVVM - MVVM ( ViewDataBinding + ViewModel ) 基类库
     api deps.dev.dev_base_mvvm
 
+    // DevMVVM - DataBinding 工具类库
+    api deps.dev.dev_mvvm
+
     // DevEngine - 第三方框架解耦、一键替换第三方库、同类库多 Engine 组件化混合使用
     api deps.dev.dev_engine
 
@@ -103,9 +106,10 @@ dependencies {
     api deps.lib.autosize
     // 动画库 https://github.com/airbnb/lottie-android
     api deps.lib.lottie
-    // ARouter 路由 https://github.com/alibaba/ARouter
-    api deps.lib.arouter_api // https://github.com/alibaba/ARouter/blob/master/README_CN.md
-    kapt deps.lib.arouter_compiler
+    // MVVM Adapter Binding https://github.com/evant/binding-collection-adapter
+    api deps.widget.binding_collection_adapter
+    api deps.widget.binding_collection_adapter_recyclerview
+    api deps.widget.binding_collection_adapter_viewpager2
 }
 ```
 

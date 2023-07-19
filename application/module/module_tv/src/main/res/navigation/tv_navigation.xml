@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/PopularTvFragment">
+
+    <fragment
+        android:id="@+id/PopularTvFragment"
+        android:name="afkt_replace.module.tv.feature.popular.PopularTvFragment"
+        android:label="PopularTvFragment" />
+
+    <fragment
+        android:id="@+id/TvDetailsFragment"
+        android:name="afkt_replace.module.tv.feature.details.TvDetailsFragment"
+        android:label="TvDetailsFragment" />
+</navigation>

@@ -46,6 +46,13 @@
 </p>
 
 
+<p align="center">
+	<b>
+		<a href="https://github.com/afkT/DevComponent/blob/main/USE_RUN.md">运行说明</a>
+	</b>
+</p>
+
+
 # About
 
 > Android 组件化就是利用多个 Module 来表示应用的多个模块实现代码和资源的隔离，并且每个 Module 都有单独运行和组合的能力。
@@ -87,17 +94,21 @@
    - core_base_lib                     | 基础核心开发库依赖 ( libs 便捷依赖统一维护 )
    - libs                              | 具体功能拆分, 封装 lib
       - lib_base                       | 基类相关 ( Activity、Application 等 )
+      - lib_base_split                 | 基础 ( 基类等 ) lib 拆包
       - lib_bean                       | 通用实体类 ( module 实体类下沉 )
       - lib_channel_flavors            | App 多渠道
       - lib_config                     | 通用配置、常量信息
       - lib_debug_assist               | Debug 编译辅助开发库 ( 提供切换环境、抓包数据可视化、调试按钮开关等辅助功能 )
       - lib_engine                     | 通用 Engine ( 图片加载、日志、JSON、权限、资源选择、缓存 ) lib
       - lib_environment                | 通用环境配置切换库
+      - lib_language                   | 通用多语言 lib
+      - lib_mvvm                       | MVVM 通用代码封装 ( 使用 MVVM module 必须 api 依赖如果使用 compileOnly 将会找不到 BindingAdapter 等 )
       - lib_network                    | 网络相关 lib ( 网络请求、上传下载 )
       - lib_property                   | 性能优化、检测 lib
       - lib_receiver                   | 广播监听 ( 如网络状态、电量、屏幕解锁 ) 相关
       - lib_router                     | 路由相关
       - lib_ui                         | 统一 style、widget、ui 相关组件
+      - lib_ui_skin                    | APP 主题、换肤相关控制
       - lib_upload                     | 通用上传库
       - lib_utils                      | 通用工具库
       - lib_web                        | WebView 相关
@@ -108,8 +119,9 @@
 该目录属于 项目模块快捷工具封装复用、第三方库 clone 对源码进行差异化修改使用等存储目录
 
 ```
-- libs                            | 根目录
-   - lib_circle_igview            | clone CircleImageView 修改源码使用 ( 例 )
+- libs                         | 根目录
+   - lib_splash_ads            | 启动页广告 lib
+   - lib_tmdb_ui               | TheMovieDB 通用 UI lib
 ```
 
 ## 应用程序目录展示
@@ -127,12 +139,13 @@
 该目录下的 Module 在 `isModular=true` 的情况下，都属于独立的应用可单独运行，为 `false` 则都属于功能模块，被主体应用 ( 壳 ) 所依赖使用
 
 ```
-- module                          | 根目录
-   - module_main                  | 首页 Module
-   - module_splash                | 启动页 ( 广告页、首次启动引导页 ) Module
-   - module_template              | 模板 Module ( 便于 copy )
-   - module_user                  | 用户 Module
-   - module_wanandroid            | 玩 Android Module
+- module                    | 根目录
+   - module_main            | 首页 Module
+   - module_movie           | 电影 Module
+   - module_person          | 人物 Module
+   - module_splash          | 启动页 ( 广告页、首次启动引导页 ) Module
+   - module_template        | 模板 Module ( 便于 copy )
+   - module_tv              | 剧集 Module
 ```
 
 ### 基础架构组件

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/StartFragment">
+
+    <fragment
+        android:id="@+id/StartFragment"
+        android:name="afkt_replace.module.template.feature.start.StartFragment"
+        android:label="StartFragment" />
+
+    <fragment
+        android:id="@+id/EndFragment"
+        android:name="afkt_replace.module.template.feature.end.EndFragment"
+        android:label="EndFragment" />
+</navigation>

@@ -1,7 +1,7 @@
 package afkt_replace.core.lib.router.module.main
 
+import afkt_replace.core.lib.router.module.AppRouter
 import com.alibaba.android.arouter.facade.Postcard
-import com.alibaba.android.arouter.launcher.ARouter
 
 /**
  * detail: Main Module Router
@@ -16,7 +16,7 @@ object MainRouter {
     // ========
 
     // 模块入口
-    const val PATH_MAIN = "/main/main"
+    const val PATH_MAIN = "/$GROUP/main"
 
     // ==========
     // = 快捷方法 =
@@ -27,6 +27,6 @@ object MainRouter {
      * 便于代码跳转直观、对外避免跳转错 [GROUP] ( Module )
      */
     internal fun build(path: String): Postcard {
-        return ARouter.getInstance().build(path, GROUP)
+        return AppRouter.buildByUri(path)
     }
 }

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="afkt_replace.module.template.feature.end.EndViewModel" />
+
+        <variable
+            name="appUI"
+            type="afkt_replace.core.lib.ui.listener.AppUI" />
+
+        <variable
+            name="appListener"
+            type="afkt_replace.core.lib.ui.listener.AppListener" />
+
+        <variable
+            name="appThemeRes"
+            type="afkt_replace.core.lib.ui.skin.AppThemeRes" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/vid_header"
+            layout="@layout/core_ui_base_header"
+            binding:appListener="@{appListener}"
+            binding:appThemeRes="@{appThemeRes}"
+            binding:appUI="@{appUI}" />
+
+        <afkt_replace.core.lib.ui.widget.BaseImageView
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_100"
+            android:layout_gravity="center"
+            android:src="@mipmap/icon_launcher" />
+    </FrameLayout>
+</layout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="ResourceName">
+
+    <style name="AppTheme.Launcher" parent="AppTheme">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <!-- 不设置为全屏防止状态栏隐藏紧接着又显示 -->
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:splitMotionEvents">false</item>
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="android:windowBackground">@drawable/launcher_module_bg</item>
+        <item name="android:statusBarColor">@color/colorPrimary</item>
+    </style>
+</resources>

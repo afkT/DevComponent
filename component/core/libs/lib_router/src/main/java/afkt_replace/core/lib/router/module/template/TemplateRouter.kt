@@ -1,7 +1,7 @@
 package afkt_replace.core.lib.router.module.template
 
+import afkt_replace.core.lib.router.module.AppRouter
 import com.alibaba.android.arouter.facade.Postcard
-import com.alibaba.android.arouter.launcher.ARouter
 
 /**
  * detail: Template Module Router
@@ -18,8 +18,22 @@ object TemplateRouter {
     // 模块入口
     const val PATH_MAIN = "/template/main"
 
-    // 对外公开 Fragment
-    const val PATH_TEMPLATE_FRAGMENT = "/template/fragment"
+    // ================
+    // = PATH - Start =
+    // ================
+
+    // Start Fragment
+    const val PATH_START_FRAGMENT = "/${GROUP}/start/fragment"
+
+    // ==============
+    // = PATH - End =
+    // ==============
+
+    // End Activity
+    const val PATH_END_ACTIVITY = "/${GROUP}/end/activity"
+
+    // End Fragment
+    const val PATH_END_FRAGMENT = "/${GROUP}/end/fragment"
 
     // ==========
     // = 快捷方法 =
@@ -30,6 +44,6 @@ object TemplateRouter {
      * 便于代码跳转直观、对外避免跳转错 [GROUP] ( Module )
      */
     internal fun build(path: String): Postcard {
-        return ARouter.getInstance().build(path, GROUP)
+        return AppRouter.buildByUri(path)
     }
 }

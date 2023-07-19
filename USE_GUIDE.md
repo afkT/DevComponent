@@ -36,17 +36,21 @@
    - core_base_lib            | com.afkt.shop.core.base.lib
    - libs                     | 
       - lib_base              | com.afkt.shop.core.lib.base
+      - lib_base_split        | com.afkt.shop.core.lib.base.split
       - lib_bean              | com.afkt.shop.core.lib.bean
       - lib_channel_flavors   | com.afkt.shop.core.lib.channel
       - lib_config            | com.afkt.shop.core.lib.config
       - lib_debug_assist      | com.afkt.shop.core.lib.debug
       - lib_engine            | com.afkt.shop.core.lib.engine
       - lib_environment       | com.afkt.shop.core.lib.environment
+      - lib_language          | com.afkt.shop.core.lib.language
+      - lib_mvvm              | com.afkt.shop.core.lib.mvvm
       - lib_network           | com.afkt.shop.core.lib.network
       - lib_property          | com.afkt.shop.core.lib.property
       - lib_receiver          | com.afkt.shop.core.lib.receiver
       - lib_router            | com.afkt.shop.core.lib.router
       - lib_ui                | com.afkt.shop.core.lib.ui
+      - lib_ui_skin           | com.afkt.shop.core.lib.ui.skin
       - lib_upload            | com.afkt.shop.core.lib.upload
       - lib_utils             | com.afkt.shop.core.lib.utils
       - lib_web               | com.afkt.shop.core.lib.web
@@ -59,10 +63,11 @@
    - app                      | com.afkt.shop.component
    - module                   | 
       - module_main           | com.afkt.shop.module.main
+      - module_movie          | com.afkt.shop.module.movie
+      - module_person         | com.afkt.shop.module.person
       - module_splash         | com.afkt.shop.module.splash
       - module_template       | com.afkt.shop.module.template
-      - module_user           | com.afkt.shop.module.user
-      - module_wanandroid     | com.afkt.shop.module.wan_android
+      - module_tv             | com.afkt.shop.module.tv
 ```
 
 **如上结果展示可得出**

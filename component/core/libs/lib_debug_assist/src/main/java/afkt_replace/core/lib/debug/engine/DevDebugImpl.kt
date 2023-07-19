@@ -45,8 +45,8 @@ internal class DevDebugImpl : IDebugEngine {
      * @param moduleName 模块名 ( 要求唯一性 )
      */
     override fun addInterceptor(
-        builder: OkHttpClient.Builder?,
-        moduleName: String?
+        builder: OkHttpClient.Builder,
+        moduleName: String
     ) {
         FloatingDebug.instance.addInterceptor(
             builder, moduleName

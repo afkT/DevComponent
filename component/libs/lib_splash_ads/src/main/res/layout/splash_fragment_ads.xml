@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="afkt_replace.lib.splash.ads.SplashAdsViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vid_guide_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:binding_layoutConstraintGuideBegin="@{viewModel.statusBarHeight}"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <afkt_replace.core.lib.ui.widget.BaseImageView
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_0"
+            android:clickable="@{viewModel.splashEnable}"
+            android:scaleType="centerCrop"
+            app:binding_click="@{viewModel.onClickAds}"
+            app:binding_listener="@{viewModel.splashLoadListener}"
+            app:binding_source="@{viewModel.splashSource}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vid_guide_line" />
+
+        <afkt_replace.core.lib.ui.widget.BaseImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/launcher_module_bg"
+            app:binding_invisibleViewByAlpha="@{viewModel.splashAnim}" />
+
+        <dev.widget.ui.round.RoundTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_25"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_3"
+            android:paddingRight="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_3"
+            android:text="@string/str_skip_ads"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12"
+            app:binding_click="@{viewModel.onClickSkip}"
+            app:binding_visibleOrGone="@{viewModel.splashEnable}"
+            app:dev_backgroundColor="@color/grey_tran60"
+            app:dev_radius="@dimen/dp_20"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vid_guide_line" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

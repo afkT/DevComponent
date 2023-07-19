@@ -1,5 +1,6 @@
 package afkt_replace.core.lib.router.module.template
 
+import afkt_replace.core.lib.config.ParamConst
 import com.alibaba.android.arouter.facade.Postcard
 
 /**
@@ -31,5 +32,22 @@ object TemplateNav {
      */
     fun routerMain() {
         build(TemplateRouter.PATH_MAIN).navigation()
+    }
+
+    // =======
+    // = End =
+    // =======
+
+    /**
+     * 构建 End Page Path Router
+     * @param title Title
+     * @return Postcard
+     */
+    fun buildEndPage(
+        title: String?
+    ): Postcard {
+        return build(TemplateRouter.PATH_END_ACTIVITY).apply {
+            withString(ParamConst.TITLE, title)
+        }
     }
 }

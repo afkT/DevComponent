@@ -34,6 +34,14 @@ dependencies {
             android:configChanges="orientation|keyboardHidden"
             android:exported="false"
             android:screenOrientation="portrait" />
+
+        <!-- End Page -->
+
+        <activity
+            android:name=".feature.end.EndActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:screenOrientation="portrait" />
     </application>
 </manifest>
 ```
@@ -47,17 +55,17 @@ dependencies {
          - template           
             - base            
             - feature         
+               - end          
+               - start        
 ```
 
 
 # main/res 目录结构
 
 ```
-- res                        
-   - layout                  
-   - mipmap-xhdpi            
-   - mipmap-xxhdpi           
-   - mipmap-xxxhdpi          
-   - values                  
-   - values-zh               
+- res                  
+   - layout            
+   - navigation        
+   - values            
+   - values-zh         
 ```
