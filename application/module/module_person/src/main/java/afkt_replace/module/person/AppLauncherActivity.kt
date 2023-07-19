@@ -3,8 +3,8 @@ package afkt_replace.module.person
 import afkt_replace.core.lib.base.app.BaseAppActivity
 import afkt_replace.core.lib.base.controller.ui.theme.defaultAppLauncherUITheme
 import afkt_replace.core.lib.config.AppLibConfig
-import afkt_replace.core.lib.router.module.person.PersonNav
-import afkt_replace.core.lib.router.module.person.PersonRouter
+import afkt_replace.core.router.module.person.PersonNav
+import afkt_replace.core.router.module.person.PersonRouter
 import afkt_replace.module.person.databinding.PersonAppLauncherBinding
 import android.os.Bundle
 import androidx.lifecycle.lifecycleScope

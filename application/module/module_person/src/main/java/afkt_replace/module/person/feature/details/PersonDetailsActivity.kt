@@ -2,7 +2,7 @@ package afkt_replace.module.person.feature.details
 
 import afkt_replace.core.lib.base.app.BaseAppActivity
 import afkt_replace.core.lib.base.controller.ui.theme.defaultActivityBlankUITheme
-import afkt_replace.core.lib.router.module.person.PersonRouter
+import afkt_replace.core.router.module.person.PersonRouter
 import afkt_replace.module.person.BR
 import afkt_replace.module.person.PersonViewModel
 import afkt_replace.module.person.R

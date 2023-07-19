@@ -1,11 +1,11 @@
 package afkt_replace.module.main.feature.adapter
 
-import afkt_replace.core.lib.router.module.movie.MovieNav
-import afkt_replace.core.lib.router.module.movie.MovieRouter
-import afkt_replace.core.lib.router.module.person.PersonNav
-import afkt_replace.core.lib.router.module.person.PersonRouter
-import afkt_replace.core.lib.router.module.tv.TvNav
-import afkt_replace.core.lib.router.module.tv.TvRouter
+import afkt_replace.core.router.module.movie.MovieNav
+import afkt_replace.core.router.module.movie.MovieRouter
+import afkt_replace.core.router.module.person.PersonNav
+import afkt_replace.core.router.module.person.PersonRouter
+import afkt_replace.core.router.module.tv.TvNav
+import afkt_replace.core.router.module.tv.TvRouter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter

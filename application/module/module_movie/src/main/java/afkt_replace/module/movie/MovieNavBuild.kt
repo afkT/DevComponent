@@ -1,7 +1,7 @@
 package afkt_replace.module.movie
 
 import afkt_replace.core.lib.bean.base.TMDBCommon
-import afkt_replace.core.lib.router.module.movie.MovieNav
+import afkt_replace.core.router.module.movie.MovieNav
 
 /**
  * detail: MovieNav 跳转参数构建

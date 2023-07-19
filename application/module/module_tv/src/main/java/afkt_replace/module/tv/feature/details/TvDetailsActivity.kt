@@ -2,7 +2,7 @@ package afkt_replace.module.tv.feature.details
 
 import afkt_replace.core.lib.base.app.BaseAppActivity
 import afkt_replace.core.lib.base.controller.ui.theme.defaultActivityBlankUITheme
-import afkt_replace.core.lib.router.module.tv.TvRouter
+import afkt_replace.core.router.module.tv.TvRouter
 import afkt_replace.module.tv.BR
 import afkt_replace.module.tv.R
 import afkt_replace.module.tv.TvViewModel

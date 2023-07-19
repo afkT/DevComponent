@@ -4,7 +4,7 @@ import afkt_replace.core.lib.base.app.BaseAppActivity
 import afkt_replace.core.lib.base.controller.ui.ext.defaultMainContainerController
 import afkt_replace.core.lib.base.controller.ui.ext.setExitBackIntercept
 import afkt_replace.core.lib.base.controller.ui.theme.defaultMainContainerUITheme
-import afkt_replace.core.lib.router.module.tv.TvRouter
+import afkt_replace.core.router.module.tv.TvRouter
 import afkt_replace.module.tv.databinding.TvAppContainerBinding
 import com.alibaba.android.arouter.facade.annotation.Route
 import dev.mvvm.utils.toResString

@@ -3,8 +3,8 @@ package afkt_replace.lib.splash.ads
 import afkt_replace.core.app.AppContext
 import afkt_replace.core.lib.bean.splash.NONE_ADS
 import afkt_replace.core.lib.bean.splash.SplashAds
-import afkt_replace.core.lib.router.module.splash.ISplashProvider
-import afkt_replace.core.lib.router.module.splash.SplashRouter
+import afkt_replace.core.router.module.splash.ISplashProvider
+import afkt_replace.core.router.module.splash.SplashRouter
 import afkt_replace.core.lib.utils.toTMDBImageSource
 import android.content.Context
 import android.graphics.Bitmap

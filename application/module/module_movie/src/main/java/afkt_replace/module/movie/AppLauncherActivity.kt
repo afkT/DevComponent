@@ -3,8 +3,8 @@ package afkt_replace.module.movie
 import afkt_replace.core.lib.base.app.BaseAppActivity
 import afkt_replace.core.lib.base.controller.ui.theme.defaultAppLauncherUITheme
 import afkt_replace.core.lib.config.AppLibConfig
-import afkt_replace.core.lib.router.module.movie.MovieNav
-import afkt_replace.core.lib.router.module.movie.MovieRouter
+import afkt_replace.core.router.module.movie.MovieNav
+import afkt_replace.core.router.module.movie.MovieRouter
 import afkt_replace.module.movie.databinding.MovieAppLauncherBinding
 import android.os.Bundle
 import androidx.lifecycle.lifecycleScope

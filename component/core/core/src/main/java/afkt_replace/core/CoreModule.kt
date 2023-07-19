@@ -1,7 +1,7 @@
 package afkt_replace.core
 
 import afkt_replace.core.lib.network.HttpCoreLibrary
-import afkt_replace.core.lib.web.WebCoreLibrary
+import afkt_replace.core.web.WebCoreLibrary
 import android.content.Context
 
 /**

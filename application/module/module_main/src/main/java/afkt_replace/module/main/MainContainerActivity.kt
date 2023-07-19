@@ -6,8 +6,8 @@ import afkt_replace.core.lib.base.controller.ui.ext.setExitBackIntercept
 import afkt_replace.core.lib.base.controller.ui.theme.defaultMainContainerUITheme
 import afkt_replace.core.lib.bean.splash.SplashAds
 import afkt_replace.core.lib.config.KeyConst
-import afkt_replace.core.lib.router.module.main.MainRouter
-import afkt_replace.core.lib.router.module.movie.MovieNav
+import afkt_replace.core.router.module.main.MainRouter
+import afkt_replace.core.router.module.movie.MovieNav
 import afkt_replace.module.main.databinding.MainAppContainerBinding
 import afkt_replace.module.main.feature.adapter.MainPagerAdapter
 import androidx.viewpager.widget.ViewPager

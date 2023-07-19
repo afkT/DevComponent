@@ -1,7 +1,7 @@
 package afkt_replace.module.tv.feature.popular
 
 import afkt_replace.core.lib.base.app.extension.loading.BaseLoadingSkeletonFragment
-import afkt_replace.core.lib.router.module.tv.TvRouter
+import afkt_replace.core.router.module.tv.TvRouter
 import afkt_replace.module.tv.BR
 import afkt_replace.module.tv.R
 import afkt_replace.module.tv.databinding.TvFragmentPopularBinding

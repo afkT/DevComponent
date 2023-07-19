@@ -10,7 +10,7 @@ import afkt_replace.core.lib.bean.person.KnownFor
 import afkt_replace.core.lib.bean.person.PersonActing
 import afkt_replace.core.lib.bean.person.PersonDetails
 import afkt_replace.core.lib.config.ParamConst
-import afkt_replace.core.lib.router.module.movie.MovieNav
+import afkt_replace.core.router.module.movie.MovieNav
 import afkt_replace.core.lib.ui.databinding.CoreUiBaseStatusBarBinding
 import afkt_replace.core.lib.ui.databinding.CoreUiBaseTitleBarBinding
 import afkt_replace.core.lib.ui.widget.view_assist.loading_skeleton.PageTitleBindable

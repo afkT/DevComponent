@@ -3,7 +3,7 @@ package afkt_replace.core.lib.base.controller
 import afkt_replace.core.lib.base.controller.transition.ITransitionController
 import afkt_replace.core.lib.base.split.controller.TransformationLayoutController
 import afkt_replace.core.lib.base.split.data.IntentData
-import afkt_replace.core.lib.router.module.AppRouter
+import afkt_replace.core.router.module.AppRouter
 import android.app.Activity
 import com.alibaba.android.arouter.facade.Postcard
 import com.skydoves.transformationlayout.TransformationLayout
@@ -44,7 +44,7 @@ class BaseTransitionController(
         postcard: Postcard
     ): Boolean {
         return routerTransition(
-            layout, AppRouter.routerIntent(layout.context, postcard),
+            layout, afkt_replace.core.router.module.AppRouter.routerIntent(layout.context, postcard),
         )
     }
 
@@ -60,7 +60,7 @@ class BaseTransitionController(
         postcard: Postcard,
         intentData: IntentData
     ): Boolean {
-        AppRouter.routerIntent(layout.context, postcard)?.let {
+        afkt_replace.core.router.module.AppRouter.routerIntent(layout.context, postcard)?.let {
             intentData.insert(it)
             return routerTransition(layout, it)
         }

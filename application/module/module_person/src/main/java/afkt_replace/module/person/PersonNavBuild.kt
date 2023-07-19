@@ -1,7 +1,7 @@
 package afkt_replace.module.person
 
 import afkt_replace.core.lib.bean.person.TMDBPerson
-import afkt_replace.core.lib.router.module.person.PersonNav
+import afkt_replace.core.router.module.person.PersonNav
 
 /**
  * detail: PersonNav 跳转参数构建

@@ -4,7 +4,7 @@ import afkt_replace.core.lib.base.repository.Resource
 import afkt_replace.core.lib.base.repository.Status
 import afkt_replace.core.lib.bean.movie.PopularMovie
 import afkt_replace.core.lib.bean.splash.toSplashAdsList
-import afkt_replace.core.lib.router.module.splash.SplashNav
+import afkt_replace.core.router.module.splash.SplashNav
 import afkt_replace.core.lib.ui.widget.extension.smartFinish
 import afkt_replace.core.lib.ui.widget.extension.smartSimpleFinishWithNoMoreData
 import afkt_replace.lib.tmdb.ui.adapter.PosterCoverItem

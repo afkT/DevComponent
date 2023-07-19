@@ -3,8 +3,8 @@ package afkt_replace.module.splash
 import afkt_replace.core.lib.base.app.BaseViewModel
 import afkt_replace.core.lib.bean.splash.SplashAds
 import afkt_replace.core.lib.config.KeyConst
-import afkt_replace.core.lib.router.module.AppRouter
-import afkt_replace.core.lib.router.module.splash.SplashNav
+import afkt_replace.core.router.module.AppRouter
+import afkt_replace.core.router.module.splash.SplashNav
 import android.app.Activity
 import androidx.lifecycle.LiveData
 import dev.expand.engine.json.toJson

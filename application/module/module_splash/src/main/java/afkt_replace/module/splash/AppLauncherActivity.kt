@@ -3,7 +3,7 @@ package afkt_replace.module.splash
 import afkt_replace.core.lib.base.app.BaseAppActivity
 import afkt_replace.core.lib.base.controller.ui.theme.defaultAppLauncherUITheme
 import afkt_replace.core.lib.base.split.data.IntentData
-import afkt_replace.core.lib.router.module.splash.SplashRouter
+import afkt_replace.core.router.module.splash.SplashRouter
 import afkt_replace.lib.splash.ads.SplashAdsEvent
 import afkt_replace.module.splash.databinding.SplashActivityBinding
 import androidx.lifecycle.lifecycleScope

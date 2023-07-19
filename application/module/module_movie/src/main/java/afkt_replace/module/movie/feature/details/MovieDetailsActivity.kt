@@ -2,7 +2,7 @@ package afkt_replace.module.movie.feature.details
 
 import afkt_replace.core.lib.base.app.BaseAppActivity
 import afkt_replace.core.lib.base.controller.ui.theme.defaultActivityBlankUITheme
-import afkt_replace.core.lib.router.module.movie.MovieRouter
+import afkt_replace.core.router.module.movie.MovieRouter
 import afkt_replace.module.movie.BR
 import afkt_replace.module.movie.MovieViewModel
 import afkt_replace.module.movie.R
