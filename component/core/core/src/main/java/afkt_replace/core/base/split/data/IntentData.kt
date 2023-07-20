@@ -1,5 +1,6 @@
 package afkt_replace.core.base.split.data
 
+import afkt_replace.core.config.KeyConst
 import android.content.Intent
 import android.os.Bundle
 import dev.base.DevIntent
@@ -106,7 +107,7 @@ class IntentData private constructor() : BaseIntent<IntentData>() {
      * @return Value
      */
     fun getAds(): String? {
-        return get(afkt_replace.core.config.KeyConst.ADS)
+        return get(KeyConst.ADS)
     }
 
     /**
@@ -115,7 +116,7 @@ class IntentData private constructor() : BaseIntent<IntentData>() {
      * @return IntentData
      */
     fun setAds(value: String?): IntentData {
-        return put(afkt_replace.core.config.KeyConst.ADS, value)
+        return put(KeyConst.ADS, value)
     }
 
     /**
@@ -123,7 +124,7 @@ class IntentData private constructor() : BaseIntent<IntentData>() {
      * @return IntentData
      */
     fun removeAds(): IntentData {
-        return remove(afkt_replace.core.config.KeyConst.ADS)
+        return remove(KeyConst.ADS)
     }
 
     /**
@@ -131,7 +132,7 @@ class IntentData private constructor() : BaseIntent<IntentData>() {
      * @return `true` yes, `false` no
      */
     fun containsAds(): Boolean {
-        return containsKey(afkt_replace.core.config.KeyConst.ADS)
+        return containsKey(KeyConst.ADS)
     }
 
     /**
@@ -139,6 +140,6 @@ class IntentData private constructor() : BaseIntent<IntentData>() {
      * @return `true` yes, `false` no
      */
     fun isNullValueAds(): Boolean {
-        return isNullValue(afkt_replace.core.config.KeyConst.ADS)
+        return isNullValue(KeyConst.ADS)
     }
 }

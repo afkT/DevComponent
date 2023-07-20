@@ -5,22 +5,22 @@ import afkt_replace.core.base.repository.Resource
 import afkt_replace.core.base.repository.Status
 import afkt_replace.core.base.split.data.IntentData
 import afkt_replace.core.config.ParamConst
+import afkt_replace.core.project.bean.tv.TvDetails
 import afkt_replace.module.tv.databinding.TvFragmentDetailsBinding
 import androidx.lifecycle.MutableLiveData
 import dev.utils.common.able.Consumerable
 import dev.utils.common.able.Getable
 
-interface TvDetailsDataConsumer : Consumerable.ConsumerByParam<
-        Boolean, afkt_replace.core.project.bean.tv.TvDetails?>
+interface TvDetailsDataConsumer : Consumerable.ConsumerByParam<Boolean, TvDetails?>
 
 /**
  * 绑定数据源解析处理
  */
 fun bindTvDetailsResource(
-    tvDetails: Resource<afkt_replace.core.project.bean.tv.TvDetails>?,
+    tvDetails: Resource<TvDetails>?,
     consumer: TvDetailsDataConsumer
 ) {
-    var details: afkt_replace.core.project.bean.tv.TvDetails? = null
+    var details: TvDetails? = null
     // 解析剧集详情数据
     tvDetails?.let {
         when (it.status) {
@@ -49,7 +49,7 @@ class TvDetailsDataConsumerIMPL(
     private lateinit var binding: TvFragmentDetailsBinding
 
     override fun accept(
-        param: afkt_replace.core.project.bean.tv.TvDetails?
+        param: TvDetails?
     ): Boolean {
         param?.let {
             details.postValue(it)
@@ -84,5 +84,5 @@ class TvDetailsDataConsumerIMPL(
     }
 
     // 数据源
-    private val details = MutableLiveData<afkt_replace.core.project.bean.tv.TvDetails>()
+    private val details = MutableLiveData<TvDetails>()
 }

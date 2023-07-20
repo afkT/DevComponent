@@ -1,5 +1,7 @@
 package afkt_replace.core.base.controller.ui.theme
 
+import afkt_replace.core.config.AppLibConfig
+
 // ======================
 // = BaseUITheme 扩展函数 =
 // ======================
@@ -9,7 +11,7 @@ package afkt_replace.core.base.controller.ui.theme
  */
 private fun <T : BaseUITheme<*>> T.unifiedUITheme(): T {
     // DevBaseContentAssist 是否安全处理
-    setContentAssistSafe(afkt_replace.core.config.AppLibConfig.UI_CONTENT_ASSIST_SAFE)
+    setContentAssistSafe(AppLibConfig.UI_CONTENT_ASSIST_SAFE)
     // StatusBar 是否占位显示 ( StatusBar 底部透明 )
     setStatusBarFrame(true)
     // StatusBar 是否高亮模式

@@ -3,6 +3,7 @@ package afkt_replace.lib.splash.ads
 import afkt_replace.core.base.controller.viewmodel.IntentDataViewModel
 import afkt_replace.core.config.AppLibConfig
 import afkt_replace.core.config.TypeConst
+import afkt_replace.core.project.bean.splash.SplashAds
 import afkt_replace.core.project.bean.splash.fromSplashAds
 import afkt_replace.core.project.utils.tmdb.toTMDBImageSource
 import android.graphics.Bitmap
@@ -18,7 +19,7 @@ import dev.mvvm.command.BindingConsumer
 
 class SplashAdsViewModel : IntentDataViewModel() {
 
-    private val splashAds: afkt_replace.core.project.bean.splash.SplashAds by lazy {
+    private val splashAds: SplashAds by lazy {
         intentData.get().fromSplashAds()
     }
 

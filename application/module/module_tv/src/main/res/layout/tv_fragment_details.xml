@@ -26,7 +26,7 @@
 
         <variable
             name="details"
-            type="afkt_replace.core.project.bean.tv.TvDetails" />
+            type="androidx.lifecycle.MutableLiveData&lt;TvDetails&gt;" />
 
         <import type="dev.utils.common.StringUtils" />
 

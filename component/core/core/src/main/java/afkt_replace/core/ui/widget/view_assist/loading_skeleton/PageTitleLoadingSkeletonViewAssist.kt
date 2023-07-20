@@ -1,7 +1,7 @@
 package afkt_replace.core.ui.widget.view_assist.loading_skeleton
 
-import afkt_replace.core.config.AppLibConfig
 import afkt_replace.core.R
+import afkt_replace.core.config.AppLibConfig
 import afkt_replace.core.databinding.CoreUiBaseStatusBarBinding
 import afkt_replace.core.databinding.CoreUiBaseTitleBarBinding
 import afkt_replace.core.databinding.CoreUiViewAssistPageTitleSkeletonFailedBinding

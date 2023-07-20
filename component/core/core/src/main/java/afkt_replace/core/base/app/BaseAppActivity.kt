@@ -44,10 +44,10 @@ abstract class BaseAppActivity<VDB : ViewDataBinding, VM : BaseViewModel> : Base
         bindLayoutId: Int,
         bindViewModelId: Int,
         vmType: ActivityVMType = ActivityVMType.ACTIVITY,
-        simple_Init: ((afkt_replace.core.base.app.BaseAppActivity<VDB, VM>) -> Unit)? = null,
-        simple_Start: ((afkt_replace.core.base.app.BaseAppActivity<VDB, VM>) -> Unit)? = null,
-        simple_PreLoad: ((afkt_replace.core.base.app.BaseAppActivity<VDB, VM>) -> Unit)? = null,
-        simple_Agile: ((afkt_replace.core.base.app.BaseAppActivity<VDB, VM>) -> Unit)? = null,
+        simple_Init: ((BaseAppActivity<VDB, VM>) -> Unit)? = null,
+        simple_Start: ((BaseAppActivity<VDB, VM>) -> Unit)? = null,
+        simple_PreLoad: ((BaseAppActivity<VDB, VM>) -> Unit)? = null,
+        simple_Agile: ((BaseAppActivity<VDB, VM>) -> Unit)? = null,
         simple_UITheme: ((ActivityUITheme) -> ActivityUITheme)? = null
     ) : super(bindLayoutId, bindViewModelId, vmType) {
         simpleFactory = SimpleActivityIMPL.of(
@@ -59,10 +59,10 @@ abstract class BaseAppActivity<VDB : ViewDataBinding, VM : BaseViewModel> : Base
         bindLayoutView: BindingActivityView?,
         bindViewModelId: Int,
         vmType: ActivityVMType = ActivityVMType.ACTIVITY,
-        simple_Init: ((afkt_replace.core.base.app.BaseAppActivity<VDB, VM>) -> Unit)? = null,
-        simple_Start: ((afkt_replace.core.base.app.BaseAppActivity<VDB, VM>) -> Unit)? = null,
-        simple_PreLoad: ((afkt_replace.core.base.app.BaseAppActivity<VDB, VM>) -> Unit)? = null,
-        simple_Agile: ((afkt_replace.core.base.app.BaseAppActivity<VDB, VM>) -> Unit)? = null,
+        simple_Init: ((BaseAppActivity<VDB, VM>) -> Unit)? = null,
+        simple_Start: ((BaseAppActivity<VDB, VM>) -> Unit)? = null,
+        simple_PreLoad: ((BaseAppActivity<VDB, VM>) -> Unit)? = null,
+        simple_Agile: ((BaseAppActivity<VDB, VM>) -> Unit)? = null,
         simple_UITheme: ((ActivityUITheme) -> ActivityUITheme)? = null
     ) : super(bindLayoutView, bindViewModelId, vmType) {
         simpleFactory = SimpleActivityIMPL.of(
@@ -74,7 +74,7 @@ abstract class BaseAppActivity<VDB : ViewDataBinding, VM : BaseViewModel> : Base
     // = 敏捷简化开发扩展接口 =
     // ====================
 
-    private var simpleFactory: SimpleActivityIMPL<afkt_replace.core.base.app.BaseAppActivity<VDB, VM>>? = null
+    private var simpleFactory: SimpleActivityIMPL<BaseAppActivity<VDB, VM>>? = null
 
     override fun simpleInit() {
         simpleFactory?.simpleInit(this)

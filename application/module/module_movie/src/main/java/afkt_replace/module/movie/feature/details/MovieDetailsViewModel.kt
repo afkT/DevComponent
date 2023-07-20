@@ -7,9 +7,11 @@ import afkt_replace.core.base.repository.Resource
 import afkt_replace.core.base.split.data.IntentData
 import afkt_replace.core.base.split.inter.FunctionFlowCall
 import afkt_replace.core.config.ParamConst
-import afkt_replace.core.project.utils.image.LuckImageEngineImpl
 import afkt_replace.core.databinding.CoreUiBaseStatusBarBinding
 import afkt_replace.core.databinding.CoreUiBaseTitleBarBinding
+import afkt_replace.core.project.bean.movie.MovieDetails
+import afkt_replace.core.project.bean.movie.MoviePosterImages
+import afkt_replace.core.project.utils.image.LuckImageEngineImpl
 import afkt_replace.core.ui.widget.view_assist.loading_skeleton.PageTitleBindable
 import afkt_replace.core.ui.widget.view_assist.loading_skeleton.PageTitleLoadingSkeletonViewAssist
 import afkt_replace.lib.tmdb.ui.adapter.MoviePosterClickConsumer
@@ -72,7 +74,7 @@ class MovieDetailsViewModel(
 
     // 请求电影详情数据
     private val movieIdLiveData: MutableLiveData<Int> = MutableLiveData()
-    private val movieDetailsLiveData: LiveData<Resource<afkt_replace.core.project.bean.movie.MovieDetails>> =
+    private val movieDetailsLiveData: LiveData<Resource<MovieDetails>> =
         movieIdLiveData.switchMap {
             movieIdLiveData.value?.let { movieId ->
                 repository.requestMovieDetails(
@@ -80,7 +82,7 @@ class MovieDetailsViewModel(
                 )
             } ?: AbsentLiveData.create()
         }
-    private val moviePosterImagesLiveData: LiveData<Resource<afkt_replace.core.project.bean.movie.MoviePosterImages>> =
+    private val moviePosterImagesLiveData: LiveData<Resource<MoviePosterImages>> =
         movieIdLiveData.switchMap {
             movieIdLiveData.value?.let { movieId ->
                 repository.requestMoviePosterImages(

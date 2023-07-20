@@ -1,5 +1,6 @@
 package afkt_replace.lib.tmdb.ui.adapter
 
+import afkt_replace.core.project.bean.person.KnownFor
 import afkt_replace.core.project.utils.tmdb.toTMDBImageSource
 import afkt_replace.core.project.utils.tmdb.toTMDBImageSourceEmpty
 import afkt_replace.core.ui.skin.AppThemeRes
@@ -28,8 +29,8 @@ import me.tatarka.bindingcollectionadapter2.ItemBinding
  */
 class PersonActingAdapter(
     val appThemeRes: Getable.Get<AppThemeRes>,
-    val itemClick: BindingClick<afkt_replace.core.project.bean.person.KnownFor>
-) : BindingRecyclerViewAdapter<afkt_replace.core.project.bean.person.KnownFor>() {
+    val itemClick: BindingClick<KnownFor>
+) : BindingRecyclerViewAdapter<KnownFor>() {
 
     private val assist = PosterCoverViewAssist(appThemeRes)
 
@@ -42,7 +43,7 @@ class PersonActingAdapter(
         variableId: Int,
         layoutRes: Int,
         position: Int,
-        item: afkt_replace.core.project.bean.person.KnownFor
+        item: KnownFor
     ) {
         super.onBindBinding(binding, variableId, layoutRes, position, item)
 
@@ -128,20 +129,20 @@ class PersonActingItem(
 ) {
 
     // 适配器
-    val adapter = PersonActingAdapter(appThemeRes, object : BindingClick<afkt_replace.core.project.bean.person.KnownFor> {
-        override fun onClick(value: afkt_replace.core.project.bean.person.KnownFor) {
+    val adapter = PersonActingAdapter(appThemeRes, object : BindingClick<KnownFor> {
+        override fun onClick(value: KnownFor) {
             itemClick?.onClick(value)
         }
     })
 
     // 数据源
-    val items = ObservableArrayList<afkt_replace.core.project.bean.person.KnownFor>()
+    val items = ObservableArrayList<KnownFor>()
 
     // Item 点击事件
-    var itemClick: BindingClick<afkt_replace.core.project.bean.person.KnownFor>? = null
+    var itemClick: BindingClick<KnownFor>? = null
 
     // Item Binding
-    val itemBinding = ItemBinding.of<afkt_replace.core.project.bean.person.KnownFor>(
+    val itemBinding = ItemBinding.of<KnownFor>(
         BR.itemValue, R.layout.tmdb_person_acting
     )
 }

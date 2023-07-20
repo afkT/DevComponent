@@ -1,7 +1,7 @@
 package afkt_replace.core.lib.debug.provider
 
-import afkt_replace.core.lib.debug.engine.DevDebugImpl
 import afkt_replace.core.engine.debug.DevDebugEngine
+import afkt_replace.core.lib.debug.engine.DevDebugImpl
 import android.content.ContentProvider
 import android.content.ContentValues
 import android.database.Cursor

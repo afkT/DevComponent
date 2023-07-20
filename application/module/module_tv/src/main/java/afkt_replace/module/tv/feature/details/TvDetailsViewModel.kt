@@ -9,6 +9,7 @@ import afkt_replace.core.base.split.inter.FunctionFlowCall
 import afkt_replace.core.config.ParamConst
 import afkt_replace.core.databinding.CoreUiBaseStatusBarBinding
 import afkt_replace.core.databinding.CoreUiBaseTitleBarBinding
+import afkt_replace.core.project.bean.tv.TvDetails
 import afkt_replace.core.ui.widget.view_assist.loading_skeleton.PageTitleBindable
 import afkt_replace.core.ui.widget.view_assist.loading_skeleton.PageTitleLoadingSkeletonViewAssist
 import afkt_replace.module.tv.TvRepository
@@ -59,7 +60,7 @@ class TvDetailsViewModel(
 
     // 请求剧集详情数据
     private val tvIdLiveData: MutableLiveData<Int> = MutableLiveData()
-    private val tvDetailsLiveData: LiveData<Resource<afkt_replace.core.project.bean.tv.TvDetails>> =
+    private val tvDetailsLiveData: LiveData<Resource<TvDetails>> =
         tvIdLiveData.switchMap {
             tvIdLiveData.value?.let { tvId ->
                 repository.requestTvDetails(

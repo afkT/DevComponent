@@ -1,5 +1,7 @@
 package afkt_replace.module.splash
 
+import afkt_replace.core.project.bean.splash.NONE_ADS
+import afkt_replace.core.project.bean.splash.SplashAds
 import afkt_replace.core.project.router.module.splash.SplashNav
 import androidx.databinding.Observable
 import androidx.lifecycle.LiveData
@@ -12,8 +14,8 @@ class SplashRepository {
      * 查询广告数据
      * @return LiveData<SplashAds>
      */
-    fun queryAds(): LiveData<afkt_replace.core.project.bean.splash.SplashAds> {
-        val liveData = MutableLiveData<afkt_replace.core.project.bean.splash.SplashAds>()
+    fun queryAds(): LiveData<SplashAds> {
+        val liveData = MutableLiveData<SplashAds>()
         // 获取广告数据
         SplashNav.splashProvider().hiIfNotNull({ provider ->
             provider.getAdsOb().let { ads ->
@@ -34,7 +36,7 @@ class SplashRepository {
                 provider.queryAds()
             }
         }, {
-            liveData.postValue(afkt_replace.core.project.bean.splash.NONE_ADS)
+            liveData.postValue(NONE_ADS)
         })
         return liveData
     }

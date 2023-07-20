@@ -1,11 +1,15 @@
 package afkt_replace.core.base.controller
 
+import afkt_replace.core.BR
 import afkt_replace.core.base.controller.inter.IController
 import afkt_replace.core.base.skin.AppThemeDefault
-import afkt_replace.core.BR
 import afkt_replace.core.databinding.CoreUiBaseHeaderBinding
 import afkt_replace.core.databinding.CoreUiBaseStatusBarBinding
 import afkt_replace.core.databinding.CoreUiBaseTitleBarBinding
+import afkt_replace.core.ui.listener.AppListener
+import afkt_replace.core.ui.listener.AppUI
+import afkt_replace.core.ui.skin.AppThemeKey
+import afkt_replace.core.ui.skin.AppThemeRes
 import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
@@ -40,8 +44,8 @@ class BaseUIController(
     // ==========
 
     // APP 主题样式资源类
-    val appThemeRes: afkt_replace.core.ui.skin.AppThemeRes by lazy {
-        afkt_replace.core.ui.skin.AppThemeRes(
+    val appThemeRes: AppThemeRes by lazy {
+        AppThemeRes(
             owner,
             controller.isSyncSkin(),
             controller.ignoreSkinList()
@@ -49,13 +53,13 @@ class BaseUIController(
     }
 
     // APP 通用事件
-    val appListener: afkt_replace.core.ui.listener.AppListener by lazy {
-        afkt_replace.core.ui.listener.AppListener()
+    val appListener: AppListener by lazy {
+        AppListener()
     }
 
     // APP UI 通用控制
-    val appUI: afkt_replace.core.ui.listener.AppUI by lazy {
-        afkt_replace.core.ui.listener.AppUI()
+    val appUI: AppUI by lazy {
+        AppUI()
     }
 
     // =
@@ -277,11 +281,11 @@ class BaseUIController(
      * 创建状态栏、标题栏透明背景色 APP 主题样式
      * @return AppThemeRes
      */
-    private fun createTransparentBackgroundByAppThemeRes(): afkt_replace.core.ui.skin.AppThemeRes {
+    private fun createTransparentBackgroundByAppThemeRes(): AppThemeRes {
         return appThemeRes.createByClone(
             arrayListOf(
-                afkt_replace.core.ui.skin.AppThemeKey.statusBarBackground,
-                afkt_replace.core.ui.skin.AppThemeKey.titleBarBackground
+                AppThemeKey.statusBarBackground,
+                AppThemeKey.titleBarBackground
             )
         ).also { newRes ->
             // 状态栏背景色
@@ -298,7 +302,7 @@ class BaseUIController(
      */
     private fun updateCoreUiBaseHeaderAppThemeRes(
         binding: CoreUiBaseHeaderBinding,
-        res: afkt_replace.core.ui.skin.AppThemeRes
+        res: AppThemeRes
     ) {
         try {
             binding.setVariable(BR.appThemeRes, res)

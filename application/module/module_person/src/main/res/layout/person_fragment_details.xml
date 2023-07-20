@@ -27,11 +27,11 @@
 
         <variable
             name="details"
-            type="PersonDetails" />
+            type="androidx.lifecycle.MutableLiveData&lt;PersonDetails&gt;" />
 
         <variable
             name="acting"
-            type="PersonActing" />
+            type="androidx.lifecycle.MutableLiveData&lt;PersonActing&gt;" />
 
         <import type="dev.utils.common.StringUtils" />
 

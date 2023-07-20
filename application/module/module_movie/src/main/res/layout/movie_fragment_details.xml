@@ -26,11 +26,11 @@
 
         <variable
             name="details"
-            type="afkt_replace.core.project.bean.movie.MovieDetails" />
+            type="androidx.lifecycle.MutableLiveData&lt;MovieDetails&gt;" />
 
         <variable
             name="poster"
-            type="afkt_replace.core.project.bean.movie.MoviePosterImages" />
+            type="androidx.lifecycle.MutableLiveData&lt;MoviePosterImages&gt;" />
 
         <import type="dev.utils.common.StringUtils" />
 

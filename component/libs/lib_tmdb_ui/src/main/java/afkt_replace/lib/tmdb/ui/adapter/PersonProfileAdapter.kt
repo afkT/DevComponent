@@ -1,5 +1,6 @@
 package afkt_replace.lib.tmdb.ui.adapter
 
+import afkt_replace.core.project.bean.person.TMDBPerson
 import afkt_replace.core.project.utils.tmdb.toTMDBImageSource
 import afkt_replace.core.ui.skin.AppThemeRes
 import afkt_replace.core.ui.widget.BaseImageView
@@ -25,7 +26,7 @@ import me.tatarka.bindingcollectionadapter2.ItemBinding
  * detail: 人物简介适配器
  * @author Ttt
  */
-class PersonProfileAdapter<T : afkt_replace.core.project.bean.person.TMDBPerson>(
+class PersonProfileAdapter<T : TMDBPerson>(
     val appThemeRes: Getable.Get<AppThemeRes>
 ) : BindingRecyclerViewAdapter<T>() {
 
@@ -96,23 +97,23 @@ class PersonProfileItem(
 ) {
 
     // 适配器
-    val adapter = PersonProfileAdapter<afkt_replace.core.project.bean.person.TMDBPerson>(appThemeRes)
+    val adapter = PersonProfileAdapter<TMDBPerson>(appThemeRes)
 
     // 页数信息
     val page = DevPage.getDefault<Any>()
 
     // 数据源
-    val items = ObservableArrayList<afkt_replace.core.project.bean.person.TMDBPerson>()
+    val items = ObservableArrayList<TMDBPerson>()
 
     // Item 点击事件
-    var itemClick: BindingClick<afkt_replace.core.project.bean.person.TMDBPerson>? = null
+    var itemClick: BindingClick<TMDBPerson>? = null
 
     // Item Binding
-    val itemBinding = ItemBinding.of<afkt_replace.core.project.bean.person.TMDBPerson>(
+    val itemBinding = ItemBinding.of<TMDBPerson>(
         BR.itemValue, R.layout.tmdb_person_profile
     ).bindExtra(
-        BR.itemClick, object : BindingClick<afkt_replace.core.project.bean.person.TMDBPerson> {
-            override fun onClick(value: afkt_replace.core.project.bean.person.TMDBPerson) {
+        BR.itemClick, object : BindingClick<TMDBPerson> {
+            override fun onClick(value: TMDBPerson) {
                 itemClick?.onClick(value)
             }
         }

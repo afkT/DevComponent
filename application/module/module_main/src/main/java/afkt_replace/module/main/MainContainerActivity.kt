@@ -5,6 +5,7 @@ import afkt_replace.core.base.controller.ui.ext.defaultMainContainerController
 import afkt_replace.core.base.controller.ui.ext.setExitBackIntercept
 import afkt_replace.core.base.controller.ui.theme.defaultMainContainerUITheme
 import afkt_replace.core.config.KeyConst
+import afkt_replace.core.project.bean.splash.SplashAds
 import afkt_replace.core.project.router.module.main.MainRouter
 import afkt_replace.core.project.router.module.movie.MovieNav
 import afkt_replace.module.main.databinding.MainAppContainerBinding
@@ -74,7 +75,7 @@ class MainContainerActivity : BaseAppActivity<MainAppContainerBinding, MainViewM
      */
     private fun consumerSplashADS() {
         intent.getStringExtra(KeyConst.ADS)?.fromJson(
-            classOfT = afkt_replace.core.project.bean.splash.SplashAds::class.java
+            classOfT = SplashAds::class.java
         )?.let {
             MovieNav.buildMovieDetails(
                 it.resId, it.title

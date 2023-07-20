@@ -14,19 +14,18 @@ import dev.utils.common.StringUtils
 import dev.utils.common.able.Consumerable
 import dev.utils.common.able.Getable
 
-interface PersonDetailsDataConsumer : Consumerable.ConsumerByParam2<
-        Boolean, afkt_replace.core.project.bean.person.PersonDetails?, afkt_replace.core.project.bean.person.PersonActing?>
+interface PersonDetailsDataConsumer : Consumerable.ConsumerByParam2<Boolean, PersonDetails?, PersonActing?>
 
 /**
  * 绑定数据源解析处理
  */
 fun bindPersonDetailsResource(
-    personDetails: Resource<afkt_replace.core.project.bean.person.PersonDetails>?,
-    personActing: Resource<afkt_replace.core.project.bean.person.PersonActing>?,
+    personDetails: Resource<PersonDetails>?,
+    personActing: Resource<PersonActing>?,
     consumer: PersonDetailsDataConsumer
 ) {
-    var details: afkt_replace.core.project.bean.person.PersonDetails? = null
-    var acting: afkt_replace.core.project.bean.person.PersonActing? = null
+    var details: PersonDetails? = null
+    var acting: PersonActing? = null
     // 解析人物详情数据
     personDetails?.let {
         when (it.status) {
@@ -68,8 +67,8 @@ class PersonDetailsDataConsumerIMPL(
     private lateinit var binding: PersonFragmentDetailsBinding
 
     override fun accept(
-        param: afkt_replace.core.project.bean.person.PersonDetails?,
-        param2: afkt_replace.core.project.bean.person.PersonActing?
+        param: PersonDetails?,
+        param2: PersonActing?
     ): Boolean {
         param?.let {
             details.postValue(it)

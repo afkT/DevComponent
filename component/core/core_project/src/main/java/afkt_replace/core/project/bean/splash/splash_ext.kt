@@ -1,5 +1,6 @@
 package afkt_replace.core.project.bean.splash
 
+import afkt_replace.core.base.split.data.IntentData
 import afkt_replace.core.project.bean.base.TMDBCommon
 import dev.expand.engine.json.fromJson
 
@@ -15,7 +16,7 @@ val NONE_ADS = SplashAds(
 // = 扩展函数 =
 // ==========
 
-fun afkt_replace.core.base.split.data.IntentData?.fromSplashAds(): SplashAds {
+fun IntentData?.fromSplashAds(): SplashAds {
     return this?.getAds()?.fromJson(
         classOfT = SplashAds::class.java
     ) ?: NONE_ADS

@@ -1,5 +1,6 @@
 package afkt_replace.lib.splash.ads
 
+import afkt_replace.core.project.bean.splash.SplashAds
 import com.jeremyliao.liveeventbus.core.LiveEvent
 
 /**
@@ -10,7 +11,7 @@ internal data class SplashAdsData(
     // yyyyMMdd
     val dateKey: String,
     // 广告数据源
-    val list: List<afkt_replace.core.project.bean.splash.SplashAds>
+    val list: List<SplashAds>
 )
 
 /**
@@ -18,7 +19,7 @@ internal data class SplashAdsData(
  * @author Ttt
  */
 data class SplashAdsEvent(
-    val ads: afkt_replace.core.project.bean.splash.SplashAds?,
+    val ads: SplashAds?,
     // 0 = 点击, 1 = 跳过
     val type: Int
 ) : LiveEvent

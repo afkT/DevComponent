@@ -1,5 +1,6 @@
 package afkt_replace.module.tv
 
+import afkt_replace.core.project.bean.base.TMDBCommon
 import afkt_replace.core.project.router.module.tv.TvNav
 
 /**
@@ -13,7 +14,7 @@ object TvNavBuild {
      * @receiver TMDBCommon
      * @return Postcard
      */
-    internal fun afkt_replace.core.project.bean.base.TMDBCommon.routerTvDetails() {
+    internal fun TMDBCommon.routerTvDetails() {
         TvNav.buildTvDetails(
             id.toString(), title()
         ).navigation()

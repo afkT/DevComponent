@@ -7,9 +7,12 @@ import afkt_replace.core.base.repository.Resource
 import afkt_replace.core.base.split.data.IntentData
 import afkt_replace.core.base.split.inter.FunctionFlowCall
 import afkt_replace.core.config.ParamConst
-import afkt_replace.core.project.router.module.movie.MovieNav
 import afkt_replace.core.databinding.CoreUiBaseStatusBarBinding
 import afkt_replace.core.databinding.CoreUiBaseTitleBarBinding
+import afkt_replace.core.project.bean.person.KnownFor
+import afkt_replace.core.project.bean.person.PersonActing
+import afkt_replace.core.project.bean.person.PersonDetails
+import afkt_replace.core.project.router.module.movie.MovieNav
 import afkt_replace.core.ui.widget.view_assist.loading_skeleton.PageTitleBindable
 import afkt_replace.core.ui.widget.view_assist.loading_skeleton.PageTitleLoadingSkeletonViewAssist
 import afkt_replace.lib.tmdb.ui.adapter.PersonActingItem
@@ -43,8 +46,8 @@ class PersonDetailsViewModel(
     val actingItem = PersonActingItem(Getable.Get {
         return@Get null
     }).apply {
-        itemClick = object : BindingClick<afkt_replace.core.project.bean.person.KnownFor> {
-            override fun onClick(value: afkt_replace.core.project.bean.person.KnownFor) {
+        itemClick = object : BindingClick<KnownFor> {
+            override fun onClick(value: KnownFor) {
                 MovieNav.buildMovieDetails(
                     value.id.toString(), value.title()
                 ).navigation()
@@ -75,7 +78,7 @@ class PersonDetailsViewModel(
 
     // 请求人物详情数据
     private val personIdLiveData: MutableLiveData<Int> = MutableLiveData()
-    private val personDetailsLiveData: LiveData<Resource<afkt_replace.core.project.bean.person.PersonDetails>> =
+    private val personDetailsLiveData: LiveData<Resource<PersonDetails>> =
         personIdLiveData.switchMap {
             personIdLiveData.value?.let { personId ->
                 repository.requestPersonDetails(
@@ -83,7 +86,7 @@ class PersonDetailsViewModel(
                 )
             } ?: AbsentLiveData.create()
         }
-    private val personActingLiveData: LiveData<Resource<afkt_replace.core.project.bean.person.PersonActing>> =
+    private val personActingLiveData: LiveData<Resource<PersonActing>> =
         personIdLiveData.switchMap {
             personIdLiveData.value?.let { personId ->
                 repository.requestPersonActing(

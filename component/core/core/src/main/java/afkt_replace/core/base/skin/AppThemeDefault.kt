@@ -1,6 +1,7 @@
 package afkt_replace.core.base.skin
 
 import afkt_replace.core.R
+import afkt_replace.core.ui.skin.AppThemeRes
 import android.content.res.ColorStateList
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
@@ -66,8 +67,8 @@ object AppThemeDefault {
      * 全局 APP 主题样式资源类创建
      * @return AppThemeRes
      */
-    internal fun globalAppThemeRes(): afkt_replace.core.ui.skin.AppThemeRes {
-        return afkt_replace.core.ui.skin.AppThemeRes(null, false).apply {
+    internal fun globalAppThemeRes(): AppThemeRes {
+        return AppThemeRes(null, false).apply {
 
             // 主题背景色
             themeBackground.value = THEME_BACKGROUND

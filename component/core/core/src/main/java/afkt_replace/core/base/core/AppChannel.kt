@@ -1,5 +1,6 @@
 package afkt_replace.core.base.core
 
+import afkt_replace.core.channel.AbstractChannelFlavors
 import dev.base.DevVariable
 import dev.utils.DevFinal
 
@@ -7,10 +8,10 @@ import dev.utils.DevFinal
  * detail: APP 渠道信息
  * @author Ttt
  */
-object AppChannel : afkt_replace.core.channel.AbstractChannelFlavors {
+object AppChannel : AbstractChannelFlavors {
 
     // 渠道信息实现
-    private val IMPL: afkt_replace.core.channel.AbstractChannelFlavors by lazy {
+    private val IMPL: AbstractChannelFlavors by lazy {
         newChannelFlavorsIMPL()
     }
 
@@ -96,11 +97,11 @@ object AppChannel : afkt_replace.core.channel.AbstractChannelFlavors {
      * 通过 class 创建多渠道实例
      * @return AbstractChannelFlavors IMPL
      */
-    private fun newChannelFlavorsIMPL(): afkt_replace.core.channel.AbstractChannelFlavors {
+    private fun newChannelFlavorsIMPL(): AbstractChannelFlavors {
         return try {
             val clazz = Class.forName(IMPL_CLASS_NAME)
             val channelIMPL = clazz.newInstance()
-            channelIMPL as afkt_replace.core.channel.AbstractChannelFlavors
+            channelIMPL as AbstractChannelFlavors
         } catch (e: Exception) {
             NotFoundChannelFlavors(e.toString())
         }
@@ -112,7 +113,7 @@ object AppChannel : afkt_replace.core.channel.AbstractChannelFlavors {
      */
     private class NotFoundChannelFlavors(
         private val errorMessage: String
-    ) : afkt_replace.core.channel.AbstractChannelFlavors {
+    ) : AbstractChannelFlavors {
 
         private val mVariable = DevVariable<String, Any>()
 

@@ -44,10 +44,10 @@ abstract class BaseAppFragment<VDB : ViewDataBinding, VM : BaseViewModel> : Base
         bindLayoutId: Int,
         bindViewModelId: Int,
         vmType: FragmentVMType = FragmentVMType.FRAGMENT,
-        simple_Init: ((afkt_replace.core.base.app.BaseAppFragment<VDB, VM>) -> Unit)? = null,
-        simple_Start: ((afkt_replace.core.base.app.BaseAppFragment<VDB, VM>) -> Unit)? = null,
-        simple_PreLoad: ((afkt_replace.core.base.app.BaseAppFragment<VDB, VM>) -> Unit)? = null,
-        simple_Agile: ((afkt_replace.core.base.app.BaseAppFragment<VDB, VM>) -> Unit)? = null,
+        simple_Init: ((BaseAppFragment<VDB, VM>) -> Unit)? = null,
+        simple_Start: ((BaseAppFragment<VDB, VM>) -> Unit)? = null,
+        simple_PreLoad: ((BaseAppFragment<VDB, VM>) -> Unit)? = null,
+        simple_Agile: ((BaseAppFragment<VDB, VM>) -> Unit)? = null,
         simple_UITheme: ((FragmentUITheme) -> FragmentUITheme)? = null
     ) : super(bindLayoutId, bindViewModelId, vmType) {
         simpleFactory = SimpleFragmentIMPL.of(
@@ -59,10 +59,10 @@ abstract class BaseAppFragment<VDB : ViewDataBinding, VM : BaseViewModel> : Base
         bindLayoutView: BindingFragmentView,
         bindViewModelId: Int,
         vmType: FragmentVMType = FragmentVMType.FRAGMENT,
-        simple_Init: ((afkt_replace.core.base.app.BaseAppFragment<VDB, VM>) -> Unit)? = null,
-        simple_Start: ((afkt_replace.core.base.app.BaseAppFragment<VDB, VM>) -> Unit)? = null,
-        simple_PreLoad: ((afkt_replace.core.base.app.BaseAppFragment<VDB, VM>) -> Unit)? = null,
-        simple_Agile: ((afkt_replace.core.base.app.BaseAppFragment<VDB, VM>) -> Unit)? = null,
+        simple_Init: ((BaseAppFragment<VDB, VM>) -> Unit)? = null,
+        simple_Start: ((BaseAppFragment<VDB, VM>) -> Unit)? = null,
+        simple_PreLoad: ((BaseAppFragment<VDB, VM>) -> Unit)? = null,
+        simple_Agile: ((BaseAppFragment<VDB, VM>) -> Unit)? = null,
         simple_UITheme: ((FragmentUITheme) -> FragmentUITheme)? = null
     ) : super(bindLayoutView, bindViewModelId, vmType) {
         simpleFactory = SimpleFragmentIMPL.of(
@@ -74,7 +74,7 @@ abstract class BaseAppFragment<VDB : ViewDataBinding, VM : BaseViewModel> : Base
     // = 敏捷简化开发扩展接口 =
     // ====================
 
-    private var simpleFactory: SimpleFragmentIMPL<afkt_replace.core.base.app.BaseAppFragment<VDB, VM>>? = null
+    private var simpleFactory: SimpleFragmentIMPL<BaseAppFragment<VDB, VM>>? = null
 
     override fun simpleInit() {
         simpleFactory?.simpleInit(this)

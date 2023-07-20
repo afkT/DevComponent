@@ -1,6 +1,7 @@
 package afkt_replace.core.base.core
 
 import afkt_replace.core.base.skin.AppThemeDefault
+import afkt_replace.core.ui.skin.AppThemeSkin
 import android.content.Context
 import android.util.Log
 import androidx.multidex.MultiDexApplication
@@ -54,7 +55,7 @@ open class DevApplication : MultiDexApplication() {
         // 初始化环境信息
         AppEnvironment.checker()
         // 初始化全局换肤资源
-        afkt_replace.core.ui.skin.AppThemeSkin.initialize(AppThemeDefault.globalAppThemeRes())
+        AppThemeSkin.initialize(AppThemeDefault.globalAppThemeRes())
         // 初始化刷新、加载相关配置
         AppRefresh.initialize()
     }
