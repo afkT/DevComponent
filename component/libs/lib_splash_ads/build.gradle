@@ -2,6 +2,6 @@ apply from: rootProject.file(files.build_library_gradle)
 
 dependencies {
 
-    // 核心基础依赖库
+    // 核心基础库依赖描述
     compileOnly project(':core_desc')
 }

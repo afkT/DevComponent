@@ -11,7 +11,7 @@ dependencies {
 
     // 核心基础依赖库
     api project(':core')
-    // 项目相关代码
+    // 项目相关代码库
     api project(':core_project')
 
     // =====================

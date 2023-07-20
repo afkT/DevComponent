@@ -161,7 +161,7 @@ android {
 // = 特殊字段创建 =
 // =============
 
-// core/libs/lib_base Module 构建字段创建
+// core Module 构建字段创建
 if (libName == "core") {
     android.defaultConfig {
         // 是否开启日志
