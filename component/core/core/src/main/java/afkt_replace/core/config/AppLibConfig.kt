@@ -1,5 +1,6 @@
 package afkt_replace.core.config
 
+import afkt_replace.core.BuildConfig
 import dev.utils.app.ClickUtils
 
 /**

@@ -1,4 +1,4 @@
-package afkt_replace.core.router.module
+package afkt_replace.core.router
 
 import android.content.Context
 import android.content.Intent

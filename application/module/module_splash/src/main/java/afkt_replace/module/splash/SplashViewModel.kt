@@ -1,10 +1,9 @@
 package afkt_replace.module.splash
 
 import afkt_replace.core.base.app.BaseViewModel
-import afkt_replace.core.project.bean.splash.SplashAds
 import afkt_replace.core.config.KeyConst
-import afkt_replace.core.router.module.AppRouter
-import afkt_replace.core.router.module.splash.SplashNav
+import afkt_replace.core.router.AppRouter
+import afkt_replace.core.project.router.module.splash.SplashNav
 import android.app.Activity
 import androidx.lifecycle.LiveData
 import dev.expand.engine.json.toJson
@@ -13,7 +12,7 @@ import dev.utils.app.toast.ToastTintUtils
 
 class SplashViewModel(
     private val repository: SplashRepository = SplashRepository()
-) : afkt_replace.core.base.app.BaseViewModel() {
+) : BaseViewModel() {
 
     // ==============
     // = 对外公开方法 =

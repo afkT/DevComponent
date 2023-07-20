@@ -1,7 +1,7 @@
 package afkt_replace.core.lib.debug.engine
 
 import afkt_replace.core.lib.debug.floating.FloatingDebug
-import afkt_replace.core.lib.engine.debug.IDebugEngine
+import afkt_replace.core.engine.debug.IDebugEngine
 import androidx.fragment.app.FragmentActivity
 import okhttp3.OkHttpClient
 

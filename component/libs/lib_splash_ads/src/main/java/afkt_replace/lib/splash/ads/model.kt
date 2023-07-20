@@ -1,6 +1,5 @@
 package afkt_replace.lib.splash.ads
 
-import afkt_replace.core.project.bean.splash.SplashAds
 import com.jeremyliao.liveeventbus.core.LiveEvent
 
 /**

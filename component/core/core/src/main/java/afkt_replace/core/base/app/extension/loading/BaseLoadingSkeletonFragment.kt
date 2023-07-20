@@ -2,12 +2,12 @@ package afkt_replace.core.base.app.extension.loading
 
 import afkt_replace.core.base.app.BaseAppFragment
 import afkt_replace.core.base.app.BaseViewModel
-import afkt_replace.core.lib.base.app.base.FragmentVMType
-import afkt_replace.core.lib.base.app.base.inter.BindingFragmentView
-import afkt_replace.core.lib.base.app.base.simple.factory.SimpleFragmentIMPL
-import afkt_replace.core.lib.base.controller.loading.BaseLoadingSkeletonController
-import afkt_replace.core.lib.base.controller.ui.theme.FragmentUITheme
-import afkt_replace.core.app.ui.widget.view_assist.loading_skeleton.PageLoadingSkeletonFactory
+import afkt_replace.core.base.app.base.FragmentVMType
+import afkt_replace.core.base.app.base.inter.BindingFragmentView
+import afkt_replace.core.base.app.base.simple.factory.SimpleFragmentIMPL
+import afkt_replace.core.base.controller.loading.BaseLoadingSkeletonController
+import afkt_replace.core.base.controller.ui.theme.FragmentUITheme
+import afkt_replace.core.ui.widget.view_assist.loading_skeleton.PageLoadingSkeletonFactory
 import androidx.databinding.ViewDataBinding
 
 /**
@@ -15,7 +15,7 @@ import androidx.databinding.ViewDataBinding
  * @author Ttt
  * Loading UI 骨架 Fragment, 用于首次进入使用
  */
-abstract class BaseLoadingSkeletonFragment<VDB : ViewDataBinding, VM : afkt_replace.core.base.app.BaseViewModel> : afkt_replace.core.base.app.BaseAppFragment<VDB, VM> {
+abstract class BaseLoadingSkeletonFragment<VDB : ViewDataBinding, VM : BaseViewModel> : BaseAppFragment<VDB, VM> {
 
     // ==========
     // = 构造函数 =
@@ -61,8 +61,7 @@ abstract class BaseLoadingSkeletonFragment<VDB : ViewDataBinding, VM : afkt_repl
     }
 
     // Page Loading 骨架工厂类
-    open val loadingSkeletonFactory =
-        afkt_replace.core.app.ui.widget.view_assist.loading_skeleton.PageLoadingSkeletonFactory()
+    open val loadingSkeletonFactory = PageLoadingSkeletonFactory()
 
     // ============
     // = override =

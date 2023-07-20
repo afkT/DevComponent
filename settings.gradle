@@ -39,6 +39,7 @@ modules.forEach {
 
 def cores = [
         "core",
+        "core_desc",
         "core_project",
         "core_lib_debug_assist",
         "core_lib_environment",

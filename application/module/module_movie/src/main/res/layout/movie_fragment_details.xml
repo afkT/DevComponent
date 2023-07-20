@@ -34,7 +34,7 @@
 
         <import type="dev.utils.common.StringUtils" />
 
-        <import type="afkt_replace.core.lib.utils.TMDBImageUrlKt" />
+        <import type="afkt_replace.core.project.utils.tmdb.TMDBImageUrlKt" />
 
         <import type="afkt_replace.core.project.bean.movie.MovieDetails" />
 

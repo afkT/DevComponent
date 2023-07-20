@@ -1,10 +1,10 @@
 package afkt_replace.module.main
 
 import afkt_replace.core.base.app.BaseAppActivity
-import afkt_replace.core.lib.base.controller.ui.theme.defaultAppLauncherUITheme
+import afkt_replace.core.base.controller.ui.theme.defaultAppLauncherUITheme
 import afkt_replace.core.config.AppLibConfig
-import afkt_replace.core.router.module.main.MainNav
-import afkt_replace.core.router.module.main.MainRouter
+import afkt_replace.core.project.router.module.main.MainNav
+import afkt_replace.core.project.router.module.main.MainRouter
 import afkt_replace.module.main.databinding.MainAppLauncherBinding
 import android.os.Bundle
 import androidx.lifecycle.lifecycleScope
@@ -12,7 +12,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import me.jessyan.autosize.internal.CancelAdapt
 
-class AppLauncherActivity : afkt_replace.core.base.app.BaseAppActivity<MainAppLauncherBinding, MainViewModel>(
+class AppLauncherActivity : BaseAppActivity<MainAppLauncherBinding, MainViewModel>(
     R.layout.main_app_launcher, BR.viewModel, simple_UITheme = {
         it.defaultAppLauncherUITheme()
     }

@@ -1,10 +1,10 @@
 package afkt_replace.core.base.app
 
-import afkt_replace.core.lib.base.app.base.FragmentVMType
-import afkt_replace.core.lib.base.app.base.inter.BindingFragmentView
-import afkt_replace.core.lib.base.app.base.simple.factory.SimpleFragmentIMPL
-import afkt_replace.core.lib.base.app.extension.mvvm.BaseMVVMFragment
-import afkt_replace.core.lib.base.controller.ui.theme.FragmentUITheme
+import afkt_replace.core.base.app.base.FragmentVMType
+import afkt_replace.core.base.app.base.inter.BindingFragmentView
+import afkt_replace.core.base.app.base.simple.factory.SimpleFragmentIMPL
+import afkt_replace.core.base.app.extension.mvvm.BaseMVVMFragment
+import afkt_replace.core.base.controller.ui.theme.FragmentUITheme
 import androidx.databinding.ViewDataBinding
 
 /**
@@ -12,7 +12,7 @@ import androidx.databinding.ViewDataBinding
  * @author Ttt
  * 如有额外参数等可统一在此基类增加, 避免污染底层基类过于复杂、混乱
  */
-abstract class BaseAppFragment<VDB : ViewDataBinding, VM : afkt_replace.core.base.app.BaseViewModel> : BaseMVVMFragment<VDB, VM> {
+abstract class BaseAppFragment<VDB : ViewDataBinding, VM : BaseViewModel> : BaseMVVMFragment<VDB, VM> {
 
     // ==========
     // = 构造函数 =

@@ -13,7 +13,7 @@ import dev.mvvm.command.BindingConsumer
  */
 class StartViewModel(
     private val repository: TemplateRepository = TemplateRepository()
-) : afkt_replace.core.base.app.BaseViewModel() {
+) : BaseViewModel() {
 
     val onClickEnd = object : BindingConsumer<View?> {
         override fun accept(value: View?) {

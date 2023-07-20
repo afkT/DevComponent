@@ -1,12 +1,10 @@
 package afkt_replace.module.movie.feature.popular
 
 import afkt_replace.core.base.app.BaseViewModel
-import afkt_replace.core.lib.base.controller.loading.BaseLoadingSkeletonController
-import afkt_replace.core.lib.base.repository.AbsentLiveData
-import afkt_replace.core.lib.base.repository.Resource
+import afkt_replace.core.base.controller.loading.BaseLoadingSkeletonController
+import afkt_replace.core.base.repository.AbsentLiveData
+import afkt_replace.core.base.repository.Resource
 import afkt_replace.core.base.split.inter.FunctionFlowCall
-import afkt_replace.core.project.bean.base.TMDBCommon
-import afkt_replace.core.project.bean.movie.PopularMovie
 import afkt_replace.core.ui.widget.extension.smartRefreshLoadMoreListener
 import afkt_replace.core.ui.widget.view_assist.loading_skeleton.PageLoadingSkeletonViewAssist
 import afkt_replace.lib.tmdb.ui.adapter.PosterCoverItem
@@ -24,7 +22,7 @@ import dev.utils.common.able.Getable
  */
 class PopularMovieViewModel(
     private val repository: MovieRepository = MovieRepository()
-) : afkt_replace.core.base.app.BaseViewModel() {
+) : BaseViewModel() {
 
     // 热门电影 Adapter Item
     val popularItem = PosterCoverItem(Getable.Get {

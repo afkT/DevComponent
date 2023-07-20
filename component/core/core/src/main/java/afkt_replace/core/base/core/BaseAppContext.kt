@@ -1,7 +1,6 @@
 package afkt_replace.core.base.core
 
-import afkt_replace.core.lib.base.skin.AppThemeDefault
-import afkt_replace.core.ui.skin.AppThemeSkin
+import afkt_replace.core.base.skin.AppThemeDefault
 import android.content.Context
 import android.util.Log
 import androidx.multidex.MultiDexApplication

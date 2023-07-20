@@ -16,7 +16,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import me.ele.uetool.UETool
 
-class DebugAssistViewModel : afkt_replace.core.base.app.BaseViewModel() {
+class DebugAssistViewModel : BaseViewModel() {
 
     // 切换环境
     val onClickEnvironment = object : BindingConsumer<View> {

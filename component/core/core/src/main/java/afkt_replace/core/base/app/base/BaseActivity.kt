@@ -1,9 +1,9 @@
 package afkt_replace.core.base.app.base
 
 import afkt_replace.core.base.app.BaseViewModel
-import afkt_replace.core.lib.base.app.base.simple.ISimpleAgile
-import afkt_replace.core.lib.base.controller.*
-import afkt_replace.core.lib.base.controller.inter.IController
+import afkt_replace.core.base.app.base.simple.ISimpleAgile
+import afkt_replace.core.base.controller.*
+import afkt_replace.core.base.controller.inter.IController
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.ViewDataBinding
@@ -16,8 +16,8 @@ import dev.utils.common.ClassUtils
  * detail: Base MVVM Activity
  * @author Ttt
  */
-abstract class BaseActivity<VDB : ViewDataBinding, VM : afkt_replace.core.base.app.BaseViewModel>(
-    private val vmType: afkt_replace.core.base.app.base.ActivityVMType = afkt_replace.core.base.app.base.ActivityVMType.ACTIVITY
+abstract class BaseActivity<VDB : ViewDataBinding, VM : BaseViewModel>(
+    private val vmType: ActivityVMType = ActivityVMType.ACTIVITY
 ) : DevBaseContentMVVMActivity<VDB, VM>(),
     IController,
     ISimpleAgile {
@@ -99,7 +99,7 @@ abstract class BaseActivity<VDB : ViewDataBinding, VM : afkt_replace.core.base.a
         try {
             val clazz = ClassUtils.getGenericSuperclass(this.javaClass, 1) as Class<VM>
             when (vmType) {
-                afkt_replace.core.base.app.base.ActivityVMType.ACTIVITY -> {
+                ActivityVMType.ACTIVITY -> {
                     viewModelAssist.getActivityViewModel(
                         this, clazz
                     )?.let {
@@ -107,7 +107,7 @@ abstract class BaseActivity<VDB : ViewDataBinding, VM : afkt_replace.core.base.a
                     }
                 }
 
-                afkt_replace.core.base.app.base.ActivityVMType.APPLICATION -> {
+                ActivityVMType.APPLICATION -> {
                     viewModelAssist.getAppViewModel(
                         DevUtils.getApplication(), clazz
                     )?.let {

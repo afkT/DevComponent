@@ -1,7 +1,5 @@
 package afkt_replace.core.base.controller.ui.theme
 
-import afkt_replace.core.config.AppLibConfig
-
 // ======================
 // = BaseUITheme 扩展函数 =
 // ======================

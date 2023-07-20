@@ -1,10 +1,9 @@
 package afkt_replace.module.tv.feature.details
 
-import afkt_replace.core.lib.base.controller.loading.BaseLoadingSkeletonController
-import afkt_replace.core.lib.base.repository.Resource
-import afkt_replace.core.lib.base.repository.Status
+import afkt_replace.core.base.controller.loading.BaseLoadingSkeletonController
+import afkt_replace.core.base.repository.Resource
+import afkt_replace.core.base.repository.Status
 import afkt_replace.core.base.split.data.IntentData
-import afkt_replace.core.project.bean.tv.TvDetails
 import afkt_replace.core.config.ParamConst
 import afkt_replace.module.tv.databinding.TvFragmentDetailsBinding
 import androidx.lifecycle.MutableLiveData

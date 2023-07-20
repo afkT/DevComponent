@@ -4,4 +4,4 @@ import afkt_replace.core.base.app.BaseViewModel
 
 class TvViewModel(
     private val repository: TvRepository = TvRepository()
-) : afkt_replace.core.base.app.BaseViewModel()
+) : BaseViewModel()

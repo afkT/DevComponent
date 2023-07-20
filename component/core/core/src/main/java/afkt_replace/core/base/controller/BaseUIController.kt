@@ -1,15 +1,11 @@
 package afkt_replace.core.base.controller
 
-import afkt_replace.core.lib.base.controller.inter.IController
-import afkt_replace.core.lib.base.skin.AppThemeDefault
-import afkt_replace.core.lib.ui.BR
-import afkt_replace.core.lib.ui.databinding.CoreUiBaseHeaderBinding
-import afkt_replace.core.lib.ui.databinding.CoreUiBaseStatusBarBinding
-import afkt_replace.core.lib.ui.databinding.CoreUiBaseTitleBarBinding
-import afkt_replace.core.app.ui.listener.AppListener
-import afkt_replace.core.app.ui.listener.AppUI
-import afkt_replace.core.ui.skin.AppThemeKey
-import afkt_replace.core.ui.skin.AppThemeRes
+import afkt_replace.core.base.controller.inter.IController
+import afkt_replace.core.base.skin.AppThemeDefault
+import afkt_replace.core.BR
+import afkt_replace.core.databinding.CoreUiBaseHeaderBinding
+import afkt_replace.core.databinding.CoreUiBaseStatusBarBinding
+import afkt_replace.core.databinding.CoreUiBaseTitleBarBinding
 import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
@@ -53,13 +49,13 @@ class BaseUIController(
     }
 
     // APP 通用事件
-    val appListener: afkt_replace.core.app.ui.listener.AppListener by lazy {
-        afkt_replace.core.app.ui.listener.AppListener()
+    val appListener: afkt_replace.core.ui.listener.AppListener by lazy {
+        afkt_replace.core.ui.listener.AppListener()
     }
 
     // APP UI 通用控制
-    val appUI: afkt_replace.core.app.ui.listener.AppUI by lazy {
-        afkt_replace.core.app.ui.listener.AppUI()
+    val appUI: afkt_replace.core.ui.listener.AppUI by lazy {
+        afkt_replace.core.ui.listener.AppUI()
     }
 
     // =

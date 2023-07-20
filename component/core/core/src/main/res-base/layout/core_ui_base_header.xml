@@ -6,11 +6,11 @@
 
         <variable
             name="appUI"
-            type="afkt_replace.core.lib.ui.listener.AppUI" />
+            type="afkt_replace.core.ui.listener.AppUI" />
 
         <variable
             name="appListener"
-            type="afkt_replace.core.lib.ui.listener.AppListener" />
+            type="afkt_replace.core.ui.listener.AppListener" />
 
         <variable
             name="appThemeRes"

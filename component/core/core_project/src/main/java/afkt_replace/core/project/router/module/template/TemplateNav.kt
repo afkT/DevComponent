@@ -1,5 +1,6 @@
-package afkt_replace.core.router.module.main
+package afkt_replace.core.project.router.module.template
 
+import afkt_replace.core.config.ParamConst
 import com.alibaba.android.arouter.facade.Postcard
 
 /**
@@ -8,7 +9,7 @@ import com.alibaba.android.arouter.facade.Postcard
  * 不封装在对应的 Router 类中, 统一通过 Nav 类进行跳转、获取
  * 方便后续二次封装、统一编辑等处理
  */
-object MainNav {
+object TemplateNav {
 
     // ==========
     // = 快捷方法 =
@@ -19,7 +20,7 @@ object MainNav {
      * 便于代码跳转直观、对外避免跳转错 GROUP ( Module )
      */
     fun build(path: String): Postcard {
-        return MainRouter.build(path)
+        return TemplateRouter.build(path)
     }
 
     // ==========
@@ -30,13 +31,23 @@ object MainNav {
      * 模块入口路由跳转
      */
     fun routerMain() {
-        build(MainRouter.PATH_MAIN).navigation()
+        build(TemplateRouter.PATH_MAIN).navigation()
     }
 
+    // =======
+    // = End =
+    // =======
+
     /**
-     * 模块入口路由
+     * 构建 End Page Path Router
+     * @param title Title
+     * @return Postcard
      */
-    fun buildMain(): Postcard {
-        return build(MainRouter.PATH_MAIN)
+    fun buildEndPage(
+        title: String?
+    ): Postcard {
+        return build(TemplateRouter.PATH_END_ACTIVITY).apply {
+            withString(ParamConst.TITLE, title)
+        }
     }
 }

@@ -1,6 +1,6 @@
 package afkt_replace.core.lib.debug.floating
 
-import afkt_replace.core.lib.engine.debug.IDebugEngine
+import afkt_replace.core.engine.debug.IDebugEngine
 import androidx.fragment.app.FragmentActivity
 import dev.DevHttpCapture
 import dev.base.DevVariableExt

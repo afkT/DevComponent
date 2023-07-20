@@ -12,7 +12,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center">
 
-            <afkt_replace.core.lib.ui.widget.BaseImageView
+            <afkt_replace.core.ui.widget.BaseImageView
                 android:id="@+id/vid_icon"
                 android:layout_width="@dimen/dp_0"
                 android:layout_height="@dimen/dp_0"
@@ -24,7 +24,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintWidth_percent="0.3" />
 
-            <afkt_replace.core.lib.ui.widget.BaseTextView
+            <afkt_replace.core.ui.widget.BaseTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/str_tip_failed_click_retry"

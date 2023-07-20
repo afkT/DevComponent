@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="ResourceName">
+
+    <!-- tip text -->
+
+    <string name="str_tip_exit_app">再按一次，退出应用</string>
+    <string name="str_tip_failed_click_retry">操作失败，点击重试</string>
+    <string name="str_tip_not_yet_achieved">暂未实现</string>
+
+    <!-- lib_debug_assist -->
+
+    <string name="str_project_debug_accessibility">项目 Debug 辅助功能</string>
+    <string name="str_debugging_features">调试功能</string>
+    <string name="str_switching_environment">切换环境</string>
+    <string name="str_open_ui_visual_debugging">打开 UI 可视化调试</string>
+    <string name="str_close_ui_visual_debugging">关闭 UI 可视化调试</string>
+    <string name="str_data_processing">数据处理</string>
+    <string name="str_http_capture_data">抓包数据</string>
+    <string name="str_delete_http_capture_data">删除抓包数据</string>
+    <string name="str_switched_environments">已切换服务器地址，请重启应用</string>
+    <string name="str_close_debug_function">已关闭 Debug 功能，重启应用再次打开</string>
+    <string name="str_deleted_successfully">删除成功</string>
+    <string name="str_start_deleting_wait_result">开始删除，请等待删除结果&#8230;</string>
+
+    <!-- DevEnvironment -->
+
+    <string name="dev_environment_restart">重启</string>
+    <string name="dev_environment_title">环境配置</string>
+</resources>

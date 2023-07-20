@@ -1,11 +1,11 @@
 package afkt_replace.core.ui.widget.view_assist.loading_skeleton
 
 import afkt_replace.core.config.AppLibConfig
-import afkt_replace.core.lib.ui.R
-import afkt_replace.core.lib.ui.databinding.CoreUiBaseStatusBarBinding
-import afkt_replace.core.lib.ui.databinding.CoreUiBaseTitleBarBinding
-import afkt_replace.core.lib.ui.databinding.CoreUiViewAssistPageTitleSkeletonFailedBinding
-import afkt_replace.core.lib.ui.databinding.CoreUiViewAssistPageTitleSkeletonLoadingBinding
+import afkt_replace.core.R
+import afkt_replace.core.databinding.CoreUiBaseStatusBarBinding
+import afkt_replace.core.databinding.CoreUiBaseTitleBarBinding
+import afkt_replace.core.databinding.CoreUiViewAssistPageTitleSkeletonFailedBinding
+import afkt_replace.core.databinding.CoreUiViewAssistPageTitleSkeletonLoadingBinding
 import afkt_replace.core.ui.widget.view_assist.IViewAssistFactory
 import android.view.LayoutInflater
 import android.view.View

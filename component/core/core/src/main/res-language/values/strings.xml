@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="ResourceName">
+
+    <!-- tip text -->
+
+    <string name="str_tip_exit_app">Press again to exit the app</string>
+    <string name="str_tip_failed_click_retry">Failed Click Retry</string>
+    <string name="str_tip_not_yet_achieved">Not yet achieved</string>
+
+    <!-- lib_debug_assist -->
+
+    <string name="str_project_debug_accessibility">Project Debug Accessibility</string>
+    <string name="str_debugging_features">Debugging Features</string>
+    <string name="str_switching_environment">Switching environments</string>
+    <string name="str_open_ui_visual_debugging">Open UI visual debugging</string>
+    <string name="str_close_ui_visual_debugging">Close UI visual debugging</string>
+    <string name="str_data_processing">Data Processing</string>
+    <string name="str_http_capture_data">Http capture data</string>
+    <string name="str_delete_http_capture_data">Delete http capture data</string>
+    <string name="str_switched_environments">The server address has been switched, please restart the application</string>
+    <string name="str_close_debug_function">Debug function is turned off, restart the application and turn it on again</string>
+    <string name="str_deleted_successfully">Deleted successfully</string>
+    <string name="str_start_deleting_wait_result">Start deleting, please wait for the deletion result&#8230;</string>
+
+    <!-- DevEnvironment -->
+
+    <string name="dev_environment_restart">Restart</string>
+    <string name="dev_environment_title">Environment Config</string>
+</resources>

@@ -7,7 +7,7 @@ import afkt_replace.module.template.TemplateRepository
 
 class EndViewModel(
     private val repository: TemplateRepository = TemplateRepository()
-) : afkt_replace.core.base.app.BaseViewModel() {
+) : BaseViewModel() {
 
     // 跳转传参
     private val intentData = IntentData.with()

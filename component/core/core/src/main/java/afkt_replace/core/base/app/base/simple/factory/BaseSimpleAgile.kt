@@ -1,6 +1,6 @@
 package afkt_replace.core.base.app.base.simple.factory
 
-import afkt_replace.core.lib.base.app.base.simple.SimpleAgileFactory
+import afkt_replace.core.base.app.base.simple.SimpleAgileFactory
 
 open class BaseSimpleAgile<SimpleTClass, SimpleTUITheme> : SimpleAgileFactory<SimpleTClass, SimpleTUITheme> {
 

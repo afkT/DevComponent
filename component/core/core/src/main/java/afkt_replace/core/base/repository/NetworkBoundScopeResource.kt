@@ -1,6 +1,6 @@
 package afkt_replace.core.base.repository
 
-import afkt_replace.core.lib.base.core.AppExecutors
+import afkt_replace.core.base.core.AppExecutors
 import afkt_replace.core.base.split.inter.FunctionFlowCall
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

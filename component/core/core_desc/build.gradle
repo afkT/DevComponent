@@ -1,0 +1,25 @@
+apply from: rootProject.file(files.build_library_gradle)
+
+/**
+ * 注: 该 Module 只是用于依赖关联, 不添加任何代码
+ */
+dependencies {
+
+    // ===================
+    // = core - 核心开发库 =
+    // ===================
+
+    // 核心基础依赖库
+    api project(':core')
+    // 项目相关代码
+    api project(':core_project')
+
+    // =====================
+    // = Debug 编译辅助开发库 =
+    // =====================
+
+    if (showDebugTools) {
+        // Debug 编译辅助开发库 ( 提供切换环境、抓包数据可视化、调试按钮开关等辅助功能 )
+        api project(':core_lib_debug_assist')
+    }
+}

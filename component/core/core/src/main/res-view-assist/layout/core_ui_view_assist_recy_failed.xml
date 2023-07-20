@@ -14,7 +14,7 @@
         android:layout_height="match_parent"
         android:background="@{appThemeRes.themeBackground}">
 
-        <afkt_replace.core.lib.ui.widget.BaseImageView
+        <afkt_replace.core.ui.widget.BaseImageView
             android:layout_width="@dimen/dp_0"
             android:layout_height="@dimen/dp_0"
             android:background="@drawable/op_refresh_white"

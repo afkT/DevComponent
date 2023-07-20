@@ -1,7 +1,7 @@
-package afkt_replace.core.router.module.splash
+package afkt_replace.core.project.router.module.splash
 
-import afkt_replace.core.router.module.AppRouter
-import afkt_replace.core.router.module.main.MainNav
+import afkt_replace.core.project.router.module.main.MainNav
+import afkt_replace.core.router.AppRouter
 import com.alibaba.android.arouter.facade.Postcard
 
 /**

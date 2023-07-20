@@ -1,7 +1,7 @@
 package afkt_replace.module.template.feature.end
 
-import afkt_replace.core.lib.base.app.extension.loading.BaseLoadingSkeletonFragment
-import afkt_replace.core.router.module.template.TemplateRouter
+import afkt_replace.core.base.app.extension.loading.BaseLoadingSkeletonFragment
+import afkt_replace.core.project.router.module.template.TemplateRouter
 import afkt_replace.module.template.BR
 import afkt_replace.module.template.R
 import afkt_replace.module.template.databinding.TemplateFragmentEndBinding

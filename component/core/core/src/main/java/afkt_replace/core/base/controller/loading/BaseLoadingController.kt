@@ -11,7 +11,7 @@ import dev.widget.assist.ViewAssist
  * 区别于 Loading Skeleton 只用在首次进入管理控制
  * 该 Loading 是重复性使用在 Content Layout 上层显示
  */
-class BaseLoadingController<VM : afkt_replace.core.base.app.BaseViewModel>(
+class BaseLoadingController<VM : BaseViewModel>(
     val contentAssist: DevBaseContentAssist,
     val FORCED_SHOW: Boolean = true
 ) {

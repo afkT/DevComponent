@@ -1,10 +1,8 @@
 package afkt_replace.module.tv
 
-import afkt_replace.core.lib.base.repository.NetworkBoundScopeResource
-import afkt_replace.core.lib.base.repository.Resource
+import afkt_replace.core.base.repository.NetworkBoundScopeResource
+import afkt_replace.core.base.repository.Resource
 import afkt_replace.core.base.split.inter.FunctionFlowCall
-import afkt_replace.core.project.bean.tv.PopularTv
-import afkt_replace.core.project.bean.tv.TvDetails
 import afkt_replace.module.tv.data.api.TvAPI
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

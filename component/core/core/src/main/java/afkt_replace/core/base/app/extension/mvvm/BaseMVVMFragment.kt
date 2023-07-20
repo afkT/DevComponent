@@ -2,9 +2,9 @@ package afkt_replace.core.base.app.extension.mvvm
 
 import afkt_replace.core.base.app.BaseAppFragment
 import afkt_replace.core.base.app.BaseViewModel
-import afkt_replace.core.lib.base.app.base.FragmentVMType
-import afkt_replace.core.lib.base.app.base.inter.BindingFragmentView
-import afkt_replace.core.lib.base.app.extension.theme.BaseUIThemeFragment
+import afkt_replace.core.base.app.base.FragmentVMType
+import afkt_replace.core.base.app.base.inter.BindingFragmentView
+import afkt_replace.core.base.app.extension.theme.BaseUIThemeFragment
 import androidx.databinding.ViewDataBinding
 
 /**
@@ -13,7 +13,7 @@ import androidx.databinding.ViewDataBinding
  * 在 [BaseUIThemeFragment] 基础上进行关联赋值
  * 如果无特殊需求请使用 [BaseAppFragment]
  */
-abstract class BaseMVVMFragment<VDB : ViewDataBinding, VM : afkt_replace.core.base.app.BaseViewModel> : BaseUIThemeFragment<VDB, VM> {
+abstract class BaseMVVMFragment<VDB : ViewDataBinding, VM : BaseViewModel> : BaseUIThemeFragment<VDB, VM> {
 
     private var viewModelId: Int
 

@@ -1,15 +1,15 @@
-package afkt_replace.core.router.module.movie
+package afkt_replace.core.project.router.module.tv
 
-import afkt_replace.core.router.module.AppRouter
+import afkt_replace.core.router.AppRouter
 import com.alibaba.android.arouter.facade.Postcard
 
 /**
- * detail: Movie Module Router
+ * detail: Tv Module Router
  * @author Ttt
  */
-object MovieRouter {
+object TvRouter {
 
-    const val GROUP = "movie"
+    const val GROUP = "tv"
 
     // ========
     // = PATH =
@@ -22,18 +22,18 @@ object MovieRouter {
     // = PATH - Popular =
     // ==================
 
-    // 热门电影 Fragment
+    // 热门剧集 Fragment
     const val PATH_POPULAR_FRAGMENT = "/$GROUP/popular/fragment"
 
-    // ========================
-    // = PATH - Movie Details =
-    // ========================
+    // =====================
+    // = PATH - Tv Details =
+    // =====================
 
-    // Movie Details Activity
-    const val PATH_MOVIE_DETAILS_ACTIVITY = "/$GROUP/movie/details/activity"
+    // Tv Details Activity
+    const val PATH_TV_DETAILS_ACTIVITY = "/$GROUP/tv/details/activity"
 
-    // Movie Details Fragment
-    const val PATH_MOVIE_DETAILS_FRAGMENT = "/$GROUP/movie/details/fragment"
+    // Tv Details Fragment
+    const val PATH_TV_DETAILS_FRAGMENT = "/$GROUP/tv/details/fragment"
 
     // ==========
     // = 快捷方法 =

@@ -1,10 +1,9 @@
 package afkt_replace.module.movie.feature.popular
 
-import afkt_replace.core.lib.base.repository.Resource
-import afkt_replace.core.lib.base.repository.Status
-import afkt_replace.core.project.bean.movie.PopularMovie
+import afkt_replace.core.base.repository.Resource
+import afkt_replace.core.base.repository.Status
 import afkt_replace.core.project.bean.splash.toSplashAdsList
-import afkt_replace.core.router.module.splash.SplashNav
+import afkt_replace.core.project.router.module.splash.SplashNav
 import afkt_replace.core.ui.widget.extension.smartFinish
 import afkt_replace.core.ui.widget.extension.smartSimpleFinishWithNoMoreData
 import afkt_replace.lib.tmdb.ui.adapter.PosterCoverItem

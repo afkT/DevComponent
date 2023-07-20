@@ -1,8 +1,8 @@
 package afkt_replace.core.app
 
-import afkt_replace.core.lib.base.core.AppChannel
-import afkt_replace.core.lib.base.core.AppDebug
-import afkt_replace.core.lib.base.core.BaseAppContext
+import afkt_replace.core.base.core.AppChannel
+import afkt_replace.core.base.core.AppDebug
+import afkt_replace.core.base.core.BaseAppContext
 import afkt_replace.core.property.Bugly
 import afkt_replace.core.property.BuglyConfig
 import afkt_replace.core.property.FloatingDebug

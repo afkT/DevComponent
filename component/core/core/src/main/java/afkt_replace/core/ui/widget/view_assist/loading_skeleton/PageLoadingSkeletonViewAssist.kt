@@ -1,8 +1,8 @@
 package afkt_replace.core.ui.widget.view_assist.loading_skeleton
 
-import afkt_replace.core.lib.ui.R
-import afkt_replace.core.lib.ui.databinding.CoreUiViewAssistPageSkeletonFailedBinding
-import afkt_replace.core.lib.ui.databinding.CoreUiViewAssistPageSkeletonLoadingBinding
+import afkt_replace.core.R
+import afkt_replace.core.databinding.CoreUiViewAssistPageSkeletonFailedBinding
+import afkt_replace.core.databinding.CoreUiViewAssistPageSkeletonLoadingBinding
 import afkt_replace.core.ui.widget.view_assist.IViewAssistFactory
 import android.view.LayoutInflater
 import android.view.View

@@ -162,21 +162,7 @@ android {
 // =============
 
 // core/libs/lib_base Module 构建字段创建
-if (libName == "core_lib_base") {
-    android.defaultConfig {
-        // 是否开启日志
-        buildConfigField("boolean", "openLog", "$openLog")
-        // 是否标记 Debug 模式 ( 与 APK build 模式无关, 用于控制第三方库 debug 标记 )
-        buildConfigField("boolean", "openDebug", "$openDebug")
-        // 是否开启优化检测、调试工具 ( 控制 UETool、LeakCanary、BlockCanary 等开关 )
-        buildConfigField("boolean", "showDebugTools", "$showDebugTools")
-        // Release 版本标记
-        buildConfigField("boolean", "isRelease", "${isRelease}")
-    }
-}
-
-// core/libs/lib_config Module 构建字段创建
-if (libName == "core_lib_config") {
+if (libName == "core") {
     android.defaultConfig {
         // 是否开启日志
         buildConfigField("boolean", "openLog", "$openLog")

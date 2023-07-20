@@ -6,6 +6,11 @@ dependencies {
     // = Dev 系列开发库 =
     // ================
 
+    // https://github.com/afkT/DevUtils
+
+    // DevApp - Android 工具类库
+    api deps.dev.dev_app
+
     // DevEnvironment - Android 环境配置切换库
     api deps.dev.dev_environment
     if (isRelease) {

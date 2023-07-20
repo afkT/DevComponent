@@ -7,6 +7,7 @@ android {
             res.srcDirs = [
                     'src/main/res', // 模块通用资源文件
                     'src/main/res-base', // Base 基础资源
+                    'src/main/res-language', // 多语言资源文件
                     'src/main/res-tools', // tools 通用使用
                     'src/main/res-view-assist', // ViewAssist 骨架辅助类
             ]
@@ -26,15 +27,6 @@ dependencies {
 
     // 通用环境配置切换库
     api project(':core_lib_environment')
-
-    // =====================
-    // = Debug 编译辅助开发库 =
-    // =====================
-
-    if (showDebugTools) {
-        // Debug 编译辅助开发库 ( 提供切换环境、抓包数据可视化、调试按钮开关等辅助功能 )
-        api project(':core_lib_debug_assist')
-    }
 
     // ================
     // = Dev 系列开发库 =

@@ -13,11 +13,11 @@
 
         <variable
             name="itemClick"
-            type="afkt_replace.core.project.bean.base.TMDBCommon" />
+            type="dev.mvvm.command.BindingClick&lt;TMDBCommon&gt;" />
 
         <variable
             name="itemValue"
-            type="afkt_replace.core.project.bean.base.TMDBCommon" />
+            type="TMDBCommon" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

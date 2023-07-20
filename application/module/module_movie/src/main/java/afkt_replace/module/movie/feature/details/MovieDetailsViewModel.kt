@@ -1,15 +1,15 @@
 package afkt_replace.module.movie.feature.details
 
-import afkt_replace.core.lib.base.controller.loading.BaseLoadingSkeletonController
-import afkt_replace.core.lib.base.repository.AbsentLiveData
-import afkt_replace.core.lib.base.repository.Resource
+import afkt_replace.core.base.app.BaseViewModel
+import afkt_replace.core.base.controller.loading.BaseLoadingSkeletonController
+import afkt_replace.core.base.repository.AbsentLiveData
+import afkt_replace.core.base.repository.Resource
 import afkt_replace.core.base.split.data.IntentData
 import afkt_replace.core.base.split.inter.FunctionFlowCall
-import afkt_replace.core.project.bean.movie.MovieDetails
-import afkt_replace.core.project.bean.movie.MoviePosterImages
 import afkt_replace.core.config.ParamConst
-import afkt_replace.core.lib.ui.databinding.CoreUiBaseStatusBarBinding
-import afkt_replace.core.lib.ui.databinding.CoreUiBaseTitleBarBinding
+import afkt_replace.core.project.utils.image.LuckImageEngineImpl
+import afkt_replace.core.databinding.CoreUiBaseStatusBarBinding
+import afkt_replace.core.databinding.CoreUiBaseTitleBarBinding
 import afkt_replace.core.ui.widget.view_assist.loading_skeleton.PageTitleBindable
 import afkt_replace.core.ui.widget.view_assist.loading_skeleton.PageTitleLoadingSkeletonViewAssist
 import afkt_replace.lib.tmdb.ui.adapter.MoviePosterClickConsumer
@@ -24,13 +24,12 @@ import com.luck.picture.lib.basic.PictureSelector
 import dev.engine.media.MediaConfig
 import dev.engine.media.MediaData
 import dev.expand.engine.media.media_openPreview
-import afkt_replace.core.project.image.LuckImageEngineImpl
 import dev.utils.common.ConvertUtils
 import dev.utils.common.able.Getable
 
 class MovieDetailsViewModel(
     private val repository: MovieRepository = MovieRepository()
-) : afkt_replace.core.base.app.BaseViewModel() {
+) : BaseViewModel() {
 
     // 跳转传参
     private val intentData = IntentData.with()
@@ -167,7 +166,7 @@ class MovieDetailsViewModel(
                             PictureSelectionPreviewModel(
                                 PictureSelector.create(fragment)
                             ).setImageEngine(
-                                afkt_replace.core.project.image.LuckImageEngineImpl.createEngine()
+                                LuckImageEngineImpl.createEngine()
                             )
                         )
                         setCustomData(index)

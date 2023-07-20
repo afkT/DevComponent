@@ -1,8 +1,8 @@
 package afkt_replace.module.person.feature.details
 
 import afkt_replace.core.base.app.BaseAppActivity
-import afkt_replace.core.lib.base.controller.ui.theme.defaultActivityBlankUITheme
-import afkt_replace.core.router.module.person.PersonRouter
+import afkt_replace.core.base.controller.ui.theme.defaultActivityBlankUITheme
+import afkt_replace.core.project.router.module.person.PersonRouter
 import afkt_replace.module.person.BR
 import afkt_replace.module.person.PersonViewModel
 import afkt_replace.module.person.R
@@ -11,7 +11,7 @@ import androidx.navigation.fragment.NavHostFragment
 import com.alibaba.android.arouter.facade.annotation.Route
 
 @Route(path = PersonRouter.PATH_PERSON_DETAILS_ACTIVITY, group = PersonRouter.GROUP)
-class PersonDetailsActivity : afkt_replace.core.base.app.BaseAppActivity<PersonActivityDetailsBinding, PersonViewModel>(
+class PersonDetailsActivity : BaseAppActivity<PersonActivityDetailsBinding, PersonViewModel>(
     R.layout.person_activity_details, BR.viewModel, simple_UITheme = {
         it.defaultActivityBlankUITheme()
     }, simple_Agile = {

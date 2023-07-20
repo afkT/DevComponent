@@ -2,10 +2,10 @@ package afkt_replace.core.base.app.extension.theme
 
 import afkt_replace.core.base.app.BaseAppFragment
 import afkt_replace.core.base.app.BaseViewModel
-import afkt_replace.core.lib.base.app.base.BaseFragment
-import afkt_replace.core.lib.base.app.base.FragmentVMType
-import afkt_replace.core.lib.base.app.base.inter.BindingFragmentView
-import afkt_replace.core.lib.base.controller.ui.theme.FragmentUITheme
+import afkt_replace.core.base.app.base.BaseFragment
+import afkt_replace.core.base.app.base.FragmentVMType
+import afkt_replace.core.base.app.base.inter.BindingFragmentView
+import afkt_replace.core.base.controller.ui.theme.FragmentUITheme
 import android.view.View
 import androidx.databinding.ViewDataBinding
 
@@ -15,7 +15,7 @@ import androidx.databinding.ViewDataBinding
  * 在 [BaseFragment] 基础上封装 UITheme 样式 Intent 传参控制处理
  * 如果无特殊需求请使用 [BaseAppFragment]
  */
-abstract class BaseUIThemeFragment<VDB : ViewDataBinding, VM : afkt_replace.core.base.app.BaseViewModel> constructor(
+abstract class BaseUIThemeFragment<VDB : ViewDataBinding, VM : BaseViewModel> constructor(
     private val bindLayoutId: Int = 0,
     private val bindLayoutView: BindingFragmentView? = null,
     vmType: FragmentVMType = FragmentVMType.FRAGMENT

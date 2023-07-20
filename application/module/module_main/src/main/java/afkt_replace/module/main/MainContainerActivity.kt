@@ -1,13 +1,12 @@
 package afkt_replace.module.main
 
 import afkt_replace.core.base.app.BaseAppActivity
-import afkt_replace.core.lib.base.controller.ui.ext.defaultMainContainerController
-import afkt_replace.core.lib.base.controller.ui.ext.setExitBackIntercept
-import afkt_replace.core.lib.base.controller.ui.theme.defaultMainContainerUITheme
-import afkt_replace.core.project.bean.splash.SplashAds
+import afkt_replace.core.base.controller.ui.ext.defaultMainContainerController
+import afkt_replace.core.base.controller.ui.ext.setExitBackIntercept
+import afkt_replace.core.base.controller.ui.theme.defaultMainContainerUITheme
 import afkt_replace.core.config.KeyConst
-import afkt_replace.core.router.module.main.MainRouter
-import afkt_replace.core.router.module.movie.MovieNav
+import afkt_replace.core.project.router.module.main.MainRouter
+import afkt_replace.core.project.router.module.movie.MovieNav
 import afkt_replace.module.main.databinding.MainAppContainerBinding
 import afkt_replace.module.main.feature.adapter.MainPagerAdapter
 import androidx.viewpager.widget.ViewPager
@@ -16,7 +15,7 @@ import dev.expand.engine.json.fromJson
 import dev.mvvm.utils.toResString
 
 @Route(path = MainRouter.PATH_MAIN, group = MainRouter.GROUP)
-class MainContainerActivity : afkt_replace.core.base.app.BaseAppActivity<MainAppContainerBinding, MainViewModel>(
+class MainContainerActivity : BaseAppActivity<MainAppContainerBinding, MainViewModel>(
     R.layout.main_app_container, BR.viewModel, simple_UITheme = {
         it.defaultMainContainerUITheme()
     }, simple_PreLoad = {

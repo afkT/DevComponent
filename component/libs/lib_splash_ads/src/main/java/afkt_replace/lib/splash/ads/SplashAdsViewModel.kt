@@ -1,10 +1,9 @@
 package afkt_replace.lib.splash.ads
 
-import afkt_replace.core.lib.base.controller.viewmodel.IntentDataViewModel
-import afkt_replace.core.project.bean.splash.SplashAds
-import afkt_replace.core.project.bean.splash.fromSplashAds
+import afkt_replace.core.base.controller.viewmodel.IntentDataViewModel
 import afkt_replace.core.config.AppLibConfig
 import afkt_replace.core.config.TypeConst
+import afkt_replace.core.project.bean.splash.fromSplashAds
 import afkt_replace.core.project.utils.tmdb.toTMDBImageSource
 import android.graphics.Bitmap
 import android.view.View

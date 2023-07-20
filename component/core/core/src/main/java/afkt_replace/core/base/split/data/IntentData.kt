@@ -1,6 +1,5 @@
 package afkt_replace.core.base.split.data
 
-import afkt_replace.core.config.KeyConst
 import android.content.Intent
 import android.os.Bundle
 import dev.base.DevIntent

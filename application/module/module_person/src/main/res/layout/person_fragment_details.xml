@@ -27,15 +27,15 @@
 
         <variable
             name="details"
-            type="afkt_replace.core.project.bean.person.PersonDetails" />
+            type="PersonDetails" />
 
         <variable
             name="acting"
-            type="afkt_replace.core.project.bean.person.PersonActing" />
+            type="PersonActing" />
 
         <import type="dev.utils.common.StringUtils" />
 
-        <import type="afkt_replace.core.lib.utils.TMDBImageUrlKt" />
+        <import type="afkt_replace.core.project.utils.tmdb.TMDBImageUrlKt" />
 
         <import type="afkt_replace.core.project.bean.person.PersonDetails" />
 

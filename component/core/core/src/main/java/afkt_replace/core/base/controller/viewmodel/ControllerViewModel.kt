@@ -1,10 +1,10 @@
 package afkt_replace.core.base.controller.viewmodel
 
-import afkt_replace.core.lib.base.controller.BaseDataController
-import afkt_replace.core.lib.base.controller.BaseKeyEventController
-import afkt_replace.core.lib.base.controller.BaseUIController
-import afkt_replace.core.lib.base.controller.loading.BaseLoadingController
-import afkt_replace.core.lib.base.controller.loading.BaseLoadingSkeletonController
+import afkt_replace.core.base.controller.BaseDataController
+import afkt_replace.core.base.controller.BaseKeyEventController
+import afkt_replace.core.base.controller.BaseUIController
+import afkt_replace.core.base.controller.loading.BaseLoadingController
+import afkt_replace.core.base.controller.loading.BaseLoadingSkeletonController
 import androidx.lifecycle.MutableLiveData
 import dev.mvvm.base.viewmodel.LifecycleViewModel
 

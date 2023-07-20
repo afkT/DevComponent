@@ -1,12 +1,10 @@
 package afkt_replace.module.person.feature.popular
 
 import afkt_replace.core.base.app.BaseViewModel
-import afkt_replace.core.lib.base.controller.loading.BaseLoadingSkeletonController
-import afkt_replace.core.lib.base.repository.AbsentLiveData
-import afkt_replace.core.lib.base.repository.Resource
+import afkt_replace.core.base.controller.loading.BaseLoadingSkeletonController
+import afkt_replace.core.base.repository.AbsentLiveData
+import afkt_replace.core.base.repository.Resource
 import afkt_replace.core.base.split.inter.FunctionFlowCall
-import afkt_replace.core.project.bean.person.PopularPerson
-import afkt_replace.core.project.bean.person.TMDBPerson
 import afkt_replace.core.ui.widget.extension.smartRefreshLoadMoreListener
 import afkt_replace.core.ui.widget.view_assist.loading_skeleton.PageLoadingSkeletonViewAssist
 import afkt_replace.lib.tmdb.ui.adapter.PersonProfileItem
@@ -24,7 +22,7 @@ import dev.utils.common.able.Getable
  */
 class PopularPersonViewModel(
     private val repository: PersonRepository = PersonRepository()
-) : afkt_replace.core.base.app.BaseViewModel() {
+) : BaseViewModel() {
 
     // 热门人物 Adapter Item
     val popularItem = PersonProfileItem(Getable.Get {

@@ -1,8 +1,7 @@
 package afkt_replace.core.base.controller.ui.ext
 
-import afkt_replace.core.lib.base.R
-import afkt_replace.core.lib.base.controller.BaseKeyEventController
-import afkt_replace.core.config.AppLibConfig
+import afkt_replace.core.R
+import afkt_replace.core.base.controller.BaseKeyEventController
 import dev.mvvm.utils.toResString
 import dev.utils.app.ClickUtils
 import dev.utils.app.toast.ToastTintUtils

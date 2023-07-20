@@ -1,15 +1,15 @@
 package afkt_replace.core.network.common
 
-import afkt_replace.core.lib.engine.debug.DevDebugEngine
-import afkt_replace.core.lib.network.BuildConfig
+import afkt_replace.core.BuildConfig
+import afkt_replace.core.engine.debug.DevDebugEngine
 import afkt_replace.core.network.HttpCoreConst
-import afkt_replace.core.project.network.tmdb.TMDBAPIInterceptor
 import dev.capture.CallbackInterceptor
 import dev.capture.CaptureInfo
 import dev.capture.IHttpCaptureEnd
 import dev.expand.engine.log.log_jsonTag
 import dev.http.manager.OkHttpBuilder
 import dev.http.manager.RetrofitBuilder
+import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import java.util.concurrent.TimeUnit
 
@@ -61,8 +61,10 @@ class OkHttpBuilderGlobal : OkHttpBuilder {
             // = TMDB =
             // ========
 
-            // TMDB API 参数拦截器
-            addInterceptor(afkt_replace.core.project.network.tmdb.TMDBAPIInterceptor())
+            newTMDBAPIInterceptorIMPL()?.let {
+                // TMDB API 参数拦截器
+                addInterceptor(it)
+            }
 
             // =============
             // = 不同版本构建 =
@@ -123,6 +125,21 @@ class OkHttpBuilderGlobal : OkHttpBuilder {
             DevDebugEngine.getEngine()?.addInterceptor(
                 builder, key
             )
+        }
+    }
+
+    /**
+     * 通过 class 创建 TMDB API 拦截器
+     * @return TMDBAPIInterceptor IMPL
+     */
+    private fun newTMDBAPIInterceptorIMPL(): Interceptor? {
+        return try {
+            val clazz = Class.forName(
+                "afkt_replace.core.project.network.tmdb.TMDBAPIInterceptor"
+            )
+            clazz.newInstance() as Interceptor
+        } catch (_: Exception) {
+            null
         }
     }
 }

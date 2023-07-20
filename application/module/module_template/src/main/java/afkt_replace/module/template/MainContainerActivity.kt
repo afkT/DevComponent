@@ -1,16 +1,16 @@
 package afkt_replace.module.template
 
 import afkt_replace.core.base.app.BaseAppActivity
-import afkt_replace.core.lib.base.controller.ui.ext.defaultMainContainerController
-import afkt_replace.core.lib.base.controller.ui.ext.setExitBackIntercept
-import afkt_replace.core.lib.base.controller.ui.theme.defaultMainContainerUITheme
-import afkt_replace.core.router.module.template.TemplateRouter
+import afkt_replace.core.base.controller.ui.ext.defaultMainContainerController
+import afkt_replace.core.base.controller.ui.ext.setExitBackIntercept
+import afkt_replace.core.base.controller.ui.theme.defaultMainContainerUITheme
+import afkt_replace.core.project.router.module.template.TemplateRouter
 import afkt_replace.module.template.databinding.TemplateAppContainerBinding
 import com.alibaba.android.arouter.facade.annotation.Route
 import dev.mvvm.utils.toResString
 
 @Route(path = TemplateRouter.PATH_MAIN, group = TemplateRouter.GROUP)
-class MainContainerActivity : afkt_replace.core.base.app.BaseAppActivity<TemplateAppContainerBinding, TemplateViewModel>(
+class MainContainerActivity : BaseAppActivity<TemplateAppContainerBinding, TemplateViewModel>(
     R.layout.template_app_container, BR.viewModel, simple_UITheme = {
         it.defaultMainContainerUITheme()
     }, simple_PreLoad = {

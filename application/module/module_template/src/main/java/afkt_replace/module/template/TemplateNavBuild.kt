@@ -1,6 +1,6 @@
 package afkt_replace.module.template
 
-import afkt_replace.core.router.module.template.TemplateNav
+import afkt_replace.core.project.router.module.template.TemplateNav
 
 /**
  * detail: TemplateNav 跳转参数构建

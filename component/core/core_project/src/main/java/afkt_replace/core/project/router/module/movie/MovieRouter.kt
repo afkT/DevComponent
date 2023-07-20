@@ -1,15 +1,15 @@
-package afkt_replace.core.router.module.person
+package afkt_replace.core.project.router.module.movie
 
-import afkt_replace.core.router.module.AppRouter
+import afkt_replace.core.router.AppRouter
 import com.alibaba.android.arouter.facade.Postcard
 
 /**
- * detail: Person Module Router
+ * detail: Movie Module Router
  * @author Ttt
  */
-object PersonRouter {
+object MovieRouter {
 
-    const val GROUP = "person"
+    const val GROUP = "movie"
 
     // ========
     // = PATH =
@@ -22,18 +22,18 @@ object PersonRouter {
     // = PATH - Popular =
     // ==================
 
-    // 热门人物 Fragment
+    // 热门电影 Fragment
     const val PATH_POPULAR_FRAGMENT = "/$GROUP/popular/fragment"
 
-    // =========================
-    // = PATH - Person Details =
-    // =========================
+    // ========================
+    // = PATH - Movie Details =
+    // ========================
 
-    // Person Details Activity
-    const val PATH_PERSON_DETAILS_ACTIVITY = "/$GROUP/person/details/activity"
+    // Movie Details Activity
+    const val PATH_MOVIE_DETAILS_ACTIVITY = "/$GROUP/movie/details/activity"
 
-    // Person Details Fragment
-    const val PATH_PERSON_DETAILS_FRAGMENT = "/$GROUP/person/details/fragment"
+    // Movie Details Fragment
+    const val PATH_MOVIE_DETAILS_FRAGMENT = "/$GROUP/movie/details/fragment"
 
     // ==========
     // = 快捷方法 =

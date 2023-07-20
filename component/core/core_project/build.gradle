@@ -6,7 +6,7 @@ android {
             // 优化 res 资源管理, 使用 sourceSets 资源分包
             res.srcDirs = [
                     'src/main/res', // 模块通用资源文件
-                    'src/main/res-language', // 通用多语言资源文件
+                    'src/main/res-language', // 多语言资源文件
             ]
         }
     }

@@ -1,6 +1,5 @@
 package afkt_replace.core.router
 
-import afkt_replace.core.router.module.AppRouter
 import com.alibaba.android.arouter.facade.Postcard
 
 /**

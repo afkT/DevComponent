@@ -1,7 +1,6 @@
 package afkt_replace.module.tv
 
-import afkt_replace.core.project.bean.base.TMDBCommon
-import afkt_replace.core.router.module.tv.TvNav
+import afkt_replace.core.project.router.module.tv.TvNav
 
 /**
  * detail: TvNav 跳转参数构建

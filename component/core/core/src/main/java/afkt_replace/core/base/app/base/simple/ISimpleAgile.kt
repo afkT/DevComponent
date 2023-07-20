@@ -3,15 +3,15 @@ package afkt_replace.core.base.app.base.simple
 import afkt_replace.core.base.app.BaseAppActivity
 import afkt_replace.core.base.app.BaseAppFragment
 import afkt_replace.core.base.app.base.BaseActivity
-import afkt_replace.core.lib.base.app.base.BaseFragment
-import afkt_replace.core.lib.base.app.extension.loading.BaseLoadingActivity
-import afkt_replace.core.lib.base.app.extension.loading.BaseLoadingFragment
-import afkt_replace.core.lib.base.app.extension.loading.BaseLoadingSkeletonActivity
-import afkt_replace.core.lib.base.app.extension.loading.BaseLoadingSkeletonFragment
-import afkt_replace.core.lib.base.app.extension.mvvm.BaseMVVMActivity
-import afkt_replace.core.lib.base.app.extension.mvvm.BaseMVVMFragment
-import afkt_replace.core.lib.base.app.extension.theme.BaseUIThemeActivity
-import afkt_replace.core.lib.base.app.extension.theme.BaseUIThemeFragment
+import afkt_replace.core.base.app.base.BaseFragment
+import afkt_replace.core.base.app.extension.loading.BaseLoadingActivity
+import afkt_replace.core.base.app.extension.loading.BaseLoadingFragment
+import afkt_replace.core.base.app.extension.loading.BaseLoadingSkeletonActivity
+import afkt_replace.core.base.app.extension.loading.BaseLoadingSkeletonFragment
+import afkt_replace.core.base.app.extension.mvvm.BaseMVVMActivity
+import afkt_replace.core.base.app.extension.mvvm.BaseMVVMFragment
+import afkt_replace.core.base.app.extension.theme.BaseUIThemeActivity
+import afkt_replace.core.base.app.extension.theme.BaseUIThemeFragment
 
 /**
  * detail: 敏捷简化开发扩展接口

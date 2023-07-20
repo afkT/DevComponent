@@ -1,7 +1,5 @@
 package afkt_replace.module.tv.data.api
 
-import afkt_replace.core.project.bean.tv.PopularTv
-import afkt_replace.core.project.bean.tv.TvDetails
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query

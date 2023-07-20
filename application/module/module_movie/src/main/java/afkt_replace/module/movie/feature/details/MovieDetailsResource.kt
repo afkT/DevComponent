@@ -1,11 +1,9 @@
 package afkt_replace.module.movie.feature.details
 
-import afkt_replace.core.lib.base.controller.loading.BaseLoadingSkeletonController
-import afkt_replace.core.lib.base.repository.Resource
-import afkt_replace.core.lib.base.repository.Status
+import afkt_replace.core.base.controller.loading.BaseLoadingSkeletonController
+import afkt_replace.core.base.repository.Resource
+import afkt_replace.core.base.repository.Status
 import afkt_replace.core.base.split.data.IntentData
-import afkt_replace.core.project.bean.movie.MovieDetails
-import afkt_replace.core.project.bean.movie.MoviePosterImages
 import afkt_replace.core.config.ParamConst
 import afkt_replace.core.project.utils.tmdb.toTMDBImageSource
 import afkt_replace.lib.tmdb.ui.adapter.MoviePosterItem

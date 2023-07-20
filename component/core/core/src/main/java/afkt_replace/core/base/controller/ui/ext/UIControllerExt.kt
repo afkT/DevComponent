@@ -1,6 +1,6 @@
 package afkt_replace.core.base.controller.ui.ext
 
-import afkt_replace.core.lib.base.controller.BaseUIController
+import afkt_replace.core.base.controller.BaseUIController
 
 // ===========================
 // = BaseUIController 扩展函数 =

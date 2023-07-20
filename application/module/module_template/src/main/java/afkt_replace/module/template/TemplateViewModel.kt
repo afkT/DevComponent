@@ -4,4 +4,4 @@ import afkt_replace.core.base.app.BaseViewModel
 
 class TemplateViewModel(
     private val repository: TemplateRepository = TemplateRepository()
-) : afkt_replace.core.base.app.BaseViewModel()
+) : BaseViewModel()

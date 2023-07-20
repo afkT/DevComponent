@@ -1,11 +1,8 @@
 package afkt_replace.module.person
 
-import afkt_replace.core.lib.base.repository.NetworkBoundScopeResource
-import afkt_replace.core.lib.base.repository.Resource
+import afkt_replace.core.base.repository.NetworkBoundScopeResource
+import afkt_replace.core.base.repository.Resource
 import afkt_replace.core.base.split.inter.FunctionFlowCall
-import afkt_replace.core.project.bean.person.PersonActing
-import afkt_replace.core.project.bean.person.PersonDetails
-import afkt_replace.core.project.bean.person.PopularPerson
 import afkt_replace.module.person.data.api.PersonAPI
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

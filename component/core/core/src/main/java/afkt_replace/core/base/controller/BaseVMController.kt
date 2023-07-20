@@ -1,15 +1,15 @@
 package afkt_replace.core.base.controller
 
 import afkt_replace.core.base.app.BaseViewModel
-import afkt_replace.core.lib.base.controller.inter.IController
-import afkt_replace.core.lib.base.controller.viewmodel.IntentDataViewModel
+import afkt_replace.core.base.controller.inter.IController
+import afkt_replace.core.base.controller.viewmodel.IntentDataViewModel
 import androidx.databinding.ViewDataBinding
 
 /**
  * detail: 基础 ViewModel 控制封装
  * @author Ttt
  */
-class BaseVMController<VDB : ViewDataBinding, VM : afkt_replace.core.base.app.BaseViewModel>(
+class BaseVMController<VDB : ViewDataBinding, VM : BaseViewModel>(
     // Base 汇总控制器接口
     private val controller: IController
 ) {

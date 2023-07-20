@@ -89,7 +89,7 @@ android {
 dependencies {
 
     // 核心基础依赖库
-    api project(':core')
+    api project(':core_desc')
 }
 
 // 编码设置

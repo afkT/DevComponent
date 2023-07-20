@@ -1,6 +1,5 @@
-package afkt_replace.core.router.module.movie
+package afkt_replace.core.project.router.module.main
 
-import afkt_replace.core.config.ParamConst
 import com.alibaba.android.arouter.facade.Postcard
 
 /**
@@ -9,7 +8,7 @@ import com.alibaba.android.arouter.facade.Postcard
  * 不封装在对应的 Router 类中, 统一通过 Nav 类进行跳转、获取
  * 方便后续二次封装、统一编辑等处理
  */
-object MovieNav {
+object MainNav {
 
     // ==========
     // = 快捷方法 =
@@ -20,7 +19,7 @@ object MovieNav {
      * 便于代码跳转直观、对外避免跳转错 GROUP ( Module )
      */
     fun build(path: String): Postcard {
-        return MovieRouter.build(path)
+        return MainRouter.build(path)
     }
 
     // ==========
@@ -31,26 +30,13 @@ object MovieNav {
      * 模块入口路由跳转
      */
     fun routerMain() {
-        build(MovieRouter.PATH_MAIN).navigation()
+        build(MainRouter.PATH_MAIN).navigation()
     }
 
-    // =================
-    // = Movie Details =
-    // =================
-
     /**
-     * 构建 Movie Details Path Router
-     * @param movieId movie id
-     * @param title movie title
-     * @return Postcard
+     * 模块入口路由
      */
-    fun buildMovieDetails(
-        movieId: String,
-        title: String?
-    ): Postcard {
-        return build(MovieRouter.PATH_MOVIE_DETAILS_ACTIVITY).apply {
-            withString(ParamConst.MOVIE_ID, movieId)
-            withString(ParamConst.TITLE, title)
-        }
+    fun buildMain(): Postcard {
+        return build(MainRouter.PATH_MAIN)
     }
 }

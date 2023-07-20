@@ -1,8 +1,5 @@
 package afkt_replace.module.person.data.api
 
-import afkt_replace.core.project.bean.person.PersonActing
-import afkt_replace.core.project.bean.person.PersonDetails
-import afkt_replace.core.project.bean.person.PopularPerson
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query

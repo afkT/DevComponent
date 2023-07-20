@@ -30,8 +30,8 @@ def getProperty(
 // = 特殊字段创建 =
 // =============
 
-// core/libs/lib_network Module 构建字段创建
-if (libName == "core_lib_network") {
+// core/core_project Module 构建字段创建
+if (libName == "core_project") {
     android.defaultConfig {
         // https://www.themoviedb.org API Key
         buildConfigField("String", "TMDB_API_KEY", "\"${getProperty("api_key.properties", "tmdb_api_key")}\"")

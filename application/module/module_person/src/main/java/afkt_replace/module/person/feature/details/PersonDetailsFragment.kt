@@ -1,7 +1,7 @@
 package afkt_replace.module.person.feature.details
 
-import afkt_replace.core.lib.base.app.extension.loading.BaseLoadingSkeletonFragment
-import afkt_replace.core.router.module.person.PersonRouter
+import afkt_replace.core.base.app.extension.loading.BaseLoadingSkeletonFragment
+import afkt_replace.core.project.router.module.person.PersonRouter
 import afkt_replace.module.person.BR
 import afkt_replace.module.person.R
 import afkt_replace.module.person.databinding.PersonFragmentDetailsBinding

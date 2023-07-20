@@ -1,7 +1,6 @@
 package afkt_replace.core.base.skin
 
-import afkt_replace.core.lib.base.R
-import afkt_replace.core.ui.skin.AppThemeRes
+import afkt_replace.core.R
 import android.content.res.ColorStateList
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable

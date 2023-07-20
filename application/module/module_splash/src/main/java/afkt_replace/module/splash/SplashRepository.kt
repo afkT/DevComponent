@@ -1,8 +1,6 @@
 package afkt_replace.module.splash
 
-import afkt_replace.core.project.bean.splash.NONE_ADS
-import afkt_replace.core.project.bean.splash.SplashAds
-import afkt_replace.core.router.module.splash.SplashNav
+import afkt_replace.core.project.router.module.splash.SplashNav
 import androidx.databinding.Observable
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

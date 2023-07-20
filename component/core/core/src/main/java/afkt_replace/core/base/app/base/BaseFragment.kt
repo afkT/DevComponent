@@ -1,12 +1,12 @@
 package afkt_replace.core.base.app.base
 
 import afkt_replace.core.base.app.BaseViewModel
-import afkt_replace.core.lib.base.app.base.simple.ISimpleAgile
-import afkt_replace.core.lib.base.controller.BaseDataController
-import afkt_replace.core.lib.base.controller.BaseTransitionController
-import afkt_replace.core.lib.base.controller.BaseUIController
-import afkt_replace.core.lib.base.controller.BaseVMController
-import afkt_replace.core.lib.base.controller.inter.IController
+import afkt_replace.core.base.app.base.simple.ISimpleAgile
+import afkt_replace.core.base.controller.BaseDataController
+import afkt_replace.core.base.controller.BaseTransitionController
+import afkt_replace.core.base.controller.BaseUIController
+import afkt_replace.core.base.controller.BaseVMController
+import afkt_replace.core.base.controller.inter.IController
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -23,7 +23,7 @@ import dev.utils.common.ClassUtils
  * detail: Base MVVM Fragment
  * @author Ttt
  */
-abstract class BaseFragment<VDB : ViewDataBinding, VM : afkt_replace.core.base.app.BaseViewModel>(
+abstract class BaseFragment<VDB : ViewDataBinding, VM : BaseViewModel>(
     private val vmType: FragmentVMType = FragmentVMType.FRAGMENT
 ) : DevBaseContentMVVMFragment<VDB, VM>(),
     IController,

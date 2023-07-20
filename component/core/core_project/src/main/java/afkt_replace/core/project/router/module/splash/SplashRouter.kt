@@ -1,22 +1,29 @@
-package afkt_replace.core.router.module.main
+package afkt_replace.core.project.router.module.splash
 
-import afkt_replace.core.router.module.AppRouter
+import afkt_replace.core.router.AppRouter
 import com.alibaba.android.arouter.facade.Postcard
 
 /**
- * detail: Main Module Router
+ * detail: Splash Module Router
  * @author Ttt
  */
-object MainRouter {
+object SplashRouter {
 
-    const val GROUP = "main"
+    const val GROUP = "splash"
 
     // ========
     // = PATH =
     // ========
 
     // 模块入口
-    const val PATH_MAIN = "/$GROUP/main"
+    const val PATH_LAUNCHER = "/$GROUP/launcher"
+
+    // ====================
+    // = PATH - IProvider =
+    // ====================
+
+    // 对外公开 IProvider 通讯组件
+    const val PATH_SPLASH_PROVIDER = "/$GROUP/provider"
 
     // ==========
     // = 快捷方法 =

@@ -1,10 +1,10 @@
 package afkt_replace.core.base.app
 
-import afkt_replace.core.lib.base.app.base.ActivityVMType
-import afkt_replace.core.lib.base.app.base.inter.BindingActivityView
-import afkt_replace.core.lib.base.app.base.simple.factory.SimpleActivityIMPL
-import afkt_replace.core.lib.base.app.extension.mvvm.BaseMVVMActivity
-import afkt_replace.core.lib.base.controller.ui.theme.ActivityUITheme
+import afkt_replace.core.base.app.base.ActivityVMType
+import afkt_replace.core.base.app.base.inter.BindingActivityView
+import afkt_replace.core.base.app.base.simple.factory.SimpleActivityIMPL
+import afkt_replace.core.base.app.extension.mvvm.BaseMVVMActivity
+import afkt_replace.core.base.controller.ui.theme.ActivityUITheme
 import androidx.databinding.ViewDataBinding
 
 /**
@@ -12,7 +12,7 @@ import androidx.databinding.ViewDataBinding
  * @author Ttt
  * 如有额外参数等可统一在此基类增加, 避免污染底层基类过于复杂、混乱
  */
-abstract class BaseAppActivity<VDB : ViewDataBinding, VM : afkt_replace.core.base.app.BaseViewModel> : BaseMVVMActivity<VDB, VM> {
+abstract class BaseAppActivity<VDB : ViewDataBinding, VM : BaseViewModel> : BaseMVVMActivity<VDB, VM> {
 
     // ==========
     // = 构造函数 =

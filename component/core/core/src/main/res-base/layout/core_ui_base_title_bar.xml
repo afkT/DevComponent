@@ -7,11 +7,11 @@
 
         <variable
             name="appUI"
-            type="afkt_replace.core.lib.ui.listener.AppUI" />
+            type="afkt_replace.core.ui.listener.AppUI" />
 
         <variable
             name="appListener"
-            type="afkt_replace.core.lib.ui.listener.AppListener" />
+            type="afkt_replace.core.ui.listener.AppListener" />
 
         <variable
             name="appThemeRes"
@@ -38,7 +38,7 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <afkt_replace.core.lib.ui.widget.BaseTextView
+            <afkt_replace.core.ui.widget.BaseTextView
                 android:id="@+id/vid_title_tv"
                 android:layout_width="@dimen/dp_0"
                 android:layout_height="@dimen/dp_0"
@@ -74,7 +74,7 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <afkt_replace.core.lib.ui.widget.BaseImageView
+                <afkt_replace.core.ui.widget.BaseImageView
                     android:layout_width="@dimen/dp_0"
                     android:layout_height="@dimen/dp_0"
                     android:background="@{appThemeRes.titleBackIcon}"

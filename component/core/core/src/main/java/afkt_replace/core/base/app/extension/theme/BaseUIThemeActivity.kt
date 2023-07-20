@@ -2,10 +2,10 @@ package afkt_replace.core.base.app.extension.theme
 
 import afkt_replace.core.base.app.BaseAppActivity
 import afkt_replace.core.base.app.BaseViewModel
-import afkt_replace.core.lib.base.app.base.ActivityVMType
+import afkt_replace.core.base.app.base.ActivityVMType
 import afkt_replace.core.base.app.base.BaseActivity
-import afkt_replace.core.lib.base.app.base.inter.BindingActivityView
-import afkt_replace.core.lib.base.controller.ui.theme.ActivityUITheme
+import afkt_replace.core.base.app.base.inter.BindingActivityView
+import afkt_replace.core.base.controller.ui.theme.ActivityUITheme
 import android.view.View
 import androidx.databinding.ViewDataBinding
 
@@ -15,11 +15,11 @@ import androidx.databinding.ViewDataBinding
  * 在 [BaseActivity] 基础上封装 UITheme 样式 Intent 传参控制处理
  * 如果无特殊需求请使用 [BaseAppActivity]
  */
-abstract class BaseUIThemeActivity<VDB : ViewDataBinding, VM : afkt_replace.core.base.app.BaseViewModel> constructor(
+abstract class BaseUIThemeActivity<VDB : ViewDataBinding, VM : BaseViewModel> constructor(
     private val bindLayoutId: Int = 0,
     private val bindLayoutView: BindingActivityView? = null,
     vmType: ActivityVMType = ActivityVMType.ACTIVITY
-) : afkt_replace.core.base.app.base.BaseActivity<VDB, VM>(vmType) {
+) : BaseActivity<VDB, VM>(vmType) {
 
     // ==================
     // = IDevBaseLayout =

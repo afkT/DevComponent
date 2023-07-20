@@ -6,6 +6,6 @@ import afkt_replace.module.splash.R
 import afkt_replace.module.splash.SplashViewModel
 import afkt_replace.module.splash.databinding.SplashFragmentBinding
 
-class SplashFragment : afkt_replace.core.base.app.BaseAppFragment<SplashFragmentBinding, SplashViewModel>(
+class SplashFragment : BaseAppFragment<SplashFragmentBinding, SplashViewModel>(
     R.layout.splash_fragment, BR.viewModel
 )

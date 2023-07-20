@@ -11,7 +11,7 @@ import dev.widget.assist.ViewAssist
  * @author Ttt
  * 首次进入使用 Activity、Fragment Loading 使用
  */
-class BaseLoadingSkeletonController<VM : afkt_replace.core.base.app.BaseViewModel>(
+class BaseLoadingSkeletonController<VM : BaseViewModel>(
     val contentAssist: DevBaseContentAssist,
     val FORCED_SHOW: Boolean = false
 ) {

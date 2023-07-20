@@ -1,6 +1,5 @@
 package afkt_replace.core.base.core
 
-import afkt_replace.core.channel.AbstractChannelFlavors
 import dev.base.DevVariable
 import dev.utils.DevFinal
 

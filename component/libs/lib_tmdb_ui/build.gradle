@@ -3,5 +3,5 @@ apply from: rootProject.file(files.build_library_gradle)
 dependencies {
 
     // 核心基础依赖库
-    compileOnly project(':core')
+    compileOnly project(':core_desc')
 }

@@ -1,7 +1,7 @@
 package afkt_replace.module.movie.feature.popular
 
-import afkt_replace.core.lib.base.app.extension.loading.BaseLoadingSkeletonFragment
-import afkt_replace.core.router.module.movie.MovieRouter
+import afkt_replace.core.base.app.extension.loading.BaseLoadingSkeletonFragment
+import afkt_replace.core.project.router.module.movie.MovieRouter
 import afkt_replace.module.movie.BR
 import afkt_replace.module.movie.R
 import afkt_replace.module.movie.databinding.MovieFragmentPopularBinding

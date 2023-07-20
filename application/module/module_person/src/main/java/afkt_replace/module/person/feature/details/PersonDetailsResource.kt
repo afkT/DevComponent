@@ -1,12 +1,12 @@
 package afkt_replace.module.person.feature.details
 
-import afkt_replace.core.lib.base.controller.loading.BaseLoadingSkeletonController
-import afkt_replace.core.lib.base.repository.Resource
-import afkt_replace.core.lib.base.repository.Status
+import afkt_replace.core.base.controller.loading.BaseLoadingSkeletonController
+import afkt_replace.core.base.repository.Resource
+import afkt_replace.core.base.repository.Status
 import afkt_replace.core.base.split.data.IntentData
+import afkt_replace.core.config.ParamConst
 import afkt_replace.core.project.bean.person.PersonActing
 import afkt_replace.core.project.bean.person.PersonDetails
-import afkt_replace.core.config.ParamConst
 import afkt_replace.lib.tmdb.ui.adapter.PersonActingItem
 import afkt_replace.module.person.databinding.PersonFragmentDetailsBinding
 import androidx.lifecycle.MutableLiveData
@@ -124,6 +124,6 @@ class PersonDetailsDataConsumerIMPL(
     }
 
     // 数据源
-    private val details = MutableLiveData<afkt_replace.core.project.bean.person.PersonDetails>()
-    private val acting = MutableLiveData<afkt_replace.core.project.bean.person.PersonActing>()
+    private val details = MutableLiveData<PersonDetails>()
+    private val acting = MutableLiveData<PersonActing>()
 }

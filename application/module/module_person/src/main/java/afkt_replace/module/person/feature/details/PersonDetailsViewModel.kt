@@ -1,18 +1,15 @@
 package afkt_replace.module.person.feature.details
 
 import afkt_replace.core.base.app.BaseViewModel
-import afkt_replace.core.lib.base.controller.loading.BaseLoadingSkeletonController
-import afkt_replace.core.lib.base.repository.AbsentLiveData
-import afkt_replace.core.lib.base.repository.Resource
+import afkt_replace.core.base.controller.loading.BaseLoadingSkeletonController
+import afkt_replace.core.base.repository.AbsentLiveData
+import afkt_replace.core.base.repository.Resource
 import afkt_replace.core.base.split.data.IntentData
 import afkt_replace.core.base.split.inter.FunctionFlowCall
-import afkt_replace.core.project.bean.person.KnownFor
-import afkt_replace.core.project.bean.person.PersonActing
-import afkt_replace.core.project.bean.person.PersonDetails
 import afkt_replace.core.config.ParamConst
-import afkt_replace.core.router.module.movie.MovieNav
-import afkt_replace.core.lib.ui.databinding.CoreUiBaseStatusBarBinding
-import afkt_replace.core.lib.ui.databinding.CoreUiBaseTitleBarBinding
+import afkt_replace.core.project.router.module.movie.MovieNav
+import afkt_replace.core.databinding.CoreUiBaseStatusBarBinding
+import afkt_replace.core.databinding.CoreUiBaseTitleBarBinding
 import afkt_replace.core.ui.widget.view_assist.loading_skeleton.PageTitleBindable
 import afkt_replace.core.ui.widget.view_assist.loading_skeleton.PageTitleLoadingSkeletonViewAssist
 import afkt_replace.lib.tmdb.ui.adapter.PersonActingItem
@@ -27,7 +24,7 @@ import dev.utils.common.able.Getable
 
 class PersonDetailsViewModel(
     private val repository: PersonRepository = PersonRepository()
-) : afkt_replace.core.base.app.BaseViewModel() {
+) : BaseViewModel() {
 
     // 跳转传参
     private val intentData = IntentData.with()

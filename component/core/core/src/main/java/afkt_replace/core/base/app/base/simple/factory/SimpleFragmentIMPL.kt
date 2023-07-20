@@ -1,6 +1,6 @@
 package afkt_replace.core.base.app.base.simple.factory
 
-import afkt_replace.core.lib.base.controller.ui.theme.FragmentUITheme
+import afkt_replace.core.base.controller.ui.theme.FragmentUITheme
 
 class SimpleFragmentIMPL<SimpleTClass> : BaseSimpleAgile<SimpleTClass, FragmentUITheme> {
 

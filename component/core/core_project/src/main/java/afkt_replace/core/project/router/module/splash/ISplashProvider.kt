@@ -1,6 +1,5 @@
-package afkt_replace.core.router.module.splash
+package afkt_replace.core.project.router.module.splash
 
-import afkt_replace.core.project.bean.splash.SplashAds
 import afkt_replace.core.router.BaseProvider
 import androidx.databinding.ObservableField
 

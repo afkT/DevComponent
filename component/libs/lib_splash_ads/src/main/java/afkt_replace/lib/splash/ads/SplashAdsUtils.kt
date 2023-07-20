@@ -1,11 +1,9 @@
 package afkt_replace.lib.splash.ads
 
 import afkt_replace.core.app.AppContext
-import afkt_replace.core.project.bean.splash.NONE_ADS
-import afkt_replace.core.project.bean.splash.SplashAds
-import afkt_replace.core.router.module.splash.ISplashProvider
-import afkt_replace.core.router.module.splash.SplashRouter
 import afkt_replace.core.project.utils.tmdb.toTMDBImageSource
+import afkt_replace.core.project.router.module.splash.ISplashProvider
+import afkt_replace.core.project.router.module.splash.SplashRouter
 import android.content.Context
 import android.graphics.Bitmap
 import androidx.databinding.ObservableField

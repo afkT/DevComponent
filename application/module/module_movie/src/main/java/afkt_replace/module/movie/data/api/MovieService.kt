@@ -1,8 +1,5 @@
 package afkt_replace.module.movie.data.api
 
-import afkt_replace.core.project.bean.movie.MovieDetails
-import afkt_replace.core.project.bean.movie.MoviePosterImages
-import afkt_replace.core.project.bean.movie.PopularMovie
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query

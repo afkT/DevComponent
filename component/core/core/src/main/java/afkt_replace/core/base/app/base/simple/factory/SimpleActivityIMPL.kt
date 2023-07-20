@@ -1,9 +1,9 @@
 package afkt_replace.core.base.app.base.simple.factory
 
 import afkt_replace.core.base.app.BaseAppActivity
-import afkt_replace.core.lib.base.controller.ui.theme.ActivityUITheme
+import afkt_replace.core.base.controller.ui.theme.ActivityUITheme
 
-class SimpleActivityIMPL<SimpleTClass : afkt_replace.core.base.app.BaseAppActivity<*, *>> : BaseSimpleAgile<SimpleTClass, ActivityUITheme> {
+class SimpleActivityIMPL<SimpleTClass : BaseAppActivity<*, *>> : BaseSimpleAgile<SimpleTClass, ActivityUITheme> {
 
     private constructor(
         simple_Init: ((SimpleTClass) -> Unit)?,
@@ -15,7 +15,7 @@ class SimpleActivityIMPL<SimpleTClass : afkt_replace.core.base.app.BaseAppActivi
 
     companion object {
 
-        fun <SimpleTClass : afkt_replace.core.base.app.BaseAppActivity<*, *>> of(
+        fun <SimpleTClass : BaseAppActivity<*, *>> of(
             simple_Init: ((SimpleTClass) -> Unit)? = null,
             simple_Start: ((SimpleTClass) -> Unit)? = null,
             simple_PreLoad: ((SimpleTClass) -> Unit)? = null,

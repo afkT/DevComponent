@@ -1,11 +1,11 @@
 package afkt_replace.core.base.app.extension.loading
 
 import afkt_replace.core.base.app.BaseViewModel
-import afkt_replace.core.lib.base.app.base.FragmentVMType
-import afkt_replace.core.lib.base.app.base.inter.BindingFragmentView
-import afkt_replace.core.lib.base.app.base.simple.factory.SimpleFragmentIMPL
-import afkt_replace.core.lib.base.controller.loading.BaseLoadingController
-import afkt_replace.core.lib.base.controller.ui.theme.FragmentUITheme
+import afkt_replace.core.base.app.base.FragmentVMType
+import afkt_replace.core.base.app.base.inter.BindingFragmentView
+import afkt_replace.core.base.app.base.simple.factory.SimpleFragmentIMPL
+import afkt_replace.core.base.controller.loading.BaseLoadingController
+import afkt_replace.core.base.controller.ui.theme.FragmentUITheme
 import androidx.databinding.ViewDataBinding
 
 /**
@@ -14,7 +14,7 @@ import androidx.databinding.ViewDataBinding
  * 区别于 Loading Skeleton 只用在首次进入管理控制
  * 该 Loading 是重复性使用在 Content Layout 上层显示
  */
-abstract class BaseLoadingFragment<VDB : ViewDataBinding, VM : afkt_replace.core.base.app.BaseViewModel> : BaseLoadingSkeletonFragment<VDB, VM> {
+abstract class BaseLoadingFragment<VDB : ViewDataBinding, VM : BaseViewModel> : BaseLoadingSkeletonFragment<VDB, VM> {
 
     // ==========
     // = 构造函数 =
