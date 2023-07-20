@@ -6,7 +6,9 @@ android {
             // 优化 res 资源管理, 使用 sourceSets 资源分包
             res.srcDirs = [
                     'src/main/res', // 模块通用资源文件
-                    'src/main/res-tools', // 用于 xml tools:xxx 展示
+                    'src/main/res-base', // Base 基础资源
+                    'src/main/res-tools', // tools 通用使用
+                    'src/main/res-view-assist', // ViewAssist 骨架辅助类
             ]
         }
     }
@@ -18,35 +20,18 @@ android {
  */
 dependencies {
 
-    // 核心基础依赖库
-    api project(':core_base_lib')
-
     // ===================
     // = core - 核心开发库 =
     // ===================
 
-    // 基础 ( 基类等 ) lib
-    api project(':core_lib_base')
-    // 基础 ( 基类等 ) lib 拆包
-    api project(':core_lib_base_split')
     // 通用实体类 lib
     api project(':core_lib_bean')
-    // App 多渠道 lib
-    api project(':core_lib_channel_flavors')
-    // 通用配置、常量 lib
-    api project(':core_lib_config')
     // 通用环境配置切换库
     api project(':core_lib_environment')
     // 通用多语言 lib
     api project(':core_lib_language')
-    // MVVM 通用代码封装 ( 使用 MVVM module 必须 api 依赖如果使用 compileOnly 将会找不到 BindingAdapter 等 )
-    api project(':core_lib_mvvm')
     // 网络相关 lib ( 网络请求、上传下载 )
     api project(':core_lib_network')
-    // 通用 UI 样式、资源、交互、控件 lib
-    api project(':core_lib_ui')
-    // APP 主题、换肤相关控制
-    api project(':core_lib_ui_skin')
     // 通用工具库
     api project(':core_lib_utils')
 
@@ -161,6 +146,15 @@ dependencies {
     api deps.widget.binding_collection_adapter
     api deps.widget.binding_collection_adapter_recyclerview
     api deps.widget.binding_collection_adapter_viewpager2
+    // 下拉刷新框架 https://github.com/scwang90/SmartRefreshLayout
+    api deps.widget.smartrefreshlayout
+    api deps.widget.smartrefresh_header_classics // 经典刷新头
+//    api deps.widget.smartrefresh_header_radar // 雷达刷新头
+//    api deps.widget.smartrefresh_header_falsify // 虚拟刷新头
+//    api deps.widget.smartrefresh_header_material // 谷歌刷新头
+//    api deps.widget.smartrefresh_header_two_level // 二级刷新头
+//    api deps.widget.smartrefresh_footer_ball // 球脉冲加载
+    api deps.widget.smartrefresh_footer_classics // 经典加载
 
     // ====================
     // = 性能检测、排查相关库 =
@@ -181,4 +175,13 @@ dependencies {
     // Bugly https://bugly.qq.com/docs/
     api deps_split.property.bugly
     api deps_split.property.bugly_ndk
+
+    // ==============
+    // = deps_split =
+    // ==============
+
+    // LoadingDrawable https://github.com/dinuscxj/LoadingDrawable
+    api deps_split.widget.loading_drawable
+    // Activity 跳转动画 https://github.com/skydoves/TransformationLayout
+    api deps_split.widget.transformation_layout
 }

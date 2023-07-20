@@ -3,10 +3,10 @@ package afkt_replace.module.movie.feature.details
 import afkt_replace.core.lib.base.controller.loading.BaseLoadingSkeletonController
 import afkt_replace.core.lib.base.repository.Resource
 import afkt_replace.core.lib.base.repository.Status
-import afkt_replace.core.lib.base.split.data.IntentData
+import afkt_replace.core.base.split.data.IntentData
 import afkt_replace.core.lib.bean.movie.MovieDetails
 import afkt_replace.core.lib.bean.movie.MoviePosterImages
-import afkt_replace.core.lib.config.ParamConst
+import afkt_replace.core.config.ParamConst
 import afkt_replace.core.lib.utils.toTMDBImageSource
 import afkt_replace.lib.tmdb.ui.adapter.MoviePosterItem
 import afkt_replace.module.movie.databinding.MovieFragmentDetailsBinding

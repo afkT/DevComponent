@@ -1,13 +1,13 @@
 package afkt_replace.module.template.feature.end
 
-import afkt_replace.core.lib.base.app.BaseViewModel
-import afkt_replace.core.lib.base.split.data.IntentData
-import afkt_replace.core.lib.config.ParamConst
+import afkt_replace.core.base.app.BaseViewModel
+import afkt_replace.core.base.split.data.IntentData
+import afkt_replace.core.config.ParamConst
 import afkt_replace.module.template.TemplateRepository
 
 class EndViewModel(
     private val repository: TemplateRepository = TemplateRepository()
-) : BaseViewModel() {
+) : afkt_replace.core.base.app.BaseViewModel() {
 
     // 跳转传参
     private val intentData = IntentData.with()

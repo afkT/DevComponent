@@ -3,9 +3,9 @@ package afkt_replace.module.tv.feature.details
 import afkt_replace.core.lib.base.controller.loading.BaseLoadingSkeletonController
 import afkt_replace.core.lib.base.repository.Resource
 import afkt_replace.core.lib.base.repository.Status
-import afkt_replace.core.lib.base.split.data.IntentData
+import afkt_replace.core.base.split.data.IntentData
 import afkt_replace.core.lib.bean.tv.TvDetails
-import afkt_replace.core.lib.config.ParamConst
+import afkt_replace.core.config.ParamConst
 import afkt_replace.module.tv.databinding.TvFragmentDetailsBinding
 import androidx.lifecycle.MutableLiveData
 import dev.utils.common.able.Consumerable

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="appUI"
+            type="afkt_replace.core.lib.ui.listener.AppUI" />
+
+        <variable
+            name="appListener"
+            type="afkt_replace.core.lib.ui.listener.AppListener" />
+
+        <variable
+            name="appThemeRes"
+            type="afkt_replace.core.ui.skin.AppThemeRes" />
+
+        <variable
+            name="appThemeResBefore"
+            type="afkt_replace.core.ui.skin.AppThemeRes" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/vid_cl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@{appThemeRes.titleBarBackground}"
+        tools:layout_height="@dimen/dp_45">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/vid_center_cl"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <afkt_replace.core.lib.ui.widget.BaseTextView
+                android:id="@+id/vid_title_tv"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="@dimen/dp_0"
+                android:gravity="center"
+                android:text="@{appUI.title}"
+                android:textColor="@{appThemeRes.titleTextColor}"
+                android:textSize="@{appThemeRes.titleTextSize}"
+                app:binding_textBold="@{appUI.titleBold}"
+                app:binding_visibleOrGone="@{appUI.titleVisible}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Title" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/vid_left_cl"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/vid_back_cl"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="@dimen/dp_0"
+                app:binding_click="@{appListener.onClickBack}"
+                app:binding_visibleOrGone="@{appUI.backVisible}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <afkt_replace.core.lib.ui.widget.BaseImageView
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_0"
+                    android:background="@{appThemeRes.titleBackIcon}"
+                    app:binding_marginAttr="@{appThemeRes.titleBackMargin}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/vid_right_cl"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

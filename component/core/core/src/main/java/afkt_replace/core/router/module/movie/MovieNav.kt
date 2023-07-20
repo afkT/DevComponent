@@ -1,6 +1,6 @@
 package afkt_replace.core.router.module.movie
 
-import afkt_replace.core.lib.config.ParamConst
+import afkt_replace.core.config.ParamConst
 import com.alibaba.android.arouter.facade.Postcard
 
 /**

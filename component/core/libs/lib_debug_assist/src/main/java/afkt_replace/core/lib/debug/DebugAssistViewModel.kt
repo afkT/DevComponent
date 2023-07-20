@@ -1,6 +1,6 @@
 package afkt_replace.core.lib.debug
 
-import afkt_replace.core.lib.base.app.BaseViewModel
+import afkt_replace.core.base.app.BaseViewModel
 import android.view.View
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.viewModelScope
@@ -16,7 +16,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import me.ele.uetool.UETool
 
-class DebugAssistViewModel : BaseViewModel() {
+class DebugAssistViewModel : afkt_replace.core.base.app.BaseViewModel() {
 
     // 切换环境
     val onClickEnvironment = object : BindingConsumer<View> {

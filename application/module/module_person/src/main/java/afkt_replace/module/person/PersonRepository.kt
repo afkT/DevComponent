@@ -2,7 +2,7 @@ package afkt_replace.module.person
 
 import afkt_replace.core.lib.base.repository.NetworkBoundScopeResource
 import afkt_replace.core.lib.base.repository.Resource
-import afkt_replace.core.lib.base.split.inter.FunctionFlowCall
+import afkt_replace.core.base.split.inter.FunctionFlowCall
 import afkt_replace.core.lib.bean.person.PersonActing
 import afkt_replace.core.lib.bean.person.PersonDetails
 import afkt_replace.core.lib.bean.person.PopularPerson

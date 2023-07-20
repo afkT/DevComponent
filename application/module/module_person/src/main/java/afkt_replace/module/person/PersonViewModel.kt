@@ -1,7 +1,7 @@
 package afkt_replace.module.person
 
-import afkt_replace.core.lib.base.app.BaseViewModel
+import afkt_replace.core.base.app.BaseViewModel
 
 class PersonViewModel(
     private val repository: PersonRepository = PersonRepository()
-) : BaseViewModel()
+) : afkt_replace.core.base.app.BaseViewModel()

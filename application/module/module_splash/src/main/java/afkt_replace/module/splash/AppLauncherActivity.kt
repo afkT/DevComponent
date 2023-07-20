@@ -1,8 +1,8 @@
 package afkt_replace.module.splash
 
-import afkt_replace.core.lib.base.app.BaseAppActivity
+import afkt_replace.core.base.app.BaseAppActivity
 import afkt_replace.core.lib.base.controller.ui.theme.defaultAppLauncherUITheme
-import afkt_replace.core.lib.base.split.data.IntentData
+import afkt_replace.core.base.split.data.IntentData
 import afkt_replace.core.router.module.splash.SplashRouter
 import afkt_replace.lib.splash.ads.SplashAdsEvent
 import afkt_replace.module.splash.databinding.SplashActivityBinding
@@ -17,7 +17,7 @@ import kotlinx.coroutines.launch
 import me.jessyan.autosize.internal.CancelAdapt
 
 @Route(path = SplashRouter.PATH_LAUNCHER, group = SplashRouter.GROUP)
-class AppLauncherActivity : BaseAppActivity<SplashActivityBinding, SplashViewModel>(
+class AppLauncherActivity : afkt_replace.core.base.app.BaseAppActivity<SplashActivityBinding, SplashViewModel>(
     R.layout.splash_activity, BR.viewModel, simple_UITheme = {
         it.defaultAppLauncherUITheme()
     }

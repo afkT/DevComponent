@@ -2,7 +2,7 @@ package afkt_replace.module.movie
 
 import afkt_replace.core.lib.base.repository.NetworkBoundScopeResource
 import afkt_replace.core.lib.base.repository.Resource
-import afkt_replace.core.lib.base.split.inter.FunctionFlowCall
+import afkt_replace.core.base.split.inter.FunctionFlowCall
 import afkt_replace.core.lib.bean.movie.MovieDetails
 import afkt_replace.core.lib.bean.movie.MoviePosterImages
 import afkt_replace.core.lib.bean.movie.PopularMovie

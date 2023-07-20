@@ -12,15 +12,15 @@
 
         <variable
             name="appUI"
-            type="afkt_replace.core.lib.ui.listener.AppUI" />
+            type="afkt_replace.core.ui.listener.AppUI" />
 
         <variable
             name="appListener"
-            type="afkt_replace.core.lib.ui.listener.AppListener" />
+            type="afkt_replace.core.ui.listener.AppListener" />
 
         <variable
             name="appThemeRes"
-            type="afkt_replace.core.lib.ui.skin.AppThemeRes" />
+            type="afkt_replace.core.ui.skin.AppThemeRes" />
 
         <!-- 对应变量 -->
         <!-- 也可以 viewModel.dataConsumer.details.xxx -->
@@ -61,14 +61,14 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintWidth_percent="1">
 
-                <afkt_replace.core.lib.ui.widget.BaseImageView
+                <afkt_replace.core.ui.widget.BaseImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
                     app:binding_source_anim="@{TMDBImageUrlKt.toTMDBImageSourceEmpty(details.profile_path)}"
                     tools:background="@drawable/tools_image" />
 
-                <afkt_replace.core.lib.ui.widget.BaseTextView
+                <afkt_replace.core.ui.widget.BaseTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
@@ -88,7 +88,7 @@
                     layout="@layout/include_person_action_popup" />
             </FrameLayout>
 
-            <afkt_replace.core.lib.ui.widget.BaseTextView
+            <afkt_replace.core.ui.widget.BaseTextView
                 android:id="@+id/vid_acting_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

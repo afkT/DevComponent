@@ -1,6 +1,6 @@
 package afkt_replace.module.tv
 
-import afkt_replace.core.lib.base.app.BaseAppActivity
+import afkt_replace.core.base.app.BaseAppActivity
 import afkt_replace.core.lib.base.controller.ui.ext.defaultMainContainerController
 import afkt_replace.core.lib.base.controller.ui.ext.setExitBackIntercept
 import afkt_replace.core.lib.base.controller.ui.theme.defaultMainContainerUITheme
@@ -10,7 +10,7 @@ import com.alibaba.android.arouter.facade.annotation.Route
 import dev.mvvm.utils.toResString
 
 @Route(path = TvRouter.PATH_MAIN, group = TvRouter.GROUP)
-class MainContainerActivity : BaseAppActivity<TvAppContainerBinding, TvViewModel>(
+class MainContainerActivity : afkt_replace.core.base.app.BaseAppActivity<TvAppContainerBinding, TvViewModel>(
     R.layout.tv_app_container, BR.viewModel, simple_UITheme = {
         it.defaultMainContainerUITheme()
     }, simple_PreLoad = {

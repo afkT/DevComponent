@@ -1,8 +1,8 @@
 package afkt_replace.module.tv
 
-import afkt_replace.core.lib.base.app.BaseAppActivity
+import afkt_replace.core.base.app.BaseAppActivity
 import afkt_replace.core.lib.base.controller.ui.theme.defaultAppLauncherUITheme
-import afkt_replace.core.lib.config.AppLibConfig
+import afkt_replace.core.config.AppLibConfig
 import afkt_replace.core.router.module.tv.TvNav
 import afkt_replace.core.router.module.tv.TvRouter
 import afkt_replace.module.tv.databinding.TvAppLauncherBinding
@@ -12,7 +12,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import me.jessyan.autosize.internal.CancelAdapt
 
-class AppLauncherActivity : BaseAppActivity<TvAppLauncherBinding, TvViewModel>(
+class AppLauncherActivity : afkt_replace.core.base.app.BaseAppActivity<TvAppLauncherBinding, TvViewModel>(
     R.layout.tv_app_launcher, BR.viewModel, simple_UITheme = {
         it.defaultAppLauncherUITheme()
     }

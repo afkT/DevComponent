@@ -1,6 +1,6 @@
 package afkt_replace.core.lib.debug
 
-import afkt_replace.core.lib.base.app.BaseAppActivity
+import afkt_replace.core.base.app.BaseAppActivity
 import afkt_replace.core.lib.base.controller.ui.theme.defaultMainContainerUITheme
 import afkt_replace.core.lib.debug.databinding.CoreDebugAssistMainActivityBinding
 import android.graphics.drawable.ColorDrawable
@@ -15,7 +15,7 @@ import dev.utils.app.ResourceUtils
  * detail: Debug 入口容器 Activity
  * @author Ttt
  */
-class DebugMainContainerActivity : BaseAppActivity<CoreDebugAssistMainActivityBinding, DebugAssistViewModel>(
+class DebugMainContainerActivity : afkt_replace.core.base.app.BaseAppActivity<CoreDebugAssistMainActivityBinding, DebugAssistViewModel>(
     R.layout.core_debug_assist_main_activity, BR.viewModel, simple_UITheme = {
         it.defaultMainContainerUITheme()
     }

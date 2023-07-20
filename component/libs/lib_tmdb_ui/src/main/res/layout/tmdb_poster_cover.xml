@@ -54,7 +54,7 @@
                 app:cardElevation="@dimen/poster_card_elevation"
                 tools:targetApi="lollipop">
 
-                <afkt_replace.core.lib.ui.widget.BaseImageView
+                <afkt_replace.core.ui.widget.BaseImageView
                     android:id="@+id/vid_poster_iv"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -109,7 +109,7 @@
                     app:dev_progressStyle="rings" />
             </dev.widget.ui.round.RoundFrameLayout>
 
-            <afkt_replace.core.lib.ui.widget.BaseTextView
+            <afkt_replace.core.ui.widget.BaseTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
@@ -120,7 +120,7 @@
                 android:textStyle="bold"
                 tools:text="Thor: Love and Thunder" />
 
-            <afkt_replace.core.lib.ui.widget.BaseTextView
+            <afkt_replace.core.ui.widget.BaseTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp_5"

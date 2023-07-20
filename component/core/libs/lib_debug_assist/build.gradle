@@ -2,21 +2,12 @@ apply from: rootProject.file(files.build_library_gradle)
 
 dependencies {
 
-    // 核心基础依赖库 ( 编译但不参与打包 )
-    compileOnly project(':core_base_lib')
-
     // ===================
     // = core - 核心开发库 =
     // ===================
 
-    // 基础 ( 基类等 ) lib
-    compileOnly project(':core_lib_base')
     // 通用环境配置切换库
     compileOnly project(':core_lib_environment')
-    // 通用 UI 样式、资源、交互、控件 lib
-    compileOnly project(':core_lib_ui')
-    // APP 主题、换肤相关控制
-    compileOnly project(':core_lib_ui_skin')
     // 通用工具库
     compileOnly project(':core_lib_utils')
 }

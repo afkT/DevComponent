@@ -1,6 +1,6 @@
 package afkt_replace.module.template.feature.start
 
-import afkt_replace.core.lib.base.app.BaseViewModel
+import afkt_replace.core.base.app.BaseViewModel
 import afkt_replace.module.template.TemplateNavBuild
 import afkt_replace.module.template.TemplateRepository
 import android.view.View
@@ -13,7 +13,7 @@ import dev.mvvm.command.BindingConsumer
  */
 class StartViewModel(
     private val repository: TemplateRepository = TemplateRepository()
-) : BaseViewModel() {
+) : afkt_replace.core.base.app.BaseViewModel() {
 
     val onClickEnd = object : BindingConsumer<View?> {
         override fun accept(value: View?) {

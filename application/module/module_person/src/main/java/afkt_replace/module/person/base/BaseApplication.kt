@@ -1,7 +1,7 @@
 package afkt_replace.module.person.base
 
 import afkt_replace.core.app.AppContext
-import afkt_replace.core.lib.config.AppLibConfig
+import afkt_replace.core.config.AppLibConfig
 
 /**
  * detail: Base Application

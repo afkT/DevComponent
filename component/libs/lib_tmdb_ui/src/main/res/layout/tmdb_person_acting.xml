@@ -40,7 +40,7 @@
                     android:orientation="vertical"
                     tools:ignore="UnusedAttribute">
 
-                    <afkt_replace.core.lib.ui.widget.BaseImageView
+                    <afkt_replace.core.ui.widget.BaseImageView
                         android:id="@+id/vid_poster_iv"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/dp_0"

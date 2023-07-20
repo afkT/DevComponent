@@ -1,6 +1,6 @@
 package afkt_replace.module.main
 
-import afkt_replace.core.lib.base.app.BaseViewModel
+import afkt_replace.core.base.app.BaseViewModel
 
-class MainViewModel : BaseViewModel() {
+class MainViewModel : afkt_replace.core.base.app.BaseViewModel() {
 }

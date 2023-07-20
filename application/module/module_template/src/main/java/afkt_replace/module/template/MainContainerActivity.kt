@@ -1,6 +1,6 @@
 package afkt_replace.module.template
 
-import afkt_replace.core.lib.base.app.BaseAppActivity
+import afkt_replace.core.base.app.BaseAppActivity
 import afkt_replace.core.lib.base.controller.ui.ext.defaultMainContainerController
 import afkt_replace.core.lib.base.controller.ui.ext.setExitBackIntercept
 import afkt_replace.core.lib.base.controller.ui.theme.defaultMainContainerUITheme
@@ -10,7 +10,7 @@ import com.alibaba.android.arouter.facade.annotation.Route
 import dev.mvvm.utils.toResString
 
 @Route(path = TemplateRouter.PATH_MAIN, group = TemplateRouter.GROUP)
-class MainContainerActivity : BaseAppActivity<TemplateAppContainerBinding, TemplateViewModel>(
+class MainContainerActivity : afkt_replace.core.base.app.BaseAppActivity<TemplateAppContainerBinding, TemplateViewModel>(
     R.layout.template_app_container, BR.viewModel, simple_UITheme = {
         it.defaultMainContainerUITheme()
     }, simple_PreLoad = {

@@ -10,15 +10,15 @@
 
         <variable
             name="appUI"
-            type="afkt_replace.core.lib.ui.listener.AppUI" />
+            type="afkt_replace.core.ui.listener.AppUI" />
 
         <variable
             name="appListener"
-            type="afkt_replace.core.lib.ui.listener.AppListener" />
+            type="afkt_replace.core.ui.listener.AppListener" />
 
         <variable
             name="appThemeRes"
-            type="afkt_replace.core.lib.ui.skin.AppThemeRes" />
+            type="afkt_replace.core.ui.skin.AppThemeRes" />
     </data>
 
     <FrameLayout
@@ -32,7 +32,7 @@
             binding:appThemeRes="@{appThemeRes}"
             binding:appUI="@{appUI}" />
 
-        <afkt_replace.core.lib.ui.widget.BaseImageView
+        <afkt_replace.core.ui.widget.BaseImageView
             android:layout_width="@dimen/dp_100"
             android:layout_height="@dimen/dp_100"
             android:layout_gravity="center"

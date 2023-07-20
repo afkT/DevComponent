@@ -54,7 +54,7 @@
                 app:cardElevation="@dimen/profile_card_elevation"
                 tools:targetApi="lollipop">
 
-                <afkt_replace.core.lib.ui.widget.BaseImageView
+                <afkt_replace.core.ui.widget.BaseImageView
                     android:id="@+id/vid_profile_iv"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -79,7 +79,7 @@
             app:layout_constraintTop_toBottomOf="@id/vid_profile_fl"
             app:layout_constraintWidth_percent="0.8">
 
-            <afkt_replace.core.lib.ui.widget.BaseTextView
+            <afkt_replace.core.ui.widget.BaseTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
@@ -90,7 +90,7 @@
                 android:textStyle="bold"
                 tools:text="Aya Asahina" />
 
-            <afkt_replace.core.lib.ui.widget.BaseTextView
+            <afkt_replace.core.ui.widget.BaseTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp_5"

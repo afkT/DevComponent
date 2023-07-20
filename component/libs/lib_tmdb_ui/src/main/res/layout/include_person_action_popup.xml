@@ -51,7 +51,7 @@
                         android:orientation="vertical"
                         tools:ignore="UnusedAttribute">
 
-                        <afkt_replace.core.lib.ui.widget.BaseImageView
+                        <afkt_replace.core.ui.widget.BaseImageView
                             android:id="@+id/vid_poster_iv"
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/dp_0"
@@ -63,7 +63,7 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.cardview.widget.CardView>
 
-                <afkt_replace.core.lib.ui.widget.BaseTextView
+                <afkt_replace.core.ui.widget.BaseTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dp_10"
@@ -76,7 +76,7 @@
                     app:binding_visibleOrGone="@{StringUtils.isNotEmpty(details.title())}"
                     tools:text="Title" />
 
-                <afkt_replace.core.lib.ui.widget.BaseTextView
+                <afkt_replace.core.ui.widget.BaseTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dp_10"

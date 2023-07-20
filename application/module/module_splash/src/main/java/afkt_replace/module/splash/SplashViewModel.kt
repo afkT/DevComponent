@@ -1,8 +1,8 @@
 package afkt_replace.module.splash
 
-import afkt_replace.core.lib.base.app.BaseViewModel
+import afkt_replace.core.base.app.BaseViewModel
 import afkt_replace.core.lib.bean.splash.SplashAds
-import afkt_replace.core.lib.config.KeyConst
+import afkt_replace.core.config.KeyConst
 import afkt_replace.core.router.module.AppRouter
 import afkt_replace.core.router.module.splash.SplashNav
 import android.app.Activity
@@ -13,7 +13,7 @@ import dev.utils.app.toast.ToastTintUtils
 
 class SplashViewModel(
     private val repository: SplashRepository = SplashRepository()
-) : BaseViewModel() {
+) : afkt_replace.core.base.app.BaseViewModel() {
 
     // ==============
     // = 对外公开方法 =

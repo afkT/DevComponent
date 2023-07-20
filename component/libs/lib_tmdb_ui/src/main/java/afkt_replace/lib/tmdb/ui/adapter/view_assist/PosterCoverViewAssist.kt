@@ -3,7 +3,7 @@ package afkt_replace.lib.tmdb.ui.adapter.view_assist
 import afkt_replace.core.lib.ui.R
 import afkt_replace.core.lib.ui.databinding.CoreUiViewAssistRecyFailedBinding
 import afkt_replace.core.lib.ui.databinding.CoreUiViewAssistRecyLoadingBinding
-import afkt_replace.core.lib.ui.skin.AppThemeRes
+import afkt_replace.core.ui.skin.AppThemeRes
 import android.view.LayoutInflater
 import android.view.View
 import androidx.databinding.DataBindingUtil

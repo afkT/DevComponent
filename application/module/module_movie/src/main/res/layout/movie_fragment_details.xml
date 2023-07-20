@@ -12,15 +12,15 @@
 
         <variable
             name="appUI"
-            type="afkt_replace.core.lib.ui.listener.AppUI" />
+            type="afkt_replace.core.ui.listener.AppUI" />
 
         <variable
             name="appListener"
-            type="afkt_replace.core.lib.ui.listener.AppListener" />
+            type="afkt_replace.core.ui.listener.AppListener" />
 
         <variable
             name="appThemeRes"
-            type="afkt_replace.core.lib.ui.skin.AppThemeRes" />
+            type="afkt_replace.core.ui.skin.AppThemeRes" />
 
         <!-- 对应变量 -->
 
@@ -59,7 +59,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <afkt_replace.core.lib.ui.widget.BaseImageView
+                    <afkt_replace.core.ui.widget.BaseImageView
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/dp_0"
                         android:scaleType="centerCrop"
@@ -72,7 +72,7 @@
                         tools:background="@drawable/tools_image" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <afkt_replace.core.lib.ui.widget.BaseTextView
+                <afkt_replace.core.ui.widget.BaseTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp_15"
@@ -84,7 +84,7 @@
                     android:textStyle="bold"
                     tools:text="2023-05-03" />
 
-                <afkt_replace.core.lib.ui.widget.BaseTextView
+                <afkt_replace.core.ui.widget.BaseTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp_15"
@@ -96,7 +96,7 @@
                     android:textStyle="bold"
                     tools:text="Guardians of the Galaxy Vol. 3" />
 
-                <afkt_replace.core.lib.ui.widget.BaseTextView
+                <afkt_replace.core.ui.widget.BaseTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp_15"
@@ -108,7 +108,7 @@
                     android:textStyle="bold"
                     tools:text="Peter Quill, still reeling from the loss of Gamora" />
 
-                <afkt_replace.core.lib.ui.widget.BaseTextView
+                <afkt_replace.core.ui.widget.BaseTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp_15"

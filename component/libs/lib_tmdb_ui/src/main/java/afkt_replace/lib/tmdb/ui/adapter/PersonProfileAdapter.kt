@@ -1,8 +1,8 @@
 package afkt_replace.lib.tmdb.ui.adapter
 
 import afkt_replace.core.lib.bean.person.TMDBPerson
-import afkt_replace.core.lib.ui.skin.AppThemeRes
-import afkt_replace.core.lib.ui.widget.BaseImageView
+import afkt_replace.core.ui.skin.AppThemeRes
+import afkt_replace.core.ui.widget.BaseImageView
 import afkt_replace.core.lib.utils.toTMDBImageSource
 import afkt_replace.lib.tmdb.ui.BR
 import afkt_replace.lib.tmdb.ui.R

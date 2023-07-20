@@ -1,6 +1,6 @@
 package afkt_replace.module.template.feature.end
 
-import afkt_replace.core.lib.base.app.BaseAppActivity
+import afkt_replace.core.base.app.BaseAppActivity
 import afkt_replace.core.lib.base.controller.ui.theme.defaultActivityBlankUITheme
 import afkt_replace.core.router.module.template.TemplateRouter
 import afkt_replace.module.template.BR
@@ -10,7 +10,7 @@ import androidx.navigation.fragment.NavHostFragment
 import com.alibaba.android.arouter.facade.annotation.Route
 
 @Route(path = TemplateRouter.PATH_END_ACTIVITY, group = TemplateRouter.GROUP)
-class EndActivity : BaseAppActivity<TemplateActivityEndBinding, EndViewModel>(
+class EndActivity : afkt_replace.core.base.app.BaseAppActivity<TemplateActivityEndBinding, EndViewModel>(
     R.layout.template_activity_end, BR.viewModel, simple_UITheme = {
         it.defaultActivityBlankUITheme()
     }, simple_Agile = {

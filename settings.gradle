@@ -39,19 +39,11 @@ modules.forEach {
 
 def cores = [
         "core",
-        "core_base_lib",
-        "core_lib_base",
-        "core_lib_base_split",
         "core_lib_bean",
-        "core_lib_channel_flavors",
-        "core_lib_config",
         "core_lib_debug_assist",
         "core_lib_environment",
         "core_lib_language",
-        "core_lib_mvvm",
         "core_lib_network",
-        "core_lib_ui",
-        "core_lib_ui_skin",
         "core_lib_utils",
 ]
 

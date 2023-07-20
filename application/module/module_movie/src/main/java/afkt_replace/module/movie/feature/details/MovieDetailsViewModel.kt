@@ -1,18 +1,18 @@
 package afkt_replace.module.movie.feature.details
 
-import afkt_replace.core.lib.base.app.BaseViewModel
+import afkt_replace.core.base.app.BaseViewModel
 import afkt_replace.core.lib.base.controller.loading.BaseLoadingSkeletonController
 import afkt_replace.core.lib.base.repository.AbsentLiveData
 import afkt_replace.core.lib.base.repository.Resource
-import afkt_replace.core.lib.base.split.data.IntentData
-import afkt_replace.core.lib.base.split.inter.FunctionFlowCall
+import afkt_replace.core.base.split.data.IntentData
+import afkt_replace.core.base.split.inter.FunctionFlowCall
 import afkt_replace.core.lib.bean.movie.MovieDetails
 import afkt_replace.core.lib.bean.movie.MoviePosterImages
-import afkt_replace.core.lib.config.ParamConst
+import afkt_replace.core.config.ParamConst
 import afkt_replace.core.lib.ui.databinding.CoreUiBaseStatusBarBinding
 import afkt_replace.core.lib.ui.databinding.CoreUiBaseTitleBarBinding
-import afkt_replace.core.lib.ui.widget.view_assist.loading_skeleton.PageTitleBindable
-import afkt_replace.core.lib.ui.widget.view_assist.loading_skeleton.PageTitleLoadingSkeletonViewAssist
+import afkt_replace.core.ui.widget.view_assist.loading_skeleton.PageTitleBindable
+import afkt_replace.core.ui.widget.view_assist.loading_skeleton.PageTitleLoadingSkeletonViewAssist
 import afkt_replace.lib.tmdb.ui.adapter.MoviePosterClickConsumer
 import afkt_replace.lib.tmdb.ui.adapter.MoviePosterItem
 import afkt_replace.module.movie.MovieRepository
@@ -31,7 +31,7 @@ import dev.utils.common.able.Getable
 
 class MovieDetailsViewModel(
     private val repository: MovieRepository = MovieRepository()
-) : BaseViewModel() {
+) : afkt_replace.core.base.app.BaseViewModel() {
 
     // 跳转传参
     private val intentData = IntentData.with()

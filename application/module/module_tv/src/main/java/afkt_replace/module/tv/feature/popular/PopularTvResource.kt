@@ -3,8 +3,8 @@ package afkt_replace.module.tv.feature.popular
 import afkt_replace.core.lib.base.repository.Resource
 import afkt_replace.core.lib.base.repository.Status
 import afkt_replace.core.lib.bean.tv.PopularTv
-import afkt_replace.core.lib.ui.widget.extension.smartFinish
-import afkt_replace.core.lib.ui.widget.extension.smartSimpleFinishWithNoMoreData
+import afkt_replace.core.ui.widget.extension.smartFinish
+import afkt_replace.core.ui.widget.extension.smartSimpleFinishWithNoMoreData
 import afkt_replace.lib.tmdb.ui.adapter.PosterCoverItem
 import com.scwang.smart.refresh.layout.SmartRefreshLayout
 import dev.mvvm.utils.hi.hiif.hiIfNotNull

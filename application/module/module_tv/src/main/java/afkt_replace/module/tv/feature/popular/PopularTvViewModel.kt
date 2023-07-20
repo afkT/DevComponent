@@ -1,14 +1,14 @@
 package afkt_replace.module.tv.feature.popular
 
-import afkt_replace.core.lib.base.app.BaseViewModel
+import afkt_replace.core.base.app.BaseViewModel
 import afkt_replace.core.lib.base.controller.loading.BaseLoadingSkeletonController
 import afkt_replace.core.lib.base.repository.AbsentLiveData
 import afkt_replace.core.lib.base.repository.Resource
-import afkt_replace.core.lib.base.split.inter.FunctionFlowCall
+import afkt_replace.core.base.split.inter.FunctionFlowCall
 import afkt_replace.core.lib.bean.base.TMDBCommon
 import afkt_replace.core.lib.bean.tv.PopularTv
-import afkt_replace.core.lib.ui.widget.extension.smartRefreshLoadMoreListener
-import afkt_replace.core.lib.ui.widget.view_assist.loading_skeleton.PageLoadingSkeletonViewAssist
+import afkt_replace.core.ui.widget.extension.smartRefreshLoadMoreListener
+import afkt_replace.core.ui.widget.view_assist.loading_skeleton.PageLoadingSkeletonViewAssist
 import afkt_replace.lib.tmdb.ui.adapter.PosterCoverItem
 import afkt_replace.module.tv.TvNavBuild.routerTvDetails
 import afkt_replace.module.tv.TvRepository
@@ -24,7 +24,7 @@ import dev.utils.common.able.Getable
  */
 class PopularTvViewModel(
     private val repository: TvRepository = TvRepository()
-) : BaseViewModel() {
+) : afkt_replace.core.base.app.BaseViewModel() {
 
     // 热门剧集 Adapter Item
     val popularItem = PosterCoverItem(Getable.Get {

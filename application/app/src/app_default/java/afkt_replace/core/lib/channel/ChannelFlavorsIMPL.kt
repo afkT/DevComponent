@@ -1,6 +1,7 @@
 package afkt_replace.core.lib.channel
 
 import afkt_replace.component.BuildConfig
+import afkt_replace.core.channel.AbstractChannelFlavors
 import dev.base.DevVariable
 import dev.utils.DevFinal
 import java.util.*

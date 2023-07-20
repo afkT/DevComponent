@@ -3,8 +3,8 @@ package afkt_replace.lib.splash.ads
 import afkt_replace.core.lib.base.controller.viewmodel.IntentDataViewModel
 import afkt_replace.core.lib.bean.splash.SplashAds
 import afkt_replace.core.lib.bean.splash.fromSplashAds
-import afkt_replace.core.lib.config.AppLibConfig
-import afkt_replace.core.lib.config.TypeConst
+import afkt_replace.core.config.AppLibConfig
+import afkt_replace.core.config.TypeConst
 import afkt_replace.core.lib.utils.toTMDBImageSource
 import android.graphics.Bitmap
 import android.view.View

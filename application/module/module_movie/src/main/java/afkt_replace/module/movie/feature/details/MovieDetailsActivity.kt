@@ -1,6 +1,6 @@
 package afkt_replace.module.movie.feature.details
 
-import afkt_replace.core.lib.base.app.BaseAppActivity
+import afkt_replace.core.base.app.BaseAppActivity
 import afkt_replace.core.lib.base.controller.ui.theme.defaultActivityBlankUITheme
 import afkt_replace.core.router.module.movie.MovieRouter
 import afkt_replace.module.movie.BR
@@ -11,7 +11,7 @@ import androidx.navigation.fragment.NavHostFragment
 import com.alibaba.android.arouter.facade.annotation.Route
 
 @Route(path = MovieRouter.PATH_MOVIE_DETAILS_ACTIVITY, group = MovieRouter.GROUP)
-class MovieDetailsActivity : BaseAppActivity<MovieActivityDetailsBinding, MovieViewModel>(
+class MovieDetailsActivity : afkt_replace.core.base.app.BaseAppActivity<MovieActivityDetailsBinding, MovieViewModel>(
     R.layout.movie_activity_details, BR.viewModel, simple_UITheme = {
         it.defaultActivityBlankUITheme()
     }, simple_Agile = {
