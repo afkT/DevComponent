@@ -3,9 +3,9 @@ package afkt_replace.module.movie
 import afkt_replace.core.lib.base.repository.NetworkBoundScopeResource
 import afkt_replace.core.lib.base.repository.Resource
 import afkt_replace.core.base.split.inter.FunctionFlowCall
-import afkt_replace.core.lib.bean.movie.MovieDetails
-import afkt_replace.core.lib.bean.movie.MoviePosterImages
-import afkt_replace.core.lib.bean.movie.PopularMovie
+import afkt_replace.core.project.bean.movie.MovieDetails
+import afkt_replace.core.project.bean.movie.MoviePosterImages
+import afkt_replace.core.project.bean.movie.PopularMovie
 import afkt_replace.module.movie.data.api.MovieAPI
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -28,36 +28,36 @@ class MovieRepository {
         page: Int,
         devPage: DevPage<*>,
         flowCall: FunctionFlowCall?
-    ): LiveData<Resource<PopularMovie>> {
-        return object : NetworkBoundScopeResource<PopularMovie>(
+    ): LiveData<Resource<afkt_replace.core.project.bean.movie.PopularMovie>> {
+        return object : NetworkBoundScopeResource<afkt_replace.core.project.bean.movie.PopularMovie>(
             viewModel.viewModelScope, flowCall = flowCall
         ) {
             // 本地数据正常属于查询数据库数据
-            var localDBData: PopularMovie? = null
+            var localDBData: afkt_replace.core.project.bean.movie.PopularMovie? = null
 
-            override fun shouldFetch(data: PopularMovie?): Boolean {
+            override fun shouldFetch(data: afkt_replace.core.project.bean.movie.PopularMovie?): Boolean {
                 return true
             }
 
-            override fun loadFromDb(): LiveData<PopularMovie?> {
+            override fun loadFromDb(): LiveData<afkt_replace.core.project.bean.movie.PopularMovie?> {
                 // 从数据库中读取
-                val local = MutableLiveData<PopularMovie>()
+                val local = MutableLiveData<afkt_replace.core.project.bean.movie.PopularMovie>()
                 local.postValue(localDBData)
                 return local
             }
 
-            override fun saveFetchData(item: PopularMovie) {
+            override fun saveFetchData(item: afkt_replace.core.project.bean.movie.PopularMovie) {
                 // 存储到本地数据库
                 this.localDBData = item
             }
 
             override fun onFetchFailed(
                 error: Throwable?,
-                items: PopularMovie?
+                items: afkt_replace.core.project.bean.movie.PopularMovie?
             ) {
             }
 
-            override suspend fun fetchRequest(): PopularMovie {
+            override suspend fun fetchRequest(): afkt_replace.core.project.bean.movie.PopularMovie {
                 return MovieAPI.api().getPopularMovie(page)
             }
 
@@ -82,36 +82,36 @@ class MovieRepository {
         viewModel: ViewModel,
         movieId: Int,
         flowCall: FunctionFlowCall?
-    ): LiveData<Resource<MovieDetails>> {
-        return object : NetworkBoundScopeResource<MovieDetails>(
+    ): LiveData<Resource<afkt_replace.core.project.bean.movie.MovieDetails>> {
+        return object : NetworkBoundScopeResource<afkt_replace.core.project.bean.movie.MovieDetails>(
             viewModel.viewModelScope, flowCall = flowCall
         ) {
             // 本地数据正常属于查询数据库数据
-            var localDBData: MovieDetails? = null
+            var localDBData: afkt_replace.core.project.bean.movie.MovieDetails? = null
 
-            override fun shouldFetch(data: MovieDetails?): Boolean {
+            override fun shouldFetch(data: afkt_replace.core.project.bean.movie.MovieDetails?): Boolean {
                 return true
             }
 
-            override fun loadFromDb(): LiveData<MovieDetails?> {
+            override fun loadFromDb(): LiveData<afkt_replace.core.project.bean.movie.MovieDetails?> {
                 // 从数据库中读取
-                val local = MutableLiveData<MovieDetails>()
+                val local = MutableLiveData<afkt_replace.core.project.bean.movie.MovieDetails>()
                 local.postValue(localDBData)
                 return local
             }
 
-            override fun saveFetchData(item: MovieDetails) {
+            override fun saveFetchData(item: afkt_replace.core.project.bean.movie.MovieDetails) {
                 // 存储到本地数据库
                 this.localDBData = item
             }
 
             override fun onFetchFailed(
                 error: Throwable?,
-                items: MovieDetails?
+                items: afkt_replace.core.project.bean.movie.MovieDetails?
             ) {
             }
 
-            override suspend fun fetchRequest(): MovieDetails {
+            override suspend fun fetchRequest(): afkt_replace.core.project.bean.movie.MovieDetails {
                 return MovieAPI.api().getMovieDetails(movieId)
             }
 
@@ -136,36 +136,36 @@ class MovieRepository {
         viewModel: ViewModel,
         movieId: Int,
         flowCall: FunctionFlowCall?
-    ): LiveData<Resource<MoviePosterImages>> {
-        return object : NetworkBoundScopeResource<MoviePosterImages>(
+    ): LiveData<Resource<afkt_replace.core.project.bean.movie.MoviePosterImages>> {
+        return object : NetworkBoundScopeResource<afkt_replace.core.project.bean.movie.MoviePosterImages>(
             viewModel.viewModelScope, flowCall = flowCall
         ) {
             // 本地数据正常属于查询数据库数据
-            var localDBData: MoviePosterImages? = null
+            var localDBData: afkt_replace.core.project.bean.movie.MoviePosterImages? = null
 
-            override fun shouldFetch(data: MoviePosterImages?): Boolean {
+            override fun shouldFetch(data: afkt_replace.core.project.bean.movie.MoviePosterImages?): Boolean {
                 return true
             }
 
-            override fun loadFromDb(): LiveData<MoviePosterImages?> {
+            override fun loadFromDb(): LiveData<afkt_replace.core.project.bean.movie.MoviePosterImages?> {
                 // 从数据库中读取
-                val local = MutableLiveData<MoviePosterImages>()
+                val local = MutableLiveData<afkt_replace.core.project.bean.movie.MoviePosterImages>()
                 local.postValue(localDBData)
                 return local
             }
 
-            override fun saveFetchData(item: MoviePosterImages) {
+            override fun saveFetchData(item: afkt_replace.core.project.bean.movie.MoviePosterImages) {
                 // 存储到本地数据库
                 this.localDBData = item
             }
 
             override fun onFetchFailed(
                 error: Throwable?,
-                items: MoviePosterImages?
+                items: afkt_replace.core.project.bean.movie.MoviePosterImages?
             ) {
             }
 
-            override suspend fun fetchRequest(): MoviePosterImages {
+            override suspend fun fetchRequest(): afkt_replace.core.project.bean.movie.MoviePosterImages {
                 return MovieAPI.api().getMoviePosterImages(movieId)
             }
 

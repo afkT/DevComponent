@@ -1,6 +1,6 @@
 package afkt_replace.module.person
 
-import afkt_replace.core.lib.bean.person.TMDBPerson
+import afkt_replace.core.project.bean.person.TMDBPerson
 import afkt_replace.core.router.module.person.PersonNav
 
 /**
@@ -14,7 +14,7 @@ object PersonNavBuild {
      * @receiver TMDBPerson
      * @return Postcard
      */
-    fun TMDBPerson.routerPersonDetails() {
+    fun afkt_replace.core.project.bean.person.TMDBPerson.routerPersonDetails() {
         PersonNav.buildPersonDetails(
             id.toString(), name
         ).navigation()

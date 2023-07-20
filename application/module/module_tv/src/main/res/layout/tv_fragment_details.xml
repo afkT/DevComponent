@@ -26,13 +26,13 @@
 
         <variable
             name="details"
-            type="androidx.lifecycle.MutableLiveData&lt;TvDetails&gt;" />
+            type="afkt_replace.core.project.bean.tv.TvDetails" />
 
         <import type="dev.utils.common.StringUtils" />
 
         <import type="afkt_replace.core.lib.utils.TMDBImageUrlKt" />
 
-        <import type="afkt_replace.core.lib.bean.tv.TvDetails" />
+        <import type="afkt_replace.core.project.bean.tv.TvDetails" />
     </data>
 
     <FrameLayout

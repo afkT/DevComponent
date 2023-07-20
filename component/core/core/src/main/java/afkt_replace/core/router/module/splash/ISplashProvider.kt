@@ -1,6 +1,6 @@
 package afkt_replace.core.router.module.splash
 
-import afkt_replace.core.lib.bean.splash.SplashAds
+import afkt_replace.core.project.bean.splash.SplashAds
 import afkt_replace.core.router.BaseProvider
 import androidx.databinding.ObservableField
 
@@ -14,7 +14,7 @@ interface ISplashProvider : BaseProvider {
      * 获取广告数据监听对象
      * @return ObservableField<SplashAds>
      */
-    fun getAdsOb(): ObservableField<SplashAds>
+    fun getAdsOb(): ObservableField<afkt_replace.core.project.bean.splash.SplashAds>
 
     /**
      * 查询广告数据
@@ -26,5 +26,5 @@ interface ISplashProvider : BaseProvider {
      * @param list List<SplashAds>
      * @return Boolean
      */
-    fun insertAds(list: List<SplashAds>): Boolean
+    fun insertAds(list: List<afkt_replace.core.project.bean.splash.SplashAds>): Boolean
 }

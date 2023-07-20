@@ -1,4 +1,0 @@
-apply from: rootProject.file(files.build_library_gradle)
-
-dependencies {
-}

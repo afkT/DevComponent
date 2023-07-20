@@ -4,8 +4,8 @@ import afkt_replace.core.lib.base.controller.loading.BaseLoadingSkeletonControll
 import afkt_replace.core.lib.base.repository.Resource
 import afkt_replace.core.lib.base.repository.Status
 import afkt_replace.core.base.split.data.IntentData
-import afkt_replace.core.lib.bean.person.PersonActing
-import afkt_replace.core.lib.bean.person.PersonDetails
+import afkt_replace.core.project.bean.person.PersonActing
+import afkt_replace.core.project.bean.person.PersonDetails
 import afkt_replace.core.config.ParamConst
 import afkt_replace.lib.tmdb.ui.adapter.PersonActingItem
 import afkt_replace.module.person.databinding.PersonFragmentDetailsBinding
@@ -15,18 +15,18 @@ import dev.utils.common.able.Consumerable
 import dev.utils.common.able.Getable
 
 interface PersonDetailsDataConsumer : Consumerable.ConsumerByParam2<
-        Boolean, PersonDetails?, PersonActing?>
+        Boolean, afkt_replace.core.project.bean.person.PersonDetails?, afkt_replace.core.project.bean.person.PersonActing?>
 
 /**
  * 绑定数据源解析处理
  */
 fun bindPersonDetailsResource(
-    personDetails: Resource<PersonDetails>?,
-    personActing: Resource<PersonActing>?,
+    personDetails: Resource<afkt_replace.core.project.bean.person.PersonDetails>?,
+    personActing: Resource<afkt_replace.core.project.bean.person.PersonActing>?,
     consumer: PersonDetailsDataConsumer
 ) {
-    var details: PersonDetails? = null
-    var acting: PersonActing? = null
+    var details: afkt_replace.core.project.bean.person.PersonDetails? = null
+    var acting: afkt_replace.core.project.bean.person.PersonActing? = null
     // 解析人物详情数据
     personDetails?.let {
         when (it.status) {
@@ -68,8 +68,8 @@ class PersonDetailsDataConsumerIMPL(
     private lateinit var binding: PersonFragmentDetailsBinding
 
     override fun accept(
-        param: PersonDetails?,
-        param2: PersonActing?
+        param: afkt_replace.core.project.bean.person.PersonDetails?,
+        param2: afkt_replace.core.project.bean.person.PersonActing?
     ): Boolean {
         param?.let {
             details.postValue(it)
@@ -124,6 +124,6 @@ class PersonDetailsDataConsumerIMPL(
     }
 
     // 数据源
-    private val details = MutableLiveData<PersonDetails>()
-    private val acting = MutableLiveData<PersonActing>()
+    private val details = MutableLiveData<afkt_replace.core.project.bean.person.PersonDetails>()
+    private val acting = MutableLiveData<afkt_replace.core.project.bean.person.PersonActing>()
 }

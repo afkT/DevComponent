@@ -1,9 +1,9 @@
 package afkt_replace.lib.tmdb.ui.adapter
 
-import afkt_replace.core.lib.bean.person.TMDBPerson
+import afkt_replace.core.project.bean.person.TMDBPerson
 import afkt_replace.core.ui.skin.AppThemeRes
 import afkt_replace.core.ui.widget.BaseImageView
-import afkt_replace.core.lib.utils.toTMDBImageSource
+import afkt_replace.core.project.utils.tmdb.toTMDBImageSource
 import afkt_replace.lib.tmdb.ui.BR
 import afkt_replace.lib.tmdb.ui.R
 import afkt_replace.lib.tmdb.ui.adapter.view_assist.PosterCoverViewAssist
@@ -26,7 +26,7 @@ import me.tatarka.bindingcollectionadapter2.ItemBinding
  * detail: 人物简介适配器
  * @author Ttt
  */
-class PersonProfileAdapter<T : TMDBPerson>(
+class PersonProfileAdapter<T : afkt_replace.core.project.bean.person.TMDBPerson>(
     val appThemeRes: Getable.Get<AppThemeRes>
 ) : BindingRecyclerViewAdapter<T>() {
 
@@ -97,23 +97,23 @@ class PersonProfileItem(
 ) {
 
     // 适配器
-    val adapter = PersonProfileAdapter<TMDBPerson>(appThemeRes)
+    val adapter = PersonProfileAdapter<afkt_replace.core.project.bean.person.TMDBPerson>(appThemeRes)
 
     // 页数信息
     val page = DevPage.getDefault<Any>()
 
     // 数据源
-    val items = ObservableArrayList<TMDBPerson>()
+    val items = ObservableArrayList<afkt_replace.core.project.bean.person.TMDBPerson>()
 
     // Item 点击事件
-    var itemClick: BindingClick<TMDBPerson>? = null
+    var itemClick: BindingClick<afkt_replace.core.project.bean.person.TMDBPerson>? = null
 
     // Item Binding
-    val itemBinding = ItemBinding.of<TMDBPerson>(
+    val itemBinding = ItemBinding.of<afkt_replace.core.project.bean.person.TMDBPerson>(
         BR.itemValue, R.layout.tmdb_person_profile
     ).bindExtra(
-        BR.itemClick, object : BindingClick<TMDBPerson> {
-            override fun onClick(value: TMDBPerson) {
+        BR.itemClick, object : BindingClick<afkt_replace.core.project.bean.person.TMDBPerson> {
+            override fun onClick(value: afkt_replace.core.project.bean.person.TMDBPerson) {
                 itemClick?.onClick(value)
             }
         }

@@ -8,6 +8,4 @@ dependencies {
 
     // 通用环境配置切换库
     compileOnly project(':core_lib_environment')
-    // 通用工具库
-    compileOnly project(':core_lib_utils')
 }

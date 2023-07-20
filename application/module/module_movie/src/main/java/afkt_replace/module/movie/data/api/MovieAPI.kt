@@ -1,7 +1,7 @@
 package afkt_replace.module.movie.data.api
 
 import afkt_replace.core.app.AppContext
-import afkt_replace.core.lib.network.HttpCoreUtils
+import afkt_replace.core.network.HttpCoreUtils
 import afkt_replace.module.movie.BuildConfig
 import dev.DevHttpManager
 import dev.environment.DevEnvironment

@@ -1,0 +1,30 @@
+apply from: rootProject.file(files.build_library_gradle)
+
+android {
+    sourceSets {
+        main {
+            // 优化 res 资源管理, 使用 sourceSets 资源分包
+            res.srcDirs = [
+                    'src/main/res', // 模块通用资源文件
+                    'src/main/res-language', // 通用多语言资源文件
+            ]
+        }
+    }
+}
+
+dependencies {
+
+    // ===================
+    // = core - 核心开发库 =
+    // ===================
+
+    // 核心基础依赖库
+    api project(':core')
+
+    // ====================
+    // = libs - 第三方库依赖 =
+    // ====================
+
+    // Android 平台下的图片选择器 https://github.com/LuckSiege/PictureSelector
+    api deps_split.lib.pictureSelector
+}

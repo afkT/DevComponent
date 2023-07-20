@@ -3,9 +3,9 @@ package afkt_replace.module.person
 import afkt_replace.core.lib.base.repository.NetworkBoundScopeResource
 import afkt_replace.core.lib.base.repository.Resource
 import afkt_replace.core.base.split.inter.FunctionFlowCall
-import afkt_replace.core.lib.bean.person.PersonActing
-import afkt_replace.core.lib.bean.person.PersonDetails
-import afkt_replace.core.lib.bean.person.PopularPerson
+import afkt_replace.core.project.bean.person.PersonActing
+import afkt_replace.core.project.bean.person.PersonDetails
+import afkt_replace.core.project.bean.person.PopularPerson
 import afkt_replace.module.person.data.api.PersonAPI
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -28,36 +28,36 @@ class PersonRepository {
         page: Int,
         devPage: DevPage<*>,
         flowCall: FunctionFlowCall?
-    ): LiveData<Resource<PopularPerson>> {
-        return object : NetworkBoundScopeResource<PopularPerson>(
+    ): LiveData<Resource<afkt_replace.core.project.bean.person.PopularPerson>> {
+        return object : NetworkBoundScopeResource<afkt_replace.core.project.bean.person.PopularPerson>(
             viewModel.viewModelScope, flowCall = flowCall
         ) {
             // 本地数据正常属于查询数据库数据
-            var localDBData: PopularPerson? = null
+            var localDBData: afkt_replace.core.project.bean.person.PopularPerson? = null
 
-            override fun shouldFetch(data: PopularPerson?): Boolean {
+            override fun shouldFetch(data: afkt_replace.core.project.bean.person.PopularPerson?): Boolean {
                 return true
             }
 
-            override fun loadFromDb(): LiveData<PopularPerson?> {
+            override fun loadFromDb(): LiveData<afkt_replace.core.project.bean.person.PopularPerson?> {
                 // 从数据库中读取
-                val local = MutableLiveData<PopularPerson>()
+                val local = MutableLiveData<afkt_replace.core.project.bean.person.PopularPerson>()
                 local.postValue(localDBData)
                 return local
             }
 
-            override fun saveFetchData(item: PopularPerson) {
+            override fun saveFetchData(item: afkt_replace.core.project.bean.person.PopularPerson) {
                 // 存储到本地数据库
                 this.localDBData = item
             }
 
             override fun onFetchFailed(
                 error: Throwable?,
-                items: PopularPerson?
+                items: afkt_replace.core.project.bean.person.PopularPerson?
             ) {
             }
 
-            override suspend fun fetchRequest(): PopularPerson {
+            override suspend fun fetchRequest(): afkt_replace.core.project.bean.person.PopularPerson {
                 return PersonAPI.api().getPopularPerson(page)
             }
 
@@ -82,36 +82,36 @@ class PersonRepository {
         viewModel: ViewModel,
         personId: Int,
         flowCall: FunctionFlowCall?
-    ): LiveData<Resource<PersonDetails>> {
-        return object : NetworkBoundScopeResource<PersonDetails>(
+    ): LiveData<Resource<afkt_replace.core.project.bean.person.PersonDetails>> {
+        return object : NetworkBoundScopeResource<afkt_replace.core.project.bean.person.PersonDetails>(
             viewModel.viewModelScope, flowCall = flowCall
         ) {
             // 本地数据正常属于查询数据库数据
-            var localDBData: PersonDetails? = null
+            var localDBData: afkt_replace.core.project.bean.person.PersonDetails? = null
 
-            override fun shouldFetch(data: PersonDetails?): Boolean {
+            override fun shouldFetch(data: afkt_replace.core.project.bean.person.PersonDetails?): Boolean {
                 return true
             }
 
-            override fun loadFromDb(): LiveData<PersonDetails?> {
+            override fun loadFromDb(): LiveData<afkt_replace.core.project.bean.person.PersonDetails?> {
                 // 从数据库中读取
-                val local = MutableLiveData<PersonDetails>()
+                val local = MutableLiveData<afkt_replace.core.project.bean.person.PersonDetails>()
                 local.postValue(localDBData)
                 return local
             }
 
-            override fun saveFetchData(item: PersonDetails) {
+            override fun saveFetchData(item: afkt_replace.core.project.bean.person.PersonDetails) {
                 // 存储到本地数据库
                 this.localDBData = item
             }
 
             override fun onFetchFailed(
                 error: Throwable?,
-                items: PersonDetails?
+                items: afkt_replace.core.project.bean.person.PersonDetails?
             ) {
             }
 
-            override suspend fun fetchRequest(): PersonDetails {
+            override suspend fun fetchRequest(): afkt_replace.core.project.bean.person.PersonDetails {
                 return PersonAPI.api().getPersonDetails(personId)
             }
 
@@ -136,36 +136,36 @@ class PersonRepository {
         viewModel: ViewModel,
         personId: Int,
         flowCall: FunctionFlowCall?
-    ): LiveData<Resource<PersonActing>> {
-        return object : NetworkBoundScopeResource<PersonActing>(
+    ): LiveData<Resource<afkt_replace.core.project.bean.person.PersonActing>> {
+        return object : NetworkBoundScopeResource<afkt_replace.core.project.bean.person.PersonActing>(
             viewModel.viewModelScope, flowCall = flowCall
         ) {
             // 本地数据正常属于查询数据库数据
-            var localDBData: PersonActing? = null
+            var localDBData: afkt_replace.core.project.bean.person.PersonActing? = null
 
-            override fun shouldFetch(data: PersonActing?): Boolean {
+            override fun shouldFetch(data: afkt_replace.core.project.bean.person.PersonActing?): Boolean {
                 return true
             }
 
-            override fun loadFromDb(): LiveData<PersonActing?> {
+            override fun loadFromDb(): LiveData<afkt_replace.core.project.bean.person.PersonActing?> {
                 // 从数据库中读取
-                val local = MutableLiveData<PersonActing>()
+                val local = MutableLiveData<afkt_replace.core.project.bean.person.PersonActing>()
                 local.postValue(localDBData)
                 return local
             }
 
-            override fun saveFetchData(item: PersonActing) {
+            override fun saveFetchData(item: afkt_replace.core.project.bean.person.PersonActing) {
                 // 存储到本地数据库
                 this.localDBData = item
             }
 
             override fun onFetchFailed(
                 error: Throwable?,
-                items: PersonActing?
+                items: afkt_replace.core.project.bean.person.PersonActing?
             ) {
             }
 
-            override suspend fun fetchRequest(): PersonActing {
+            override suspend fun fetchRequest(): afkt_replace.core.project.bean.person.PersonActing {
                 return PersonAPI.api().getPersonActing(personId)
             }
 

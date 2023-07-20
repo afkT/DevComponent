@@ -5,8 +5,8 @@ import afkt_replace.core.lib.base.controller.loading.BaseLoadingSkeletonControll
 import afkt_replace.core.lib.base.repository.AbsentLiveData
 import afkt_replace.core.lib.base.repository.Resource
 import afkt_replace.core.base.split.inter.FunctionFlowCall
-import afkt_replace.core.lib.bean.base.TMDBCommon
-import afkt_replace.core.lib.bean.tv.PopularTv
+import afkt_replace.core.project.bean.base.TMDBCommon
+import afkt_replace.core.project.bean.tv.PopularTv
 import afkt_replace.core.ui.widget.extension.smartRefreshLoadMoreListener
 import afkt_replace.core.ui.widget.view_assist.loading_skeleton.PageLoadingSkeletonViewAssist
 import afkt_replace.lib.tmdb.ui.adapter.PosterCoverItem
@@ -30,8 +30,8 @@ class PopularTvViewModel(
     val popularItem = PosterCoverItem(Getable.Get {
         return@Get uiController.value?.appThemeRes
     }).apply {
-        itemClick = object : BindingClick<TMDBCommon> {
-            override fun onClick(value: TMDBCommon) {
+        itemClick = object : BindingClick<afkt_replace.core.project.bean.base.TMDBCommon> {
+            override fun onClick(value: afkt_replace.core.project.bean.base.TMDBCommon) {
                 value.routerTvDetails()
             }
         }
@@ -65,7 +65,7 @@ class PopularTvViewModel(
 
     // 请求页数信息
     private val tvPageLiveData: MutableLiveData<Int> = MutableLiveData()
-    private val tvListLiveData: LiveData<Resource<PopularTv>> = tvPageLiveData.switchMap {
+    private val tvListLiveData: LiveData<Resource<afkt_replace.core.project.bean.tv.PopularTv>> = tvPageLiveData.switchMap {
         tvPageLiveData.value?.let { page ->
             repository.requestPopularTv(
                 viewModel = this, page = page,

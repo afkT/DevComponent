@@ -7,11 +7,11 @@
 
         <variable
             name="details"
-            type="KnownFor" />
+            type="afkt_replace.core.project.bean.person.KnownFor" />
 
         <import type="dev.utils.common.StringUtils" />
 
-        <import type="afkt_replace.core.lib.bean.person.KnownFor" />
+        <import type="afkt_replace.core.project.bean.person.KnownFor" />
     </data>
 
     <FrameLayout

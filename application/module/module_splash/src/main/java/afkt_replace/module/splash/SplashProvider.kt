@@ -1,6 +1,6 @@
 package afkt_replace.module.splash
 
-import afkt_replace.core.lib.bean.splash.SplashAds
+import afkt_replace.core.project.bean.splash.SplashAds
 import afkt_replace.core.router.BaseProviderExt
 import afkt_replace.core.router.module.splash.ISplashProvider
 import afkt_replace.core.router.module.splash.SplashRouter
@@ -21,7 +21,7 @@ class SplashProvider : ISplashProvider,
     // = ISplashProvider =
     // ===================
 
-    override fun getAdsOb(): ObservableField<SplashAds> {
+    override fun getAdsOb(): ObservableField<afkt_replace.core.project.bean.splash.SplashAds> {
         return SplashAdsUtils.instance.getAdsOb()
     }
 
@@ -29,7 +29,7 @@ class SplashProvider : ISplashProvider,
         SplashAdsUtils.instance.queryAds()
     }
 
-    override fun insertAds(list: List<SplashAds>): Boolean {
+    override fun insertAds(list: List<afkt_replace.core.project.bean.splash.SplashAds>): Boolean {
         return SplashAdsUtils.instance.insertAds(list)
     }
 }

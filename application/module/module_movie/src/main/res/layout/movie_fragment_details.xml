@@ -26,19 +26,19 @@
 
         <variable
             name="details"
-            type="androidx.lifecycle.MutableLiveData&lt;MovieDetails&gt;" />
+            type="afkt_replace.core.project.bean.movie.MovieDetails" />
 
         <variable
             name="poster"
-            type="androidx.lifecycle.MutableLiveData&lt;MoviePosterImages&gt;" />
+            type="afkt_replace.core.project.bean.movie.MoviePosterImages" />
 
         <import type="dev.utils.common.StringUtils" />
 
         <import type="afkt_replace.core.lib.utils.TMDBImageUrlKt" />
 
-        <import type="afkt_replace.core.lib.bean.movie.MovieDetails" />
+        <import type="afkt_replace.core.project.bean.movie.MovieDetails" />
 
-        <import type="afkt_replace.core.lib.bean.movie.MoviePosterImages" />
+        <import type="afkt_replace.core.project.bean.movie.MoviePosterImages" />
     </data>
 
     <FrameLayout

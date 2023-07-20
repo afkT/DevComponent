@@ -1,11 +1,11 @@
 package afkt_replace.lib.splash.ads
 
 import afkt_replace.core.app.AppContext
-import afkt_replace.core.lib.bean.splash.NONE_ADS
-import afkt_replace.core.lib.bean.splash.SplashAds
+import afkt_replace.core.project.bean.splash.NONE_ADS
+import afkt_replace.core.project.bean.splash.SplashAds
 import afkt_replace.core.router.module.splash.ISplashProvider
 import afkt_replace.core.router.module.splash.SplashRouter
-import afkt_replace.core.lib.utils.toTMDBImageSource
+import afkt_replace.core.project.utils.tmdb.toTMDBImageSource
 import android.content.Context
 import android.graphics.Bitmap
 import androidx.databinding.ObservableField
@@ -58,7 +58,7 @@ class SplashAdsUtils : ISplashProvider {
     // = ISplashProvider =
     // ===================
 
-    override fun getAdsOb(): ObservableField<SplashAds> {
+    override fun getAdsOb(): ObservableField<afkt_replace.core.project.bean.splash.SplashAds> {
         return splashAdsOb
     }
 
@@ -66,7 +66,7 @@ class SplashAdsUtils : ISplashProvider {
         readSplashAds()
     }
 
-    override fun insertAds(list: List<SplashAds>): Boolean {
+    override fun insertAds(list: List<afkt_replace.core.project.bean.splash.SplashAds>): Boolean {
         return ENGINE.kv_putEntity(
             engine = ENGINE,
             value = SplashAdsData(
@@ -81,7 +81,7 @@ class SplashAdsUtils : ISplashProvider {
     // ==========
 
     // 默认广告监听
-    private val splashAdsOb = ObservableField<SplashAds>()
+    private val splashAdsOb = ObservableField<afkt_replace.core.project.bean.splash.SplashAds>()
 
     /**
      * 获取当前时间 key
@@ -106,10 +106,10 @@ class SplashAdsUtils : ISplashProvider {
                     checkerSplashAdsResource(it.list.toMutableList())
                 }
             } else {
-                splashAdsOb.set(NONE_ADS)
+                splashAdsOb.set(afkt_replace.core.project.bean.splash.NONE_ADS)
             }
         }, {
-            splashAdsOb.set(NONE_ADS)
+            splashAdsOb.set(afkt_replace.core.project.bean.splash.NONE_ADS)
         })
     }
 
@@ -117,9 +117,9 @@ class SplashAdsUtils : ISplashProvider {
      * 检查广告资源
      * @param list 广告资源
      */
-    private fun checkerSplashAdsResource(list: MutableList<SplashAds>) {
+    private fun checkerSplashAdsResource(list: MutableList<afkt_replace.core.project.bean.splash.SplashAds>) {
         if (list.isEmpty()) {
-            splashAdsOb.set(NONE_ADS)
+            splashAdsOb.set(afkt_replace.core.project.bean.splash.NONE_ADS)
             return
         }
         val index = RandomUtils.getRandom(list.size)

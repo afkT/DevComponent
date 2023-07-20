@@ -1,9 +1,9 @@
 package afkt_replace.lib.tmdb.ui.adapter
 
-import afkt_replace.core.lib.bean.base.TMDBCommon
+import afkt_replace.core.project.bean.base.TMDBCommon
 import afkt_replace.core.ui.skin.AppThemeRes
 import afkt_replace.core.ui.widget.BaseImageView
-import afkt_replace.core.lib.utils.toTMDBImageSource
+import afkt_replace.core.project.utils.tmdb.toTMDBImageSource
 import afkt_replace.lib.tmdb.ui.BR
 import afkt_replace.lib.tmdb.ui.R
 import afkt_replace.lib.tmdb.ui.adapter.view_assist.PosterCoverViewAssist
@@ -26,7 +26,7 @@ import me.tatarka.bindingcollectionadapter2.ItemBinding
  * detail: 海报封面适配器
  * @author Ttt
  */
-class PosterCoverAdapter<T : TMDBCommon>(
+class PosterCoverAdapter<T : afkt_replace.core.project.bean.base.TMDBCommon>(
     val appThemeRes: Getable.Get<AppThemeRes>
 ) : BindingRecyclerViewAdapter<T>() {
 
@@ -106,23 +106,23 @@ class PosterCoverItem(
 ) {
 
     // 适配器
-    val adapter = PosterCoverAdapter<TMDBCommon>(appThemeRes)
+    val adapter = PosterCoverAdapter<afkt_replace.core.project.bean.base.TMDBCommon>(appThemeRes)
 
     // 页数信息
     val page = DevPage.getDefault<Any>()
 
     // 数据源
-    val items = ObservableArrayList<TMDBCommon>()
+    val items = ObservableArrayList<afkt_replace.core.project.bean.base.TMDBCommon>()
 
     // Item 点击事件
-    var itemClick: BindingClick<TMDBCommon>? = null
+    var itemClick: BindingClick<afkt_replace.core.project.bean.base.TMDBCommon>? = null
 
     // Item Binding
-    val itemBinding = ItemBinding.of<TMDBCommon>(
+    val itemBinding = ItemBinding.of<afkt_replace.core.project.bean.base.TMDBCommon>(
         BR.itemValue, R.layout.tmdb_poster_cover
     ).bindExtra(
-        BR.itemClick, object : BindingClick<TMDBCommon> {
-            override fun onClick(value: TMDBCommon) {
+        BR.itemClick, object : BindingClick<afkt_replace.core.project.bean.base.TMDBCommon> {
+            override fun onClick(value: afkt_replace.core.project.bean.base.TMDBCommon) {
                 itemClick?.onClick(value)
             }
         }

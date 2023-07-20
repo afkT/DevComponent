@@ -1,10 +1,10 @@
 package afkt_replace.lib.tmdb.ui.adapter
 
-import afkt_replace.core.lib.bean.person.KnownFor
+import afkt_replace.core.project.bean.person.KnownFor
 import afkt_replace.core.ui.skin.AppThemeRes
 import afkt_replace.core.ui.widget.BaseImageView
-import afkt_replace.core.lib.utils.toTMDBImageSource
-import afkt_replace.core.lib.utils.toTMDBImageSourceEmpty
+import afkt_replace.core.project.utils.tmdb.toTMDBImageSource
+import afkt_replace.core.project.utils.tmdb.toTMDBImageSourceEmpty
 import afkt_replace.lib.tmdb.ui.BR
 import afkt_replace.lib.tmdb.ui.R
 import afkt_replace.lib.tmdb.ui.adapter.view_assist.PosterCoverViewAssist
@@ -29,8 +29,8 @@ import me.tatarka.bindingcollectionadapter2.ItemBinding
  */
 class PersonActingAdapter(
     val appThemeRes: Getable.Get<AppThemeRes>,
-    val itemClick: BindingClick<KnownFor>
-) : BindingRecyclerViewAdapter<KnownFor>() {
+    val itemClick: BindingClick<afkt_replace.core.project.bean.person.KnownFor>
+) : BindingRecyclerViewAdapter<afkt_replace.core.project.bean.person.KnownFor>() {
 
     private val assist = PosterCoverViewAssist(appThemeRes)
 
@@ -43,7 +43,7 @@ class PersonActingAdapter(
         variableId: Int,
         layoutRes: Int,
         position: Int,
-        item: KnownFor
+        item: afkt_replace.core.project.bean.person.KnownFor
     ) {
         super.onBindBinding(binding, variableId, layoutRes, position, item)
 
@@ -129,20 +129,20 @@ class PersonActingItem(
 ) {
 
     // 适配器
-    val adapter = PersonActingAdapter(appThemeRes, object : BindingClick<KnownFor> {
-        override fun onClick(value: KnownFor) {
+    val adapter = PersonActingAdapter(appThemeRes, object : BindingClick<afkt_replace.core.project.bean.person.KnownFor> {
+        override fun onClick(value: afkt_replace.core.project.bean.person.KnownFor) {
             itemClick?.onClick(value)
         }
     })
 
     // 数据源
-    val items = ObservableArrayList<KnownFor>()
+    val items = ObservableArrayList<afkt_replace.core.project.bean.person.KnownFor>()
 
     // Item 点击事件
-    var itemClick: BindingClick<KnownFor>? = null
+    var itemClick: BindingClick<afkt_replace.core.project.bean.person.KnownFor>? = null
 
     // Item Binding
-    val itemBinding = ItemBinding.of<KnownFor>(
+    val itemBinding = ItemBinding.of<afkt_replace.core.project.bean.person.KnownFor>(
         BR.itemValue, R.layout.tmdb_person_acting
     )
 }

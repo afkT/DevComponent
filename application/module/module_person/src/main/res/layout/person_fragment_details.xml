@@ -27,19 +27,19 @@
 
         <variable
             name="details"
-            type="androidx.lifecycle.MutableLiveData&lt;PersonDetails&gt;" />
+            type="afkt_replace.core.project.bean.person.PersonDetails" />
 
         <variable
             name="acting"
-            type="androidx.lifecycle.MutableLiveData&lt;PersonActing&gt;" />
+            type="afkt_replace.core.project.bean.person.PersonActing" />
 
         <import type="dev.utils.common.StringUtils" />
 
         <import type="afkt_replace.core.lib.utils.TMDBImageUrlKt" />
 
-        <import type="afkt_replace.core.lib.bean.person.PersonDetails" />
+        <import type="afkt_replace.core.project.bean.person.PersonDetails" />
 
-        <import type="afkt_replace.core.lib.bean.person.PersonActing" />
+        <import type="afkt_replace.core.project.bean.person.PersonActing" />
     </data>
 
     <FrameLayout

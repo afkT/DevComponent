@@ -2,7 +2,7 @@ package afkt_replace.lib.tmdb.ui.adapter
 
 import afkt_replace.core.ui.skin.AppThemeRes
 import afkt_replace.core.ui.widget.BaseImageView
-import afkt_replace.core.lib.utils.toTMDBImageSource
+import afkt_replace.core.project.utils.tmdb.toTMDBImageSource
 import afkt_replace.lib.tmdb.ui.BR
 import afkt_replace.lib.tmdb.ui.R
 import afkt_replace.lib.tmdb.ui.adapter.view_assist.PosterCoverViewAssist

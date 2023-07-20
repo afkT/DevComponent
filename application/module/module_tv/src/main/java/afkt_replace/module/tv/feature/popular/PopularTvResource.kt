@@ -2,7 +2,7 @@ package afkt_replace.module.tv.feature.popular
 
 import afkt_replace.core.lib.base.repository.Resource
 import afkt_replace.core.lib.base.repository.Status
-import afkt_replace.core.lib.bean.tv.PopularTv
+import afkt_replace.core.project.bean.tv.PopularTv
 import afkt_replace.core.ui.widget.extension.smartFinish
 import afkt_replace.core.ui.widget.extension.smartSimpleFinishWithNoMoreData
 import afkt_replace.lib.tmdb.ui.adapter.PosterCoverItem
@@ -14,7 +14,7 @@ import dev.mvvm.utils.hi.hiif.hiIfNotNull
  * @param item PosterCoverItem
  * @param refreshLayout SmartRefreshLayout
  */
-fun Resource<PopularTv>.bindResource(
+fun Resource<afkt_replace.core.project.bean.tv.PopularTv>.bindResource(
     item: PosterCoverItem,
     refreshLayout: SmartRefreshLayout
 ) {

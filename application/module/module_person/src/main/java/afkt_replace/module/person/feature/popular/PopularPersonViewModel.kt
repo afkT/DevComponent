@@ -5,8 +5,8 @@ import afkt_replace.core.lib.base.controller.loading.BaseLoadingSkeletonControll
 import afkt_replace.core.lib.base.repository.AbsentLiveData
 import afkt_replace.core.lib.base.repository.Resource
 import afkt_replace.core.base.split.inter.FunctionFlowCall
-import afkt_replace.core.lib.bean.person.PopularPerson
-import afkt_replace.core.lib.bean.person.TMDBPerson
+import afkt_replace.core.project.bean.person.PopularPerson
+import afkt_replace.core.project.bean.person.TMDBPerson
 import afkt_replace.core.ui.widget.extension.smartRefreshLoadMoreListener
 import afkt_replace.core.ui.widget.view_assist.loading_skeleton.PageLoadingSkeletonViewAssist
 import afkt_replace.lib.tmdb.ui.adapter.PersonProfileItem
@@ -30,8 +30,8 @@ class PopularPersonViewModel(
     val popularItem = PersonProfileItem(Getable.Get {
         return@Get uiController.value?.appThemeRes
     }).apply {
-        itemClick = object : BindingClick<TMDBPerson> {
-            override fun onClick(value: TMDBPerson) {
+        itemClick = object : BindingClick<afkt_replace.core.project.bean.person.TMDBPerson> {
+            override fun onClick(value: afkt_replace.core.project.bean.person.TMDBPerson) {
                 value.routerPersonDetails()
             }
         }
@@ -65,7 +65,7 @@ class PopularPersonViewModel(
 
     // 请求页数信息
     private val personPageLiveData: MutableLiveData<Int> = MutableLiveData()
-    private val personListLiveData: LiveData<Resource<PopularPerson>> =
+    private val personListLiveData: LiveData<Resource<afkt_replace.core.project.bean.person.PopularPerson>> =
         personPageLiveData.switchMap {
             personPageLiveData.value?.let { page ->
                 repository.requestPopularPerson(

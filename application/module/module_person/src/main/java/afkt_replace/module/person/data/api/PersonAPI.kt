@@ -1,7 +1,7 @@
 package afkt_replace.module.person.data.api
 
 import afkt_replace.core.app.AppContext
-import afkt_replace.core.lib.network.HttpCoreUtils
+import afkt_replace.core.network.HttpCoreUtils
 import afkt_replace.module.person.BuildConfig
 import dev.DevHttpManager
 import dev.environment.DevEnvironment

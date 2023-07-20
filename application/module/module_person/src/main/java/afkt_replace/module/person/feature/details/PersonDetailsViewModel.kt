@@ -6,9 +6,9 @@ import afkt_replace.core.lib.base.repository.AbsentLiveData
 import afkt_replace.core.lib.base.repository.Resource
 import afkt_replace.core.base.split.data.IntentData
 import afkt_replace.core.base.split.inter.FunctionFlowCall
-import afkt_replace.core.lib.bean.person.KnownFor
-import afkt_replace.core.lib.bean.person.PersonActing
-import afkt_replace.core.lib.bean.person.PersonDetails
+import afkt_replace.core.project.bean.person.KnownFor
+import afkt_replace.core.project.bean.person.PersonActing
+import afkt_replace.core.project.bean.person.PersonDetails
 import afkt_replace.core.config.ParamConst
 import afkt_replace.core.router.module.movie.MovieNav
 import afkt_replace.core.lib.ui.databinding.CoreUiBaseStatusBarBinding
@@ -46,8 +46,8 @@ class PersonDetailsViewModel(
     val actingItem = PersonActingItem(Getable.Get {
         return@Get null
     }).apply {
-        itemClick = object : BindingClick<KnownFor> {
-            override fun onClick(value: KnownFor) {
+        itemClick = object : BindingClick<afkt_replace.core.project.bean.person.KnownFor> {
+            override fun onClick(value: afkt_replace.core.project.bean.person.KnownFor) {
                 MovieNav.buildMovieDetails(
                     value.id.toString(), value.title()
                 ).navigation()
@@ -78,7 +78,7 @@ class PersonDetailsViewModel(
 
     // 请求人物详情数据
     private val personIdLiveData: MutableLiveData<Int> = MutableLiveData()
-    private val personDetailsLiveData: LiveData<Resource<PersonDetails>> =
+    private val personDetailsLiveData: LiveData<Resource<afkt_replace.core.project.bean.person.PersonDetails>> =
         personIdLiveData.switchMap {
             personIdLiveData.value?.let { personId ->
                 repository.requestPersonDetails(
@@ -86,7 +86,7 @@ class PersonDetailsViewModel(
                 )
             } ?: AbsentLiveData.create()
         }
-    private val personActingLiveData: LiveData<Resource<PersonActing>> =
+    private val personActingLiveData: LiveData<Resource<afkt_replace.core.project.bean.person.PersonActing>> =
         personIdLiveData.switchMap {
             personIdLiveData.value?.let { personId ->
                 repository.requestPersonActing(

@@ -1,6 +1,6 @@
 package afkt_replace.module.movie
 
-import afkt_replace.core.lib.bean.base.TMDBCommon
+import afkt_replace.core.project.bean.base.TMDBCommon
 import afkt_replace.core.router.module.movie.MovieNav
 
 /**
@@ -14,7 +14,7 @@ object MovieNavBuild {
      * @receiver TMDBCommon
      * @return Postcard
      */
-    internal fun TMDBCommon.routerMovieDetails() {
+    internal fun afkt_replace.core.project.bean.base.TMDBCommon.routerMovieDetails() {
         MovieNav.buildMovieDetails(
             id.toString(), title()
         ).navigation()

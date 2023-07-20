@@ -2,8 +2,8 @@ package afkt_replace.module.movie.feature.popular
 
 import afkt_replace.core.lib.base.repository.Resource
 import afkt_replace.core.lib.base.repository.Status
-import afkt_replace.core.lib.bean.movie.PopularMovie
-import afkt_replace.core.lib.bean.splash.toSplashAdsList
+import afkt_replace.core.project.bean.movie.PopularMovie
+import afkt_replace.core.project.bean.splash.toSplashAdsList
 import afkt_replace.core.router.module.splash.SplashNav
 import afkt_replace.core.ui.widget.extension.smartFinish
 import afkt_replace.core.ui.widget.extension.smartSimpleFinishWithNoMoreData
@@ -16,7 +16,7 @@ import dev.mvvm.utils.hi.hiif.hiIfNotNull
  * @param item PosterCoverItem
  * @param refreshLayout SmartRefreshLayout
  */
-fun Resource<PopularMovie>.bindResource(
+fun Resource<afkt_replace.core.project.bean.movie.PopularMovie>.bindResource(
     item: PosterCoverItem,
     refreshLayout: SmartRefreshLayout
 ) {

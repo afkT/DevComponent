@@ -4,10 +4,10 @@ import afkt_replace.core.lib.base.controller.loading.BaseLoadingSkeletonControll
 import afkt_replace.core.lib.base.repository.Resource
 import afkt_replace.core.lib.base.repository.Status
 import afkt_replace.core.base.split.data.IntentData
-import afkt_replace.core.lib.bean.movie.MovieDetails
-import afkt_replace.core.lib.bean.movie.MoviePosterImages
+import afkt_replace.core.project.bean.movie.MovieDetails
+import afkt_replace.core.project.bean.movie.MoviePosterImages
 import afkt_replace.core.config.ParamConst
-import afkt_replace.core.lib.utils.toTMDBImageSource
+import afkt_replace.core.project.utils.tmdb.toTMDBImageSource
 import afkt_replace.lib.tmdb.ui.adapter.MoviePosterItem
 import afkt_replace.module.movie.databinding.MovieFragmentDetailsBinding
 import android.net.Uri
@@ -18,18 +18,18 @@ import dev.utils.common.able.Consumerable
 import dev.utils.common.able.Getable
 
 interface MovieDetailsDataConsumer : Consumerable.ConsumerByParam2<
-        Boolean, MovieDetails?, MoviePosterImages?>
+        Boolean, afkt_replace.core.project.bean.movie.MovieDetails?, afkt_replace.core.project.bean.movie.MoviePosterImages?>
 
 /**
  * 绑定数据源解析处理
  */
 fun bindMovieDetailsResource(
-    movieDetails: Resource<MovieDetails>?,
-    moviePosterImages: Resource<MoviePosterImages>?,
+    movieDetails: Resource<afkt_replace.core.project.bean.movie.MovieDetails>?,
+    moviePosterImages: Resource<afkt_replace.core.project.bean.movie.MoviePosterImages>?,
     consumer: MovieDetailsDataConsumer
 ) {
-    var details: MovieDetails? = null
-    var moviePoster: MoviePosterImages? = null
+    var details: afkt_replace.core.project.bean.movie.MovieDetails? = null
+    var moviePoster: afkt_replace.core.project.bean.movie.MoviePosterImages? = null
     // 解析电影详情数据
     movieDetails?.let {
         when (it.status) {
@@ -71,8 +71,8 @@ class MovieDetailsDataConsumerIMPL(
     private lateinit var binding: MovieFragmentDetailsBinding
 
     override fun accept(
-        param: MovieDetails?,
-        param2: MoviePosterImages?
+        param: afkt_replace.core.project.bean.movie.MovieDetails?,
+        param2: afkt_replace.core.project.bean.movie.MoviePosterImages?
     ): Boolean {
         param?.let {
             details.postValue(it)
@@ -132,6 +132,6 @@ class MovieDetailsDataConsumerIMPL(
     }
 
     // 数据源
-    private val details = MutableLiveData<MovieDetails>()
-    private val moviePoster = MutableLiveData<MoviePosterImages>()
+    private val details = MutableLiveData<afkt_replace.core.project.bean.movie.MovieDetails>()
+    private val moviePoster = MutableLiveData<afkt_replace.core.project.bean.movie.MoviePosterImages>()
 }

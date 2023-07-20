@@ -7,11 +7,11 @@
 
         <variable
             name="itemValue"
-            type="KnownFor" />
+            type="afkt_replace.core.project.bean.person.KnownFor" />
 
         <import
             alias="KnownFor"
-            type="afkt_replace.core.lib.bean.person.KnownFor" />
+            type="afkt_replace.core.project.bean.person.KnownFor" />
     </data>
 
     <FrameLayout

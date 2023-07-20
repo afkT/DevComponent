@@ -1,13 +1,12 @@
 package afkt_replace.module.movie.feature.details
 
-import afkt_replace.core.base.app.BaseViewModel
 import afkt_replace.core.lib.base.controller.loading.BaseLoadingSkeletonController
 import afkt_replace.core.lib.base.repository.AbsentLiveData
 import afkt_replace.core.lib.base.repository.Resource
 import afkt_replace.core.base.split.data.IntentData
 import afkt_replace.core.base.split.inter.FunctionFlowCall
-import afkt_replace.core.lib.bean.movie.MovieDetails
-import afkt_replace.core.lib.bean.movie.MoviePosterImages
+import afkt_replace.core.project.bean.movie.MovieDetails
+import afkt_replace.core.project.bean.movie.MoviePosterImages
 import afkt_replace.core.config.ParamConst
 import afkt_replace.core.lib.ui.databinding.CoreUiBaseStatusBarBinding
 import afkt_replace.core.lib.ui.databinding.CoreUiBaseTitleBarBinding
@@ -25,7 +24,7 @@ import com.luck.picture.lib.basic.PictureSelector
 import dev.engine.media.MediaConfig
 import dev.engine.media.MediaData
 import dev.expand.engine.media.media_openPreview
-import dev.kotlin.utils.image.LuckImageEngineImpl
+import afkt_replace.core.project.image.LuckImageEngineImpl
 import dev.utils.common.ConvertUtils
 import dev.utils.common.able.Getable
 
@@ -74,7 +73,7 @@ class MovieDetailsViewModel(
 
     // 请求电影详情数据
     private val movieIdLiveData: MutableLiveData<Int> = MutableLiveData()
-    private val movieDetailsLiveData: LiveData<Resource<MovieDetails>> =
+    private val movieDetailsLiveData: LiveData<Resource<afkt_replace.core.project.bean.movie.MovieDetails>> =
         movieIdLiveData.switchMap {
             movieIdLiveData.value?.let { movieId ->
                 repository.requestMovieDetails(
@@ -82,7 +81,7 @@ class MovieDetailsViewModel(
                 )
             } ?: AbsentLiveData.create()
         }
-    private val moviePosterImagesLiveData: LiveData<Resource<MoviePosterImages>> =
+    private val moviePosterImagesLiveData: LiveData<Resource<afkt_replace.core.project.bean.movie.MoviePosterImages>> =
         movieIdLiveData.switchMap {
             movieIdLiveData.value?.let { movieId ->
                 repository.requestMoviePosterImages(
@@ -168,7 +167,7 @@ class MovieDetailsViewModel(
                             PictureSelectionPreviewModel(
                                 PictureSelector.create(fragment)
                             ).setImageEngine(
-                                LuckImageEngineImpl.createEngine()
+                                afkt_replace.core.project.image.LuckImageEngineImpl.createEngine()
                             )
                         )
                         setCustomData(index)

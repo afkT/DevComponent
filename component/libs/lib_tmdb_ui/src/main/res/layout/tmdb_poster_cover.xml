@@ -5,19 +5,19 @@
 
     <data>
 
-        <import type="afkt_replace.core.lib.utils.TMDBUtils" />
+        <import type="afkt_replace.core.project.utils.tmdb.TMDBUtils" />
 
         <import
             alias="TMDBCommon"
-            type="afkt_replace.core.lib.bean.base.TMDBCommon" />
+            type="afkt_replace.core.project.bean.base.TMDBCommon" />
 
         <variable
             name="itemClick"
-            type="dev.mvvm.command.BindingClick&lt;TMDBCommon&gt;" />
+            type="afkt_replace.core.project.bean.base.TMDBCommon" />
 
         <variable
             name="itemValue"
-            type="TMDBCommon" />
+            type="afkt_replace.core.project.bean.base.TMDBCommon" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

@@ -24,16 +24,8 @@ dependencies {
     // = core - 核心开发库 =
     // ===================
 
-    // 通用实体类 lib
-    api project(':core_lib_bean')
     // 通用环境配置切换库
     api project(':core_lib_environment')
-    // 通用多语言 lib
-    api project(':core_lib_language')
-    // 网络相关 lib ( 网络请求、上传下载 )
-    api project(':core_lib_network')
-    // 通用工具库
-    api project(':core_lib_utils')
 
     // =====================
     // = Debug 编译辅助开发库 =
@@ -134,6 +126,14 @@ dependencies {
     // = libs - 第三方库依赖 =
     // ====================
 
+    // okio https://github.com/square/okio
+    api deps.lib.okio
+    // OkHttp3 网络请求框架 https://github.com/square/okhttp
+    api deps.lib.okhttp3
+    // Retrofit 网络请求库  https://github.com/square/retrofit
+    api deps.lib.retrofit
+    // Retrofit Gson Converter  https://github.com/square/retrofit/tree/master/retrofit-converters/gson
+    api deps.lib.retrofit_gson
     // LiveEventBus 消息总线 https://github.com/JeremyLiao/LiveEventBus
     api deps.lib.live_eventbus
     // 基于 mmap 的高性能通用 key-value 组件 https://github.com/Tencent/MMKV/blob/master/readme_cn.md

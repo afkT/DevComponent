@@ -6,8 +6,8 @@ dependencies {
     // = Dev 系列开发库 =
     // ================
 
-//    // DevEnvironment - Android 环境配置切换库
-//    api deps.dev.dev_environment
+    // DevEnvironment - Android 环境配置切换库
+    api deps.dev.dev_environment
     if (isRelease) {
         kapt deps.dev.dev_environment_compiler_release
     } else {

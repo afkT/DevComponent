@@ -1,7 +1,7 @@
 package afkt_replace.module.splash
 
 import afkt_replace.core.base.app.BaseViewModel
-import afkt_replace.core.lib.bean.splash.SplashAds
+import afkt_replace.core.project.bean.splash.SplashAds
 import afkt_replace.core.config.KeyConst
 import afkt_replace.core.router.module.AppRouter
 import afkt_replace.core.router.module.splash.SplashNav
@@ -23,7 +23,7 @@ class SplashViewModel(
      * 查询广告数据
      * @return LiveData<SplashAds>
      */
-    fun queryAds(): LiveData<SplashAds> {
+    fun queryAds(): LiveData<afkt_replace.core.project.bean.splash.SplashAds> {
         return repository.queryAds()
     }
 
@@ -34,7 +34,7 @@ class SplashViewModel(
      */
     fun routerAppMain(
         activity: Activity,
-        ads: SplashAds? = null
+        ads: afkt_replace.core.project.bean.splash.SplashAds? = null
     ) {
         if (BuildConfig.isModular) {
             ToastTintUtils.success(R.string.str_modular_app.toResString())
