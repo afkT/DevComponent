@@ -8,27 +8,12 @@ Debug 编译辅助开发库 ( 提供切换环境、抓包数据可视化、调�
 ```groovy
 dependencies {
 
-    // 核心基础依赖库 ( 编译但不参与打包 )
-    compileOnly project(':core_base_lib')
-
     // ===================
     // = core - 核心开发库 =
     // ===================
 
-    // 基础 ( 基类等 ) lib
-    compileOnly project(':core_lib_base')
-    // 通用 Engine ( 图片加载、日志、JSON、权限、资源选择 等 ) lib
-    compileOnly project(':core_lib_engine')
-    // 通用环境配置切换库
-    compileOnly project(':core_lib_environment')
-    // 性能优化、检测 lib
-    compileOnly project(':core_lib_property')
-    // 通用 UI 样式、资源、交互、控件 lib
-    compileOnly project(':core_lib_ui')
-    // APP 主题、换肤相关控制
-    compileOnly project(':core_lib_ui_skin')
-    // 通用工具库
-    compileOnly project(':core_lib_utils')
+    // 核心基础依赖库
+    api project(':core')
 }
 ```
 

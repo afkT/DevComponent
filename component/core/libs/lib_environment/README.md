@@ -8,15 +8,17 @@
 ```groovy
 dependencies {
 
-    // 核心基础依赖库 ( 编译但不参与打包 )
-    compileOnly project(':core_base_lib')
-
     // ================
     // = Dev 系列开发库 =
     // ================
 
-//    // DevEnvironment - Android 环境配置切换库
-//    api deps.dev.dev_environment
+    // https://github.com/afkT/DevUtils
+
+    // DevApp - Android 工具类库
+    api deps.dev.dev_app
+
+    // DevEnvironment - Android 环境配置切换库
+    api deps.dev.dev_environment
     if (isRelease) {
         kapt deps.dev.dev_environment_compiler_release
     } else {

@@ -11,9 +11,7 @@ internal object CatalogMain {
 
         // 生成 interesting 目录结构
         Utils.generateCatalog(
-            Config.INTERESTING_LOCAL_PATH,
-            Config.INTERESTING_DIR_NAME,
-            Config.sInterestingCatalogMap,
+            Config.INTERESTING_LOCAL_PATH, Config.INTERESTING_DIR_NAME, Config.sInterestingCatalogMap,
             null, null, 0, false
         )
 
