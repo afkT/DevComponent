@@ -1,6 +1,5 @@
 package afkt_replace.core.base.repository
 
-import afkt_replace.core.Repository.*
 import afkt_replace.core.base.core.AppExecutors
 import androidx.annotation.MainThread
 import androidx.annotation.WorkerThread

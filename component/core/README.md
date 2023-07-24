@@ -16,12 +16,12 @@
 
 # core/core
 
-> 该 Module 依赖 core 核心开发库、核心第三方库等
->
-> 统一维护核心库依赖，对外只需要依赖该 Module 便可使用整个核心模块 ( core 文件以及内部所有 libs )
+> 该 Module 属于 core 核心开发、第三方库封装、框架代码封装等核心代码实现
 
-# core/core_base_lib
+# core/core_desc
 
-> 该 Module 基于 Dev 系列开发库搭建，且不存在任何代码属于核心 lib 依赖 ( 全部开发基于该 module )
->
-> 用于统一维护基础核心开发库依赖，如有必须依赖底层库在此添加
+> 该 Module 属于项目依赖描述库，不存在任何代码属于核心依赖，统一维护核心库依赖，对外只需要依赖该 Module 便可使用整个核心模块 ( core 文件以及内部所有 libs )
+
+# core/core_project
+
+> 该 Module 属于项目独有的相关代码模块，便于拆分存储业务相关逻辑代码

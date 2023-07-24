@@ -137,7 +137,8 @@ object Config {
         sCoreCatalogMap[".core_desc"] = "核心基础库依赖描述"
         sCoreCatalogMap[".core_project"] = "项目相关代码库"
         sCoreCatalogMap[".libs"] = "具体功能拆分, 封装 lib"
-        sCoreCatalogMap[".libs.lib_debug_assist"] = "Debug 编译辅助开发库 ( 提供切换环境、抓包数据可视化、调试按钮开关等辅助功能 )"
+        sCoreCatalogMap[".libs.lib_debug_assist"] =
+            "Debug 编译辅助开发库 ( 提供切换环境、抓包数据可视化、调试按钮开关等辅助功能 )"
         sCoreCatalogMap[".libs.lib_environment"] = "通用环境配置切换库"
 
         sCoreIgnoreCatalogs.add("core")
