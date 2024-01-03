@@ -84,9 +84,9 @@
 
 
 
-[DevReplace]: https://github.com/afkT/DevComponent/blob/main/interesting
-[ReplaceMain]: https://github.com/afkT/DevComponent/blob/main/interesting/DevReplace/src/main/java/afkt_replace/replace/ReplaceMain.kt
-[DevReplace.Code]: https://github.com/afkT/DevComponent/blob/main/interesting/DevReplace/src/main/java/afkt_replace/replace/Code.kt
-[DevComponent.Core]: https://github.com/afkT/DevComponent/blob/main/component/core
-[DevComponent.Application]: https://github.com/afkT/DevComponent/blob/main/application
-[modular.gradle]: https://github.com/afkT/DevComponent/blob/main/file/gradle/modular.gradle
+[DevReplace]: https://github.com/afkT/DevComponent/blob/arouter_single_core/interesting
+[ReplaceMain]: https://github.com/afkT/DevComponent/blob/arouter_single_core/interesting/DevReplace/src/main/java/afkt_replace/replace/ReplaceMain.kt
+[DevReplace.Code]: https://github.com/afkT/DevComponent/blob/arouter_single_core/interesting/DevReplace/src/main/java/afkt_replace/replace/Code.kt
+[DevComponent.Core]: https://github.com/afkT/DevComponent/blob/arouter_single_core/component/core
+[DevComponent.Application]: https://github.com/afkT/DevComponent/blob/arouter_single_core/application
+[modular.gradle]: https://github.com/afkT/DevComponent/blob/arouter_single_core/file/gradle/modular.gradle

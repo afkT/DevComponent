@@ -111,7 +111,7 @@ sourceSets {
 
 首先创建 `多渠道接口` 用于统一不同渠道使用相同方法获取渠道、数据信息。
 
-参照 `lib_channel_flavors` 模块 [lib_channel_flavors/AbstractChannelFlavors][lib_channel_flavors/AbstractChannelFlavors] 类
+参照 `core` 模块 [core/AbstractChannelFlavors][core/AbstractChannelFlavors] 类
 
 ```kotlin
 /**
@@ -279,9 +279,9 @@ private val IMPL_CLASS_NAME = "afkt_replace.core.lib.channel.ChannelFlavorsIMPL"
 [VasDolly 多渠道打包]: https://github.com/Tencent/VasDolly
 [Android 官方多渠道 productFlavors]: https://developer.android.com/studio/build/build-variants
 [main]: https://github.com/afkT/DevComponent
-[apk_channel.gradle]: https://github.com/afkT/DevComponent/blob/main/file/gradle/channel/apk_channel.gradle
-[app/src]: https://github.com/afkT/DevComponent/blob/main/application/app/src
-[AbstractChannelFlavors]: https://github.com/afkT/DevComponent/blob/main/component/core/libs/lib_channel_flavors/src/main/java/afkt_replace/core/lib/channel/AbstractChannelFlavors.kt
-[lib_channel_flavors/AbstractChannelFlavors]: https://github.com/afkT/DevComponent/blob/main/component/core/libs/lib_channel_flavors/src/main/java/afkt_replace/core/lib/channel/AbstractChannelFlavors.kt
-[AppChannel]: https://github.com/afkT/DevComponent/blob/main/component/core/libs/lib_base/src/main/java/afkt_replace/core/lib/base/core/AppChannel.kt
-[xiao_mi/ChannelFlavorsIMPL]: https://github.com/afkT/DevComponent/blob/main/application/app/src/xiao_mi/java/afkt_replace/core/lib/channel/ChannelFlavorsIMPL.kt
+[apk_channel.gradle]: https://github.com/afkT/DevComponent/blob/arouter_single_core/file/gradle/channel/apk_channel.gradle
+[app/src]: https://github.com/afkT/DevComponent/blob/arouter_single_core/application/app/src
+[AbstractChannelFlavors]: https://github.com/afkT/DevComponent/blob/arouter_single_core/component/core/core/src/main/java/afkt_replace/core/channel/AbstractChannelFlavors.kt
+[core/AbstractChannelFlavors]: https://github.com/afkT/DevComponent/blob/arouter_single_core/component/core/core/src/main/java/afkt_replace/core/channel/AbstractChannelFlavors.kt
+[AppChannel]: https://github.com/afkT/DevComponent/blob/arouter_single_core/component/core/core/src/main/java/afkt_replace/core/base/core/AppChannel.kt
+[xiao_mi/ChannelFlavorsIMPL]: https://github.com/afkT/DevComponent/blob/arouter_single_core/application/app/src/xiao_mi/java/afkt_replace/core/lib/channel/ChannelFlavorsIMPL.kt
