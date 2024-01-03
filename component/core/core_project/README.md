@@ -60,13 +60,6 @@ dependencies {
 ```
 
 
-# main/res 目录结构
-
-```
-- res
-```
-
-
 # main/res-language 目录结构
 
 ```
