@@ -1,3 +1,7 @@
+```
+    该分支基于 ARouter 框架实现组件化路由导航，多 core lib 实现基础核心开发库
+```
+
 
 <h1 align="center">DevComponent</h1>
 
