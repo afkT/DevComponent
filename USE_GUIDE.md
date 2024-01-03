@@ -79,9 +79,9 @@
 
 
 
-[DevReplace]: https://github.com/afkT/DevComponent/blob/main/interesting
-[ReplaceMain]: https://github.com/afkT/DevComponent/blob/main/interesting/DevReplace/src/main/java/afkt_replace/replace/ReplaceMain.kt
-[DevReplace.Code]: https://github.com/afkT/DevComponent/blob/main/interesting/DevReplace/src/main/java/afkt_replace/replace/Code.kt
-[DevComponent.Core]: https://github.com/afkT/DevComponent/blob/main/component/core
-[DevComponent.Application]: https://github.com/afkT/DevComponent/blob/main/application
-[modular.gradle]: https://github.com/afkT/DevComponent/blob/main/file/gradle/modular.gradle
+[DevReplace]: https://github.com/afkT/DevComponent/blob/deprecated_20230712/interesting
+[ReplaceMain]: https://github.com/afkT/DevComponent/blob/deprecated_20230712/interesting/DevReplace/src/main/java/afkt_replace/replace/ReplaceMain.kt
+[DevReplace.Code]: https://github.com/afkT/DevComponent/blob/deprecated_20230712/interesting/DevReplace/src/main/java/afkt_replace/replace/Code.kt
+[DevComponent.Core]: https://github.com/afkT/DevComponent/blob/deprecated_20230712/component/core
+[DevComponent.Application]: https://github.com/afkT/DevComponent/blob/deprecated_20230712/application
+[modular.gradle]: https://github.com/afkT/DevComponent/blob/deprecated_20230712/file/gradle/modular.gradle

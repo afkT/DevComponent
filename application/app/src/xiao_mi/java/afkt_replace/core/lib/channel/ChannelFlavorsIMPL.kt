@@ -6,7 +6,7 @@ import dev.utils.DevFinal
 import java.util.*
 
 /**
- * detail: 华为渠道实现
+ * detail: 小米渠道实现
  * @author Ttt
  */
 class ChannelFlavorsIMPL : AbstractChannelFlavors {

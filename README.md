@@ -38,10 +38,10 @@
 
 <p align="center">
 	<b>
-		<a href="https://github.com/afkT/DevComponent/blob/main/USE_GUIDE.md">使用说明</a>
+		<a href="https://github.com/afkT/DevComponent/blob/deprecated_20230712/USE_GUIDE.md">使用说明</a>
 	</b>、
 	<b>
-		<a href="https://github.com/afkT/DevComponent/blob/main/USE_CHANNEL.md">多渠道打包</a>
+		<a href="https://github.com/afkT/DevComponent/blob/deprecated_20230712/USE_CHANNEL.md">多渠道打包</a>
 	</b>
 </p>
 
@@ -66,7 +66,7 @@
 
 ## 组件目录展示
 
-### [目录](https://github.com/afkT/DevComponent/blob/main/component)
+### [目录](https://github.com/afkT/DevComponent/blob/deprecated_20230712/component)
 
 ```
 - component          | 根目录
@@ -74,11 +74,11 @@
    - libs            | 通用 Library、第三方库 clone 差异化修改
 ```
 
-### [core](https://github.com/afkT/DevComponent/blob/main/component/core)
+### [core](https://github.com/afkT/DevComponent/blob/deprecated_20230712/component/core)
 
 该目录属于核心基础库代码，整个组件化项目基于该基础上进行开发
 
-> 该 [Core Module](https://github.com/afkT/DevComponent/blob/main/component/core/core) 基于 [Dev 系列开发库](https://github.com/afkT/DevUtils) 搭建，
+> 该 [Core Module](https://github.com/afkT/DevComponent/blob/deprecated_20230712/component/core/core) 基于 [Dev 系列开发库](https://github.com/afkT/DevUtils) 搭建，
 ( 全部开发基于该 module ) 用于统一维护基础核心开发库、第三方库依赖，对外只需要依赖该 module 便可使用整个核心模块 ( core 文件以及内部所有 libs )
 
 ```
@@ -103,7 +103,7 @@
       - lib_web                        | WebView 相关
 ```
 
-### [libs](https://github.com/afkT/DevComponent/blob/main/component/libs)
+### [libs](https://github.com/afkT/DevComponent/blob/deprecated_20230712/component/libs)
 
 该目录属于 项目模块快捷工具封装复用、第三方库 clone 对源码进行差异化修改使用等存储目录
 
@@ -114,7 +114,7 @@
 
 ## 应用程序目录展示
 
-### [目录](https://github.com/afkT/DevComponent/blob/main/application)
+### [目录](https://github.com/afkT/DevComponent/blob/deprecated_20230712/application)
 
 ```
 - application       | 根目录
@@ -122,7 +122,7 @@
    - module         | 具体功能模块 ( 可单独运行 )，被主体应用 ( 壳 ) 所依赖使用
 ```
 
-### [module](https://github.com/afkT/DevComponent/blob/main/application/module)
+### [module](https://github.com/afkT/DevComponent/blob/deprecated_20230712/application/module)
 
 该目录下的 Module 在 `isModular=true` 的情况下，都属于独立的应用可单独运行，为 `false` 则都属于功能模块，被主体应用 ( 壳 ) 所依赖使用
 
@@ -189,14 +189,14 @@ Android Studio 使用 gradle 进行项目构建，gradle 使得我们可以像�
 
 ##### 开关配置
 
-主要技术点为在 [modular.gradle](https://github.com/afkT/DevComponent/blob/main/file/gradle/modular.gradle) 中定义标识
+主要技术点为在 [modular.gradle](https://github.com/afkT/DevComponent/blob/deprecated_20230712/file/gradle/modular.gradle) 中定义标识
 
 ```groovy
 // 模块化编译开关 ( true = 每个模块都是独立应用, false = 整合运行 )
 isModular = false
 ```
 
-根据标识，应用不同的[构建文件](https://github.com/afkT/DevComponent/blob/main/file/gradle/build/build_module.gradle)。
+根据标识，应用不同的[构建文件](https://github.com/afkT/DevComponent/blob/deprecated_20230712/file/gradle/build/build_module.gradle)。
 
 ```groovy
 def isModular = isModular.toBoolean()
@@ -215,11 +215,11 @@ if (isModular) { // 每个模块都是独立应用
 
 ##### 配置文件
 
-* [config.gradle](https://github.com/afkT/DevComponent/blob/main/file/gradle/config.gradle) ：主要存储第三方库版本信息等
+* [config.gradle](https://github.com/afkT/DevComponent/blob/deprecated_20230712/file/gradle/config.gradle) ：主要存储第三方库版本信息等
 
-* [versions.gradle](https://github.com/afkT/DevComponent/blob/main/file/gradle/versions.gradle) ：构建信息以及 core 库版本配置
+* [versions.gradle](https://github.com/afkT/DevComponent/blob/deprecated_20230712/file/gradle/versions.gradle) ：构建信息以及 core 库版本配置
 
-* [modular.gradle](https://github.com/afkT/DevComponent/blob/main/file/gradle/modular.gradle) ：组件化配置以及各个 Module 版本信息
+* [modular.gradle](https://github.com/afkT/DevComponent/blob/deprecated_20230712/file/gradle/modular.gradle) ：组件化配置以及各个 Module 版本信息
 
 > 关于 core 库依赖可以参考 [MavenCentral Links - 搭建自己的 Maven 库](https://github.com/afkT/Resources/blob/main/link/MavenCentral.md) 搭建自己的 Maven 库，通过 aar 直接进行依赖
 
@@ -244,7 +244,7 @@ if (isModular) { // 每个模块都是独立应用
 - [AndroidAutoSize](https://github.com/JessYanCoding/AndroidAutoSize/blob/master/README-zh.md) 今日头条屏幕适配方案终极版。
 - [SmartRefreshLayout](https://github.com/scwang90/SmartRefreshLayout) 下拉刷新框架。
 - [Dev 系列库](https://github.com/afkT/DevUtils) Android 工具类库、辅助类、基类、UI 库、环境配置切换库。
-- [多渠道打包](https://github.com/afkT/DevComponent/blob/main/USE_CHANNEL.md)
+- [多渠道打包](https://github.com/afkT/DevComponent/blob/deprecated_20230712/USE_CHANNEL.md)
 
 调试工具：
 
