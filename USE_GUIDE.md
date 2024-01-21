@@ -84,9 +84,9 @@
 
 
 
-[DevReplace]: https://github.com/afkT/DevComponent/blob/arouter/interesting
-[ReplaceMain]: https://github.com/afkT/DevComponent/blob/arouter/interesting/DevReplace/src/main/java/afkt_replace/replace/ReplaceMain.kt
-[DevReplace.Code]: https://github.com/afkT/DevComponent/blob/arouter/interesting/DevReplace/src/main/java/afkt_replace/replace/Code.kt
-[DevComponent.Core]: https://github.com/afkT/DevComponent/blob/arouter/component/core
-[DevComponent.Application]: https://github.com/afkT/DevComponent/blob/arouter/application
-[modular.gradle]: https://github.com/afkT/DevComponent/blob/arouter/file/gradle/modular.gradle
+[DevReplace]: https://github.com/afkT/DevComponent/blob/therouter/interesting
+[ReplaceMain]: https://github.com/afkT/DevComponent/blob/therouter/interesting/DevReplace/src/main/java/afkt_replace/replace/ReplaceMain.kt
+[DevReplace.Code]: https://github.com/afkT/DevComponent/blob/therouter/interesting/DevReplace/src/main/java/afkt_replace/replace/Code.kt
+[DevComponent.Core]: https://github.com/afkT/DevComponent/blob/therouter/component/core
+[DevComponent.Application]: https://github.com/afkT/DevComponent/blob/therouter/application
+[modular.gradle]: https://github.com/afkT/DevComponent/blob/therouter/file/gradle/modular.gradle
