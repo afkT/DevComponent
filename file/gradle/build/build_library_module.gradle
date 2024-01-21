@@ -10,6 +10,7 @@ apply plugin: 'kotlin-kapt'
 android {
 
     compileSdkVersion versions.compileSdkVersion
+    buildToolsVersion versions.buildToolsVersion
 
     defaultConfig {
         minSdkVersion versions.lib_minSdkVersion
@@ -18,6 +19,7 @@ android {
     }
 
     buildFeatures {
+        buildConfig true
         // Data Binding
         dataBinding = true
         // View Binding

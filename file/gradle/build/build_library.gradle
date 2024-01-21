@@ -6,11 +6,12 @@ apply plugin: 'kotlin-kapt'
 // 版本构建截取、设置处理
 apply from: rootProject.file(files.config_build_version_gradle)
 // Router Lib 构建配置
-apply from: rootProject.file(files.build_router_lib)
+apply from: rootProject.file(files.build_router_lib_gradle)
 
 android {
 
     compileSdkVersion versions.compileSdkVersion
+    buildToolsVersion versions.buildToolsVersion
 
     defaultConfig {
         minSdkVersion versions.lib_minSdkVersion
@@ -28,6 +29,7 @@ android {
     }
 
     buildFeatures {
+        buildConfig true
         // Data Binding
         dataBinding = true
         // View Binding
