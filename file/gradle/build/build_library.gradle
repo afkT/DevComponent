@@ -17,15 +17,6 @@ android {
         minSdkVersion versions.lib_minSdkVersion
         // 混淆配置
         consumerProguardFiles 'proguard-rules.pro'
-
-//        javaCompileOptions {
-//            annotationProcessorOptions {
-//                arguments = [AROUTER_MODULE_NAME: project.getName()]
-//                // 更新 build.gradle, 添加参数 AROUTER_GENERATE_DOC: "enable"
-//                // 生成的文档路径
-//                // build/generated/source/apt/(debug or release)/com/alibaba/android/arouter/docs/arouter-map-of-${moduleName}.json
-//            }
-//        }
     }
 
     buildFeatures {
