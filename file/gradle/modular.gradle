@@ -160,21 +160,25 @@ ext {
             // 核心空壳依赖库
             "core"                    : [
                     // 版本号
-                    versionCode: 100,
+                    versionCode  : 100,
                     // 版本名
-                    versionName: "1.0.0",
+                    versionName  : "1.0.0",
+                    // 包名 ( 用于 namespace )
+                    applicationId: "afkt_replace.core",
                     // 模块名
-                    moduleName : "CORE",
+                    moduleName   : "CORE",
             ],
 
             // 核心基础依赖库
             "core_base_lib"           : [
                     // 版本号
-                    versionCode: 100,
+                    versionCode  : 100,
                     // 版本名
-                    versionName: "1.0.0",
+                    versionName  : "1.0.0",
+                    // 包名 ( 用于 namespace )
+                    applicationId: "afkt_replace.core.base.lib",
                     // 模块名
-                    moduleName : "CORE_BASE_LIB",
+                    moduleName   : "CORE_BASE_LIB",
             ],
 
             // ==============
@@ -184,191 +188,229 @@ ext {
             // 基础 ( 基类等 ) lib
             "core_lib_base"           : [
                     // 版本号
-                    versionCode: 100,
+                    versionCode  : 100,
                     // 版本名
-                    versionName: "1.0.0",
+                    versionName  : "1.0.0",
+                    // 包名 ( 用于 namespace )
+                    applicationId: "afkt_replace.core.lib.base",
                     // 模块名
-                    moduleName : "CORE_LIB_BASE",
+                    moduleName   : "CORE_LIB_BASE",
             ],
 
             // 基础 ( 基类等 ) lib 拆包
             "core_lib_base_split"     : [
                     // 版本号
-                    versionCode: 100,
+                    versionCode  : 100,
                     // 版本名
-                    versionName: "1.0.0",
+                    versionName  : "1.0.0",
+                    // 包名 ( 用于 namespace )
+                    applicationId: "afkt_replace.core.lib.base.split",
                     // 模块名
-                    moduleName : "CORE_LIB_BASE_SPLIT",
+                    moduleName   : "CORE_LIB_BASE_SPLIT",
             ],
 
             // 通用实体类 lib
             "core_lib_bean"           : [
                     // 版本号
-                    versionCode: 100,
+                    versionCode  : 100,
                     // 版本名
-                    versionName: "1.0.0",
+                    versionName  : "1.0.0",
+                    // 包名 ( 用于 namespace )
+                    applicationId: "afkt_replace.core.lib.bean",
                     // 模块名
-                    moduleName : "CORE_LIB_BEAN",
+                    moduleName   : "CORE_LIB_BEAN",
             ],
 
             // App 多渠道 lib
             "core_lib_channel_flavors": [
                     // 版本号
-                    versionCode: 100,
+                    versionCode  : 100,
                     // 版本名
-                    versionName: "1.0.0",
+                    versionName  : "1.0.0",
+                    // 包名 ( 用于 namespace )
+                    applicationId: "afkt_replace.core.lib.channel",
                     // 模块名
-                    moduleName : "CORE_LIB_CHANNEL_FLAVORS",
+                    moduleName   : "CORE_LIB_CHANNEL_FLAVORS",
             ],
 
             // 通用配置、常量 lib
             "core_lib_config"         : [
                     // 版本号
-                    versionCode: 100,
+                    versionCode  : 100,
                     // 版本名
-                    versionName: "1.0.0",
+                    versionName  : "1.0.0",
+                    // 包名 ( 用于 namespace )
+                    applicationId: "afkt_replace.core.lib.config",
                     // 模块名
-                    moduleName : "CORE_LIB_CONFIG",
+                    moduleName   : "CORE_LIB_CONFIG",
             ],
 
             // Debug 编译辅助开发库 ( 提供切换环境、抓包数据可视化、调试按钮开关等辅助功能 )
             "core_lib_debug_assist"   : [
                     // 版本号
-                    versionCode: 100,
+                    versionCode  : 100,
                     // 版本名
-                    versionName: "1.0.0",
+                    versionName  : "1.0.0",
+                    // 包名 ( 用于 namespace )
+                    applicationId: "afkt_replace.core.lib.debug",
                     // 模块名
-                    moduleName : "CORE_LIB_DEBUG_ASSIST",
+                    moduleName   : "CORE_LIB_DEBUG_ASSIST",
             ],
 
             // 通用 Engine ( 图片加载、日志、JSON、权限、资源选择 等 ) lib
             "core_lib_engine"         : [
                     // 版本号
-                    versionCode: 100,
+                    versionCode  : 100,
                     // 版本名
-                    versionName: "1.0.0",
+                    versionName  : "1.0.0",
+                    // 包名 ( 用于 namespace )
+                    applicationId: "afkt_replace.core.lib.engine",
                     // 模块名
-                    moduleName : "CORE_LIB_ENGINE",
+                    moduleName   : "CORE_LIB_ENGINE",
             ],
 
             // 通用环境配置切换库
             "core_lib_environment"    : [
                     // 版本号
-                    versionCode: 100,
+                    versionCode  : 100,
                     // 版本名
-                    versionName: "1.0.0",
+                    versionName  : "1.0.0",
+                    // 包名 ( 用于 namespace )
+                    applicationId: "afkt_replace.core.lib.environment",
                     // 模块名
-                    moduleName : "CORE_LIB_ENVIRONMENT",
+                    moduleName   : "CORE_LIB_ENVIRONMENT",
             ],
 
             // 通用多语言 lib
             "core_lib_language"       : [
                     // 版本号
-                    versionCode: 100,
+                    versionCode  : 100,
                     // 版本名
-                    versionName: "1.0.0",
+                    versionName  : "1.0.0",
+                    // 包名 ( 用于 namespace )
+                    applicationId: "afkt_replace.core.lib.language",
                     // 模块名
-                    moduleName : "CORE_LIB_LANGUAGE",
+                    moduleName   : "CORE_LIB_LANGUAGE",
             ],
 
             // MVVM 通用代码封装
             "core_lib_mvvm"           : [
                     // 版本号
-                    versionCode: 100,
+                    versionCode  : 100,
                     // 版本名
-                    versionName: "1.0.0",
+                    versionName  : "1.0.0",
+                    // 包名 ( 用于 namespace )
+                    applicationId: "afkt_replace.core.lib.mvvm",
                     // 模块名
-                    moduleName : "CORE_LIB_MVVM",
+                    moduleName   : "CORE_LIB_MVVM",
             ],
 
             // 网络相关 lib ( 网络请求、上传下载 )
             "core_lib_network"        : [
                     // 版本号
-                    versionCode: 100,
+                    versionCode  : 100,
                     // 版本名
-                    versionName: "1.0.0",
+                    versionName  : "1.0.0",
+                    // 包名 ( 用于 namespace )
+                    applicationId: "afkt_replace.core.lib.network",
                     // 模块名
-                    moduleName : "CORE_LIB_NETWORK",
+                    moduleName   : "CORE_LIB_NETWORK",
             ],
 
             // 性能优化、检测 lib
             "core_lib_property"       : [
                     // 版本号
-                    versionCode: 100,
+                    versionCode  : 100,
                     // 版本名
-                    versionName: "1.0.0",
+                    versionName  : "1.0.0",
+                    // 包名 ( 用于 namespace )
+                    applicationId: "afkt_replace.core.lib.property",
                     // 模块名
-                    moduleName : "CORE_LIB_PROPERTY",
+                    moduleName   : "CORE_LIB_PROPERTY",
             ],
 
             // 广播监听 ( 如网络状态、电量、屏幕解锁 ) 相关
             "core_lib_receiver"       : [
                     // 版本号
-                    versionCode: 100,
+                    versionCode  : 100,
                     // 版本名
-                    versionName: "1.0.0",
+                    versionName  : "1.0.0",
+                    // 包名 ( 用于 namespace )
+                    applicationId: "afkt_replace.core.lib.receiver",
                     // 模块名
-                    moduleName : "CORE_LIB_RECEIVER",
+                    moduleName   : "CORE_LIB_RECEIVER",
             ],
 
             // 路由相关
             "core_lib_router"         : [
                     // 版本号
-                    versionCode: 100,
+                    versionCode  : 100,
                     // 版本名
-                    versionName: "1.0.0",
+                    versionName  : "1.0.0",
+                    // 包名 ( 用于 namespace )
+                    applicationId: "afkt_replace.core.lib.router",
                     // 模块名
-                    moduleName : "CORE_LIB_ROUTER",
+                    moduleName   : "CORE_LIB_ROUTER",
             ],
 
             // 通用 UI 样式、资源、交互、控件 lib
             "core_lib_ui"             : [
                     // 版本号
-                    versionCode: 100,
+                    versionCode  : 100,
                     // 版本名
-                    versionName: "1.0.0",
+                    versionName  : "1.0.0",
+                    // 包名 ( 用于 namespace )
+                    applicationId: "afkt_replace.core.lib.ui",
                     // 模块名
-                    moduleName : "CORE_LIB_UI",
+                    moduleName   : "CORE_LIB_UI",
             ],
 
             // APP 主题、换肤相关控制
             "core_lib_ui_skin"        : [
                     // 版本号
-                    versionCode: 100,
+                    versionCode  : 100,
                     // 版本名
-                    versionName: "1.0.0",
+                    versionName  : "1.0.0",
+                    // 包名 ( 用于 namespace )
+                    applicationId: "afkt_replace.core.lib.ui.skin",
                     // 模块名
-                    moduleName : "CORE_LIB_UI_SKIN",
+                    moduleName   : "CORE_LIB_UI_SKIN",
             ],
 
             // 通用上传库
             "core_lib_upload"         : [
                     // 版本号
-                    versionCode: 100,
+                    versionCode  : 100,
                     // 版本名
-                    versionName: "1.0.0",
+                    versionName  : "1.0.0",
+                    // 包名 ( 用于 namespace )
+                    applicationId: "afkt_replace.core.lib.upload",
                     // 模块名
-                    moduleName : "CORE_LIB_UPLOAD",
+                    moduleName   : "CORE_LIB_UPLOAD",
             ],
 
             // 通用工具库
             "core_lib_utils"          : [
                     // 版本号
-                    versionCode: 100,
+                    versionCode  : 100,
                     // 版本名
-                    versionName: "1.0.0",
+                    versionName  : "1.0.0",
+                    // 包名 ( 用于 namespace )
+                    applicationId: "afkt_replace.core.lib.utils",
                     // 模块名
-                    moduleName : "CORE_LIB_UTILS",
+                    moduleName   : "CORE_LIB_UTILS",
             ],
 
             // WebView 相关
             "core_lib_web"            : [
                     // 版本号
-                    versionCode: 100,
+                    versionCode  : 100,
                     // 版本名
-                    versionName: "1.0.0",
+                    versionName  : "1.0.0",
+                    // 包名 ( 用于 namespace )
+                    applicationId: "afkt_replace.core.lib.web",
                     // 模块名
-                    moduleName : "CORE_LIB_WEB",
+                    moduleName   : "CORE_LIB_WEB",
             ],
     ]
 }

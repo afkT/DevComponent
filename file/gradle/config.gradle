@@ -50,9 +50,19 @@ ext {
             // Router App 构建配置
             build_router_app_gradle       : "file/gradle/build/router/build_router_app.gradle",
             // Router Lib 构建配置
-            build_router_lib              : "file/gradle/build/router/build_router_lib.gradle",
+            build_router_lib_gradle       : "file/gradle/build/router/build_router_lib.gradle",
             // Router Module 构建配置
             build_router_module_gradle    : "file/gradle/build/router/build_router_module.gradle",
+
+            // ARouter App 构建配置
+            build_arouter_app_gradle      : "file/gradle/build/router/arouter/build_arouter_app.gradle",
+            // ARouter Module 构建配置
+            build_arouter_module_gradle   : "file/gradle/build/router/arouter/build_arouter_module.gradle",
+
+            // TheRouter App 构建配置
+            build_therouter_app_gradle    : "file/gradle/build/router/therouter/build_therouter_app.gradle",
+            // TheRouter Module 构建配置
+            build_therouter_module_gradle : "file/gradle/build/router/therouter/build_therouter_module.gradle",
     ]
 
     deps = [

@@ -6,28 +6,21 @@ apply plugin: 'kotlin-kapt'
 // 版本构建截取、设置处理
 apply from: rootProject.file(files.config_build_version_gradle)
 // Router Lib 构建配置
-apply from: rootProject.file(files.build_router_lib)
+apply from: rootProject.file(files.build_router_lib_gradle)
 
 android {
 
     compileSdkVersion versions.compileSdkVersion
+    buildToolsVersion versions.buildToolsVersion
 
     defaultConfig {
         minSdkVersion versions.lib_minSdkVersion
         // 混淆配置
         consumerProguardFiles 'proguard-rules.pro'
-
-//        javaCompileOptions {
-//            annotationProcessorOptions {
-//                arguments = [AROUTER_MODULE_NAME: project.getName()]
-//                // 更新 build.gradle, 添加参数 AROUTER_GENERATE_DOC: "enable"
-//                // 生成的文档路径
-//                // build/generated/source/apt/(debug or release)/com/alibaba/android/arouter/docs/arouter-map-of-${moduleName}.json
-//            }
-//        }
     }
 
     buildFeatures {
+        buildConfig true
         // Data Binding
         dataBinding = true
         // View Binding

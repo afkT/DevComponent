@@ -36,8 +36,11 @@ if (libName.startsWith("core")) {
         def coreLibVersionCode = coreLibrary.versionCode
         def coreLibVersionName = coreLibrary.versionName
         def moduleName = coreLibrary.moduleName
+        def applicationId = coreLibrary.applicationId
 
         if (coreLibVersionCode != null && coreLibVersionName != null) {
+            android.namespace = applicationId
+            // 设置配置信息
             android.defaultConfig {
                 versionCode coreLibVersionCode
                 versionName coreLibVersionName
@@ -71,8 +74,11 @@ if (libName.startsWith("module_")) {
         def moduleVersionName = modular.versionName
         def moduleName = modular.moduleName
         def featureVersion = modular.featureVersion
+        def applicationId = modular.applicationId
 
         if (moduleVersionCode != null && moduleVersionName != null) {
+            android.namespace = applicationId
+            // 设置配置信息
             android.defaultConfig {
                 versionCode moduleVersionCode
                 versionName moduleVersionName
@@ -110,8 +116,11 @@ if (libName.startsWith("app")) {
         def appVersionName = app.versionName
         def moduleName = app.moduleName
         def featureVersion = app.featureVersion
+        def applicationId = app.applicationId
 
         if (appVersionCode != null && appVersionName != null) {
+            android.namespace = applicationId
+            // 设置配置信息
             android.defaultConfig {
                 versionCode appVersionCode
                 versionName appVersionName

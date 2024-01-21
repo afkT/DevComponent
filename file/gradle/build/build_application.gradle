@@ -13,6 +13,7 @@ def modular = modularVersion[libName]
 android {
 
     compileSdkVersion versions.compileSdkVersion
+    buildToolsVersion versions.buildToolsVersion
 
     defaultConfig {
         minSdkVersion versions.app_minSdkVersion
@@ -64,6 +65,7 @@ android {
     }
 
     buildFeatures {
+        buildConfig true
         // Data Binding
         dataBinding = true
         // View Binding
