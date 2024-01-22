@@ -1,7 +1,7 @@
 package afkt_replace.core.router
 
 import android.content.Context
-import com.alibaba.android.arouter.facade.annotation.Route
+import com.therouter.router.Route
 import com.alibaba.android.arouter.facade.service.SerializationService
 import dev.expand.engine.json.fromJson
 import dev.expand.engine.json.toJson

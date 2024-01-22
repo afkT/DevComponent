@@ -6,10 +6,10 @@ import afkt_replace.core.base.controller.ui.ext.setExitBackIntercept
 import afkt_replace.core.base.controller.ui.theme.defaultMainContainerUITheme
 import afkt_replace.core.project.router.module.movie.MovieRouter
 import afkt_replace.module.movie.databinding.MovieAppContainerBinding
-import com.alibaba.android.arouter.facade.annotation.Route
+import com.therouter.router.Route
 import dev.mvvm.utils.toResString
 
-@Route(path = MovieRouter.PATH_MAIN, group = MovieRouter.GROUP)
+@Route(path = MovieRouter.PATH_MAIN)
 class MainContainerActivity : BaseAppActivity<MovieAppContainerBinding, MovieViewModel>(
     R.layout.movie_app_container, BR.viewModel, simple_UITheme = {
         it.defaultMainContainerUITheme()

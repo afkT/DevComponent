@@ -1,6 +1,6 @@
 package afkt_replace.core.project.router.module.main
 
-import com.alibaba.android.arouter.facade.Postcard
+import com.therouter.router.Navigator
 
 /**
  * detail: 具体 navigation 类
@@ -18,7 +18,7 @@ object MainNav {
      * 内部传入 GROUP 尽量各个模块直接通过对应 [build] 方法跳转
      * 便于代码跳转直观、对外避免跳转错 GROUP ( Module )
      */
-    fun build(path: String): Postcard {
+    fun build(path: String): Navigator {
         return MainRouter.build(path)
     }
 
@@ -36,7 +36,7 @@ object MainNav {
     /**
      * 模块入口路由
      */
-    fun buildMain(): Postcard {
+    fun buildMain(): Navigator {
         return build(MainRouter.PATH_MAIN)
     }
 }

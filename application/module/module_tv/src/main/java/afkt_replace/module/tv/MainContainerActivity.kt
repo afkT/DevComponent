@@ -6,10 +6,10 @@ import afkt_replace.core.base.controller.ui.ext.setExitBackIntercept
 import afkt_replace.core.base.controller.ui.theme.defaultMainContainerUITheme
 import afkt_replace.core.project.router.module.tv.TvRouter
 import afkt_replace.module.tv.databinding.TvAppContainerBinding
-import com.alibaba.android.arouter.facade.annotation.Route
+import com.therouter.router.Route
 import dev.mvvm.utils.toResString
 
-@Route(path = TvRouter.PATH_MAIN, group = TvRouter.GROUP)
+@Route(path = TvRouter.PATH_MAIN)
 class MainContainerActivity : BaseAppActivity<TvAppContainerBinding, TvViewModel>(
     R.layout.tv_app_container, BR.viewModel, simple_UITheme = {
         it.defaultMainContainerUITheme()

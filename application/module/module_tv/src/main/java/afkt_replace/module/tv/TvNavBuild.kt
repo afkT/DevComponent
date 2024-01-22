@@ -12,7 +12,7 @@ object TvNavBuild {
     /**
      * 跳转 Tv Details Path
      * @receiver TMDBCommon
-     * @return Postcard
+     * @return Navigator
      */
     internal fun TMDBCommon.routerTvDetails() {
         TvNav.buildTvDetails(

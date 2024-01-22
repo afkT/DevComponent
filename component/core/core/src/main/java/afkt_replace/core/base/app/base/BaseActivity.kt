@@ -7,7 +7,7 @@ import afkt_replace.core.base.controller.inter.IController
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.ViewDataBinding
-import com.alibaba.android.arouter.launcher.ARouter
+import com.therouter.TheRouter
 import dev.DevUtils
 import dev.base.expand.content.DevBaseContentMVVMActivity
 import dev.utils.common.ClassUtils
@@ -85,9 +85,9 @@ abstract class BaseActivity<VDB : ViewDataBinding, VM : BaseViewModel>(
 
     private fun innerInitialize() {
         try {
-            ARouter.getInstance().inject(this)
+            TheRouter.inject(this)
         } catch (e: Exception) {
-            assist.printLog(e, "ARouter inject")
+            assist.printLog(e, "TheRouter inject")
         }
 
         // =================

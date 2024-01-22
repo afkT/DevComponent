@@ -13,7 +13,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.FragmentActivity
-import com.alibaba.android.arouter.launcher.ARouter
+import com.therouter.TheRouter
 import dev.DevUtils
 import dev.base.expand.content.DevBaseContentMVVMFragment
 import dev.utils.app.ActivityUtils
@@ -97,9 +97,9 @@ abstract class BaseFragment<VDB : ViewDataBinding, VM : BaseViewModel>(
 
     private fun innerInitialize() {
         try {
-            ARouter.getInstance().inject(this)
+            TheRouter.inject(this)
         } catch (e: Exception) {
-            assist.printLog(e, "ARouter inject")
+            assist.printLog(e, "TheRouter inject")
         }
 
         // =================

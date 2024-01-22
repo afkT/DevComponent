@@ -12,7 +12,7 @@ object MovieNavBuild {
     /**
      * 跳转 Movie Details Path
      * @receiver TMDBCommon
-     * @return Postcard
+     * @return Navigator
      */
     internal fun TMDBCommon.routerMovieDetails() {
         MovieNav.buildMovieDetails(

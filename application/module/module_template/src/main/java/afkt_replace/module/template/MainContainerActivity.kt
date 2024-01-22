@@ -6,10 +6,10 @@ import afkt_replace.core.base.controller.ui.ext.setExitBackIntercept
 import afkt_replace.core.base.controller.ui.theme.defaultMainContainerUITheme
 import afkt_replace.core.project.router.module.template.TemplateRouter
 import afkt_replace.module.template.databinding.TemplateAppContainerBinding
-import com.alibaba.android.arouter.facade.annotation.Route
+import com.therouter.router.Route
 import dev.mvvm.utils.toResString
 
-@Route(path = TemplateRouter.PATH_MAIN, group = TemplateRouter.GROUP)
+@Route(path = TemplateRouter.PATH_MAIN)
 class MainContainerActivity : BaseAppActivity<TemplateAppContainerBinding, TemplateViewModel>(
     R.layout.template_app_container, BR.viewModel, simple_UITheme = {
         it.defaultMainContainerUITheme()

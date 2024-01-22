@@ -5,9 +5,9 @@ import afkt_replace.core.project.router.module.movie.MovieRouter
 import afkt_replace.module.movie.BR
 import afkt_replace.module.movie.R
 import afkt_replace.module.movie.databinding.MovieFragmentDetailsBinding
-import com.alibaba.android.arouter.facade.annotation.Route
+import com.therouter.router.Route
 
-@Route(path = MovieRouter.PATH_MOVIE_DETAILS_FRAGMENT, group = MovieRouter.GROUP)
+@Route(path = MovieRouter.PATH_MOVIE_DETAILS_FRAGMENT)
 class MovieDetailsFragment : BaseLoadingSkeletonFragment<MovieFragmentDetailsBinding, MovieDetailsViewModel>(
     R.layout.movie_fragment_details, BR.viewModel, simple_Agile = {
         // 初始化 MovieDetailsFragment ViewModel 调用

@@ -7,9 +7,9 @@ import afkt_replace.module.template.BR
 import afkt_replace.module.template.R
 import afkt_replace.module.template.databinding.TemplateActivityEndBinding
 import androidx.navigation.fragment.NavHostFragment
-import com.alibaba.android.arouter.facade.annotation.Route
+import com.therouter.router.Route
 
-@Route(path = TemplateRouter.PATH_END_ACTIVITY, group = TemplateRouter.GROUP)
+@Route(path = TemplateRouter.PATH_END_ACTIVITY)
 class EndActivity : BaseAppActivity<TemplateActivityEndBinding, EndViewModel>(
     R.layout.template_activity_end, BR.viewModel, simple_UITheme = {
         it.defaultActivityBlankUITheme()

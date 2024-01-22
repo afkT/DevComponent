@@ -4,8 +4,8 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import com.alibaba.android.arouter.core.LogisticsCenter
-import com.alibaba.android.arouter.facade.Postcard
-import com.alibaba.android.arouter.launcher.ARouter
+import com.therouter.router.Navigator
+import com.therouter.TheRouter
 import dev.utils.LogPrintUtils
 
 /**
@@ -18,44 +18,44 @@ object AppRouter {
     private val TAG = AppRouter::class.java.simpleName
 
     /**
-     * 构建 Router Postcard
+     * 构建 Router Navigator
      * @param path router Path
      * @param group router Group
-     * @return [Postcard]
+     * @return [Navigator]
      */
     @Deprecated(
         "推荐使用 buildByUri 方法", ReplaceWith(
-            "ARouter.getInstance().build(path, group)",
-            "com.alibaba.android.arouter.launcher.ARouter"
+            "TheRouter.build(path, group)",
+            "com.therouter.TheRouter"
         )
     )
     fun build(
         path: String,
         group: String
-    ): Postcard {
-        return ARouter.getInstance().build(path, group)
+    ): Navigator {
+        return TheRouter.build(path, group)
     }
 
     /**
-     * 构建 Router Postcard
+     * 构建 Router Navigator
      * @param path router Path
-     * @return [Postcard]
+     * @return [Navigator]
      */
-    fun buildByUri(path: String): Postcard {
+    fun buildByUri(path: String): Navigator {
         // path 必须包含 group => /group/path
         val routerURI = Uri.parse(path)
-        return ARouter.getInstance().build(routerURI)
+        return TheRouter.build(routerURI)
     }
 
     /**
-     * 通过 Router Postcard 获取 Intent
+     * 通过 Router Navigator 获取 Intent
      * @param context [Context]
-     * @param postcard [Postcard]
+     * @param postcard [Navigator]
      * @return Intent?
      */
     fun routerIntent(
         context: Context,
-        postcard: Postcard
+        postcard: Navigator
     ): Intent? {
         return try {
             LogisticsCenter.completion(postcard)
@@ -75,7 +75,7 @@ object AppRouter {
      * @return instance of service
      */
     fun <T> navigation(service: Class<T>): T? {
-        return ARouter.getInstance().navigation(service)
+        return TheRouter.navigation(service)
     }
 
     /**
@@ -83,7 +83,7 @@ object AppRouter {
      * @param clazz Any?
      */
     fun inject(clazz: Any?) {
-        ARouter.getInstance().inject(clazz)
+        TheRouter.inject(clazz)
     }
 
     /**
@@ -103,10 +103,10 @@ object AppRouter {
 // ==========
 
 /**
- * 通过 Router Postcard 获取 Intent
+ * 通过 Router Navigator 获取 Intent
  * @param context [Context]
  * @return Intent?
  */
-fun Postcard.routerIntent(context: Context): Intent? {
+fun Navigator.routerIntent(context: Context): Intent? {
     return AppRouter.routerIntent(context, this)
 }

@@ -12,7 +12,7 @@ object PersonNavBuild {
     /**
      * 跳转 Person Details Path
      * @receiver TMDBPerson
-     * @return Postcard
+     * @return Navigator
      */
     fun TMDBPerson.routerPersonDetails() {
         PersonNav.buildPersonDetails(

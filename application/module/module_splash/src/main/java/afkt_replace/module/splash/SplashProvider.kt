@@ -7,9 +7,9 @@ import afkt_replace.core.router.BaseProviderExt
 import afkt_replace.lib.splash.ads.SplashAdsUtils
 import android.content.Context
 import androidx.databinding.ObservableField
-import com.alibaba.android.arouter.facade.annotation.Route
+import com.therouter.router.Route
 
-@Route(path = SplashRouter.PATH_SPLASH_PROVIDER, group = SplashRouter.GROUP)
+@Route(path = SplashRouter.PATH_SPLASH_PROVIDER)
 class SplashProvider : ISplashProvider,
     BaseProviderExt(SplashProvider::class.java.simpleName) {
 
@@ -33,3 +33,6 @@ class SplashProvider : ISplashProvider,
         return SplashAdsUtils.instance.insertAds(list)
     }
 }
+
+@com.therouter.inject.ServiceProvider 
+fun theRouterServiceProvider(): afkt_replace.core.project.router.module.splash.ISplashProvider=SplashProvider()

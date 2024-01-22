@@ -1,6 +1,6 @@
 package afkt_replace.core.router
 
-import com.alibaba.android.arouter.facade.template.IProvider
+
 import dev.utils.LogPrintUtils
 
 /**
