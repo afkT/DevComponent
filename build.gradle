@@ -30,11 +30,11 @@ buildscript {
 
     dependencies {
         // https://mvnrepository.com/artifact/com.android.tools.build/gradle
-        classpath 'com.android.tools.build:gradle:7.2.1'
+        classpath 'com.android.tools.build:gradle:8.2.1'
         // kotlin https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-gradle-plugin
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        // ARouter AutoRegister https://mvnrepository.com/artifact/com.alibaba/arouter-register
-        classpath "com.alibaba:arouter-register:1.0.2"
+        // TheRouter AutoRegister https://mvnrepository.com/artifact/cn.therouter/plugin
+        classpath "cn.therouter:plugin-agp8:1.2.2-rc5"
     }
 }
 

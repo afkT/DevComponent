@@ -279,9 +279,9 @@ private val IMPL_CLASS_NAME = "afkt_replace.core.lib.channel.ChannelFlavorsIMPL"
 [VasDolly 多渠道打包]: https://github.com/Tencent/VasDolly
 [Android 官方多渠道 productFlavors]: https://developer.android.com/studio/build/build-variants
 [main]: https://github.com/afkT/DevComponent
-[apk_channel.gradle]: https://github.com/afkT/DevComponent/blob/arouter_single_core/file/gradle/channel/apk_channel.gradle
-[app/src]: https://github.com/afkT/DevComponent/blob/arouter_single_core/application/app/src
-[AbstractChannelFlavors]: https://github.com/afkT/DevComponent/blob/arouter_single_core/component/core/core/src/main/java/afkt_replace/core/channel/AbstractChannelFlavors.kt
-[core/AbstractChannelFlavors]: https://github.com/afkT/DevComponent/blob/arouter_single_core/component/core/core/src/main/java/afkt_replace/core/channel/AbstractChannelFlavors.kt
-[AppChannel]: https://github.com/afkT/DevComponent/blob/arouter_single_core/component/core/core/src/main/java/afkt_replace/core/base/core/AppChannel.kt
-[xiao_mi/ChannelFlavorsIMPL]: https://github.com/afkT/DevComponent/blob/arouter_single_core/application/app/src/xiao_mi/java/afkt_replace/core/lib/channel/ChannelFlavorsIMPL.kt
+[apk_channel.gradle]: https://github.com/afkT/DevComponent/blob/therouter_single_core/file/gradle/channel/apk_channel.gradle
+[app/src]: https://github.com/afkT/DevComponent/blob/therouter_single_core/application/app/src
+[AbstractChannelFlavors]: https://github.com/afkT/DevComponent/blob/therouter_single_core/component/core/core/src/main/java/afkt_replace/core/channel/AbstractChannelFlavors.kt
+[core/AbstractChannelFlavors]: https://github.com/afkT/DevComponent/blob/therouter_single_core/component/core/core/src/main/java/afkt_replace/core/channel/AbstractChannelFlavors.kt
+[AppChannel]: https://github.com/afkT/DevComponent/blob/therouter_single_core/component/core/core/src/main/java/afkt_replace/core/base/core/AppChannel.kt
+[xiao_mi/ChannelFlavorsIMPL]: https://github.com/afkT/DevComponent/blob/therouter_single_core/application/app/src/xiao_mi/java/afkt_replace/core/lib/channel/ChannelFlavorsIMPL.kt

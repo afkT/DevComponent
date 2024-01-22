@@ -3,109 +3,109 @@ dependencies {
 	// = dev =
 
 	// dev_app
-	"io.github.afkt:DevAppX:2.4.3",
+	"io.github.afkt:DevAppX:2.4.4",
 	// dev_assist
-	"io.github.afkt:DevAssist:1.3.9",
+	"io.github.afkt:DevAssist:1.4.0",
 	// dev_base
-	"io.github.afkt:DevBase:1.1.5",
+	"io.github.afkt:DevBase:1.1.6",
 	// dev_base_mvvm
-	"io.github.afkt:DevBaseMVVM:1.1.3",
+	"io.github.afkt:DevBaseMVVM:1.1.4",
 	// dev_mvvm
-	"io.github.afkt:DevMVVM:1.0.1",
+	"io.github.afkt:DevMVVM:1.0.2",
 	// dev_engine
-	"io.github.afkt:DevEngine:1.1.1",
+	"io.github.afkt:DevEngine:1.1.2",
 	// dev_java
-	"io.github.afkt:DevJava:1.4.9",
+	"io.github.afkt:DevJava:1.5.0",
 	// dev_widget
-	"io.github.afkt:DevWidgetX:1.2.1",
+	"io.github.afkt:DevWidgetX:1.2.2",
 	// dev_environment
-	"io.github.afkt:DevEnvironment:1.1.3",
+	"io.github.afkt:DevEnvironment:1.1.4",
 	// dev_environment_base
-	"io.github.afkt:DevEnvironmentBase:1.1.3",
+	"io.github.afkt:DevEnvironmentBase:1.1.4",
 	// dev_environment_compiler
-	"io.github.afkt:DevEnvironmentCompiler:1.1.3",
+	"io.github.afkt:DevEnvironmentCompiler:1.1.4",
 	// dev_environment_compiler_release
-	"io.github.afkt:DevEnvironmentCompilerRelease:1.1.3",
+	"io.github.afkt:DevEnvironmentCompilerRelease:1.1.4",
 	// dev_http_capture
-	"io.github.afkt:DevHttpCapture:1.1.4",
+	"io.github.afkt:DevHttpCapture:1.1.6",
 	// dev_http_capture_compiler
-	"io.github.afkt:DevHttpCaptureCompiler:1.1.4",
+	"io.github.afkt:DevHttpCaptureCompiler:1.1.6",
 	// dev_http_capture_compiler_release
-	"io.github.afkt:DevHttpCaptureCompilerRelease:1.1.4",
+	"io.github.afkt:DevHttpCaptureCompilerRelease:1.1.6",
 	// dev_http_manager
-	"io.github.afkt:DevHttpManager:1.0.4",
+	"io.github.afkt:DevHttpManager:1.0.5",
 	// dev_retrofit
-	"io.github.afkt:DevRetrofit:1.0.3",
+	"io.github.afkt:DevRetrofit:1.0.4",
 
 	// = kotlin =
 
 	// stdlib
 	"org.jetbrains.kotlin:kotlin-stdlib:1.7.10",
 	// core
-	"androidx.core:core-ktx:1.8.0",
+	"androidx.core:core-ktx:1.12.0",
 	// coroutines
-	"org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4",
+	"org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3",
 	// lifecycle_runtime
-	"androidx.lifecycle:lifecycle-runtime-ktx:2.5.1",
+	"androidx.lifecycle:lifecycle-runtime-ktx:2.7.0",
 	// lifecycle_viewmodel
-	"androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1",
+	"androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0",
 	// lifecycle_livedata
-	"androidx.lifecycle:lifecycle-livedata-ktx:2.5.1",
+	"androidx.lifecycle:lifecycle-livedata-ktx:2.7.0",
 	// lifecycle_viewmodel_savedstate
-	"androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1",
+	"androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0",
 	// lifecycle_common_java8
-	"androidx.lifecycle:lifecycle-common-java8:2.5.1",
+	"androidx.lifecycle:lifecycle-common-java8:2.7.0",
 	// room_runtime
-	"androidx.room:room-runtime:2.4.3",
+	"androidx.room:room-runtime:2.6.1",
 	// room_compiler
-	"androidx.room:room-compiler:2.4.3",
+	"androidx.room:room-compiler:2.6.1",
 	// room
-	"androidx.room:room-ktx:2.4.3",
+	"androidx.room:room-ktx:2.6.1",
 	// work_runtime
-	"androidx.work:work-runtime-ktx:2.7.1",
+	"androidx.work:work-runtime-ktx:2.9.0",
 	// datastore_preferences
-	"androidx.datastore:datastore-preferences:1.0.0",
+	"androidx.datastore:datastore-preferences:1.1.0-beta01",
 	// fragment
-	"androidx.fragment:fragment-ktx:1.5.2",
+	"androidx.fragment:fragment-ktx:1.6.2",
 	// activity
-	"androidx.activity:activity-ktx:1.5.1",
+	"androidx.activity:activity-ktx:1.8.2",
 	// navigation_fragment
-	"androidx.navigation:navigation-fragment-ktx:2.5.2",
+	"androidx.navigation:navigation-fragment-ktx:2.7.6",
 	// navigation_ui
-	"androidx.navigation:navigation-ui-ktx:2.5.2",
+	"androidx.navigation:navigation-ui-ktx:2.7.6",
 	// palette
 	"androidx.palette:palette-ktx:1.0.0",
 
 	// = androidx =
 
 	// appcompat
-	"androidx.appcompat:appcompat:1.5.1",
+	"androidx.appcompat:appcompat:1.6.1",
 	// appcompat_resources
-	"androidx.appcompat:appcompat-resources:1.5.1",
+	"androidx.appcompat:appcompat-resources:1.6.1",
 	// cardview
 	"androidx.cardview:cardview:1.0.0",
 	// recyclerview
-	"androidx.recyclerview:recyclerview:1.2.1",
+	"androidx.recyclerview:recyclerview:1.3.2",
 	// multidex
 	"androidx.multidex:multidex:2.0.1",
 	// constraint_layout
 	"androidx.constraintlayout:constraintlayout:2.1.4",
 	// viewpager2
-	"androidx.viewpager2:viewpager2:1.0.0",
+	"androidx.viewpager2:viewpager2:1.1.0-beta02",
 	// sqlite
-	"androidx.sqlite:sqlite:2.2.0",
+	"androidx.sqlite:sqlite:2.4.0",
 	// design
-	"com.google.android.material:material:1.6.1",
+	"com.google.android.material:material:1.11.0",
 	// work_runtime
-	"androidx.work:work-runtime:2.7.1",
+	"androidx.work:work-runtime:2.9.0",
 	// fragment
-	"androidx.fragment:fragment:1.5.2",
+	"androidx.fragment:fragment:1.6.2",
 	// activity
-	"androidx.activity:activity:1.5.1",
+	"androidx.activity:activity:1.8.2",
 	// navigation_fragment
-	"androidx.navigation:navigation-fragment:2.5.2",
+	"androidx.navigation:navigation-fragment:2.7.6",
 	// navigation_ui
-	"androidx.navigation:navigation-ui:2.5.2",
+	"androidx.navigation:navigation-ui:2.7.6",
 	// palette
 	"androidx.palette:palette:1.0.0",
 	// flexbox
@@ -113,36 +113,36 @@ dependencies {
 	// startup
 	"androidx.startup:startup-runtime:1.1.1",
 	// hilt_android
-	"com.google.dagger:hilt-android:2.43.2",
+	"com.google.dagger:hilt-android:2.50",
 	// hilt_android_compiler
-	"com.google.dagger:hilt-android-compiler:2.43.2",
+	"com.google.dagger:hilt-android-compiler:2.50",
 	// swiperefreshlayout
 	"androidx.swiperefreshlayout:swiperefreshlayout:1.1.0",
 	// exifinterface
-	"androidx.exifinterface:exifinterface:1.3.3",
+	"androidx.exifinterface:exifinterface:1.3.7",
 
 	// = compose =
 
 	// ui
-	"androidx.compose.ui:ui:1.2.1",
+	"androidx.compose.ui:ui:1.5.4",
 	// runtime
-	"androidx.compose.runtime:runtime:1.2.1",
+	"androidx.compose.runtime:runtime:1.5.4",
 	// runtime_livedata
-	"androidx.compose.runtime:runtime-livedata:1.2.1",
+	"androidx.compose.runtime:runtime-livedata:1.5.4",
 	// animation
-	"androidx.compose.animation:animation:1.2.1",
+	"androidx.compose.animation:animation:1.5.4",
 	// foundation
-	"androidx.compose.foundation:foundation:1.2.1",
+	"androidx.compose.foundation:foundation:1.5.4",
 	// material
-	"androidx.compose.material:material:1.2.1",
+	"androidx.compose.material:material:1.5.4",
 	// material3
-	"androidx.compose.material3:material3:1.0.0-beta02",
+	"androidx.compose.material3:material3:1.1.2",
 	// material3_window_size_class
-	"androidx.compose.material3:material3-window-size-class:1.0.0-beta02",
+	"androidx.compose.material3:material3-window-size-class:1.1.2",
 	// lifecycle_viewmodel
-	"androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1",
+	"androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0",
 	// navigation
-	"androidx.navigation:navigation-compose:2.5.2",
+	"androidx.navigation:navigation-compose:2.7.6",
 	// constraintlayout
 	"androidx.constraintlayout:constraintlayout-compose:1.0.1",
 
@@ -151,27 +151,27 @@ dependencies {
 	// gson
 	"com.google.code.gson:gson:2.10.1",
 	// fastjson2
-	"com.alibaba.fastjson2:fastjson2:2.0.34",
+	"com.alibaba.fastjson2:fastjson2:2.0.45",
 	// fastjson2_android
-	"com.alibaba.fastjson2:fastjson2:2.0.34.1.android4",
+	"com.alibaba.fastjson2:fastjson2:2.0.45.android4",
 	// glide
-	"com.github.bumptech.glide:glide:4.15.1",
+	"com.github.bumptech.glide:glide:4.16.0",
 	// glide_compiler
-	"com.github.bumptech.glide:compiler:4.15.1",
+	"com.github.bumptech.glide:compiler:4.16.0",
 	// glide_transformations
 	"jp.wasabeef:glide-transformations:4.3.0",
 	// mmkv
-	"com.tencent:mmkv:1.3.0",
+	"com.tencent:mmkv:1.3.2",
 	// eventbus
 	"org.greenrobot:eventbus:3.3.1",
 	// live_eventbus
 	"io.github.jeremyliao:live-event-bus-x:1.8.0",
 	// okio
-	"com.squareup.okio:okio:3.3.0",
+	"com.squareup.okio:okio:3.7.0",
 	// okhttp3
-	"com.squareup.okhttp3:okhttp:4.11.0",
+	"com.squareup.okhttp3:okhttp:4.12.0",
 	// okhttp3_logging
-	"com.squareup.okhttp3:logging-interceptor:4.11.0",
+	"com.squareup.okhttp3:logging-interceptor:4.12.0",
 	// retrofit
 	"com.squareup.retrofit2:retrofit:2.9.0",
 	// retrofit_gson
@@ -179,7 +179,7 @@ dependencies {
 	// retrofit_rxjava3
 	"com.squareup.retrofit2:adapter-rxjava3:2.9.0",
 	// lottie
-	"com.airbnb.android:lottie:6.0.1",
+	"com.airbnb.android:lottie:6.3.0",
 	// autosize
 	"com.github.JessYanCoding:AndroidAutoSize:v1.2.1",
 	// arouter_api
@@ -187,9 +187,9 @@ dependencies {
 	// arouter_compiler
 	"com.alibaba:arouter-compiler:1.5.2",
 	// therouter_apt
-	"cn.therouter:apt:1.2.0-beta3",
+	"cn.therouter:apt:1.2.2-rc5",
 	// therouter_router
-	"cn.therouter:router:1.2.0-beta3",
+	"cn.therouter:router:1.2.2-rc5",
 
 	// = aop =
 
@@ -211,21 +211,21 @@ dependencies {
 	// consecutiveScroller
 	"com.github.donkingliang:ConsecutiveScroller:4.6.4",
 	// banner
-	"io.github.youth5201314:banner:2.2.2",
+	"io.github.youth5201314:banner:2.2.3",
 	// smartrefreshlayout
-	"io.github.scwang90:refresh-layout-kernel:2.0.6",
+	"io.github.scwang90:refresh-layout-kernel:2.1.0",
 	// smartrefresh_header_classics
-	"io.github.scwang90:refresh-header-classics:2.0.6",
+	"io.github.scwang90:refresh-header-classics:2.1.0",
 	// smartrefresh_header_radar
-	"io.github.scwang90:refresh-header-radar:2.0.6",
+	"io.github.scwang90:refresh-header-radar:2.1.0",
 	// smartrefresh_header_falsify
-	"io.github.scwang90:refresh-header-falsify:2.0.6",
+	"io.github.scwang90:refresh-header-falsify:2.1.0",
 	// smartrefresh_header_material
-	"io.github.scwang90:refresh-header-material:2.0.6",
+	"io.github.scwang90:refresh-header-material:2.1.0",
 	// smartrefresh_header_two_level
-	"io.github.scwang90:refresh-header-two-level:2.0.6",
+	"io.github.scwang90:refresh-header-two-level:2.1.0",
 	// smartrefresh_footer_ball
-	"io.github.scwang90:refresh-footer-ball:2.0.6",
+	"io.github.scwang90:refresh-footer-ball:2.1.0",
 	// smartrefresh_footer_classics
-	"io.github.scwang90:refresh-footer-classics:2.0.6",
+	"io.github.scwang90:refresh-footer-classics:2.1.0",
 }
