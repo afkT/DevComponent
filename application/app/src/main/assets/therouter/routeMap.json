@@ -1,0 +1,128 @@
+[
+  {
+    "path": "/tv/popular/fragment",
+    "className": "afkt_replace.module.tv.feature.popular.PopularTvFragment",
+    "action": "",
+    "description": "",
+    "params": {}
+  },
+  {
+    "path": "/tv/tv/details/fragment",
+    "className": "afkt_replace.module.tv.feature.details.TvDetailsFragment",
+    "action": "",
+    "description": "",
+    "params": {}
+  },
+  {
+    "path": "/tv/tv/details/activity",
+    "className": "afkt_replace.module.tv.feature.details.TvDetailsActivity",
+    "action": "",
+    "description": "",
+    "params": {}
+  },
+  {
+    "path": "/tv/main",
+    "className": "afkt_replace.module.tv.MainContainerActivity",
+    "action": "",
+    "description": "",
+    "params": {}
+  },
+  {
+    "path": "/template/start/fragment",
+    "className": "afkt_replace.module.template.feature.start.StartFragment",
+    "action": "",
+    "description": "",
+    "params": {}
+  },
+  {
+    "path": "/template/end/fragment",
+    "className": "afkt_replace.module.template.feature.end.EndFragment",
+    "action": "",
+    "description": "",
+    "params": {}
+  },
+  {
+    "path": "/template/end/activity",
+    "className": "afkt_replace.module.template.feature.end.EndActivity",
+    "action": "",
+    "description": "",
+    "params": {}
+  },
+  {
+    "path": "/template/main",
+    "className": "afkt_replace.module.template.MainContainerActivity",
+    "action": "",
+    "description": "",
+    "params": {}
+  },
+  {
+    "path": "/splash/launcher",
+    "className": "afkt_replace.module.splash.AppLauncherActivity",
+    "action": "",
+    "description": "",
+    "params": {}
+  },
+  {
+    "path": "/person/popular/fragment",
+    "className": "afkt_replace.module.person.feature.popular.PopularPersonFragment",
+    "action": "",
+    "description": "",
+    "params": {}
+  },
+  {
+    "path": "/person/person/details/fragment",
+    "className": "afkt_replace.module.person.feature.details.PersonDetailsFragment",
+    "action": "",
+    "description": "",
+    "params": {}
+  },
+  {
+    "path": "/person/person/details/activity",
+    "className": "afkt_replace.module.person.feature.details.PersonDetailsActivity",
+    "action": "",
+    "description": "",
+    "params": {}
+  },
+  {
+    "path": "/person/main",
+    "className": "afkt_replace.module.person.MainContainerActivity",
+    "action": "",
+    "description": "",
+    "params": {}
+  },
+  {
+    "path": "/movie/popular/fragment",
+    "className": "afkt_replace.module.movie.feature.popular.PopularMovieFragment",
+    "action": "",
+    "description": "",
+    "params": {}
+  },
+  {
+    "path": "/movie/movie/details/fragment",
+    "className": "afkt_replace.module.movie.feature.details.MovieDetailsFragment",
+    "action": "",
+    "description": "",
+    "params": {}
+  },
+  {
+    "path": "/movie/movie/details/activity",
+    "className": "afkt_replace.module.movie.feature.details.MovieDetailsActivity",
+    "action": "",
+    "description": "",
+    "params": {}
+  },
+  {
+    "path": "/movie/main",
+    "className": "afkt_replace.module.movie.MainContainerActivity",
+    "action": "",
+    "description": "",
+    "params": {}
+  },
+  {
+    "path": "/main/main",
+    "className": "afkt_replace.module.main.MainContainerActivity",
+    "action": "",
+    "description": "",
+    "params": {}
+  }
+]

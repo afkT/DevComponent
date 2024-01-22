@@ -6,9 +6,9 @@ apply from: rootProject.file(files.task_generate_deps_file_gradle)
 buildscript {
 
     // Kotlin 版本
-    ext.kotlin_version = "1.7.10"
-    ext.kotlin_stdlib = "1.7.10"
-    ext.matrix_version = "2.0.8"
+    ext.kotlin_version = "1.9.22"
+    ext.kotlin_stdlib = "1.9.22"
+    ext.matrix_version = "2.1.0"
 
     repositories { // 该 repositories 用于 buildscript dependencies 插件、脚本依赖加载
         // AliRepo 阿里仓库服务 https://maven.aliyun.com/mvn/view

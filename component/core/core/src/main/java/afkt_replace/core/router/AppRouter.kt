@@ -2,10 +2,8 @@ package afkt_replace.core.router
 
 import android.content.Context
 import android.content.Intent
-import android.net.Uri
-import com.alibaba.android.arouter.core.LogisticsCenter
-import com.therouter.router.Navigator
 import com.therouter.TheRouter
+import com.therouter.router.Navigator
 import dev.utils.LogPrintUtils
 
 /**
@@ -20,31 +18,10 @@ object AppRouter {
     /**
      * 构建 Router Navigator
      * @param path router Path
-     * @param group router Group
      * @return [Navigator]
      */
-    @Deprecated(
-        "推荐使用 buildByUri 方法", ReplaceWith(
-            "TheRouter.build(path, group)",
-            "com.therouter.TheRouter"
-        )
-    )
-    fun build(
-        path: String,
-        group: String
-    ): Navigator {
-        return TheRouter.build(path, group)
-    }
-
-    /**
-     * 构建 Router Navigator
-     * @param path router Path
-     * @return [Navigator]
-     */
-    fun buildByUri(path: String): Navigator {
-        // path 必须包含 group => /group/path
-        val routerURI = Uri.parse(path)
-        return TheRouter.build(routerURI)
+    fun build(path: String): Navigator {
+        return TheRouter.build(path)
     }
 
     /**
@@ -58,11 +35,7 @@ object AppRouter {
         postcard: Navigator
     ): Intent? {
         return try {
-            LogisticsCenter.completion(postcard)
-            // postcard.context
-            val intent = Intent(context, postcard.destination)
-            intent.putExtras(postcard.extras)
-            intent
+            return postcard.createIntent(context)
         } catch (e: Exception) {
             LogPrintUtils.eTag(TAG, e, "routerIntent")
             null
@@ -75,7 +48,7 @@ object AppRouter {
      * @return instance of service
      */
     fun <T> navigation(service: Class<T>): T? {
-        return TheRouter.navigation(service)
+        return TheRouter.get(service)
     }
 
     /**

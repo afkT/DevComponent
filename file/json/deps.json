@@ -19,7 +19,7 @@
         "dev_retrofit": "io.github.afkt:DevRetrofit:1.0.4"
     },
     "kotlin": {
-        "stdlib": "org.jetbrains.kotlin:kotlin-stdlib:1.7.10",
+        "stdlib": "org.jetbrains.kotlin:kotlin-stdlib:1.9.22",
         "core": "androidx.core:core-ktx:1.12.0",
         "coroutines": "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3",
         "lifecycle_runtime": "androidx.lifecycle:lifecycle-runtime-ktx:2.7.0",

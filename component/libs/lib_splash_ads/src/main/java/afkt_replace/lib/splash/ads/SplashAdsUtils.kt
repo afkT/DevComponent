@@ -42,7 +42,7 @@ class SplashAdsUtils : ISplashProvider {
 
     // =
 
-    override fun init(context: Context?) {
+    fun init() {
         splashAdsOb.set(null)
         // 初始化 Splash 模块 KeyValue Engine
         DevKeyValueEngine.setEngine(

@@ -1,6 +1,5 @@
 package afkt_replace.core.router
 
-
 import dev.utils.LogPrintUtils
 
 /**
@@ -8,7 +7,7 @@ import dev.utils.LogPrintUtils
  * @author Ttt
  * Router IProvider 基础 Provider 类, 方便统一初始化控制、打印日志等
  */
-interface BaseProvider : IProvider
+interface BaseProvider
 
 // 初始化 TAG
 const val PROVIDER_INIT_TAG = "Provider_Init"

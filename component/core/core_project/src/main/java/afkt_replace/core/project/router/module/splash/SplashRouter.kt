@@ -34,6 +34,6 @@ object SplashRouter {
      * 便于代码跳转直观、对外避免跳转错 [GROUP] ( Module )
      */
     internal fun build(path: String): Navigator {
-        return AppRouter.buildByUri(path)
+        return AppRouter.build(path)
     }
 }
