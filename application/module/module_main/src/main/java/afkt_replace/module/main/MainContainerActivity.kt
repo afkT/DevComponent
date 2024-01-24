@@ -11,11 +11,11 @@ import afkt_replace.core.lib.router.module.movie.MovieNav
 import afkt_replace.module.main.databinding.MainAppContainerBinding
 import afkt_replace.module.main.feature.adapter.MainPagerAdapter
 import androidx.viewpager.widget.ViewPager
-import com.alibaba.android.arouter.facade.annotation.Route
+import com.therouter.router.Route
 import dev.expand.engine.json.fromJson
 import dev.mvvm.utils.toResString
 
-@Route(path = MainRouter.PATH_MAIN, group = MainRouter.GROUP)
+@Route(path = MainRouter.PATH_MAIN)
 class MainContainerActivity : BaseAppActivity<MainAppContainerBinding, MainViewModel>(
     R.layout.main_app_container, BR.viewModel, simple_UITheme = {
         it.defaultMainContainerUITheme()

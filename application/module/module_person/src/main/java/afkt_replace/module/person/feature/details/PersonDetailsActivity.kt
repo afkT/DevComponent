@@ -8,9 +8,9 @@ import afkt_replace.module.person.PersonViewModel
 import afkt_replace.module.person.R
 import afkt_replace.module.person.databinding.PersonActivityDetailsBinding
 import androidx.navigation.fragment.NavHostFragment
-import com.alibaba.android.arouter.facade.annotation.Route
+import com.therouter.router.Route
 
-@Route(path = PersonRouter.PATH_PERSON_DETAILS_ACTIVITY, group = PersonRouter.GROUP)
+@Route(path = PersonRouter.PATH_PERSON_DETAILS_ACTIVITY)
 class PersonDetailsActivity : BaseAppActivity<PersonActivityDetailsBinding, PersonViewModel>(
     R.layout.person_activity_details, BR.viewModel, simple_UITheme = {
         it.defaultActivityBlankUITheme()

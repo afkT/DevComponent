@@ -8,9 +8,9 @@ import afkt_replace.module.movie.MovieViewModel
 import afkt_replace.module.movie.R
 import afkt_replace.module.movie.databinding.MovieActivityDetailsBinding
 import androidx.navigation.fragment.NavHostFragment
-import com.alibaba.android.arouter.facade.annotation.Route
+import com.therouter.router.Route
 
-@Route(path = MovieRouter.PATH_MOVIE_DETAILS_ACTIVITY, group = MovieRouter.GROUP)
+@Route(path = MovieRouter.PATH_MOVIE_DETAILS_ACTIVITY)
 class MovieDetailsActivity : BaseAppActivity<MovieActivityDetailsBinding, MovieViewModel>(
     R.layout.movie_activity_details, BR.viewModel, simple_UITheme = {
         it.defaultActivityBlankUITheme()

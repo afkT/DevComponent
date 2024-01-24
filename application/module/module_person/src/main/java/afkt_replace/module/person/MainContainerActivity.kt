@@ -6,10 +6,10 @@ import afkt_replace.core.lib.base.controller.ui.ext.setExitBackIntercept
 import afkt_replace.core.lib.base.controller.ui.theme.defaultMainContainerUITheme
 import afkt_replace.core.lib.router.module.person.PersonRouter
 import afkt_replace.module.person.databinding.PersonAppContainerBinding
-import com.alibaba.android.arouter.facade.annotation.Route
+import com.therouter.router.Route
 import dev.mvvm.utils.toResString
 
-@Route(path = PersonRouter.PATH_MAIN, group = PersonRouter.GROUP)
+@Route(path = PersonRouter.PATH_MAIN)
 class MainContainerActivity : BaseAppActivity<PersonAppContainerBinding, PersonViewModel>(
     R.layout.person_app_container, BR.viewModel, simple_UITheme = {
         it.defaultMainContainerUITheme()

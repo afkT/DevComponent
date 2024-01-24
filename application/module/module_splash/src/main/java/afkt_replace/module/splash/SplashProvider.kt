@@ -3,18 +3,16 @@ package afkt_replace.module.splash
 import afkt_replace.core.lib.bean.splash.SplashAds
 import afkt_replace.core.lib.router.BaseProviderExt
 import afkt_replace.core.lib.router.module.splash.ISplashProvider
-import afkt_replace.core.lib.router.module.splash.SplashRouter
 import afkt_replace.lib.splash.ads.SplashAdsUtils
-import android.content.Context
 import androidx.databinding.ObservableField
-import com.alibaba.android.arouter.facade.annotation.Route
+import com.therouter.inject.ServiceProvider
 
-@Route(path = SplashRouter.PATH_SPLASH_PROVIDER, group = SplashRouter.GROUP)
+//@Route(path = SplashRouter.PATH_SPLASH_PROVIDER)
 class SplashProvider : ISplashProvider,
     BaseProviderExt(SplashProvider::class.java.simpleName) {
 
-    override fun init(context: Context?) {
-        SplashAdsUtils.instance.init(context)
+    init {
+        SplashAdsUtils.instance.init()
     }
 
     // ===================
@@ -33,3 +31,6 @@ class SplashProvider : ISplashProvider,
         return SplashAdsUtils.instance.insertAds(list)
     }
 }
+
+@ServiceProvider(returnType = ISplashProvider::class)
+fun theRouterServiceProvider(): ISplashProvider = SplashProvider()

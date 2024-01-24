@@ -5,9 +5,9 @@ import afkt_replace.core.lib.router.module.person.PersonRouter
 import afkt_replace.module.person.BR
 import afkt_replace.module.person.R
 import afkt_replace.module.person.databinding.PersonFragmentPopularBinding
-import com.alibaba.android.arouter.facade.annotation.Route
+import com.therouter.router.Route
 
-@Route(path = PersonRouter.PATH_POPULAR_FRAGMENT, group = PersonRouter.GROUP)
+@Route(path = PersonRouter.PATH_POPULAR_FRAGMENT)
 class PopularPersonFragment : BaseLoadingSkeletonFragment<PersonFragmentPopularBinding, PopularPersonViewModel>(
     R.layout.person_fragment_popular, BR.viewModel, simple_Agile = {
         // 初始化 PopularPersonFragment ViewModel 调用

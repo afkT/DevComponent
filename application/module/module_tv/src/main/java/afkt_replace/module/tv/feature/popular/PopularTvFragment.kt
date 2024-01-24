@@ -5,9 +5,9 @@ import afkt_replace.core.lib.router.module.tv.TvRouter
 import afkt_replace.module.tv.BR
 import afkt_replace.module.tv.R
 import afkt_replace.module.tv.databinding.TvFragmentPopularBinding
-import com.alibaba.android.arouter.facade.annotation.Route
+import com.therouter.router.Route
 
-@Route(path = TvRouter.PATH_POPULAR_FRAGMENT, group = TvRouter.GROUP)
+@Route(path = TvRouter.PATH_POPULAR_FRAGMENT)
 class PopularTvFragment : BaseLoadingSkeletonFragment<TvFragmentPopularBinding, PopularTvViewModel>(
     R.layout.tv_fragment_popular, BR.viewModel, simple_Agile = {
         // 初始化 PopularTvFragment ViewModel 调用

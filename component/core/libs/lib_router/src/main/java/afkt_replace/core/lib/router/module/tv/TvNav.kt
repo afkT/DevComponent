@@ -1,7 +1,7 @@
 package afkt_replace.core.lib.router.module.tv
 
 import afkt_replace.core.lib.config.ParamConst
-import com.alibaba.android.arouter.facade.Postcard
+import com.therouter.router.Navigator
 
 /**
  * detail: 具体 navigation 类
@@ -19,7 +19,7 @@ object TvNav {
      * 内部传入 GROUP 尽量各个模块直接通过对应 [build] 方法跳转
      * 便于代码跳转直观、对外避免跳转错 GROUP ( Module )
      */
-    fun build(path: String): Postcard {
+    fun build(path: String): Navigator {
         return TvRouter.build(path)
     }
 
@@ -42,12 +42,12 @@ object TvNav {
      * 构建 Tv Details Path Router
      * @param tvId tv id
      * @param title tv title
-     * @return Postcard
+     * @return Navigator
      */
     fun buildTvDetails(
         tvId: String,
         title: String?
-    ): Postcard {
+    ): Navigator {
         return build(TvRouter.PATH_TV_DETAILS_ACTIVITY).apply {
             withString(ParamConst.TV_ID, tvId)
             withString(ParamConst.TITLE, title)

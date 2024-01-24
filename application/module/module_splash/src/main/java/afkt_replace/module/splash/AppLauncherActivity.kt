@@ -8,7 +8,7 @@ import afkt_replace.lib.splash.ads.SplashAdsEvent
 import afkt_replace.module.splash.databinding.SplashActivityBinding
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
-import com.alibaba.android.arouter.facade.annotation.Route
+import com.therouter.router.Route
 import com.jeremyliao.liveeventbus.LiveEventBus
 import dev.expand.engine.json.toJson
 import dev.utils.app.ActivityUtils
@@ -16,7 +16,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import me.jessyan.autosize.internal.CancelAdapt
 
-@Route(path = SplashRouter.PATH_LAUNCHER, group = SplashRouter.GROUP)
+@Route(path = SplashRouter.PATH_LAUNCHER)
 class AppLauncherActivity : BaseAppActivity<SplashActivityBinding, SplashViewModel>(
     R.layout.splash_activity, BR.viewModel, simple_UITheme = {
         it.defaultAppLauncherUITheme()
@@ -31,6 +31,7 @@ class AppLauncherActivity : BaseAppActivity<SplashActivityBinding, SplashViewMod
     override fun onBackPressed() {
         ActivityUtils.getManager().finishAllActivity()
         finish()
+        super.onBackPressed()
     }
 
     override fun initListener() {

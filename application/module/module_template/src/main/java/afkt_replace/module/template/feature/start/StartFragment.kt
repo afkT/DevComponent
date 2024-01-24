@@ -5,9 +5,9 @@ import afkt_replace.core.lib.router.module.template.TemplateRouter
 import afkt_replace.module.template.BR
 import afkt_replace.module.template.R
 import afkt_replace.module.template.databinding.TemplateFragmentStartBinding
-import com.alibaba.android.arouter.facade.annotation.Route
+import com.therouter.router.Route
 
-@Route(path = TemplateRouter.PATH_START_FRAGMENT, group = TemplateRouter.GROUP)
+@Route(path = TemplateRouter.PATH_START_FRAGMENT)
 class StartFragment : BaseLoadingSkeletonFragment<TemplateFragmentStartBinding, StartViewModel>(
     R.layout.template_fragment_start, BR.viewModel, simple_Agile = {
         // 初始化 StartFragment ViewModel 调用

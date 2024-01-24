@@ -5,9 +5,9 @@ import afkt_replace.core.lib.router.module.movie.MovieRouter
 import afkt_replace.module.movie.BR
 import afkt_replace.module.movie.R
 import afkt_replace.module.movie.databinding.MovieFragmentPopularBinding
-import com.alibaba.android.arouter.facade.annotation.Route
+import com.therouter.router.Route
 
-@Route(path = MovieRouter.PATH_POPULAR_FRAGMENT, group = MovieRouter.GROUP)
+@Route(path = MovieRouter.PATH_POPULAR_FRAGMENT)
 class PopularMovieFragment : BaseLoadingSkeletonFragment<MovieFragmentPopularBinding, PopularMovieViewModel>(
     R.layout.movie_fragment_popular, BR.viewModel, simple_Agile = {
         // 初始化 PopularMovieFragment ViewModel 调用

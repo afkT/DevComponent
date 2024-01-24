@@ -10,7 +10,7 @@ import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelStore
 import androidx.lifecycle.ViewModelStoreOwner
-import com.alibaba.android.arouter.launcher.ARouter
+import com.therouter.TheRouter
 import dev.DevUtils
 import dev.base.utils.assist.DevBaseViewModelAssist
 
@@ -28,14 +28,8 @@ open class AppContext : BaseAppContext(),
         // 全局静态 Application
         application = this
 
-        if (AppDebug.isOpenDebug()) {
-            ARouter.openLog()
-            ARouter.openDebug()
-            // 打印日志的时候打印线程堆栈
-            ARouter.printStackTrace()
-        }
         // 尽可能的早调用, 推荐在 Application 中初始化
-        ARouter.init(this)
+        TheRouter.init(this)
 
         // 全局 ViewModel
         mAppViewModelStore = ViewModelStore()
@@ -125,7 +119,6 @@ open class AppContext : BaseAppContext(),
     // ViewModelStore
     private lateinit var mAppViewModelStore: ViewModelStore
 
-    override fun getViewModelStore(): ViewModelStore {
-        return mAppViewModelStore
-    }
+    override val viewModelStore: ViewModelStore
+        get() = mAppViewModelStore
 }

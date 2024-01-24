@@ -1,7 +1,7 @@
 package afkt_replace.core.lib.router.module.person
 
 import afkt_replace.core.lib.config.ParamConst
-import com.alibaba.android.arouter.facade.Postcard
+import com.therouter.router.Navigator
 
 /**
  * detail: 具体 navigation 类
@@ -19,7 +19,7 @@ object PersonNav {
      * 内部传入 GROUP 尽量各个模块直接通过对应 [build] 方法跳转
      * 便于代码跳转直观、对外避免跳转错 GROUP ( Module )
      */
-    fun build(path: String): Postcard {
+    fun build(path: String): Navigator {
         return PersonRouter.build(path)
     }
 
@@ -42,12 +42,12 @@ object PersonNav {
      * 构建 Person Details Path Router
      * @param personId person id
      * @param name person name
-     * @return Postcard
+     * @return Navigator
      */
     fun buildPersonDetails(
         personId: String,
         name: String?
-    ): Postcard {
+    ): Navigator {
         return build(PersonRouter.PATH_PERSON_DETAILS_ACTIVITY).apply {
             withString(ParamConst.PERSON_ID, personId)
             withString(ParamConst.NAME, name)
