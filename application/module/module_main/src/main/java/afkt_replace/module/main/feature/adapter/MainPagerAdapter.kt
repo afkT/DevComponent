@@ -21,25 +21,25 @@ class MainPagerAdapter(
             0 -> {
                 MovieNav.build(
                     MovieRouter.PATH_POPULAR_FRAGMENT
-                ).navigation() as Fragment
+                ).createFragment()!!
             }
 
             1 -> {
                 TvNav.build(
                     TvRouter.PATH_POPULAR_FRAGMENT
-                ).navigation() as Fragment
+                ).createFragment()!!
             }
 
             2 -> {
                 PersonNav.build(
                     PersonRouter.PATH_POPULAR_FRAGMENT
-                ).navigation() as Fragment
+                ).createFragment()!!
             }
 
             else -> {
                 MovieNav.build(
                     MovieRouter.PATH_POPULAR_FRAGMENT
-                ).navigation() as Fragment
+                ).createFragment()!!
             }
         }
     }
