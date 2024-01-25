@@ -125,7 +125,6 @@ open class AppContext : BaseAppContext(),
     // ViewModelStore
     private lateinit var mAppViewModelStore: ViewModelStore
 
-    override fun getViewModelStore(): ViewModelStore {
-        return mAppViewModelStore
-    }
+    override val viewModelStore: ViewModelStore
+        get() = mAppViewModelStore
 }
