@@ -3,6 +3,11 @@
     单 core lib 实现基础核心开发库，减少 lib module 数量及维护开发难度
 ```
 
+```
+    arouter_agp7 分支使用 Gradle 7.x 版本 ( 第三方库及 Dev 系列库非最新版本 )
+    arouter 分支使用 Gradle 8.x 版本 ( 实时同步更新 )
+```
+
 
 <h1 align="center">DevComponent</h1>
 
