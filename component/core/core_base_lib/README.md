@@ -99,7 +99,7 @@ dependencies {
     // ====================
 
     // LiveEventBus 消息总线 https://github.com/JeremyLiao/LiveEventBus
-    api deps.lib.live_eventbus
+    api deps.lib.live_eventbus_fork
     // 基于 mmap 的高性能通用 key-value 组件 https://github.com/Tencent/MMKV/blob/master/readme_cn.md
     api deps.lib.mmkv
     // 今日头条屏幕适配方案终极版 https://github.com/JessYanCoding/AndroidAutoSize/blob/master/README-zh.md
