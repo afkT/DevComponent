@@ -2,6 +2,11 @@
     该分支基于 ARouter 框架实现组件化路由导航，多 core lib 实现基础核心开发库
 ```
 
+```
+    arouter_agp7 分支使用 Gradle 7.x 版本 ( 第三方库及 Dev 系列库非最新版本 )
+    arouter_agp8 分支使用 Gradle 8.x 版本
+```
+
 
 <h1 align="center">DevComponent</h1>
 

@@ -1,5 +1,16 @@
 dependencies {
 
+	// = build =
+
+	// kotlin_gradle_plugin
+	"org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.10",
+	// dokka_gradle_plugin
+	"org.jetbrains.dokka:dokka-gradle-plugin:1.7.10",
+	// android_maven_gradle_plugin
+	"com.github.dcendents:android-maven-gradle-plugin:2.1",
+	// gradle_bintray_plugin
+	"com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.5",
+
 	// = dev =
 
 	// dev_app
@@ -166,6 +177,8 @@ dependencies {
 	"org.greenrobot:eventbus:3.3.1",
 	// live_eventbus
 	"io.github.jeremyliao:live-event-bus-x:1.8.0",
+	// live_eventbus_fork
+	"com.github.michaellee123:LiveEventBus:1.8.14",
 	// okio
 	"com.squareup.okio:okio:3.3.0",
 	// okhttp3
@@ -186,10 +199,20 @@ dependencies {
 	"com.alibaba:arouter-api:1.5.2",
 	// arouter_compiler
 	"com.alibaba:arouter-compiler:1.5.2",
+	// arouter_register
+	"com.alibaba:arouter-register:1.0.2",
+	// arouter_api_fork
+	"com.github.jadepeakpoet.ARouter:arouter-api:1.0.3",
+	// arouter_compiler_fork
+	"com.github.jadepeakpoet.ARouter:arouter-compiler:1.0.3",
+	// arouter_register_fork
+	"com.github.jadepeakpoet.ARouter:arouter-register:1.0.3",
 	// therouter_apt
-	"cn.therouter:apt:1.2.0-beta3",
+	"cn.therouter:apt:1.2.2-rc5",
 	// therouter_router
-	"cn.therouter:router:1.2.0-beta3",
+	"cn.therouter:router:1.2.2-rc5",
+	// therouter_plugin
+	"cn.therouter:plugin-agp8:1.2.2-rc5",
 
 	// = aop =
 
