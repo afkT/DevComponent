@@ -4,7 +4,7 @@
 
 ```
     arouter_agp7 分支使用 Gradle 7.x 版本 ( 第三方库及 Dev 系列库非最新版本 )
-    arouter_agp8 分支使用 Gradle 8.x 版本
+    arouter 分支使用 Gradle 8.x 版本 ( 实时同步更新 )
 ```
 
 
