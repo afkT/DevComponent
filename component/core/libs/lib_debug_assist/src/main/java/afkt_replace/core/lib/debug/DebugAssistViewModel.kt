@@ -7,7 +7,7 @@ import androidx.lifecycle.viewModelScope
 import dev.DevHttpCapture
 import dev.DevHttpCaptureCompiler
 import dev.environment.DevEnvironment
-import dev.environment.DevEnvironmentActivity
+import dev.environment.DevEnvironmentUtils
 import dev.mvvm.command.BindingConsumer
 import dev.mvvm.utils.toResString
 import dev.utils.app.ScreenUtils
@@ -21,7 +21,7 @@ class DebugAssistViewModel : BaseViewModel() {
     // 切换环境
     val onClickEnvironment = object : BindingConsumer<View> {
         override fun accept(value: View) {
-            DevEnvironmentActivity.start(value.context)
+            DevEnvironmentUtils.start(value.context)
         }
     }
 

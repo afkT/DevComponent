@@ -2,11 +2,32 @@
 // = Module 构建配置 =
 // =================
 
+// 获取 lib 名 => settings.gradle 例 include ':core_lib_engine'
+def libName = project.getName() // core_lib_engine
+// 是否启用模块 ( 在模块化情况下被其他模块依赖, 为 true 时则无法运行为 APP )
+def moduleEnable = false
+// 属于组件化模块则进行校验
+if (libName.startsWith("module_")) {
+    def modular = modularVersion[libName]
+    if (modular != null) {
+        moduleEnable = modular.moduleEnable
+    }
+}
+
+// ===============
+// = 组件化核心实现 =
+// ===============
+
 // 模块化编译开关 ( true = 每个模块都是独立应用, false = 整合运行 )
 def isModular = isModular.toBoolean()
 
+// 支持组件化下模块依赖
 if (isModular) { // 每个模块都是独立应用
-    apply from: rootProject.file(files.build_application_gradle)
+    if (moduleEnable) {
+        apply from: rootProject.file(files.build_library_module_gradle)
+    } else {
+        apply from: rootProject.file(files.build_application_gradle)
+    }
 } else { // 整合运行, 每个 module 都是 library
     apply from: rootProject.file(files.build_library_module_gradle)
 }
@@ -28,9 +49,14 @@ android {
 
             // 判断是否模块化, 加载不同的 AndroidManifest
             if (isModular) {
-                manifest.srcFile "buildSrc/AndroidManifest.xml"
-                if (!manifest.srcFile.exists()) { // 解决没 buildSrc/xml 文件无法 sync、clean 操作
+                // 启用模块则无法运行为 APP
+                if (moduleEnable) {
                     manifest.srcFile "src/main/AndroidManifest.xml"
+                } else {
+                    manifest.srcFile "buildSrc/AndroidManifest.xml"
+                    if (!manifest.srcFile.exists()) { // 解决没 buildSrc/xml 文件无法 sync、clean 操作
+                        manifest.srcFile "src/main/AndroidManifest.xml"
+                    }
                 }
             } else {
                 manifest.srcFile "src/main/AndroidManifest.xml"

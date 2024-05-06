@@ -64,6 +64,8 @@ ext {
                     applicationId : "afkt_replace.component",
                     // 模块名
                     moduleName    : "APP",
+                    // 是否启用模块 ( 在模块化情况下被其他模块依赖, 为 true 时则无法运行为 APP )
+                    moduleEnable  : false,
                     // 模块功能版本标识 ( 需求、RP 版本 )
                     featureVersion: "23.01.01",
             ],
@@ -77,6 +79,8 @@ ext {
                     applicationId : "afkt_replace.module.splash",
                     // 模块名
                     moduleName    : "SPLASH",
+                    // 是否启用模块 ( 在模块化情况下被其他模块依赖, 为 true 时则无法运行为 APP )
+                    moduleEnable  : false,
                     // 模块功能版本标识 ( 需求、RP 版本 )
                     featureVersion: "23.01.01",
             ],
@@ -90,6 +94,8 @@ ext {
                     applicationId : "afkt_replace.module.main",
                     // 模块名
                     moduleName    : "MAIN",
+                    // 是否启用模块 ( 在模块化情况下被其他模块依赖, 为 true 时则无法运行为 APP )
+                    moduleEnable  : false,
                     // 模块功能版本标识 ( 需求、RP 版本 )
                     featureVersion: "23.01.01",
             ],
@@ -103,6 +109,8 @@ ext {
                     applicationId : "afkt_replace.module.movie",
                     // 模块名
                     moduleName    : "MOVIE",
+                    // 是否启用模块 ( 在模块化情况下被其他模块依赖, 为 true 时则无法运行为 APP )
+                    moduleEnable  : false,
                     // 模块功能版本标识 ( 需求、RP 版本 )
                     featureVersion: "23.01.01",
             ],
@@ -116,6 +124,8 @@ ext {
                     applicationId : "afkt_replace.module.person",
                     // 模块名
                     moduleName    : "PERSON",
+                    // 是否启用模块 ( 在模块化情况下被其他模块依赖, 为 true 时则无法运行为 APP )
+                    moduleEnable  : false,
                     // 模块功能版本标识 ( 需求、RP 版本 )
                     featureVersion: "23.01.01",
             ],
@@ -129,6 +139,8 @@ ext {
                     applicationId : "afkt_replace.module.tv",
                     // 模块名
                     moduleName    : "TV",
+                    // 是否启用模块 ( 在模块化情况下被其他模块依赖, 为 true 时则无法运行为 APP )
+                    moduleEnable  : false,
                     // 模块功能版本标识 ( 需求、RP 版本 )
                     featureVersion: "23.01.01",
             ],
@@ -142,6 +154,8 @@ ext {
                     applicationId : "afkt_replace.module.template",
                     // 模块名
                     moduleName    : "TEMPLATE",
+                    // 是否启用模块 ( 在模块化情况下被其他模块依赖, 为 true 时则无法运行为 APP )
+                    moduleEnable  : false,
                     // 模块功能版本标识 ( 需求、RP 版本 )
                     featureVersion: "23.01.01",
             ],

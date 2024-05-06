@@ -1,7 +1,25 @@
 apply from: rootProject.file(files.build_module_gradle)
 
+// 模块化编译开关 ( true = 每个模块都是独立应用, false = 整合运行 )
+def isModular = isModular.toBoolean()
+
 dependencies {
 
     // TMDB 通用 UI lib
     implementation project(':lib_tmdb_ui')
+
+    // ==============
+    // = 是否启用模块 =
+    // ==============
+
+    // 组件化情况下, 进行判断是否模块依赖
+    if (isModular) {
+        def modular = modularVersion['module_movie']
+        if (modular != null) {
+            def moduleEnable = modular.moduleEnable
+            if (moduleEnable) {
+                implementation project(':module_movie')
+            }
+        }
+    }
 }
