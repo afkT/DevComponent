@@ -1,12 +1,14 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 //apply from: rootProject.file("file/gradle/config.gradle")
 //apply from: rootProject.file("file/gradle/config_split.gradle")
+//apply from: rootProject.file("file/gradle/config_files.gradle")
 //apply from: rootProject.file(files.task_generate_deps_file_gradle)
 
 buildscript {
 
     apply from: rootProject.file("file/gradle/config.gradle")
     apply from: rootProject.file("file/gradle/config_split.gradle")
+    apply from: rootProject.file("file/gradle/config_files.gradle")
     apply from: rootProject.file(files.task_generate_deps_file_gradle)
 
     repositories { // 该 repositories 用于 buildscript dependencies 插件、脚本依赖加载
@@ -29,7 +31,7 @@ buildscript {
 
     dependencies {
         // https://mvnrepository.com/artifact/com.android.tools.build/gradle
-        classpath 'com.android.tools.build:gradle:8.4.0'
+        classpath 'com.android.tools.build:gradle:8.5.2'
         // kotlin https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-gradle-plugin
         classpath rootProject.ext.deps.build.kotlin_gradle_plugin
         // TheRouter AutoRegister https://mvnrepository.com/artifact/cn.therouter/plugin
@@ -58,12 +60,12 @@ allprojects {
 //    }
 }
 
-task clean(type: Delete) {
+tasks.register('clean', Delete) {
     delete rootProject.buildDir
 }
 
 // 全局编码设置
-tasks.withType(JavaCompile) {
+tasks.withType(JavaCompile).configureEach {
     options.encoding = "UTF-8"
 }
 

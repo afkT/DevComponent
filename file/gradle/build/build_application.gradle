@@ -73,7 +73,6 @@ android {
     }
 
     lintOptions {
-        // https://blog.csdn.net/berber78/article/details/60766091
         abortOnError false
         checkReleaseBuilds false
     }
@@ -95,6 +94,6 @@ dependencies {
 }
 
 // 编码设置
-tasks.withType(JavaCompile) {
+tasks.withType(JavaCompile).configureEach {
     options.encoding = "UTF-8"
 }

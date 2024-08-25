@@ -2,7 +2,7 @@ ext {
     versions = [
 
             // 支持最小的 SDK
-            lib_minSdkVersion                        : 14,
+            lib_minSdkVersion                        : 21,
             // 支持最小的 SDK
             app_minSdkVersion                        : 21,
             // Lib 编译 SDK 版本
@@ -17,34 +17,41 @@ ext {
             javaVersion                              : JavaVersion.VERSION_1_8,
             javaVersion_str                          : "1.8",
             // Kotlin 版本
-            kotlin_version                           : "1.9.23",
-            kotlin_stdlib_version                    : "1.9.23",
+            kotlin_version                           : "2.0.20",
+            kotlin_stdlib_version                    : "2.0.20",
             dokka_plugin_version                     : "1.9.20",
-            matrix_version                           : "2.1.0",
 
             // ===========
             // = Dev Lib =
             // ===========
 
             // DevApp - Android 工具类库
-            dev_app_versionCode                      : 245,
-            dev_app_versionName                      : "2.4.5",
+            dev_app_versionCode                      : 246,
+            dev_app_versionName                      : "2.4.6",
 
             // DevAssist - 封装逻辑代码, 实现多个快捷功能辅助类、以及 Engine 兼容框架等
             dev_assist_versionCode                   : 141,
             dev_assist_versionName                   : "1.4.1",
 
             // DevBase - Base ( Activity、Fragment )、MVP、ViewBinding、ContentLayout 基类库
-            dev_base_versionCode                     : 117,
-            dev_base_versionName                     : "1.1.7",
+            dev_base_versionCode                     : 118,
+            dev_base_versionName                     : "1.1.8",
 
             // DevBaseMVVM - MVVM ( ViewDataBinding + ViewModel ) 基类库
-            dev_base_mvvm_versionCode                : 115,
-            dev_base_mvvm_versionName                : "1.1.5",
+            dev_base_mvvm_versionCode                : 116,
+            dev_base_mvvm_versionName                : "1.1.6",
 
             // DevMVVM - DataBinding 工具类库
-            dev_mvvm_versionCode                     : 103,
-            dev_mvvm_versionName                     : "1.0.3",
+            dev_mvvm_versionCode                     : 104,
+            dev_mvvm_versionName                     : "1.0.4",
+
+            // DevSimple - 简单敏捷开发库
+            dev_simple_versionCode                   : 101,
+            dev_simple_versionName                   : "1.0.1",
+
+            // DevAgile - 简单敏捷开发库 ( 常用、零散代码 )
+            dev_agile_versionCode                    : 100,
+            dev_agile_versionName                    : "1.0.0",
 
             // DevEngine - 第三方框架解耦、一键替换第三方库、同类库多 Engine 组件化混合使用
             dev_engine_versionCode                   : 113,
