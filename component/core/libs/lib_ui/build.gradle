@@ -17,18 +17,18 @@ android {
 dependencies {
 
     // 核心基础依赖库 ( 编译但不参与打包 )
-    compileOnly project(':core_base_lib')
+    api project(':core_base_lib')
 
     // ===================
     // = core - 核心开发库 =
     // ===================
 
     // 通用配置、常量 lib
-    compileOnly project(':core_lib_config')
+    api project(':core_lib_config')
     // 通用多语言 lib
-    compileOnly project(':core_lib_language')
+    api project(':core_lib_language')
     // APP 主题、换肤相关控制
-    compileOnly project(':core_lib_ui_skin')
+    api project(':core_lib_ui_skin')
 
     // ====================
     // = libs - 第三方库依赖 =
