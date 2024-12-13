@@ -7,5 +7,5 @@ android {
 dependencies {
 
     // 核心基础库依赖描述
-    compileOnly project(':core_desc')
+    api project(':core_desc')
 }
