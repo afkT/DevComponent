@@ -1,50 +1,41 @@
-apply from: rootProject.file("file/gradle/modular.gradle")
+apply from: rootProject.file("file/component/modular.gradle")
 
 ext {
+
+    // ====================
+    // = 组件化 Gradle 文件 =
+    // ====================
+
+    files_component = [
+            // Module 构建配置 ( module 依赖使用, 自动判断 isModular 依赖不同 gradle 文件 )
+            build_module_gradle        : "file/component/build_module.gradle",
+            // 应用程序构建配置 ( 可运行 )
+            build_application_gradle   : "file/component/build_application.gradle",
+            // Lib Module 构建配置 ( 非可运行应用 )
+            build_library_module_gradle: "file/component/build_library_module.gradle",
+            // Lib 构建通用配置 ( 各种 core、底层库依赖使用 )
+            build_library_gradle       : "file/component/build_library.gradle",
+
+            // =============
+            // = 配置信息构建 =
+            // =============
+
+            // APK 多渠道打包
+            apk_channel_gradle         : "file/component/channel/apk_channel.gradle",
+
+            // 部分字段信息构建 ( 防止过于混乱单独拆分 )
+            config_build_field_gradle  : "file/component/config/config_build_field.gradle",
+
+            // 版本构建截取、设置处理
+            config_build_version_gradle: "file/component/config/config_build_version.gradle",
+
+    ]
 
     // ==================
     // = 通用 Gradle 文件 =
     // ==================
 
     files = [
-            // Module 构建配置 ( module 依赖使用, 自动判断 isModular 依赖不同 gradle 文件 )
-            build_module_gradle           : "file/gradle/build/build_module.gradle",
-            // 应用程序构建配置 ( 可运行 )
-            build_application_gradle      : "file/gradle/build/build_application.gradle",
-            // Lib Module 构建配置 ( 非可运行应用 )
-            build_library_module_gradle   : "file/gradle/build/build_library_module.gradle",
-            // Lib 构建通用配置 ( 各种 core、底层库依赖使用 )
-            build_library_gradle          : "file/gradle/build/build_library.gradle",
-
-            // Java Lib 构建通用配置 ( 方便使用 kotlin 运行 main, plugin 为 android kotlin )
-            build_library_java_gradle     : "file/gradle/build/build_library_java.gradle",
-
-            // APK 多渠道打包
-            apk_channel_gradle            : "file/gradle/channel/apk_channel.gradle",
-
-            // =============
-            // = 配置信息构建 =
-            // =============
-
-            // 部分字段信息构建 ( 防止过于混乱单独拆分 )
-            config_build_field_gradle     : "file/gradle/build/config/config_build_field.gradle",
-
-            // 版本构建截取、设置处理
-            config_build_version_gradle   : "file/gradle/build/config/config_build_version.gradle",
-
-            // ===============
-            // = Gradle Task =
-            // ===============
-
-            // 生成依赖库 deps 文件信息任务
-            task_generate_deps_file_gradle: "file/gradle/build/task/task_generate_deps_file.gradle",
-
-            // ===========
-            // = Unified =
-            // ===========
-
-            // 第三方库版本强制统一处理
-            unified_library_config_gradle : "file/gradle/build/unified/unified_library_config.gradle",
 
             // ==========
             // = Router =
@@ -66,5 +57,19 @@ ext {
             build_therouter_app_gradle    : "file/gradle/build/router/therouter/build_therouter_app.gradle",
             // TheRouter Module 构建配置
             build_therouter_module_gradle : "file/gradle/build/router/therouter/build_therouter_module.gradle",
+
+            // ===========
+            // = Unified =
+            // ===========
+
+            // 第三方库版本强制统一处理
+            unified_library_config_gradle : "file/gradle/build/unified/unified_library_config.gradle",
+
+            // ===============
+            // = Gradle Task =
+            // ===============
+
+            // 生成依赖库 deps 文件信息任务
+            task_generate_deps_file_gradle: "file/gradle/task/task_generate_deps_file.gradle",
     ]
 }

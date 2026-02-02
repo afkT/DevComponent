@@ -1,4 +1,4 @@
-apply from: rootProject.file(files.build_module_gradle)
+apply from: rootProject.file(files_component.build_module_gradle)
 
 // 模块化编译开关 ( true = 每个模块都是独立应用, false = 整合运行 )
 def isModular = isModular.toBoolean()

@@ -225,4 +225,4 @@ if (libName == "core_lib_environment") {
 }
 
 // 部分字段信息构建 ( 防止过于混乱单独拆分 )
-apply from: rootProject.file(files.config_build_field_gradle)
+apply from: rootProject.file(files_component.config_build_field_gradle)

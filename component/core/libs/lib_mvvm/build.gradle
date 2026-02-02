@@ -1,4 +1,4 @@
-apply from: rootProject.file(files.build_library_gradle)
+apply from: rootProject.file(files_component.build_library_gradle)
 
 /**
  * 推荐不依赖任何额外的库, 防止多层级重复依赖冲突

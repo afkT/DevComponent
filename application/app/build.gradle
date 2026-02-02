@@ -1,7 +1,7 @@
-apply from: rootProject.file(files.build_application_gradle)
-apply from: rootProject.file(files.apk_channel_gradle)
+apply from: rootProject.file(files_component.build_application_gradle)
+apply from: rootProject.file(files_component.apk_channel_gradle)
 // 版本构建截取、设置处理
-apply from: rootProject.file(files.config_build_version_gradle)
+apply from: rootProject.file(files_component.config_build_version_gradle)
 
 // 模块化编译开关 ( true = 每个模块都是独立应用, false = 整合运行 )
 def isModular = isModular.toBoolean()

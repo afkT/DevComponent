@@ -1,4 +1,5 @@
-apply from: rootProject.file(files.build_library_java_gradle)
+def buildFile = new File(project.projectDir.absoluteFile.getParent(), "build_library_java.gradle")
+apply from: rootProject.file(buildFile)
 
 android {
     namespace "afkt_replace.standard"
@@ -9,5 +10,5 @@ dependencies {
     // DevApp - Android 工具类库
     implementation deps.dev.dev_app
     // Gson https://github.com/google/gson
-    implementation deps.lib.gson
+    implementation deps_lib.common.gson
 }

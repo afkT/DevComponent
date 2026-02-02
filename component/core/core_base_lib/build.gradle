@@ -1,4 +1,4 @@
-apply from: rootProject.file(files.build_library_gradle)
+apply from: rootProject.file(files_component.build_library_gradle)
 
 /**
  * 该 Module 基于 Dev 系列开发库搭建, 且不存在任何代码属于核心 lib 依赖 ( 全部开发基于该 module )
@@ -12,7 +12,7 @@ dependencies {
     // ================
 
     // https://github.com/afkT/DevUtils
-    // https://github.com/afkT/DevUtils/blob/master/README_API.md
+    // https://github.com/afkT/DevUtils/blob/master/README_PROJECT.md
 
     // DevApp - Android 工具类库
     api deps.dev.dev_app
@@ -20,26 +20,23 @@ dependencies {
     // DevAssist - 封装逻辑代码, 实现多个快捷功能辅助类、以及 Engine 兼容框架等
     api deps.dev.dev_assist
 
-    // DevBase - Base ( Activity、Fragment )、MVP、ViewBinding、ContentLayout 基类库
+    // DevBase - Base ( Activity、Fragment ) MVP、MVVM 基类库
     api deps.dev.dev_base
-
-    // DevBaseMVVM - MVVM ( ViewDataBinding + ViewModel ) 基类库
-    api deps.dev.dev_base_mvvm
-
-    // DevMVVM - DataBinding 工具类库
-    api deps.dev.dev_mvvm
-
-    // DevSimple - 简单敏捷开发库
-    api deps.dev.dev_simple
-
-    // DevAgile - 简单敏捷开发库 ( 常用、零散代码 )
-    api deps.dev.dev_agile
 
     // DevEngine - 第三方框架解耦、一键替换第三方库、同类库多 Engine 组件化混合使用
     api deps.dev.dev_engine
 
+    // DevSimple - 简单敏捷开发库
+    api deps.dev.dev_simple
+
     // DevWidget - 自定义 View UI 库
     api deps.dev.dev_widget
+
+    // DevRetrofit - Retrofit + Kotlin Coroutines 封装
+    api deps.dev.dev_retrofit
+
+    // DevHttpManager - OkHttp 管理库 ( Retrofit 多 BaseUrl 管理、Progress 监听 )
+    api deps.dev.dev_http_manager
 
     // DevEnvironment - Android 环境配置切换库
     api deps.dev.dev_environment
@@ -58,11 +55,8 @@ dependencies {
         api deps.dev.dev_http_capture_compiler
     }
 
-    // DevRetrofit - Retrofit + Kotlin Coroutines 封装
-    api deps.dev.dev_retrofit
-
-    // DevHttpManager - OkHttp 管理库 ( Retrofit 多 BaseUrl 管理、Progress 监听 )
-    api deps.dev.dev_http_manager
+    // DevDeprecated - Dev 系列库弃用代码统一存储库
+    api deps.dev.dev_deprecated
 
     // ==========
     // = kotlin =
@@ -104,16 +98,30 @@ dependencies {
     // = libs - 第三方库依赖 =
     // ====================
 
-    // LiveEventBus 消息总线 https://github.com/JeremyLiao/LiveEventBus
-    api deps.lib.live_eventbus_fork
+    // ============
+    // = 常用开发库 =
+    // ============
+
     // 基于 mmap 的高性能通用 key-value 组件 https://github.com/Tencent/MMKV/blob/master/readme_cn.md
-    api deps.lib.mmkv
+    api deps_lib.common.mmkv
+    // LiveEventBus 消息总线 https://github.com/michaellee123/LiveEventBus
+    api deps_lib.common.live_eventbus_fork
     // 今日头条屏幕适配方案终极版 https://github.com/JessYanCoding/AndroidAutoSize/blob/master/README-zh.md
-    api deps.lib.autosize
-    // 动画库 https://github.com/airbnb/lottie-android
-    api deps.lib.lottie
+    api deps_lib.common.autosize
+
+    // ==============
+    // = 常用开发组件 =
+    // ==============
+
     // MVVM Adapter Binding https://github.com/evant/binding-collection-adapter
-    api deps.widget.binding_collection_adapter
-    api deps.widget.binding_collection_adapter_recyclerview
-    api deps.widget.binding_collection_adapter_viewpager2
+    api deps_lib.common_widget.binding_collection_adapter
+    api deps_lib.common_widget.binding_collection_adapter_recyclerview
+    api deps_lib.common_widget.binding_collection_adapter_viewpager2
+
+    // ===============
+    // = 动画相关组件库 =
+    // ===============
+
+    // 动画库 https://github.com/airbnb/lottie-android
+    api deps_lib.anim_widget.lottie
 }

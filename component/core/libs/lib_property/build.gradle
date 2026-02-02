@@ -1,4 +1,4 @@
-apply from: rootProject.file(files.build_library_gradle)
+apply from: rootProject.file(files_component.build_library_gradle)
 
 dependencies {
 
@@ -12,13 +12,13 @@ dependencies {
     // 是否开启优化检测、调试工具 ( 控制 UETool、LeakCanary、BlockCanary 等开关 )
     if (showDebugTools) {
 //        // 内存检测工具 https://github.com/square/leakcanary
-//        api deps_split.property.leakcanary
+//        api deps_lib.profiler.leakcanary
         // 饿了么 UETool https://github.com/eleme/UETool/blob/master/README_zh.md
-        api deps_split.property.uetool
-        api deps_split.property.uetool_base
+        api deps_lib.profiler.uetool
+        api deps_lib.profiler.uetool_base
     } else {
         // 饿了么 UETool https://github.com/eleme/UETool/blob/master/README_zh.md
-        api deps_split.property.uetool_no_op
+        api deps_lib.profiler.uetool_no_op
     }
 
     // ====================
@@ -26,6 +26,6 @@ dependencies {
     // ====================
 
     // Bugly https://bugly.qq.com/docs/
-    api deps_split.property.bugly
-    api deps_split.property.bugly_ndk
+    api deps_lib.profiler.bugly
+    api deps_lib.profiler.bugly_ndk
 }

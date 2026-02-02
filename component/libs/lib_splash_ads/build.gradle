@@ -1,4 +1,4 @@
-apply from: rootProject.file(files.build_library_gradle)
+apply from: rootProject.file(files_component.build_library_gradle)
 
 android {
     namespace "afkt_replace.lib.splash.ads"

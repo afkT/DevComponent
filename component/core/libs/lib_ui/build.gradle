@@ -1,4 +1,4 @@
-apply from: rootProject.file(files.build_library_gradle)
+apply from: rootProject.file(files_component.build_library_gradle)
 
 android {
     sourceSets {
@@ -34,20 +34,19 @@ dependencies {
     // = libs - 第三方库依赖 =
     // ====================
 
-    // 下拉刷新框架 https://github.com/scwang90/SmartRefreshLayout
-    api deps.widget.smartrefreshlayout
-    api deps.widget.smartrefresh_header_classics // 经典刷新头
-//    api deps.widget.smartrefresh_header_radar // 雷达刷新头
-//    api deps.widget.smartrefresh_header_falsify // 虚拟刷新头
-//    api deps.widget.smartrefresh_header_material // 谷歌刷新头
-//    api deps.widget.smartrefresh_header_two_level // 二级刷新头
-//    api deps.widget.smartrefresh_footer_ball // 球脉冲加载
-    api deps.widget.smartrefresh_footer_classics // 经典加载
+    // ==============
+    // = 常用开发组件 =
+    // ==============
 
-    // ==============
-    // = deps_split =
-    // ==============
+    // 下拉刷新框架 https://github.com/scwang90/SmartRefreshLayout
+    api deps_lib.common_widget.smartrefreshlayout
+    api deps_lib.common_widget.smartrefresh_header_classics // 经典刷新头
+    api deps_lib.common_widget.smartrefresh_footer_classics // 经典加载
+
+    // ===================
+    // = UI 效果相关组件库 =
+    // ===================
 
     // LoadingDrawable https://github.com/dinuscxj/LoadingDrawable
-    api deps_split.widget.loading_drawable
+    api deps_lib.ui_widget.loading_drawable
 }

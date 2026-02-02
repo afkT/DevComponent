@@ -1,4 +1,4 @@
-apply from: rootProject.file(files.build_library_gradle)
+apply from: rootProject.file(files_component.build_library_gradle)
 
 /**
  * core_lib_base 库拆包解决重复依赖冲突
@@ -21,10 +21,10 @@ dependencies {
     // = libs - 第三方库依赖 =
     // ====================
 
-    // ==============
-    // = deps_split =
-    // ==============
+    // ===============
+    // = 动画相关组件库 =
+    // ===============
 
     // Activity 跳转动画 https://github.com/skydoves/TransformationLayout
-    api deps_split.widget.transformation_layout
+    api deps_lib.anim_widget.transformation_layout
 }

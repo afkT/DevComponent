@@ -1,4 +1,4 @@
-apply from: rootProject.file(files.build_library_gradle)
+apply from: rootProject.file(files_component.build_library_gradle)
 
 /**
  * 该 Module 依赖 core 核心开发库、核心第三方库等

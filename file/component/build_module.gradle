@@ -24,16 +24,16 @@ def isModular = isModular.toBoolean()
 // 支持组件化下模块依赖
 if (isModular) { // 每个模块都是独立应用
     if (moduleEnable) {
-        apply from: rootProject.file(files.build_library_module_gradle)
+        apply from: rootProject.file(files_component.build_library_module_gradle)
     } else {
-        apply from: rootProject.file(files.build_application_gradle)
+        apply from: rootProject.file(files_component.build_application_gradle)
     }
 } else { // 整合运行, 每个 module 都是 library
-    apply from: rootProject.file(files.build_library_module_gradle)
+    apply from: rootProject.file(files_component.build_library_module_gradle)
 }
 
 // 版本构建截取、设置处理
-apply from: rootProject.file(files.config_build_version_gradle)
+apply from: rootProject.file(files_component.config_build_version_gradle)
 // Router Module 构建配置
 apply from: rootProject.file(files.build_router_module_gradle)
 

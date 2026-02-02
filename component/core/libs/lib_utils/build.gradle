@@ -1,4 +1,4 @@
-apply from: rootProject.file(files.build_library_gradle)
+apply from: rootProject.file(files_component.build_library_gradle)
 
 android {
     sourceSets {
@@ -27,6 +27,11 @@ dependencies {
     // = libs - 第三方库依赖 =
     // ====================
 
+    // ===============
+    // = 图片相关组件库 =
+    // ===============
+
     // Android 平台下的图片选择器 https://github.com/LuckSiege/PictureSelector
-    api deps_split.lib.pictureSelector
+    api deps_lib.image_widget.pictureSelector
+    api deps_lib.image_widget.pictureSelector_camerax
 }

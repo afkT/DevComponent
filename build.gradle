@@ -1,23 +1,21 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
-//apply from: rootProject.file("file/gradle/config.gradle")
-//apply from: rootProject.file("file/gradle/config_split.gradle")
-//apply from: rootProject.file("file/gradle/config_files.gradle")
-//apply from: rootProject.file(files.task_generate_deps_file_gradle)
-
 buildscript {
 
+    // ext.deps
     apply from: rootProject.file("file/gradle/config.gradle")
-    apply from: rootProject.file("file/gradle/config_split.gradle")
+    apply from: rootProject.file("file/gradle/config_libs.gradle")
     apply from: rootProject.file("file/gradle/config_files.gradle")
-    apply from: rootProject.file(files.task_generate_deps_file_gradle)
 
     repositories { // 该 repositories 用于 buildscript dependencies 插件、脚本依赖加载
-        // AliRepo 阿里仓库服务 https://maven.aliyun.com/mvn/view
-        maven { url "https://maven.aliyun.com/repository/google" }
-        maven { url "https://maven.aliyun.com/repository/public" }
-        maven { url "https://maven.aliyun.com/repository/gradle-plugin" }
-
         google()
+        mavenCentral()
+
+        // AliRepo 阿里仓库服务 https://maven.aliyun.com/mvn/view
+        maven { url "https://maven.aliyun.com/repository/central" }
+        maven { url "https://maven.aliyun.com/repository/public" }
+        maven { url "https://maven.aliyun.com/repository/google" }
+        maven { url "https://maven.aliyun.com/repository/gradle-plugin" }
+        maven { url "https://maven.aliyun.com/repository/apache-snapshots" }
+        maven { url "https://maven.aliyun.com/repository/jcenter" }
 
         // jitpack maven
         maven { url "https://jitpack.io" }
@@ -31,17 +29,26 @@ buildscript {
 
     dependencies {
         // https://mvnrepository.com/artifact/com.android.tools.build/gradle
-        classpath 'com.android.tools.build:gradle:8.7.3'
+        classpath 'com.android.tools.build:gradle:8.13.2'
         // kotlin https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-gradle-plugin
         classpath rootProject.ext.deps.build.kotlin_gradle_plugin
         // TheRouter AutoRegister https://mvnrepository.com/artifact/cn.therouter/plugin
-        classpath rootProject.ext.deps.lib.therouter_plugin
+        classpath rootProject.ext.deps_lib.router.therouter_plugin
     }
 }
 
 allprojects {
     repositories { // 该 repositories 用于 app、module dependencies 第三方库 implementation 等依赖加载
         google()
+        mavenCentral()
+
+        // AliRepo 阿里仓库服务 https://maven.aliyun.com/mvn/view
+        maven { url "https://maven.aliyun.com/repository/central" }
+        maven { url "https://maven.aliyun.com/repository/public" }
+        maven { url "https://maven.aliyun.com/repository/google" }
+        maven { url "https://maven.aliyun.com/repository/gradle-plugin" }
+        maven { url "https://maven.aliyun.com/repository/apache-snapshots" }
+        maven { url "https://maven.aliyun.com/repository/jcenter" }
 
         // jitpack maven
         maven { url "https://jitpack.io" }
@@ -52,12 +59,6 @@ allprojects {
 
         maven { url "https://repo1.maven.org/maven2/" }
     }
-
-//    gradle.projectsEvaluated {
-//        tasks.withType(JavaCompile) {
-//            options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
-//        }
-//    }
 }
 
 tasks.register('clean', Delete) {
@@ -71,3 +72,5 @@ tasks.withType(JavaCompile).configureEach {
 
 // 第三方库版本强制统一处理
 apply from: rootProject.file(files.unified_library_config_gradle)
+//// 生成依赖库 deps 文件信息任务【升级全部第三方库后才放开打印依赖信息】
+//apply from: rootProject.file(files.task_generate_deps_file_gradle)
